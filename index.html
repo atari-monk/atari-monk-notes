@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="atari-monk" />
+    <meta name="description" content="" />
+    <title>Notes</title>
+    <link rel="stylesheet" href="./src/css/detectOSStyle.css" type="text/css" />
+    <link rel="stylesheet" href="./src/css/noteStyle.css" type="text/css" />
+    <link rel="stylesheet" href="./src/css/none.css" type="text/css" />
+    <link rel="stylesheet" href="./src/css/mobile.css" type="text/css" />
+    <link rel="stylesheet" href="./src/css/desktop.css" type="text/css" />
+    <script src="./node_modules/ua-parser-js/dist/ua-parser.min.js"></script>
+    <script type="module" src="./src/js/controller/index.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <template id="template-nav">
+        <div class="nav">
+          <h1 class="nav-title center">{%TITLE%}</h1>
+          <nav id="nav-nav" class="center" aria-label="primary-navigation">
+            <ul class="nav-ul">
+            </ul>
+          </nav>
+        </div>
+      </template>
+      <template id="template-nav-item">
+        <li class="nav-item">
+          <a class="nav-item-link" href="">{%NAV_LINK%}</a>
+        </li>
+      </template>
+      <template id="template-detect-os">
+        <div class="card">
+          <img id="card-img" alt="Operating System" />
+          <div class="card-text">
+            <h4 class="card-h4"><b></b></h4>
+          </div>
+        </div>
+      </template>
+      <template id="template-style-btn">
+        <li class="nav-item">
+          <p class="style-btn">
+            Style:
+            <a class="style-btn-link" id="style-none" href="#">None</a>
+            <a class="style-btn-link" id="style-desktop" href="#"
+              >Desktop</a
+            >
+            <a class="style-btn-link" id="style-mobile" href="#"
+              >Mobile</a
+            >
+          </p>
+        </li>
+      <template>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+body {
+  background-color: black;
+  color: green;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note {
+  border-color: blue;
+  border-style: none;
+}
+
+.note-icon img {
+  width: 30px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.note-title {
+  width: auto;
+  border-color: green;
+  border-style: none;
+  font-size: x-large;
+  line-height: 1.6;
+}
+
+.note-text {
+  width: auto;
+  border-color: green;
+  border-style: none;
+  font-size: x-large;
+  line-height: 1.6;
+}
