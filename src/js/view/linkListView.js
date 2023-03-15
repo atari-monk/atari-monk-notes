@@ -9,7 +9,7 @@ export class LinkListView {
     const sectionEl = sectionTemplate.content.querySelector(".link-list-list");
     const itemTemplate = document.getElementById("template-link-list-item");
     const itemEl = itemTemplate.content.querySelector(".link-list-item");
-    const sections = data.links.filter(link => link.type === 'section');
+    const sections = data.notes.filter(link => link.type === 'section');
     sections.forEach(sectionData => {
       const newSection = this.#buildSection(sectionData, sectionEl);
       this.#buildSectionLinks(sectionData, newSection.querySelector("ul"), itemEl);

@@ -3,53 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="atari-monk" />
-    <meta name="description" content="Page of my tech wiki." />
+    <meta name="description" content="" />
     <title>Notes</title>
-    <link rel="icon" href="./src/img/html5.png" type="image/x-icon" />
     <link rel="stylesheet" href="./src/css/none.css" type="text/css" />
     <link rel="stylesheet" href="./src/css/mobile.css" type="text/css" />
     <link rel="stylesheet" href="./src/css/desktop.css" type="text/css" />
-    <link rel="stylesheet" href="./src/css/style.css" type="text/css" />
-    <script type="module" src="./src/js/controller/notes.js"></script>
+    <script src="./src/js/lib/ua-parser.min.js"></script>
+    <script type="module" src="./src/js/controller/notesController.js"></script>
   </head>
 
-  <body>
+  <body class="body-container">
     <header>
-      <h1 class="title hide"></h1>
-      <nav aria-label="primary-navigation">
-        <ul class="navigation">
-          <li class="list-point horizontal">
-            <p>
-              Style:
-              <a class="style-btn-link" id="style-none" href="#">None</a>
-              <a class="style-btn-link" id="style-desktop" href="#">Desktop</a>
-              <a class="style-btn-link" id="style-mobile" href="#">Mobile</a>
-            </p>
-          </li>
-          <div class="nav-view hide"></div>
-        </ul>
-      </nav>
+      <template id="template-nav">
+        <div class="nav">
+          <h1 class="nav-title">{%TITLE%}</h1>
+          <nav id="nav-nav" class="nav-nav" aria-label="primary-navigation">
+            <ul class="nav-ul"></ul>
+          </nav>
+        </div>
+      </template>
+      <template id="template-nav-item">
+        <li class="nav-item">
+          <a class="nav-item-link" href="">{%NAV_LINK%}</a>
+        </li>
+      </template>
+      <template id="template-detect-os">
+        <div class="card">
+          <img id="card-img" alt="Operating System" />
+          <div class="card-text">
+            <h4 class="card-h4"><b></b></h4>
+          </div>
+        </div>
+      </template>
+      <template id="template-style-btn">
+        <li class="nav-item">
+          <p class="style-btn">
+            Style:
+            <a class="style-btn-link" id="style-none" href="#">None</a>
+            <a class="style-btn-link" id="style-desktop" href="#">Desktop</a>
+            <a class="style-btn-link" id="style-mobile" href="#">Mobile</a>
+          </p>
+        </li>
+      </template>
     </header>
-    <hr />
-    <main>
-      <article class="meta-view hide"></article>
-      <article class="notes-view hide"></article>
-      <article class="summary-view hide"></article>
-    </main>
-    <hr />
-    <footer>
-      <p class="author">
-        &lt;&lt;&lt;
-        <a class="author-link" href="https://github.com/atari-monk"
-          >atari-monk</a
-        >
-        &gt;&gt;&gt;
-      </p>
-      <p class="back-top">
-        <a href="#">Back to Top</a>
-      </p>
-    </footer>
-    <template>
+    <template id="template-link-list">
+      <article class="link-list"></article>
+    </template>
+    <template id="template-link-list-list">
+      <section class="link-list-list" id="{%#ID%}">
+        <h3 class="link-list-title">{%TITLE%}</h3>
+        <ul></ul>
+      </section>
+    </template>
+    <template id="template-link-list-item">
+      <li class="link-list-item">
+        <a class="link-list-item-link" href="">{%LINK_TEXT%}</a>
+      </li>
+    </template>
+    <template id="template-note">
       <div class="note center">
         <div class="note-text">
           <p class="note-title">{%TITLE%}</p>
@@ -61,6 +72,45 @@
           </span>
         </div>
       </div>
+    </template>
+    <template id="template-note-aside">
+      <aside>
+        <details>
+          <summary>details</summary>
+          <p></p>
+        </details>
+      </aside>
+    </template>
+    <template id="template-note-mark">
+      <mark>{%TEXT%}</mark>
+    </template>
+    <template id="template-source">
+      <section class="center">
+        <h2>{%TITLE%}</h2>
+        <ul></ul>
+      </section>
+    </template>
+    <template id="template-source-link">
+      <li class="source-link-li">
+        <a href="">{%LINK_TEXT%}</a>
+      </li>
+    </template>
+    <template id="template-description">
+      <section class="center">
+        <h2 class="description-title">{%TITLE%}</h2>
+        <p>{%TEXT%}</p>
+      </section>
+    </template>
+    <template id="template-precondition">
+      <section class="center">
+        <h2 class="precondition-title">{%TITLE%}</h2>
+        <ul></ul>
+      </section>
+    </template>
+    <template id="template-precondition-item">
+      <li class="precondition-item-li">
+        <p class="precondition-item-p">{%TEXT%}</p>
+      </li>
     </template>
   </body>
 </html>

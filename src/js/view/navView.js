@@ -20,7 +20,7 @@ export class NavView extends View {
   }
 
   #createNavLinks(data) {
-    const navLinks = this._filterOne(data.links, 'nav');
+    const navLinks = this._filterOne(data.notes, 'nav');
     const navItem = this._getParentElement('template-nav-item', '.nav-item');
     navLinks.nav.forEach((navData) => {
       const newNavItem = this._getNewParent(navItem);
