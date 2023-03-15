@@ -1,20 +1,74 @@
-import { DEBUG } from "./../config.js";
-
 export class View {
-  _data;
+  addHandlerRender(handler) {
+    ['load'].forEach((ev) => window.addEventListener(ev, handler));
+  }
 
-  render(data) {
-    if (!data || (Array.isArray(data) && data.length === 0)) {
-      DEBUG && console.log("error");
+  _filterOne(data, filter) {
+    return data.filter((item) => item.type === filter)[0];
+  }
+
+  _filterMany(data, filter) {
+    return data.filter((item) => item.type === filter);
+  }
+
+  _getParentElement(templateName, selector) {
+    const template = document.getElementById(templateName);
+    return template.content.querySelector(selector);
+  }
+
+  _getNewParent(parentElement) {
+    return document.importNode(parentElement, true);
+  }
+
+  _templateText(element, selector, template, data) {
+    const childEl = element.querySelector(selector);
+    childEl.textContent = childEl.textContent.replace(
+      new RegExp(`{%${template.toUpperCase()}%}`),
+      data
+    );
+  }
+
+  _templateElText(element, template, data) {
+    element.textContent = element.textContent.replace(
+      new RegExp(`{%${template.toUpperCase()}%}`),
+      data
+    );
+  }
+
+  _templateHtml(element, template, data) {
+    element.innerHTML = element.innerHTML.replace(
+      new RegExp(`{%${template.toUpperCase()}%}`),
+      data
+    );
+  }
+
+  _templateLink(element, template, data, selector = 'a') {
+    const linkEl = element.querySelector(selector);
+    linkEl.setAttribute('href', data.link);
+    linkEl.textContent = linkEl.textContent.replace(
+      new RegExp(`{%${template.toUpperCase()}%}`),
+      data.text
+    );
+  }
+
+  _setAttribute(data, propName, element, attributeName) {
+    if (data.hasOwnProperty(propName) === false) return;
+    element.setAttribute(attributeName, data[propName]);
+  }
+
+  _hideElement(data, propName, element, selector, cssClass) {
+    if (data.hasOwnProperty(propName) === false || data[propName] === true)
       return;
-    }
-    this._data = data;
-    
-    this._parentElement.classList.remove("hide");
+    const childEl = element.querySelector(selector);
+    childEl.classList.add(cssClass);
+  }
+
+  _createBr() {
+    return document.createElement('br');
   }
 
   _scrollToBottom() {
     window.scrollTo(0, document.body.scrollHeight);
-    console.log("scrolling to bottom!");
+    console.log('scrolling to bottom!');
   }
 }

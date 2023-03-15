@@ -5,23 +5,20 @@
     <meta name="author" content="atari-monk" />
     <meta name="description" content="" />
     <title>Notes</title>
-    <link rel="stylesheet" href="./src/css/detectOSStyle.css" type="text/css" />
-    <link rel="stylesheet" href="./src/css/noteStyle.css" type="text/css" />
     <link rel="stylesheet" href="./src/css/none.css" type="text/css" />
     <link rel="stylesheet" href="./src/css/mobile.css" type="text/css" />
     <link rel="stylesheet" href="./src/css/desktop.css" type="text/css" />
     <script src="./src/js/lib/ua-parser.min.js"></script>
-    <script type="module" src="./src/js/controller/index.js"></script>
+    <script type="module" src="./src/js/controller/indexController.js"></script>
   </head>
 
-  <body>
+  <body class="body-container">
     <header>
       <template id="template-nav">
         <div class="nav">
-          <h1 class="nav-title center">{%TITLE%}</h1>
-          <nav id="nav-nav" class="center" aria-label="primary-navigation">
-            <ul class="nav-ul">
-            </ul>
+          <h1 class="nav-title">{%TITLE%}</h1>
+          <nav id="nav-nav" class="nav-nav" aria-label="primary-navigation">
+            <ul class="nav-ul"></ul>
           </nav>
         </div>
       </template>
@@ -43,15 +40,25 @@
           <p class="style-btn">
             Style:
             <a class="style-btn-link" id="style-none" href="#">None</a>
-            <a class="style-btn-link" id="style-desktop" href="#"
-              >Desktop</a
-            >
-            <a class="style-btn-link" id="style-mobile" href="#"
-              >Mobile</a
-            >
+            <a class="style-btn-link" id="style-desktop" href="#">Desktop</a>
+            <a class="style-btn-link" id="style-mobile" href="#">Mobile</a>
           </p>
         </li>
-      <template>
+      </template>
     </header>
+    <template id="template-link-list">
+      <article class="link-list"></article>
+    </template>
+    <template id="template-link-list-list">
+      <section class="link-list-list" id="{%#ID%}">
+        <h3 class="link-list-title">{%TITLE%}</h3>
+        <ul></ul>
+      </section>
+    </template>
+    <template id="template-link-list-item">
+      <li class="link-list-item">
+        <a class="link-list-item-link" href="">{%LINK_TEXT%}</a>
+      </li>
+    </template>
   </body>
 </html>

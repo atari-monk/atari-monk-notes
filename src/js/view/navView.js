@@ -1,52 +1,48 @@
+import { View } from './view.js';
 
-export class NavView {
-
-  addHandlerRender(handler) {
-    ["load"].forEach((ev) => window.addEventListener(ev, handler));
-  }
+export class NavView extends View {
+  #navList;
 
   createContent(data, detectOSCard, styleBtn) {
     const nav = this.#createNav(data);
-    this.#createNavLinks(nav, data);
+    this.#navList = nav.querySelector('.nav-ul');
+    this.#createNavLinks(data);
     this.#createDetectOsCard(nav, detectOSCard);
-    this.#createStyleBtn(nav, styleBtn);
+    this.#createStyleBtn(styleBtn);
     document.body.appendChild(nav);
   }
 
   #createNav(data) {
-    const template = document.getElementById("template-nav");
-    const nav = template.content.querySelector(".nav");
-    let newNav;
-    newNav = document.importNode(nav, true);
-    const titleEl = newNav.querySelector(".nav-title");
-    titleEl.textContent = titleEl.textContent.replace(/{%TITLE%}/g, `${data.title}`);
+    const nav = this._getParentElement('template-nav', '.nav');
+    const newNav = this._getNewParent(nav);
+    this._templateText(newNav, '.nav-title', 'title', data.title);
     return newNav;
   }
 
-  #createNavLinks(nav, data) {
-    const navItems = nav.querySelector(".nav-ul");
-    const template = document.getElementById("template-nav-item");
-    const navItem = template.content.querySelector(".nav-item");
-
-    data.nav.forEach(navData => {
-      let newNavItem;
-      newNavItem = document.importNode(navItem, true);
-      const navItemLink = newNavItem.querySelector(".nav-item-link");
-      navItemLink.textContent = navItemLink.textContent
-        .replace(/{%NAV_LINK%}/g, `${navData.title}`);
-      navItemLink.setAttribute("href", `#${navData.title.toLowerCase()}`);
-      navItems.appendChild(newNavItem);
+  #createNavLinks(data) {
+    const navLinks = this._filterOne(data.links, 'nav');
+    const navItem = this._getParentElement('template-nav-item', '.nav-item');
+    navLinks.nav.forEach((navData) => {
+      const newNavItem = this._getNewParent(navItem);
+      this._templateLink(
+        newNavItem,
+        'nav_link',
+        {
+          link: `#${navData.title.toLowerCase()}`,
+          text: navData.title,
+        },
+        '.nav-item-link'
+      );
+      this.#navList.appendChild(newNavItem);
     });
   }
 
   #createDetectOsCard(nav, detectOSCard) {
-    const navNav = nav.querySelector("#nav-nav");
-    navNav.appendChild(detectOSCard);
+    nav.querySelector('#nav-nav').appendChild(detectOSCard);
   }
 
-  #createStyleBtn(nav, styleBtn) {
-    const navItems = nav.querySelector(".nav-ul");
-    navItems.appendChild(styleBtn);
+  #createStyleBtn(styleBtn) {
+    this.#navList.appendChild(styleBtn);
   }
 }
 
