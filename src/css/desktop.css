@@ -1,6 +1,11 @@
+:root {
+  --main-font-color: rgb(75, 253, 4);
+  /* --main-font-color: rgb(255, 255, 255); */
+}
+
 body {
   background-color: black;
-  color: green;
+  color: var(--main-font-color);
 }
 
 .body-container {
@@ -14,7 +19,7 @@ body {
 }
 
 .nav-title {
-  color: green;
+  color: var(--main-font-color);
   font-size: 40px;
 }
 
@@ -66,12 +71,12 @@ body {
 }
 
 a {
-  color: green;
+  color: var(--main-font-color);
   font-size: 25px;
 }
 
 h2 {
-  color: green;
+  color: var(--main-font-color);
   font-size: 25px;
 }
 
@@ -146,7 +151,7 @@ p {
 .card-h4 {
   margin-top: 10px;
   font-size: 25px;
-  color: green;
+  color: var(--main-font-color);
   font-weight: normal;
 }
 /* detect-os-card end */
@@ -163,7 +168,7 @@ p {
 
 .note-title {
   width: auto;
-  border-color: green;
+  border-color: var(--main-font-color);
   border-style: none;
   font-size: x-large;
   line-height: 1.6;
@@ -171,7 +176,7 @@ p {
 
 .note-text {
   width: auto;
-  border-color: green;
+  border-color: var(--main-font-color);
   border-style: none;
   font-size: x-large;
   line-height: 1.6;
