@@ -2,9 +2,11 @@ import { View } from './view.js';
 
 export class SourceView extends View {
   createContent(data) {
+    const source = this._filterOne(data, 'source');
+    if (source === undefined) return;
     document.body.appendChild(
       this.#createSource(
-        this._filterOne(data, 'source'),
+        source,
         this._getParentElement('template-source', 'section'),
         this._getParentElement('template-source-link', 'li')
       )
