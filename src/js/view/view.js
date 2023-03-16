@@ -16,6 +16,7 @@ export class View {
     return template.content.querySelector(selector);
   }
 
+  //todo: change name to cloneNode, and param to element
   _getNewParent(parentElement) {
     return document.importNode(parentElement, true);
   }
@@ -49,6 +50,17 @@ export class View {
       new RegExp(`{%${template.toUpperCase()}%}`),
       data.text
     );
+  }
+
+  _templateLink2(element, template, data, selector = 'a') {
+    const newElement = this._getNewParent(element);
+    const linkEl = newElement.querySelector(selector);
+    linkEl.setAttribute('href', data.link);
+    linkEl.textContent = linkEl.textContent.replace(
+      new RegExp(`{%${template.toUpperCase()}%}`),
+      data.text
+    );
+    return newElement;
   }
 
   _setAttribute(data, propName, element, attributeName) {
