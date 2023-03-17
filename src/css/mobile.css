@@ -48,15 +48,10 @@ body {
 
 .link-list {
   /* outline: dashed 1px red; */
-  /* text-align: center; */
-  display: flex;
-  justify-content: center;
 }
 
 .link-list-list {
   /* outline: dashed 1px red; */
-  /* display: flex;
-  justify-content: center; */
   padding: 20px;
 }
 
@@ -67,7 +62,6 @@ body {
 
 .link-list-item {
   /* outline: dashed 1px red; */
-  /* margin: 0 auto; */
   font-size: 25px;
 }
 
@@ -177,6 +171,7 @@ p {
   border-style: none;
   font-size: x-large;
   line-height: 1.6;
+  text-align: center;
 }
 
 .note-text {

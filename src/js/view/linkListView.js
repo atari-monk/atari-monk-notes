@@ -2,22 +2,18 @@ import { View } from './view.js';
 
 export class LinkListView extends View {
   createContent(data) {
-    let newArticle = this._getNewParent(
-      this._getParentElement('template-link-list', '.link-list')
-    );
     this._filterMany(data.notes, 'section').forEach((sectionData) => {
-      const newSection = this.#buildSection(
+      const newArticle = this.#buildSection(
         sectionData,
-        this._getParentElement('template-link-list-list', '.link-list-list')
+        this._getParentElement('template-link-list', '.link-list')
       );
       this.#buildSectionLinks(
         sectionData,
-        newSection.querySelector('ul'),
+        newArticle.querySelector('ul'),
         this._getParentElement('template-link-list-item', '.link-list-item')
       );
-      newArticle.appendChild(newSection);
+      document.body.appendChild(newArticle);
     });
-    document.body.appendChild(newArticle);
   }
 
   #buildSection(data, sectionEl) {
