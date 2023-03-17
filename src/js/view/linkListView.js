@@ -2,7 +2,7 @@ import { View } from './view.js';
 
 export class LinkListView extends View {
   createContent(data) {
-    this._filterMany(data.notes, 'section').forEach((sectionData) => {
+    data.section.forEach((sectionData) => {
       const newArticle = this.#buildSection(
         sectionData,
         this._getParentElement('template-link-list', '.link-list')
