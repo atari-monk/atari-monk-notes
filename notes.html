@@ -53,8 +53,8 @@
     <template id="template-note">
       <div class="note center">
         <div class="note-text">
-          <p class="note-title">{%TITLE%}</p>
-          <p class="note-note">{%NOTE%}</p>
+          <p class="note-title center-text">{%TITLE%}</p>
+          <p class="note-note center-text">{%NOTE%}</p>
         </div>
         <div class="note-icon">
           <span class="note-copy">
@@ -66,7 +66,7 @@
     <template id="template-note-aside">
       <aside>
         <details>
-          <summary>details</summary>
+          <summary>Expound</summary>
           <p></p>
         </details>
       </aside>
@@ -76,8 +76,9 @@
     </template>
     <template id="template-source">
       <section class="center">
-        <h2>{%TITLE%}</h2>
-        <ul></ul>
+        <ul>
+          <h2 class="center-text">{%TITLE%}</h2>
+        </ul>
       </section>
     </template>
     <template id="template-source-link">
@@ -87,14 +88,17 @@
     </template>
     <template id="template-description">
       <section class="center">
-        <h2 class="description-title">{%TITLE%}</h2>
-        <p>{%TEXT%}</p>
+        <div>
+          <h2 class="description-title center-text">{%TITLE%}</h2>
+          <p>{%TEXT%}</p>
+        </div>
       </section>
     </template>
     <template id="template-precondition">
       <section class="center">
-        <h2 class="precondition-title">{%TITLE%}</h2>
-        <ul></ul>
+        <ul>
+          <h2 class="precondition-title center-text">{%TITLE%}</h2>
+        </ul>
       </section>
     </template>
     <template id="template-precondition-item">

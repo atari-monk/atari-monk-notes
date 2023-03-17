@@ -46,6 +46,10 @@ body {
   align-items: center;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .link-list {
   /* outline: dashed 1px red; */
 }
@@ -171,7 +175,6 @@ p {
   border-style: none;
   font-size: x-large;
   line-height: 1.6;
-  text-align: center;
 }
 
 .note-text {
