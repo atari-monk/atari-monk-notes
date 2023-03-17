@@ -4,7 +4,7 @@ export class DescriptionView extends View {
   createContent(data) {
     document.body.appendChild(
       this.#createDescription(
-        this._filterOne(data, 'description'),
+        data.description,
         this._getParentElement('template-description', 'section')
       )
     );

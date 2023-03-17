@@ -24,7 +24,7 @@ class NotesController extends Controller {
       const styleBtnEl = styleBtnView.createContent();
       navView.createContent(data, detectOsEl, styleBtnEl);
       sourceView.createContent(data.notes);
-      descriptionView.createContent(data.notes);
+      descriptionView.createContent(data);
       preconditionView.createContent(data.notes);
       noteView.createContent(data.notes);
     } catch (err) {
