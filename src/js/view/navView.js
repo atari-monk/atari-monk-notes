@@ -9,13 +9,21 @@ export class NavView extends View {
     this.#createNavLinks(data);
     this.#createDetectOsCard(nav, detectOSCard);
     this.#createStyleBtn(styleBtn);
+    document.body.appendChild(this.#createTitle(data));
     document.body.appendChild(nav);
+  }
+
+  #createTitle(data) {
+    const title = this._getParentElement('template-title', '.title');
+    const newtitle = this._getNewParent(title);
+    this._templateText(newtitle, '.title-title', 'title', data.title);
+    return newtitle;
   }
 
   #createNav(data) {
     const nav = this._getParentElement('template-nav', '.nav');
     const newNav = this._getNewParent(nav);
-    this._templateText(newNav, '.nav-title', 'title', data.title);
+    // this._templateText(newNav, '.nav-title', 'title', data.title);
     return newNav;
   }
 

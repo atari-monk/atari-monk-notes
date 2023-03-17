@@ -12,6 +12,11 @@ body {
   /* outline: dashed 1px yellow; */
 }
 
+.title-title {
+  color: var(--main-font-color);
+  font-size: 40px;
+}
+
 .nav {
   /* text-align: center; */
   display: flex;
