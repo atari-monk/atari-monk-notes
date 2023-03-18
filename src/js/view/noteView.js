@@ -3,10 +3,9 @@ import { View } from './view.js';
 
 export class NoteView extends View {
   createContent(data) {
-    const notes = this._filterMany(data, 'note');
     const noteEl = this._getParentElement('template-note', '.note');
-    const asideEl = this._getParentElement('template-note-aside', 'aside');
-    notes.forEach((note) => {
+    const asideEl = this._getParentElement('template-note-aside', '.note-aside');
+    data.note.forEach((note) => {
       const newNote = this.#createNote(note, noteEl);
       if (note.hasOwnProperty('params')) {
         this.#createAside(asideEl, note, newNote.querySelector('.note-text'));
@@ -14,6 +13,7 @@ export class NoteView extends View {
       document.body.appendChild(newNote);
     });
     this.#setupCopyBtns();
+    this.#setupArrowBtns();
   }
 
   #createNote(note, noteEl) {
@@ -91,6 +91,19 @@ export class NoteView extends View {
       ? `${title.textContent}${text.textContent}aside:\n${asideTxt}`
       : `${title.textContent}${text.textContent}`;
     navigator.clipboard.writeText(txt);
+  }
+
+  #setupArrowBtns() {
+    document.querySelectorAll('.note-aside').forEach((aside) => {
+      const btn = aside.querySelector('#note-aside-btn');
+      const text = aside.querySelector('#note-aside-text');
+      btn.classList.add('arrow-off');
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('btn-off');
+        btn.classList.toggle('btn-on');
+        text.classList.toggle('hide');
+      });
+    });
   }
 }
 

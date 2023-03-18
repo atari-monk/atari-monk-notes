@@ -4,7 +4,7 @@ export class PreconditionView extends View {
   createContent(data) {
     document.body.appendChild(
       this.#createPrecondition(
-        this._filterOne(data, 'precondition'),
+        data.precondition,
         this._getParentElement('template-precondition', 'section'),
         this._getParentElement('template-precondition-item', 'li')
       )
