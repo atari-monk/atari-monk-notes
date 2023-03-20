@@ -18,7 +18,9 @@ class IndexController extends Controller {
       const data = await model.getPage(this._page ?? "index/index");
       DEBUG && console.log(data);
       const detectOsEl = detectOsView.createContent();
-      const styleBtnEl = styleBtnView.createContent();
+      const styleBtnEl = styleBtnView.createContent(
+        detectOsView.currentSystem
+      );
       navView.createContent(data, detectOsEl, styleBtnEl);
       linkListView.createContent(data);
     } catch (err) {

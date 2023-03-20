@@ -1,5 +1,6 @@
 :root {
   --main-font-color: rgb(75, 253, 4);
+  --main-font-color-not-active: rgba(75, 253, 4, .4);
 }
 
 body {
@@ -93,6 +94,10 @@ p {
 
 .style-btn-link {
   font-size: 25px;
+}
+
+.style-btn-link-not-active {
+  color:  var(--main-font-color-not-active);
 }
 
 .hide {

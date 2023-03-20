@@ -3,14 +3,6 @@ export class View {
     ['load'].forEach((ev) => window.addEventListener(ev, handler));
   }
 
-  _filterOne(data, filter) {
-    return data.filter((item) => item.type === filter)[0];
-  }
-
-  _filterMany(data, filter) {
-    return data.filter((item) => item.type === filter);
-  }
-
   _getParentElement(templateName, selector) {
     const template = document.getElementById(templateName);
     return template.content.querySelector(selector);

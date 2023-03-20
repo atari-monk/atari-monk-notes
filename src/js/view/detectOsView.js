@@ -1,17 +1,17 @@
-import { DEBUG } from "../config.js";
+import { SYSTEM, DEBUG } from '../config.js';
+import { View } from './view.js';
 
-export class DetectOsView {
-  #system;
+export class DetectOsView extends View {
   #currentSystem;
   #cardImg;
   #cardh4;
 
+  get currentSystem() {
+    return this.#currentSystem;
+  }
+
   constructor() {
-    this.#system = {
-      Unknown: 'Unknown',
-      Android: 'Android',
-      Windows: 'Windows'
-    };
+    super();
     this.#setSystemEnum();
   }
 
@@ -19,14 +19,14 @@ export class DetectOsView {
     const osName = this.#getSystem().toLowerCase();
     DEBUG && console.log(`OS: ${osName}`);
     switch (osName) {
-      case "windows":
-        this.#currentSystem = this.#system.Windows;
+      case 'windows':
+        this.#currentSystem = SYSTEM.Windows;
         break;
-      case "android":
-        this.#currentSystem = this.#system.Android;
+      case 'android':
+        this.#currentSystem = SYSTEM.Android;
         break;
       default:
-        this.#currentSystem = this.#system.Unknown;
+        this.#currentSystem = SYSTEM.Unknown;
         break;
     }
   }
@@ -38,25 +38,24 @@ export class DetectOsView {
   }
 
   createContent() {
-    const template = document.getElementById("template-detect-os");
-    const card = template.content.querySelector(".card");
-    let newCard;
-    newCard = document.importNode(card, true);
-    this.#cardImg = newCard.querySelector("#card-img");
-    this.#cardh4 = newCard.querySelector(".card-h4");
+    const newCard = this._getNewParent(
+      this._getParentElement('template-detect-os', '.card')
+    );
+    this.#cardImg = newCard.querySelector('#card-img');
+    this.#cardh4 = newCard.querySelector('.card-h4');
     this.#setCard();
     return newCard;
   }
 
   #setCard() {
     switch (this.#currentSystem) {
-      case this.#system.Unknown:
+      case SYSTEM.Unknown:
         this.#setUnknown();
         break;
-      case this.#system.Android:
+      case SYSTEM.Android:
         this.#setAndroid();
         break;
-      case this.#system.Windows:
+      case SYSTEM.Windows:
         this.#setWindows();
         break;
       default:
@@ -67,22 +66,22 @@ export class DetectOsView {
 
   #setUnknown() {
     this.#cardImg.classList.remove();
-    this.#cardImg.classList.add("card-img-unknown");
-    this.#cardImg.setAttribute("src", "./src/img/unknown.png");
-    this.#cardh4.textContent = "SYSTEM";
+    this.#cardImg.classList.add('card-img-unknown');
+    this.#cardImg.setAttribute('src', './src/img/unknown.png');
+    this.#cardh4.textContent = 'SYSTEM';
   }
 
   #setAndroid() {
     this.#cardImg.classList.remove();
-    this.#cardImg.classList.add("card-img-android");
-    this.#cardImg.setAttribute("src", "./src/img/android.png");
+    this.#cardImg.classList.add('card-img-android');
+    this.#cardImg.setAttribute('src', './src/img/android.png');
     this.#cardh4.textContent = this.#currentSystem.toString();
   }
 
   #setWindows() {
     this.#cardImg.classList.remove();
-    this.#cardImg.classList.add("card-img-windows");
-    this.#cardImg.setAttribute("src", "./src/img/windows.png");
+    this.#cardImg.classList.add('card-img-windows');
+    this.#cardImg.setAttribute('src', './src/img/windows.png');
     this.#cardh4.textContent = this.#currentSystem.toString();
   }
 }
