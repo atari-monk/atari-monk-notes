@@ -1,13 +1,13 @@
-import { DEBUG } from "../config.js";
-import { Controller } from "./controller.js";
-import model from "../model.js";
-import navView from "../view/navView.js";
-import detectOsView from "../view/detectOsView.js";
-import styleBtnView from "../view/styleBtnView.js";
-import sourceView from "./../view/sourceView.js";
-import noteView from "./../view/noteView.js";
-import descriptionView from "./../view/descriptionView.js";
-import preconditionView from "./../view/preconditionView.js";
+import { DEBUG } from '../config.js';
+import { Controller } from './controller.js';
+import model from '../model.js';
+import navView from '../view/navView.js';
+import detectOsView from '../view/detectOsView.js';
+import styleBtnView from '../view/styleBtnView.js';
+import sourceView from './../view/sourceView.js';
+import noteView from './../view/noteView.js';
+import descriptionView from './../view/descriptionView.js';
+import preconditionView from './../view/preconditionView.js';
 
 class NotesController extends Controller {
   constructor() {
@@ -21,7 +21,7 @@ class NotesController extends Controller {
       const data = await model.getPage(this._page);
       DEBUG && console.log(data);
       const detectOsEl = detectOsView.createContent();
-      const styleBtnEl = styleBtnView.createContent();
+      const styleBtnEl = styleBtnView.createContent(detectOsView.currentSystem);
       navView.createContent(data, detectOsEl, styleBtnEl);
       sourceView.createContent(data);
       descriptionView.createContent(data);
