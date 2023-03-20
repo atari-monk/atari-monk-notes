@@ -177,9 +177,8 @@ p {
 }
 
 .note-text {
-  width: auto;
+  /* outline: dashed 1px red; */
   border-color: var(--main-font-color);
-  border-style: none;
   font-size: x-large;
   line-height: 1.6;
 }
