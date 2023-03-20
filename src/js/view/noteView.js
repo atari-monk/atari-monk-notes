@@ -4,7 +4,10 @@ import { View } from './view.js';
 export class NoteView extends View {
   createContent(data) {
     const noteEl = this._getParentElement('template-note', '.note');
-    const asideEl = this._getParentElement('template-note-aside', '.note-aside');
+    const asideEl = this._getParentElement(
+      'template-note-aside',
+      '.note-aside'
+    );
     data.note.forEach((note) => {
       const newNote = this.#createNote(note, noteEl);
       if (note.hasOwnProperty('params')) {
@@ -18,20 +21,34 @@ export class NoteView extends View {
 
   #createNote(note, noteEl) {
     const newNote = this._getNewParent(noteEl);
-    this._templateText(newNote, '.note-title', 'title', note.title);
+    this._templateChildHtml(newNote, '.note-title', 'title', this.getTitle(note));
     const noteTextEl = newNote.querySelector('.note-note');
+    this.#setNote(note, noteTextEl);
+    this._setAttribute(note, 'navId', newNote, 'id');
+    this._hideElement(note, 'isCopy', newNote, '.note-icon', 'hide');
+    return newNote;
+  }
+
+  getTitle(note) {
+    return Array.isArray(note.title)
+      ? note.title.join('\n<br>')
+      : note.title;
+  }
+
+  #setNote(note, noteTextEl) {
+    if (note.note === undefined) {
+      noteTextEl.classList.add('hide');
+      return;
+    }
     if (note.hasOwnProperty('params')) {
       this._templateHtml(
         noteTextEl,
         'note',
-        this.#insertParams(note.note.join('\n<br>') + '\n', note.params)
+        this.#insertParams(note.note?.join('\n<br>') + '\n', note.params)
       );
     } else {
-      this._templateHtml(noteTextEl, 'note', note.note.join('\n<br>'));
+      this._templateHtml(noteTextEl, 'note', note.note?.join('\n<br>'));
     }
-    this._setAttribute(note, 'navId', newNote, 'id');
-    this._hideElement(note, 'isCopy', newNote, '.note-icon', 'hide');
-    return newNote;
   }
 
   #insertParams(text, params) {
