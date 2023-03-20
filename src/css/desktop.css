@@ -1,43 +1,38 @@
 :root {
-  --main-font-color: rgb(75, 253, 4);
-  --main-font-color-not-active: rgba(75, 253, 4, .4);
+  --font-color: rgb(75, 253, 4);
+  --font-color-not-active: rgba(75, 253, 4, 0.4);
+  --font-size-title: 55px;
+  --font-size-index: 35px;
+  --font-size-system: 25px;
+  --margin-index: 25px;
+  --outline-on: dashed 1px yellow;
+  --outline-red: dashed 1px red;
+  --outline-off: none 0px;
+  --outline: var(--outline-on);
 }
 
 body {
+  outline: var(--outline);
   background-color: black;
-  color: var(--main-font-color);
+  color: var(--font-color);
 }
 
-.body-container {
-  /* outline: dashed 1px yellow; */
+a {
+  color: var(--font-color);
+  font-size: var(--font-size-index);
 }
 
-.title-title {
-  color: var(--main-font-color);
-  font-size: 40px;
+h2 {
+  color: var(--font-color);
+  font-size: var(--font-size-index);
 }
 
-.nav {
-  /* text-align: center; */
-  display: flex;
-  justify-content: center;
+p {
+  font-size: var(--font-size-index);
 }
 
-.nav-title {
-  color: var(--main-font-color);
-  font-size: 40px;
-}
-
-.nav-nav {
-  font-size: 25px;
-}
-
-.nav-item {
-  margin-bottom: 5px;
-}
-
-.nav-item-link {
-  font-size: 25px;
+.hide {
+  display: none;
 }
 
 .center {
@@ -50,121 +45,108 @@ body {
   text-align: center;
 }
 
+.title-title {
+  outline: var(--outline);
+  color: var(--font-color);
+  font-size: var(--font-size-title);
+}
+
+.nav {
+  outline: var(--outline);
+  display: flex;
+  justify-content: center;
+}
+
+.nav-nav {
+  outline: var(--outline);
+  font-size: var(--font-size-index);
+}
+
+.nav-item {
+  outline: var(--outline);
+  margin-bottom: var(--margin-index);
+}
+
+.nav-item-link {
+  outline: var(--outline);
+  font-size: var(--font-size-index);
+}
+
 .link-list {
-  /* outline: dashed 1px red; */
+  outline: var(--outline);
 }
 
 .link-list-list {
-  /* outline: dashed 1px red; */
+  outline: var(--outline);
   padding: 20px;
 }
 
 .link-list-title {
+  outline: var(--outline);
   text-align: center;
-  font-size: 25px;
+  font-size: var(--font-size-index);
 }
 
 .link-list-item {
-  /* outline: dashed 1px red; */
-  font-size: 25px;
+  outline: var(--outline);
+  font-size: var(--font-size-index);
+  margin-bottom: var(--margin-index);
 }
 
 .link-list-item-link {
-  font-size: 25px;
-}
-
-a {
-  color: var(--main-font-color);
-  font-size: 25px;
-}
-
-h2 {
-  color: var(--main-font-color);
-  font-size: 25px;
-}
-
-p {
-  font-size: 25px;
+  font-size: var(--font-size-index);
 }
 
 .style-btn {
   margin: 0px;
-  font-size: 25px;
+  font-size: var(--font-size-index);
 }
 
 .style-btn-link {
-  font-size: 25px;
+  font-size: var(--font-size-index);
 }
 
 .style-btn-link-not-active {
-  color:  var(--main-font-color-not-active);
+  color: var(--font-color-not-active);
 }
 
-.hide {
-  display: none;
-}
-
-/* detect-os-card start */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  outline: var(--outline);
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
   transition: 0.3s;
-  width: 100px;
-  height: 100px;
-  border: 0px;
-  border-color: red;
-  border-style: solid;
-  margin-left: 100px;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.5);
 }
 
 .card-img-windows {
-  display: block;
   max-width: 50px;
   max-height: 50px;
-  width: auto;
-  height: auto;
-  padding: 5px;
-  margin-left: 16px;
+  margin-right: 14px;
   margin-bottom: 14px;
 }
 
 .card-img-android {
-  display: block;
   max-width: 80px;
   max-height: 80px;
-  width: auto;
-  height: auto;
-  padding: 10px;
 }
 
 .card-img-unknown {
-  display: block;
   max-width: 45px;
   max-height: 45px;
-  width: auto;
-  height: auto;
-  padding: 10px;
-  margin-left: 23px;
-}
-
-.card-text {
-  text-align: center;
-  color: white;
+  margin-right: 23px;
 }
 
 .card-h4 {
-  margin-top: 10px;
-  font-size: 25px;
-  color: var(--main-font-color);
+  margin-top: 20px;
+  font-size: var(--font-size-system);
+  color: var(--font-color);
   font-weight: normal;
 }
-/* detect-os-card end */
 
 .note {
-  /* outline: dashed 1px red; */
+  outline: var(--outline);
 }
 
 .note-icon img {
@@ -175,17 +157,19 @@ p {
 
 .note-title {
   width: auto;
-  border-color: var(--main-font-color);
+  border-color: var(--font-color);
   border-style: none;
   font-size: x-large;
   line-height: 1.6;
 }
 
 .note-text {
-  /* outline: dashed 1px red; */
-  border-color: var(--main-font-color);
+  outline: dashed 1px red;
+  border-color: var(--font-color);
   font-size: x-large;
   line-height: 1.6;
+  inline-size: 850px;
+  overflow-wrap: break-word;
 }
 
 .note-note {
@@ -193,7 +177,6 @@ p {
   font-size: 25px;
 }
 
-/*mark1-7 newton color sequence ROYGBIV*/
 .mark-1 {
   background-color: red;
   color: white;
@@ -257,11 +240,11 @@ p {
   cursor: pointer;
   margin-right: 10px;
   font-size: 20px;
-  color: var(--main-font-color);
+  color: var(--font-color);
 }
 
 .btn-on {
-  background-color: var(--main-font-color);
+  background-color: var(--font-color);
   padding: 5px;
   cursor: pointer;
   margin-right: 10px;
