@@ -1,6 +1,5 @@
 :root {
   --main-font-color: rgb(75, 253, 4);
-  /* --main-font-color: rgb(255, 255, 255); */
 }
 
 body {
@@ -242,4 +241,26 @@ p {
 .precondition-item-p {
   margin: 0px;
   margin-bottom: 5px;
+}
+
+.note-aside {
+  margin-bottom: 35px;
+}
+
+.btn-off {
+  background-color: green;
+  padding: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 20px;
+  color: var(--main-font-color);
+}
+
+.btn-on {
+  background-color: var(--main-font-color);
+  padding: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 20px;
+  color: green;
 }
