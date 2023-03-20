@@ -1,10 +1,10 @@
 :root {
   --font-color: rgb(75, 253, 4);
   --font-color-not-active: rgba(75, 253, 4, 0.4);
-  --font-size-title: 55px;
-  --font-size-index: 35px;
-  --font-size-system: 25px;
-  --font-size-note: 35px;
+  --font-size-title: 60px;
+  --font-size-index: 45px;
+  --font-size-system: 30px;
+  --font-size-note: 45px;
   --inline-size: 800px;
   --margin-index: 25px;
   --outline-on: dashed 1px yellow;
