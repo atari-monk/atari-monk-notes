@@ -21,7 +21,7 @@ export class NoteView extends View {
 
   #createNote(note, noteEl) {
     const newNote = this._getNewParent(noteEl);
-    this._templateChildHtml(newNote, '.note-title', 'title', this.getTitle(note));
+    this._templateChildHtml2(newNote, '.note-title', 'title', this.getTitle(note));
     const noteTextEl = newNote.querySelector('.note-note');
     this.#setNote(note, noteTextEl);
     this._setAttribute(note, 'navId', newNote, 'id');
@@ -49,6 +49,7 @@ export class NoteView extends View {
     } else {
       this._templateHtml(noteTextEl, 'note', note.note?.join('\n<br>'));
     }
+    this._centerText(note, noteTextEl);
   }
 
   #insertParams(text, params) {

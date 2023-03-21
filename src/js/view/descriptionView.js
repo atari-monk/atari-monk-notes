@@ -19,6 +19,7 @@ export class DescriptionView extends View {
       'text',
       description.description.join('<br>')
     );
+    this._centerText(description, newDescription);
     this._setAttribute(description, 'navId', newDescription, 'id');
     return newDescription;
   }

@@ -43,6 +43,18 @@ export class View {
     );
   }
 
+  _templateChildHtml2(element, selector, template, data) {
+    const childEl = element.querySelector(selector);
+    if (data === undefined) {
+      childEl.classList.add('hide');
+      return;
+    }
+    childEl.innerHTML = childEl.innerHTML.replace(
+      new RegExp(`{%${template.toUpperCase()}%}`),
+      data
+    );
+  }
+
   _templateLink(element, template, data, selector = 'a') {
     const linkEl = element.querySelector(selector);
     linkEl.setAttribute('href', data.link);
@@ -82,5 +94,11 @@ export class View {
   _scrollToBottom() {
     window.scrollTo(0, document.body.scrollHeight);
     console.log('scrolling to bottom!');
+  }
+
+  _centerText(data, element) {
+    if (data.hasOwnProperty('isCenter') && data.isCenter) {
+      element.classList.add('center-text');
+    }
   }
 }
