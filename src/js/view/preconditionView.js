@@ -2,6 +2,7 @@ import { View } from './view.js';
 
 export class PreconditionView extends View {
   createContent(data) {
+    if (data.precondition === undefined) return;
     document.body.appendChild(
       this.#createPrecondition(
         data.precondition,
