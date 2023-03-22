@@ -101,4 +101,11 @@ export class View {
       element.classList.add('center-text');
     }
   }
+
+  _injectText(text, inject) {
+    return text.replace(
+      new RegExp(inject.key, 'g'),
+      inject.text
+    );
+  }
 }

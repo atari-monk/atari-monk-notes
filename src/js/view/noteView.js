@@ -9,7 +9,7 @@ export class NoteView extends View {
       '.note-aside'
     );
     data.note.forEach((note) => {
-      const newNote = this.#createNote(note, noteEl);
+      const newNote = this.#createNote(note, data.inject, noteEl);
       if (note.hasOwnProperty('params')) {
         this.#createAside(asideEl, note, newNote.querySelector('.note-text'));
       }
@@ -19,11 +19,11 @@ export class NoteView extends View {
     this.#setupArrowBtns();
   }
 
-  #createNote(note, noteEl) {
+  #createNote(note, inject, noteEl) {
     const newNote = this._getNewParent(noteEl);
     this._templateChildHtml2(newNote, '.note-title', 'title', this.getTitle(note));
     const noteTextEl = newNote.querySelector('.note-note');
-    this.#setNote(note, noteTextEl);
+    this.#setNote(note, inject, noteTextEl);
     this._setAttribute(note, 'navId', newNote, 'id');
     this._hideElement(note, 'isCopy', newNote, '.note-icon', 'hide');
     return newNote;
@@ -35,25 +35,38 @@ export class NoteView extends View {
       : note.title;
   }
 
-  #setNote(note, noteTextEl) {
+  #setNote(note, inject, noteTextEl) {
     if (note.note === undefined) {
       noteTextEl.classList.add('hide');
       return;
     }
     if (note.hasOwnProperty('params')) {
+      const noteWithParams = this.#insertParams(note.note?.join('\n<br>') + '\n', note.params);
+      const noteInjected = this.#injectText(noteWithParams, inject);
       this._templateHtml(
         noteTextEl,
         'note',
-        this.#insertParams(note.note?.join('\n<br>') + '\n', note.params)
+        noteInjected
       );
     } else {
-      this._templateHtml(noteTextEl, 'note', note.note?.join('\n<br>'));
+      const fullNote = note.note?.join('\n<br>');
+      const noteInjected = this.#injectText(fullNote, inject);
+      this._templateHtml(noteTextEl, 'note', noteInjected);
     }
     this._centerText(note, noteTextEl);
   }
 
   #insertParams(text, params) {
     return text.format(...this.#getParams(params));
+  }
+
+  #injectText(text, inject) {
+    if( inject === undefined) return text;
+    inject.forEach(item => {
+      if (text.includes(item.key))
+        text = this._injectText(text, item);
+    });
+    return text;
   }
 
   #getParams(params) {

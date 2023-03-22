@@ -258,3 +258,7 @@ p {
   font-size: var(--font-size-note);
   color: green;
 }
+
+.tab {
+  margin-left: 50px;
+}
