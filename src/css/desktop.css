@@ -235,10 +235,13 @@ p {
 .note-aside {
   margin-top: 0px;
   margin-bottom: 40px;
+  line-height: 1.6;
 }
 
-.note-aside-text {
+#note-aside-text {
   font-size: var(--font-size-note);
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .btn-off {
@@ -261,4 +264,8 @@ p {
 
 .tab {
   margin-left: 50px;
+}
+
+.code {
+  font-family: 'Courier New', Courier, monospace;
 }

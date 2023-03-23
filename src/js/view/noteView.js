@@ -3,36 +3,43 @@ import { View } from './view.js';
 
 export class NoteView extends View {
   createContent(data) {
-    const noteEl = this._getParentElement('template-note', '.note');
-    const asideEl = this._getParentElement(
-      'template-note-aside',
-      '.note-aside'
-    );
     data.note.forEach((note) => {
-      const newNote = this.#createNote(note, data.inject, noteEl);
+      const newNote = this.#createNote(
+        note,
+        data.inject,
+        this._getParentElement('template-note', '.note')
+      );
       if (note.hasOwnProperty('params')) {
-        this.#createAside(asideEl, note, newNote.querySelector('.note-text'));
+        this.#createAside(
+          this._getParentElement('template-note-aside', '.note-aside'),
+          note,
+          newNote.querySelector('.note-text')
+        );
       }
       document.body.appendChild(newNote);
     });
     this.#setupCopyBtns();
-    this.#setupArrowBtns();
+    this.#setupDetailBtns();
   }
 
   #createNote(note, inject, noteEl) {
     const newNote = this._getNewParent(noteEl);
-    this._templateChildHtml2(newNote, '.note-title', 'title', this.getTitle(note));
+    this._templateChildHtml2(
+      newNote,
+      '.note-title',
+      'title',
+      this.getTitle(note)
+    );
     const noteTextEl = newNote.querySelector('.note-note');
     this.#setNote(note, inject, noteTextEl);
     this._setAttribute(note, 'navId', newNote, 'id');
     this._hideElement(note, 'isCopy', newNote, '.note-icon', 'hide');
+    if (note.hasOwnProperty('isCode') && note.isCode) noteTextEl.classList.add('code');
     return newNote;
   }
 
   getTitle(note) {
-    return Array.isArray(note.title)
-      ? note.title.join('\n<br>')
-      : note.title;
+    return Array.isArray(note.title) ? note.title.join('\n<br>') : note.title;
   }
 
   #setNote(note, inject, noteTextEl) {
@@ -41,13 +48,12 @@ export class NoteView extends View {
       return;
     }
     if (note.hasOwnProperty('params')) {
-      const noteWithParams = this.#insertParams(note.note?.join('\n<br>') + '\n', note.params);
-      const noteInjected = this.#injectText(noteWithParams, inject);
-      this._templateHtml(
-        noteTextEl,
-        'note',
-        noteInjected
+      const noteWithParams = this.#insertParams(
+        note.note?.join('\n<br>') + '\n',
+        note.params
       );
+      const noteInjected = this.#injectText(noteWithParams, inject);
+      this._templateHtml(noteTextEl, 'note', noteInjected);
     } else {
       const fullNote = note.note?.join('\n<br>');
       const noteInjected = this.#injectText(fullNote, inject);
@@ -61,10 +67,9 @@ export class NoteView extends View {
   }
 
   #injectText(text, inject) {
-    if( inject === undefined) return text;
-    inject.forEach(item => {
-      if (text.includes(item.key))
-        text = this._injectText(text, item);
+    if (inject === undefined) return text;
+    inject.forEach((item) => {
+      if (text.includes(item.key)) text = this._injectText(text, item);
     });
     return text;
   }
@@ -124,7 +129,7 @@ export class NoteView extends View {
     navigator.clipboard.writeText(txt);
   }
 
-  #setupArrowBtns() {
+  #setupDetailBtns() {
     document.querySelectorAll('.note-aside').forEach((aside) => {
       const btn = aside.querySelector('#note-aside-btn');
       const text = aside.querySelector('#note-aside-text');
