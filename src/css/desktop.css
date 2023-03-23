@@ -244,6 +244,11 @@ p {
   margin-bottom: 15px;
 }
 
+.note-copy {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
 .btn-off {
   background-color: green;
   padding: 5px;
