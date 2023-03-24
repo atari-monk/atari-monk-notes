@@ -34,7 +34,8 @@ export class NoteView extends View {
     this.#setNote(note, inject, noteTextEl);
     this._setAttribute(note, 'navId', newNote, 'id');
     this._hideElement(note, 'isCopy', newNote, '.note-icon', 'hide');
-    if (note.hasOwnProperty('isCode') && note.isCode) noteTextEl.classList.add('code');
+    if (note.hasOwnProperty('isCode') && note.isCode)
+      noteTextEl.classList.add('code');
     return newNote;
   }
 
@@ -121,12 +122,16 @@ export class NoteView extends View {
     const title = noteText.querySelector('.note-title');
     const text = noteText.querySelector('.note-note');
     const aside = noteText.querySelector('aside');
-    let asideTxt;
-    if (aside) asideTxt = aside.querySelector('p').textContent;
-    const txt = asideTxt
-      ? `${title.textContent}${text.textContent}aside:\n${asideTxt}`
-      : `${title.textContent}${text.textContent}`;
-    navigator.clipboard.writeText(txt);
+    if (text.classList.contains('code')) {
+      navigator.clipboard.writeText(`${text.textContent}`);
+    } else {
+      let asideTxt;
+      if (aside) asideTxt = aside.querySelector('p').textContent;
+      const txt = asideTxt
+        ? `${title.textContent}${text.textContent}aside:\n${asideTxt}`
+        : `${title.textContent}${text.textContent}`;
+      navigator.clipboard.writeText(txt);
+    }
   }
 
   #setupDetailBtns() {
