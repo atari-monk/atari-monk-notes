@@ -1,6 +1,8 @@
 :root {
-  --font-color: rgb(75, 253, 4);
-  --font-color-not-active: rgba(75, 253, 4, 0.4);
+  --font-color: rgb(255, 255, 255);
+  --font-color-not-active: rgba(255, 255, 255, 0.4);
+  --btn-not-active: rgba(255, 255, 255, 0.2);
+  --btn-active: rgba(255, 255, 255, 0.6);
   --font-size-title: 35px;
   --font-size-index: 25px;
   --font-size-system-card: 25px;
@@ -66,7 +68,7 @@ p {
 
 .nav-item {
   outline: var(--outline);
-  margin-bottom: var(--margin-index);
+  line-height: 1.6;
 }
 
 .nav-item-link {
@@ -173,7 +175,7 @@ p {
 
 .mark-1 {
   background-color: red;
-  color: white;
+  color: black;
 }
 
 .mark-2 {
@@ -208,7 +210,7 @@ p {
 
 .source-link-li {
   font-size: var(--font-size-note);
-  margin-bottom: 5px;
+  line-height: 1.6;
 }
 
 .description-title {
@@ -250,25 +252,25 @@ p {
 }
 
 .btn-off {
-  background-color: green;
+  background-color: var(--btn-not-active);
   padding: 5px;
   cursor: pointer;
   margin-right: 10px;
   font-size: var(--font-size-note);
-  color: var(--font-color);
+  color: black;
 }
 
 .btn-on {
-  background-color: var(--font-color);
+  background-color: var(--btn-active);
   padding: 5px;
   cursor: pointer;
   margin-right: 10px;
   font-size: var(--font-size-note);
-  color: green;
+  color: black;
 }
 
 .tab {
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 .code {

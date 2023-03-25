@@ -30,15 +30,31 @@ export class NavView extends View {
       const newNavItem = this._getNewParent(
         this._getParentElement('template-nav-item', '.nav-item')
       );
-      this._templateLink(
-        newNavItem,
-        'nav_link',
-        {
-          link: `#${navData.title.toLowerCase()}`,
-          text: navData.title,
-        },
-        '.nav-item-link'
-      );
+      if (
+        navData.hasOwnProperty('isPageLink') === false ||
+        navData?.isPageLink === true
+      ) {
+        this._templateLink(
+          newNavItem,
+          'nav_link',
+          {
+            link: `#${navData.title.toLowerCase()}`,
+            text: navData.title,
+          },
+          '.nav-item-link'
+        );
+      } else {
+        this._templateLink(
+          newNavItem,
+          'nav_link',
+          {
+            link: navData.link,
+            text: navData.title,
+          },
+          '.nav-item-link'
+        );
+        console.log('newNavItem:', newNavItem);
+      }
       this.#navList.appendChild(newNavItem);
     });
   }
