@@ -1,10 +1,10 @@
 :root {
   --font-color: rgb(75, 253, 4);
   --font-color-not-active: rgba(75, 253, 4, 0.4);
-  --font-size-title: 55px;
-  --font-size-index: 35px;
-  --font-size-system: 25px;
-  --font-size-note: 35px;
+  --font-size-title: 35px;
+  --font-size-index: 25px;
+  --font-size-system-card: 25px;
+  --font-size-note: 25px;
   --inline-size: 1700px;
   --margin-index: 25px;
   --outline-on: dashed 1px yellow;
@@ -135,7 +135,7 @@ p {
 }
 
 .card-h4 {
-  font-size: var(--font-size-system);
+  font-size: var(--font-size-system-card);
   color: var(--font-color);
   font-weight: normal;
 }
