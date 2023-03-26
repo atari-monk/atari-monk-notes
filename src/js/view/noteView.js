@@ -1,110 +1,20 @@
 import * as tool from './../tool.js';
 import { View } from './view.js';
+import { TextNoteView } from './textNoteView.js';
 
 export class NoteView extends View {
   createContent(data) {
     data.note.forEach((note) => {
-      const newNote = this.#createNote(
-        note,
-        data.inject,
-        this._getParentElement('template-note', '.note')
-      );
-      if (note.hasOwnProperty('params')) {
-        this.#createAside(
-          this._getParentElement('template-note-aside', '.note-aside'),
-          note,
-          newNote.querySelector('.note-text')
-        );
+      let newNote;
+      if (note.hasOwnProperty('isCommand') && note.isCommand) {
+        newNote = new TextNoteView().createContent(data, note);
+      } else {
+        newNote = new TextNoteView().createContent(data, note);
       }
       document.body.appendChild(newNote);
     });
     this.#setupCopyBtns();
     this.#setupDetailBtns();
-  }
-
-  #createNote(note, inject, noteEl) {
-    const newNote = this._getNewParent(noteEl);
-    this._templateChildHtml2(
-      newNote,
-      '.note-title',
-      'title',
-      this.getTitle(note)
-    );
-    const noteTextEl = newNote.querySelector('.note-note');
-    this.#setNote(note, inject, noteTextEl);
-    this._setAttribute(note, 'navId', newNote, 'id');
-    this._hideElement(note, 'isCopy', newNote, '.note-icon', 'hide');
-    if (note.hasOwnProperty('isCode') && note.isCode)
-      noteTextEl.classList.add('code');
-    return newNote;
-  }
-
-  getTitle(note) {
-    return Array.isArray(note.title) ? note.title.join('\n<br>') : note.title;
-  }
-
-  #setNote(note, inject, noteTextEl) {
-    if (note.note === undefined) {
-      noteTextEl.classList.add('hide');
-      return;
-    }
-    if (note.hasOwnProperty('params')) {
-      const noteWithParams = this.#insertParams(
-        note.note?.join('\n<br>') + '\n',
-        note.params
-      );
-      const noteInjected = this.#injectText(noteWithParams, inject);
-      this._templateHtml(noteTextEl, 'note', noteInjected);
-    } else {
-      const fullNote = note.note?.join('\n<br>');
-      const noteInjected = this.#injectText(fullNote, inject);
-      this._templateHtml(noteTextEl, 'note', noteInjected);
-    }
-    this._centerText(note, noteTextEl);
-  }
-
-  #insertParams(text, params) {
-    return text.format(...this.#getParams(params));
-  }
-
-  #injectText(text, inject) {
-    if (inject === undefined) return text;
-    inject.forEach((item) => {
-      if (text.includes(item.key)) text = this._injectText(text, item);
-    });
-    return text;
-  }
-
-  #getParams(params) {
-    let j = 1;
-    const markEl = this._getParentElement('template-note-mark', 'mark');
-    const result = [];
-    params.forEach((param, i) => {
-      const newMark = this._getNewParent(markEl);
-      newMark.classList.add(`mark-${j}`);
-      this._templateHtml(newMark, 'text', param?.name);
-      j++;
-      if (i > 0 && i % 6 === 0) j = 1;
-      result.push(newMark.outerHTML);
-    });
-    return result;
-  }
-
-  #createAside(asideEl, note, textEl) {
-    const newAside = this._getNewParent(asideEl);
-    const parentEl = newAside.querySelector('p');
-    const markEl = this._getParentElement('template-note-mark', 'mark');
-    let j = 1;
-    note.params.forEach((param, i) => {
-      const newMark = this._getNewParent(markEl);
-      newMark.classList.add(`mark-${j}`);
-      j++;
-      if (i > 0 && i % 6 === 0) j = 1;
-      this._templateElText(newMark, 'text', param?.desc + '\n');
-      parentEl.appendChild(newMark);
-      parentEl.appendChild(this._createBr());
-    });
-    textEl.appendChild(newAside);
   }
 
   #setupCopyBtns() {
