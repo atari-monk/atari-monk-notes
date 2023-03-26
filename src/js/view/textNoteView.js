@@ -1,5 +1,6 @@
 import * as tool from '../tool.js';
 import { View } from './view.js';
+import { AsideNoteView } from './asideNoteView.js';
 
 export class TextNoteView extends View {
   createContent(data, note) {
@@ -9,11 +10,9 @@ export class TextNoteView extends View {
       this._getParentElement('template-note', '.note')
     );
     if (note.hasOwnProperty('params')) {
-      this.#createAside(
-        this._getParentElement('template-note-aside', '.note-aside'),
-        note,
-        newNote.querySelector('.note-text')
-      );
+      newNote
+        .querySelector('.note-text')
+        .appendChild(new AsideNoteView().createContent(note));
     }
     return newNote;
   }
@@ -84,22 +83,5 @@ export class TextNoteView extends View {
       result.push(newMark.outerHTML);
     });
     return result;
-  }
-
-  #createAside(asideEl, note, textEl) {
-    const newAside = this._getNewParent(asideEl);
-    const parentEl = newAside.querySelector('p');
-    const markEl = this._getParentElement('template-note-mark', 'mark');
-    let j = 1;
-    note.params.forEach((param, i) => {
-      const newMark = this._getNewParent(markEl);
-      newMark.classList.add(`mark-${j}`);
-      j++;
-      if (i > 0 && i % 6 === 0) j = 1;
-      this._templateElText(newMark, 'text', param?.desc + '\n');
-      parentEl.appendChild(newMark);
-      parentEl.appendChild(this._createBr());
-    });
-    textEl.appendChild(newAside);
   }
 }
