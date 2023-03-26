@@ -1,13 +1,14 @@
 import * as tool from './../tool.js';
 import { View } from './view.js';
 import { TextNoteView } from './textNoteView.js';
+import { CommandNoteView } from './commandNoteView.js';
 
 export class NoteView extends View {
   createContent(data) {
     data.note.forEach((note) => {
       let newNote;
       if (note.hasOwnProperty('isCommand') && note.isCommand) {
-        newNote = new TextNoteView().createContent(data, note);
+        newNote = new CommandNoteView().createContent(data, note);
       } else {
         newNote = new TextNoteView().createContent(data, note);
       }

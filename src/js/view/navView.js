@@ -53,7 +53,6 @@ export class NavView extends View {
           },
           '.nav-item-link'
         );
-        console.log('newNavItem:', newNavItem);
       }
       this.#navList.appendChild(newNavItem);
     });
