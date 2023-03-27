@@ -9,21 +9,19 @@ export class CommandNoteView extends View {
   }
 
   #createNote(note) {
-    const noteEl = this._getParentElement('template-note-cmd', '.note');
+    const noteEl = this._getParentElement('template-cmd', '.cmd');
     const newNote = this._getNewParent(noteEl);
+    const ulEl = newNote.querySelector('.cmd-ul');
     note.note.forEach((line) => {
-      newNote.appendChild(this.#createNoteItem(note, line));
+      ulEl.appendChild(this.#createNoteItem(line));
     });
     return newNote;
   }
 
-  #createNoteItem(note, line) {
-    const noteItemEl = this._getParentElement(
-      'template-note-cmd-cmd',
-      '.note-text'
-    );
+  #createNoteItem(line) {
+    const noteItemEl = this._getParentElement('template-cmd-item', 'div');
     const newNoteItem = this._getNewParent(noteItemEl);
-    const noteTextEl = newNoteItem.querySelector('.note-note');
+    const noteTextEl = newNoteItem.querySelector('.cmd-item-note');
     this._templateHtml(noteTextEl, 'note', line);
     noteTextEl.classList.add('code');
     return newNoteItem;

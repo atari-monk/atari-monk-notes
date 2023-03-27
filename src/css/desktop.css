@@ -173,6 +173,31 @@ p {
   margin-bottom: 10px;
 }
 
+.cmd {
+  outline: var(--outline);
+}
+
+.cmd-ul {
+  outline: var(--outline);
+}
+
+.cmd-item {
+  outline: var(--outline);
+}
+
+.cmd-item-note {
+  outline: var(--outline);
+  font-size: var(--font-size-note);
+  line-height: 1.6;
+  margin: 0px;
+}
+
+.cmd-item-icon {
+  outline: var(--outline);
+  width: 25px;
+  cursor: pointer;
+}
+
 .mark-1 {
   background-color: red;
   color: black;
