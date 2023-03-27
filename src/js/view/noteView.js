@@ -1,26 +1,50 @@
 import * as tool from './../tool.js';
 import { View } from './view.js';
 import { TextNoteView } from './textNoteView.js';
-import { noteAsideView } from './noteAsideView.js';
+import { NoteAsideView } from './noteAsideView.js';
+import { AsideNoteView } from './asideNoteView.js';
 import { CommandNoteView } from './commandNoteView.js';
 
 export class NoteView extends View {
+  #noteView;
+  #noteAsideView;
+  #asideNoteView;
+  #commandNoteView;
+
+  constructor() {
+    super();
+    this.#noteView = new TextNoteView();
+    this.#noteAsideView = new NoteAsideView();
+    this.#asideNoteView = new AsideNoteView();
+    this.#commandNoteView = new CommandNoteView();
+  }
+
   createContent(data) {
     data.note.forEach((note) => {
       let newNote;
       if (this.#isType(note, 'text')) {
-        newNote = new TextNoteView().createContent(data, note);
+        newNote = this.#noteView.createContent(data, note);
       } else if (this.#isType(note, 'note-aside')) {
-        newNote = new noteAsideView().createContent(data, note);
+        newNote = this.#getNoteAsideView(note, newNote, data);
       } else if (this.#isType(note, 'cmd')) {
-        newNote = new CommandNoteView().createContent(data, note);
+        newNote = this.#commandNoteView.createContent(data, note);
       } else {
-        newNote = new noteAsideView().createContent(data, note);
+        newNote = this.#getNoteAsideView(note, newNote, data);
       }
       document.body.appendChild(newNote);
     });
     this.#setupCopyBtns();
     this.#setupDetailBtns();
+  }
+
+  #getNoteAsideView(note, newNote, data) {
+    const asideNoteView = this.#asideNoteView.createContent(note);
+    const isParams = note.hasOwnProperty('params');
+    const params = this.#asideNoteView.getParams(note.params);
+    newNote = this.#noteAsideView.createContent(data, note, params);
+    if (isParams)
+      newNote.querySelector('.note-text').appendChild(asideNoteView);
+    return newNote;
   }
 
   #isType(note, type) {
