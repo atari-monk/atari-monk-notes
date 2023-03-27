@@ -8,6 +8,21 @@ export class AsideNoteView extends View {
     );
   }
 
+  getParams(params) {
+    let j = 1;
+    const markEl = this._getParentElement('template-note-mark', 'mark');
+    const result = [];
+    params.forEach((param, i) => {
+      const newMark = this._getNewParent(markEl);
+      newMark.classList.add(`mark-${j}`);
+      this._templateHtml(newMark, 'text', param?.name);
+      j++;
+      if (i > 0 && i % 6 === 0) j = 1;
+      result.push(newMark.outerHTML);
+    });
+    return result;
+  }
+
   #createAside(asideEl, note) {
     const newAside = this._getNewParent(asideEl);
     const parentEl = newAside.querySelector('p');

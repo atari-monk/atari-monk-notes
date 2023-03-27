@@ -1,6 +1,10 @@
 :root {
-  --font-color: rgb(255, 255, 255);
-  --font-color-not-active: rgba(255, 255, 255, 0.4);
+  --green: rgb(50, 182, 14);
+  --ghost-green: rgba(50, 182, 14, .4);
+  --white: rgb(255, 255, 255);
+  --ghost-white: rgba(255, 255, 255, .4);
+  --font-color: var(--green);
+  --font-color-not-active: var(--ghost-green);
   --btn-not-active: rgba(255, 255, 255, 0.2);
   --btn-active: rgba(255, 255, 255, 0.6);
   --font-size-title: 35px;
@@ -179,6 +183,8 @@ p {
 
 .cmd-ul {
   outline: var(--outline);
+  inline-size: var(--inline-size);
+  overflow-wrap: break-word;
 }
 
 .cmd-item {

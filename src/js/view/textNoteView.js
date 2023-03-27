@@ -3,6 +3,13 @@ import { View } from './view.js';
 import { AsideNoteView } from './asideNoteView.js';
 
 export class TextNoteView extends View {
+  #asideView;
+
+  constructor() {
+    super();
+    this.#asideView = new AsideNoteView();
+  }
+
   createContent(data, note) {
     const newNote = this.#createNote(
       note,
@@ -12,7 +19,7 @@ export class TextNoteView extends View {
     if (note.hasOwnProperty('params')) {
       newNote
         .querySelector('.note-text')
-        .appendChild(new AsideNoteView().createContent(note));
+        .appendChild(this.#asideView.createContent(note));
     }
     return newNote;
   }
@@ -59,7 +66,7 @@ export class TextNoteView extends View {
   }
 
   #insertParams(text, params) {
-    return text.format(...this.#getParams(params));
+    return text.format(...this.#asideView.getParams(params));
   }
 
   #injectText(text, inject) {
@@ -68,20 +75,5 @@ export class TextNoteView extends View {
       if (text.includes(item.key)) text = this._injectText(text, item);
     });
     return text;
-  }
-
-  #getParams(params) {
-    let j = 1;
-    const markEl = this._getParentElement('template-note-mark', 'mark');
-    const result = [];
-    params.forEach((param, i) => {
-      const newMark = this._getNewParent(markEl);
-      newMark.classList.add(`mark-${j}`);
-      this._templateHtml(newMark, 'text', param?.name);
-      j++;
-      if (i > 0 && i % 6 === 0) j = 1;
-      result.push(newMark.outerHTML);
-    });
-    return result;
   }
 }
