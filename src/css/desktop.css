@@ -11,6 +11,7 @@
   --font-size-index: 25px;
   --font-size-system-card: 25px;
   --font-size-note: 25px;
+  --font-size-code: 20px;
   --inline-size: 900px;
   --margin-index: 25px;
   --outline-on: dashed 1px yellow;
@@ -306,4 +307,5 @@ p {
 
 .code {
   font-family: 'Courier New', Courier, monospace;
+  font-size: var(--font-size-code);
 }

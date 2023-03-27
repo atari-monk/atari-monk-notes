@@ -1,9 +1,23 @@
 import * as tool from '../tool.js';
 import { View } from './view.js';
+import { AsideNoteView } from './asideNoteView.js';
 
-export class TextNoteView extends View {
+export class noteAsideView extends View {
+  #asideView;
+
+  constructor() {
+    super();
+    this.#asideView = new AsideNoteView();
+  }
+
   createContent(data, note) {
-    return this.#createNote(note, data.inject);
+    const newNote = this.#createNote(note, data.inject);
+    if (note.hasOwnProperty('params')) {
+      newNote
+        .querySelector('.note-text')
+        .appendChild(this.#asideView.createContent(note));
+    }
+    return newNote;
   }
 
   #createNote(note, inject) {
@@ -33,10 +47,23 @@ export class TextNoteView extends View {
       noteTextEl.classList.add('hide');
       return;
     }
-    const fullNote = note.note?.join('\n<br>');
-    const noteInjected = this.#injectText(fullNote, inject);
-    this._templateHtml(noteTextEl, 'note', noteInjected);
+    if (note.hasOwnProperty('params')) {
+      const noteWithParams = this.#insertParams(
+        note.note?.join('\n<br>') + '\n',
+        note.params
+      );
+      const noteInjected = this.#injectText(noteWithParams, inject);
+      this._templateHtml(noteTextEl, 'note', noteInjected);
+    } else {
+      const fullNote = note.note?.join('\n<br>');
+      const noteInjected = this.#injectText(fullNote, inject);
+      this._templateHtml(noteTextEl, 'note', noteInjected);
+    }
     this._centerText(note, noteTextEl);
+  }
+
+  #insertParams(text, params) {
+    return text.format(...this.#asideView.getParams(params));
   }
 
   #injectText(text, inject) {

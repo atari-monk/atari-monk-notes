@@ -1,21 +1,30 @@
 import * as tool from './../tool.js';
 import { View } from './view.js';
 import { TextNoteView } from './textNoteView.js';
+import { noteAsideView } from './noteAsideView.js';
 import { CommandNoteView } from './commandNoteView.js';
 
 export class NoteView extends View {
   createContent(data) {
     data.note.forEach((note) => {
       let newNote;
-      if (note.hasOwnProperty('isCommand') && note.isCommand) {
+      if (this.#isType(note, 'text')) {
+        newNote = new TextNoteView().createContent(data, note);
+      } else if (this.#isType(note, 'note-aside')) {
+        newNote = new noteAsideView().createContent(data, note);
+      } else if (this.#isType(note, 'cmd')) {
         newNote = new CommandNoteView().createContent(data, note);
       } else {
-        newNote = new TextNoteView().createContent(data, note);
+        newNote = new noteAsideView().createContent(data, note);
       }
       document.body.appendChild(newNote);
     });
     this.#setupCopyBtns();
     this.#setupDetailBtns();
+  }
+
+  #isType(note, type) {
+    return note.hasOwnProperty('type') && note.type === type;
   }
 
   #setupCopyBtns() {
