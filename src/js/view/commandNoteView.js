@@ -3,8 +3,18 @@ import { View } from './view.js';
 import { AsideNoteView } from './asideNoteView.js';
 
 export class CommandNoteView extends View {
+  #asideView;
+
+  constructor() {
+    super();
+    this.#asideView = new AsideNoteView();
+  }
+
   createContent(data, note) {
-    const newNote = this.#createNote(note, data.inject);
+    const { newNote, ulEl } = this.#createNote(note, data.inject);
+    if (note.hasOwnProperty('params')) {
+      ulEl.appendChild(this.#asideView.createContent(note));
+    }
     return newNote;
   }
 
@@ -15,7 +25,7 @@ export class CommandNoteView extends View {
     note.note.forEach((line) => {
       ulEl.appendChild(this.#createNoteItem(line));
     });
-    return newNote;
+    return { newNote: newNote, ulEl: ulEl };
   }
 
   #createNoteItem(line) {

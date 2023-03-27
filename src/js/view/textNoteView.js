@@ -11,11 +11,7 @@ export class TextNoteView extends View {
   }
 
   createContent(data, note) {
-    const newNote = this.#createNote(
-      note,
-      data.inject,
-      this._getParentElement('template-note', '.note')
-    );
+    const newNote = this.#createNote(note, data.inject);
     if (note.hasOwnProperty('params')) {
       newNote
         .querySelector('.note-text')
@@ -24,7 +20,8 @@ export class TextNoteView extends View {
     return newNote;
   }
 
-  #createNote(note, inject, noteEl) {
+  #createNote(note, inject) {
+    const noteEl = this._getParentElement('template-note', '.note');
     const newNote = this._getNewParent(noteEl);
     this._templateChildHtml2(
       newNote,
