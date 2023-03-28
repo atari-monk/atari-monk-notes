@@ -1,16 +1,38 @@
 import { View } from './view.js';
 
 export class AsideView extends View {
-  createContent(note) {
-    return this.#createAside(
-      this._getParentElement('template-note-aside', '.note-aside'),
-      note
+  createContent(data, note) {
+    return this.#createAside(data, note);
+  }
+
+  #createAside(data, note) {
+    const asideEl = this._getParentElement(
+      'template-note-aside',
+      '.note-aside'
     );
+    const newAside = this._getNewParent(asideEl);
+    const parentEl = newAside.querySelector('p');
+    const markEl = this._getParentElement('template-note-mark', 'mark');
+    let j = 1;
+    const params = this.#getData2(data, note);
+    params.forEach((param, i) => {
+      const newMark = this._getNewParent(markEl);
+      newMark.classList.add(`mark-${j}`);
+      j++;
+      if (i > 0 && i % 6 === 0) j = 1;
+      this._templateElText(newMark, 'text', param?.desc + '\n');
+      parentEl.appendChild(newMark);
+      parentEl.appendChild(this._createBr());
+    });
+    return newAside;
   }
 
   #getData(data, note) {
-    if (note.hasOwnProperty('paramKey'))
-      return data.param[note.paramKey];
+    if (note.hasOwnProperty('paramKey')) return data.param[note.paramKey];
+  }
+
+  #getData2(data, note) {
+    if (note.hasOwnProperty('aside')) return data.param[note.aside.paramKey];
   }
 
   getTextParams(data, note) {
@@ -28,23 +50,5 @@ export class AsideView extends View {
       result.push(newMark.outerHTML);
     });
     return result;
-  }
-
-  #createAside(asideEl, note) {
-    const newAside = this._getNewParent(asideEl);
-    const parentEl = newAside.querySelector('p');
-    const markEl = this._getParentElement('template-note-mark', 'mark');
-    let j = 1;
-    if (note.hasOwnProperty('params') === false) return newAside;
-    note.params.forEach((param, i) => {
-      const newMark = this._getNewParent(markEl);
-      newMark.classList.add(`mark-${j}`);
-      j++;
-      if (i > 0 && i % 6 === 0) j = 1;
-      this._templateElText(newMark, 'text', param?.desc + '\n');
-      parentEl.appendChild(newMark);
-      parentEl.appendChild(this._createBr());
-    });
-    return newAside;
   }
 }

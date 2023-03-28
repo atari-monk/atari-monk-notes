@@ -42,6 +42,10 @@ export class NoteView extends View {
       } else {
         newNote = this.#getNoteAsideView(note, newNote, data);
       }
+      if (note.hasOwnProperty('aside') && note.aside.isDetail) {
+        const aside = this.#asideView.createContent(data, note);
+        newNote.querySelector('.note-text').appendChild(aside);
+      }
       document.body.appendChild(newNote);
     });
     this.#setupCopyBtns();
