@@ -14,6 +14,7 @@ export class CommandNoteAsideView extends View {
         i < textParams.length ? this.#format(line, textParams[i], i) : line;
       ulEl.appendChild(this.#createNoteItem(text));
     });
+    this.#setupCopyBtns(newNote);
     return newNote;
   }
 
@@ -28,5 +29,15 @@ export class CommandNoteAsideView extends View {
 
   #format(line, param, i) {
     return line.replace(new RegExp(`{%${i}%}`), param);
+  }
+
+  #setupCopyBtns(newNote) {
+    const lines = newNote.querySelectorAll('.cmd-item-note');
+    const copyBtns = newNote.querySelectorAll('.cmd-item-copy');
+    copyBtns.forEach((copyBtn, i) => {
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(lines[i].innerText.trim());
+      });
+    });
   }
 }

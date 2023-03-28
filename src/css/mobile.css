@@ -1,8 +1,8 @@
 :root {
   --green: rgb(50, 182, 14);
-  --ghost-green: rgba(50, 182, 14, .4);
+  --ghost-green: rgba(50, 182, 14, 0.4);
   --white: rgb(255, 255, 255);
-  --ghost-white: rgba(255, 255, 255, .4);
+  --ghost-white: rgba(255, 255, 255, 0.4);
   --font-color: var(--green);
   --font-color-not-active: var(--ghost-green);
   --btn-not-active: rgba(255, 255, 255, 0.2);
@@ -199,45 +199,42 @@ p {
   margin: 0px;
 }
 
+.cmd-item-copy {
+  background-color: rgba(11, 170, 19, 0.5);
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 .cmd-item-icon {
   outline: var(--outline);
-  width: 25px;
+  width: 40px;
   cursor: pointer;
 }
 
-.mark-1 {
-  background-color: red;
-  color: black;
+.parent {
+  background-color: rgba(72, 74, 214, 0.5);
+  padding: 10px;
 }
 
-.mark-2 {
-  background-color: orange;
-  color: rgb(0, 0, 0);
+.flex-parent {
+  display: flex;
 }
 
-.mark-3 {
-  background-color: yellow;
-  color: rgb(0, 0, 0);
+.child {
+  border: 1px solid indigo;
+  padding: 10px;
 }
 
-.mark-4 {
-  background-color: green;
-  color: white;
+.flex-child-left {
+  flex: 10;
+  background-color: rgba(32, 158, 53, 0.5);
 }
 
-.mark-5 {
-  background-color: blue;
-  color: white;
-}
-
-.mark-6 {
-  background-color: indigo;
-  color: white;
-}
-
-.mark-7 {
-  background-color: violet;
-  color: rgb(0, 0, 0);
+.flex-child-right {
+  flex: .3;
+  background-color: rgba(204, 143, 31, 0.5);
+  position: relative;
 }
 
 .source-link-li {
@@ -308,4 +305,39 @@ p {
 .code {
   font-family: 'Courier New', Courier, monospace;
   font-size: var(--font-size-code);
+}
+
+.mark-1 {
+  background-color: red;
+  color: black;
+}
+
+.mark-2 {
+  background-color: orange;
+  color: rgb(0, 0, 0);
+}
+
+.mark-3 {
+  background-color: yellow;
+  color: rgb(0, 0, 0);
+}
+
+.mark-4 {
+  background-color: green;
+  color: white;
+}
+
+.mark-5 {
+  background-color: blue;
+  color: white;
+}
+
+.mark-6 {
+  background-color: indigo;
+  color: white;
+}
+
+.mark-7 {
+  background-color: violet;
+  color: rgb(0, 0, 0);
 }

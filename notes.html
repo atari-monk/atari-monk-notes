@@ -69,11 +69,15 @@
       </div>
     </template>
     <template id="template-cmd-item">
-      <div class="cmd-item">
-        <p class="cmd-item-note">
-          {%NOTE%}
-          <img class="cmd-item-icon" src="./src/img/zHgKDpN.png" alt="" />
-        </p>
+      <div class="cmd-item parent flex-parent">
+        <div class="child flex-child-left">
+          <p class="cmd-item-note">{%NOTE%}</p>
+        </div>
+        <div class="child flex-child-right">
+          <div class="cmd-item-copy">
+            <img class="cmd-item-icon" src="./src/img/zHgKDpN.png" alt="" />
+          </div>
+        </div>
       </div>
     </template>
     <template id="template-note-aside">
