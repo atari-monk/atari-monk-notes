@@ -2,21 +2,27 @@ import * as tool from './../tool.js';
 import { View } from './view.js';
 import { TextNoteView } from './textNoteView.js';
 import { NoteAsideView } from './noteAsideView.js';
+import { AsideView } from './asideView.js';
 import { AsideNoteView } from './asideNoteView.js';
 import { CommandNoteView } from './commandNoteView.js';
+import { CommandNoteAsideView } from './commandNoteAsideView.js';
 
 export class NoteView extends View {
   #noteView;
   #noteAsideView;
+  #asideView;
   #asideNoteView;
   #commandNoteView;
+  #commandNoteAsideView;
 
   constructor() {
     super();
     this.#noteView = new TextNoteView();
     this.#noteAsideView = new NoteAsideView();
+    this.#asideView = new AsideView();
     this.#asideNoteView = new AsideNoteView();
     this.#commandNoteView = new CommandNoteView();
+    this.#commandNoteAsideView = new CommandNoteAsideView();
   }
 
   createContent(data) {
@@ -27,7 +33,12 @@ export class NoteView extends View {
       } else if (this.#isType(note, 'note-aside')) {
         newNote = this.#getNoteAsideView(note, newNote, data);
       } else if (this.#isType(note, 'cmd')) {
-        newNote = this.#commandNoteView.createContent(data, note);
+        if (note.hasOwnProperty('paramKey'))
+          newNote = this.#commandNoteAsideView.createContent(
+            note,
+            this.#asideView.getTextParams(data, note)
+          );
+        else newNote = this.#commandNoteView.createContent(note);
       } else {
         newNote = this.#getNoteAsideView(note, newNote, data);
       }

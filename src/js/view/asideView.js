@@ -8,8 +8,14 @@ export class AsideView extends View {
     );
   }
 
-  getParams(params) {
+  #getData(data, note) {
+    if (note.hasOwnProperty('paramKey'))
+      return data.param[note.paramKey];
+  }
+
+  getTextParams(data, note) {
     const result = [];
+    const params = this.#getData(data, note);
     if (params === undefined) return result;
     let j = 1;
     const markEl = this._getParentElement('template-note-mark', 'mark');

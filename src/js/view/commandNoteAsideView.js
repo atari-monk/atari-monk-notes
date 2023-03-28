@@ -1,17 +1,18 @@
-import * as tool from '../tool.js';
 import { View } from './view.js';
 
-export class CommandNoteView extends View {
-  createContent(note) {
-    return this.#createNote(note);
+export class CommandNoteAsideView extends View {
+  createContent(note, textParams) {
+    return this.#createNote(note, textParams);
   }
 
-  #createNote(note) {
+  #createNote(note, textParams) {
     const noteEl = this._getParentElement('template-cmd', '.cmd');
     const newNote = this._getNewParent(noteEl);
     const ulEl = newNote.querySelector('.cmd-ul');
-    note.note.forEach((line) => {
-      ulEl.appendChild(this.#createNoteItem(line));
+    note.note.forEach((line, i) => {
+      const text =
+        i < textParams.length ? this.#format(line, textParams[i], i) : line;
+      ulEl.appendChild(this.#createNoteItem(text));
     });
     return newNote;
   }
@@ -23,5 +24,9 @@ export class CommandNoteView extends View {
     this._templateHtml(noteTextEl, 'note', line);
     noteTextEl.classList.add('code');
     return newNoteItem;
+  }
+
+  #format(line, param, i) {
+    return line.replace(new RegExp(`{%${i}%}`), param);
   }
 }

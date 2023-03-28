@@ -8,7 +8,7 @@ String.prototype.format = function () {
   // if yes, replace the match with the argument
   return this.replace(/{([0-9]+)}/g, function (match, index) {
     // check if the argument is present
-    return typeof args[index] == "undefined" ? match : args[index];
+    return typeof args[index] == 'undefined' ? match : args[index];
   });
 };
 
