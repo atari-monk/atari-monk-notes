@@ -200,10 +200,11 @@ p {
 }
 
 .cmd-item-copy {
-  background-color: rgba(11, 170, 19, 0.5);
+  /* background-color: rgba(11, 170, 19, 0.5); */
   position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .cmd-item-icon {
@@ -213,7 +214,7 @@ p {
 }
 
 .parent {
-  background-color: rgba(72, 74, 214, 0.5);
+  /* background-color: rgba(72, 74, 214, 0.5); */
   padding: 10px;
 }
 
@@ -222,18 +223,18 @@ p {
 }
 
 .child {
-  border: 1px solid indigo;
+  /* border: 1px solid indigo; */
   padding: 10px;
 }
 
 .flex-child-left {
   flex: 10;
-  background-color: rgba(32, 158, 53, 0.5);
+  background-color: rgb(51, 49, 49);
 }
 
 .flex-child-right {
-  flex: .3;
-  background-color: rgba(204, 143, 31, 0.5);
+  flex: 0.3;
+  background-color: rgb(51, 49, 49);
   position: relative;
 }
 
@@ -265,7 +266,7 @@ p {
 
 .note-aside {
   margin-top: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   line-height: 1.6;
 }
 

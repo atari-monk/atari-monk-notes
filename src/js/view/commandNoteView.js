@@ -13,6 +13,7 @@ export class CommandNoteView extends View {
     note.note.forEach((line) => {
       ulEl.appendChild(this.#createNoteItem(line));
     });
+    this.#setupCopyBtns(newNote);
     return newNote;
   }
 
@@ -23,5 +24,15 @@ export class CommandNoteView extends View {
     this._templateHtml(noteTextEl, 'note', line);
     noteTextEl.classList.add('code');
     return newNoteItem;
+  }
+
+  #setupCopyBtns(newNote) {
+    const lines = newNote.querySelectorAll('.cmd-item-note');
+    const copyBtns = newNote.querySelectorAll('.cmd-item-copy');
+    copyBtns.forEach((copyBtn, i) => {
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(lines[i].innerText.trim());
+      });
+    });
   }
 }

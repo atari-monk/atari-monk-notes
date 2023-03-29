@@ -14,7 +14,7 @@ export class AsideView extends View {
     const parentEl = newAside.querySelector('p');
     const markEl = this._getParentElement('template-note-mark', 'mark');
     let j = 1;
-    const params = this.#getData2(data, note);
+    const params = this.#getData(data, note);
     params.forEach((param, i) => {
       const newMark = this._getNewParent(markEl);
       newMark.classList.add(`mark-${j}`);
@@ -28,11 +28,8 @@ export class AsideView extends View {
   }
 
   #getData(data, note) {
-    if (note.hasOwnProperty('paramKey')) return data.param[note.paramKey];
-  }
-
-  #getData2(data, note) {
-    if (note.hasOwnProperty('aside')) return data.param[note.aside.paramKey];
+    if (note.hasOwnProperty('aside') && note.aside.hasOwnProperty('paramKey'))
+      return data.param[note.aside.paramKey];
   }
 
   getTextParams(data, note) {

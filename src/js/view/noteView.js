@@ -30,21 +30,29 @@ export class NoteView extends View {
       let newNote;
       if (this.#isType(note, 'text')) {
         newNote = this.#noteView.createContent(data, note);
+        if (note.hasOwnProperty('aside') && note.aside.isDetail) {
+          const aside = this.#asideView.createContent(data, note);
+          newNote.querySelector('.note-text').appendChild(aside);
+        }
       } else if (this.#isType(note, 'note-aside')) {
         newNote = this.#getNoteAsideView(note, newNote, data);
       } else if (this.#isType(note, 'cmd')) {
-        if (note.hasOwnProperty('paramKey'))
-          newNote = this.#commandNoteAsideView.createContent(
-            note,
-            this.#asideView.getTextParams(data, note)
-          );
-        else newNote = this.#commandNoteView.createContent(note);
+        if (note.hasOwnProperty('aside')) {
+          if (note.aside.hasOwnProperty('paramKey')) {
+            newNote = this.#commandNoteAsideView.createContent(
+              note,
+              this.#asideView.getTextParams(data, note)
+            );
+          }
+          if (note.aside.hasOwnProperty('isDetail') && note.aside.isDetail) {
+            const aside = this.#asideView.createContent(data, note);
+            newNote.querySelector('.cmd-ul').appendChild(aside);
+          }
+        } else {
+          newNote = this.#commandNoteView.createContent(note);
+        }
       } else {
         newNote = this.#getNoteAsideView(note, newNote, data);
-      }
-      if (note.hasOwnProperty('aside') && note.aside.isDetail) {
-        const aside = this.#asideView.createContent(data, note);
-        newNote.querySelector('.note-text').appendChild(aside);
       }
       document.body.appendChild(newNote);
     });
