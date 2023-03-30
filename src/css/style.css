@@ -20,14 +20,26 @@
   --outline-off: none 0px;
   --outline: var(--outline-off);
 
-  --desktop-font-size-title: 35px;
   --desktop-font-color: var(--green);
+  --desktop-font-size-title: 35px;
+  --desktop-font-size-index: 25px;
+  --desktop-font-size-system-card: 25px;
+  --desktop-font-size-note: 25px;
+  --desktop-font-size-code: 20px;
 
+  --mobile0-font-color: var(--green);
   --mobile0-font-size-title: 55px;
-  --mobile0-font-color: red;
+  --mobile0-font-size-index: 40px;
+  --mobile0-font-size-system-card: 35px;
+  --mobile0-font-size-note: 35px;
+  --mobile0-font-size-code: 15px;
 
-  --mobile90-font-size-title: 35px;
-  --mobile90-font-color: orange;
+  --mobile90-font-color: var(--green);
+  --mobile90-font-size-title: 25px;
+  --mobile90-font-size-index: 20px;
+  --mobile90-font-size-system-card: 15px;
+  --mobile90-font-size-note: 20px;
+  --mobile90-font-size-code: 16px;
 }
 
 body {
