@@ -40,6 +40,7 @@ export class NoteView extends View {
         if (note.hasOwnProperty('aside')) {
           if (note.aside.hasOwnProperty('paramKey')) {
             newNote = this.#commandNoteAsideView.createContent(
+              data,
               note,
               this.#asideView.getTextParams(data, note)
             );
