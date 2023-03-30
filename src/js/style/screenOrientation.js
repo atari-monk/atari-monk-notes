@@ -1,11 +1,12 @@
 export class ScreenOrientation {
   #style0;
   #style90;
-
+  #debugEl;
   constructor(style0, style90) {
     this.#style0 = style0;
     this.#style90 = style90;
     screen.orientation.onchange = this.#handleChange.bind(this);
+    this.#debugEl = document.querySelector('#debug');
   }
 
   setStyle() {
@@ -13,9 +14,9 @@ export class ScreenOrientation {
   }
 
   #handleChange() {
-    console.log(
-      `angle: ${screen.orientation.angle}, width: ${screen.width}`
-    );
+    const log = `orientation: ${screen.orientation.type}, angle: ${screen.orientation.angle}, width: ${screen.width}`;
+    console.log(log);
+    this.#debugEl.innerHTML = log;
     this.#setStyle();
   }
 
