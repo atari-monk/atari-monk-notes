@@ -1,18 +1,34 @@
 import { SYSTEM, DEBUG } from './../config.js';
 import { View } from './view.js';
+import { DesktopStyle } from './../style/desktopStyle.js';
+import { Mobile0Style } from '../style/mobile0Style.js';
+import { Mobile90Style } from '../style/mobile90Style.js';
+import { ScreenOrientation } from '../style/screenOrientation.js';
 
 export class StyleBtnView extends View {
   #styleOn;
-  #none;
-  #desktop;
-  #mobile;
+  #noneEl;
+  #desktopEl;
+  #mobileEl;
+  #desktopStyle;
+  #mobile0Style;
+  #mobile90Style;
+  #screenOrientation;
 
   constructor() {
     super();
     this.#styleOn = ['detectOSStyle', 'noteStyle'];
-    this.#none = undefined;
-    this.#desktop = undefined;
-    this.#mobile = undefined;
+    this.#noneEl = undefined;
+    this.#desktopEl = undefined;
+    this.#mobileEl = undefined;
+    this.#desktopStyle = new DesktopStyle();
+    this.#mobile0Style = new Mobile0Style();
+    this.#mobile90Style = new Mobile90Style();
+    this.#screenOrientation = new ScreenOrientation(
+      this.#mobile0Style,
+      this.#mobile90Style
+    );
+    this.enableStyle('style');
   }
 
   createContent(currentSystem) {
@@ -50,44 +66,45 @@ export class StyleBtnView extends View {
   }
 
   #setLinks(styleBtn) {
-    this.#none = styleBtn.querySelector('#style-none');
-    this.#desktop = styleBtn.querySelector('#style-desktop');
-    this.#mobile = styleBtn.querySelector('#style-mobile');
+    this.#noneEl = styleBtn.querySelector('#style-none');
+    this.#desktopEl = styleBtn.querySelector('#style-desktop');
+    this.#mobileEl = styleBtn.querySelector('#style-mobile');
   }
 
   #setBtns(styleBtn) {
     this.#setLinks(styleBtn);
-    this.#none.addEventListener('click', () => {
+    this.#noneEl.addEventListener('click', () => {
       this.enableStyle('none');
     });
-    this.#desktop.addEventListener('click', () => {
+    this.#desktopEl.addEventListener('click', () => {
       this.#enableDesktop();
     });
-    this.#mobile.addEventListener('click', () => {
+    this.#mobileEl.addEventListener('click', () => {
       this.#enableMobile();
     });
   }
 
   #enableDesktop() {
-    this.enableStyle('desktop');
-    this.#indicateDesktop();
+    this.#desktopStyle.setStyle();
+    //this.#indicateDesktop();
   }
 
   #enableMobile() {
-    this.enableStyle('mobile');
-    this.#indicateMobile();
+    this.#screenOrientation.setStyle();
+    //this.#mobile0Style.setStyle();
+    //this.#indicateMobile();
   }
 
   #indicateDesktop() {
-    this.#none.classList.add('style-btn-link-not-active');
-    this.#mobile.classList.add('style-btn-link-not-active');
-    this.#desktop.classList.remove('style-btn-link-not-active');
+    this.#noneEl.classList.add('style-btn-link-not-active');
+    this.#mobileEl.classList.add('style-btn-link-not-active');
+    this.#desktopEl.classList.remove('style-btn-link-not-active');
   }
 
   #indicateMobile() {
-    this.#none.classList.add('style-btn-link-not-active');
-    this.#desktop.classList.add('style-btn-link-not-active');
-    this.#mobile.classList.remove('style-btn-link-not-active');
+    this.#noneEl.classList.add('style-btn-link-not-active');
+    this.#desktopEl.classList.add('style-btn-link-not-active');
+    this.#mobileEl.classList.remove('style-btn-link-not-active');
   }
 
   enableStyle(name) {

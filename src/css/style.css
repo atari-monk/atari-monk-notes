@@ -1,4 +1,5 @@
 :root {
+  --orange: rgb(211, 140, 33);
   --green: rgb(50, 182, 14);
   --ghost-green: rgba(50, 182, 14, 0.4);
   --white: rgb(255, 255, 255);
@@ -18,6 +19,15 @@
   --outline-red: dashed 1px red;
   --outline-off: none 0px;
   --outline: var(--outline-off);
+
+  --desktop-font-size-title: 35px;
+  --desktop-font-color: var(--green);
+
+  --mobile0-font-size-title: 55px;
+  --mobile0-font-color: red;
+
+  --mobile90-font-size-title: 35px;
+  --mobile90-font-color: orange;
 }
 
 body {
