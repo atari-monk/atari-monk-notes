@@ -24,7 +24,7 @@ export class ScreenOrientation {
     const angle = screen.orientation.angle;
     if (angle === 0) {
       this.#style0.setStyle();
-    } else if (angle === 90) {
+    } else {
       this.#style90.setStyle();
     }
   }
