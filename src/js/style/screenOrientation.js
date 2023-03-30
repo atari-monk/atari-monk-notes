@@ -14,7 +14,7 @@ export class ScreenOrientation {
   }
 
   #handleChange() {
-    const log = `orientation: ${screen.orientation.type}, angle: ${screen.orientation.angle}, width: ${screen.width}`;
+    const log = `orientation: ${screen.orientation.type}, angle: ${screen.orientation.angle}, width: ${screen.width}, height: ${screen.height}`;
     console.log(log);
     this.#debugEl.innerHTML = log;
     this.#setStyle();
