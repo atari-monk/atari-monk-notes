@@ -4,7 +4,6 @@ import { View } from './view.js';
 export class DetectOsView extends View {
   #currentSystem;
   #cardImg;
-  #cardh4;
 
   get currentSystem() {
     return this.#currentSystem;
@@ -42,7 +41,6 @@ export class DetectOsView extends View {
       this._getParentElement('template-detect-os', '.card')
     );
     this.#cardImg = newCard.querySelector('#card-img');
-    this.#cardh4 = newCard.querySelector('.card-h4');
     this.#setCard();
     return newCard;
   }

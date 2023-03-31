@@ -1,49 +1,21 @@
 :root {
-  --orange: rgb(211, 140, 33);
   --green: rgb(50, 182, 14);
   --ghost-green: rgba(50, 182, 14, 0.4);
-  --white: rgb(255, 255, 255);
-  --ghost-white: rgba(255, 255, 255, 0.4);
   --font-color: var(--green);
   --font-color-not-active: var(--ghost-green);
   --btn-not-active: rgba(255, 255, 255, 0.2);
   --btn-active: rgba(255, 255, 255, 0.6);
-  --font-color-debug: green;
   --font-size-title: 35px;
   --font-size-index: 25px;
   --font-size-system-card: 25px;
   --font-size-note: 25px;
-  --font-size-code: 20px;
-  --inline-size: 900px;
+  --font-size-code: 25px;
+  --inline-size: 950px;
   --margin-index: 25px;
   --outline-on: dashed 1px yellow;
   --outline-red: dashed 1px red;
   --outline-off: none 0px;
   --outline: var(--outline-off);
-
-  --desktop-font-color: var(--green);
-  --desktop-font-size-title: 35px;
-  --desktop-font-size-index: 25px;
-  --desktop-font-size-system-card: 25px;
-  --desktop-font-size-note: 25px;
-  --desktop-font-size-code: 20px;
-  --desktop-font-color-debug: green;
-
-  --mobile0-font-color: var(--green);
-  --mobile0-font-size-title: 55px;
-  --mobile0-font-size-index: 40px;
-  --mobile0-font-size-system-card: 35px;
-  --mobile0-font-size-note: 35px;
-  --mobile0-font-size-code: 15px;
-  --mobile0-font-color-debug: red;
-
-  --mobile90-font-color: var(--green);
-  --mobile90-font-size-title: 25px;
-  --mobile90-font-size-index: 20px;
-  --mobile90-font-size-system-card: 15px;
-  --mobile90-font-size-note: 20px;
-  --mobile90-font-size-code: 16px;
-  --mobile90-font-color-debug: orange;
 }
 
 body {
@@ -54,16 +26,6 @@ body {
 
 a {
   color: var(--font-color);
-  font-size: var(--font-size-index);
-}
-
-h2 {
-  color: var(--font-color);
-  font-size: var(--font-size-index);
-}
-
-p {
-  font-size: var(--font-size-index);
 }
 
 .hide {
@@ -225,13 +187,12 @@ p {
 
 .cmd-item-note {
   outline: var(--outline);
-  font-size: var(--font-size-note);
+  font-size: var(--font-size-code);
   line-height: 1.6;
   margin: 0px;
 }
 
 .cmd-item-copy {
-  /* background-color: rgba(11, 170, 19, 0.5); */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -245,7 +206,6 @@ p {
 }
 
 .parent {
-  /* background-color: rgba(72, 74, 214, 0.5); */
   padding: 10px;
 }
 
@@ -254,7 +214,6 @@ p {
 }
 
 .child {
-  /* border: 1px solid indigo; */
   padding: 10px;
 }
 
@@ -283,7 +242,7 @@ p {
   inline-size: var(--inline-size);
   overflow-wrap: break-word;
   line-height: 1.6;
-  font-size: var(--font-size-note);
+  font-size: var(--font-size-index);
 }
 
 .precondition-item-li {
@@ -376,5 +335,5 @@ p {
 }
 
 .debug-log {
-   color: var(--font-color-debug);
+   color: var(--font-color);
 }

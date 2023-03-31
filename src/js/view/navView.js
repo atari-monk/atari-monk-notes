@@ -1,16 +1,16 @@
 import { View } from './view.js';
+import detectOsView from '../view/detectOsView.js';
 
 export class NavView extends View {
   #navList;
 
-  createContent(data, detectOSCard, styleBtn) {
+  createContent(data) {
     const nav = this.#createNav();
     this.#navList = nav.querySelector('.nav-ul');
     this.#createNavLinks(data);
-    this.#createDetectOsCard(nav, detectOSCard);
-    this.#createStyleBtn(styleBtn);
     document.body.appendChild(this.#createTitle(data));
     document.body.appendChild(nav);
+    document.body.appendChild(detectOsView.createContent());
   }
 
   #createTitle(data) {
@@ -56,14 +56,6 @@ export class NavView extends View {
       }
       this.#navList.appendChild(newNavItem);
     });
-  }
-
-  #createDetectOsCard(nav, detectOSCard) {
-    nav.querySelector('#nav-nav').appendChild(detectOSCard);
-  }
-
-  #createStyleBtn(styleBtn) {
-    this.#navList.appendChild(styleBtn);
   }
 }
 
