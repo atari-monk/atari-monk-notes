@@ -26,5 +26,7 @@ export class Styler {
     );
     this._setVar('--font-size-note', `var(--${name}-font-size-note)`);
     this._setVar('--font-size-code', `var(--${name}-font-size-code)`);
+
+    this._setVar('--font-color-debug', `var(--${name}-font-color-debug)`);
   }
 }

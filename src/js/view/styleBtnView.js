@@ -14,6 +14,7 @@ export class StyleBtnView extends View {
   #mobile0Style;
   #mobile90Style;
   #screenOrientation;
+  #currentStyle;
 
   constructor() {
     super();
@@ -29,6 +30,8 @@ export class StyleBtnView extends View {
       this.#mobile90Style
     );
     this.enableStyle('style');
+    this.#currentStyle = 'style';
+    this.#logInfo();
   }
 
   createContent(currentSystem) {
@@ -43,6 +46,7 @@ export class StyleBtnView extends View {
     try {
       this.#setBtns(styleBtn);
       this.#enableBasedOnDetectedSys(currentSystem);
+      this.#logInfo();
     } catch (err) {
       DEBUG && console.log(err);
     }
@@ -86,25 +90,12 @@ export class StyleBtnView extends View {
 
   #enableDesktop() {
     this.#desktopStyle.setStyle();
-    //this.#indicateDesktop();
+    this.#currentStyle = 'Desktop';
   }
 
   #enableMobile() {
     this.#screenOrientation.setStyle();
-    //this.#mobile0Style.setStyle();
-    //this.#indicateMobile();
-  }
-
-  #indicateDesktop() {
-    this.#noneEl.classList.add('style-btn-link-not-active');
-    this.#mobileEl.classList.add('style-btn-link-not-active');
-    this.#desktopEl.classList.remove('style-btn-link-not-active');
-  }
-
-  #indicateMobile() {
-    this.#noneEl.classList.add('style-btn-link-not-active');
-    this.#desktopEl.classList.add('style-btn-link-not-active');
-    this.#mobileEl.classList.remove('style-btn-link-not-active');
+    this.#currentStyle = 'Mobile';
   }
 
   enableStyle(name) {
@@ -123,6 +114,21 @@ export class StyleBtnView extends View {
       if (fileName.includes(style)) result = true;
     });
     return result;
+  }
+
+  #logInfo() {
+    const debugEl = document.querySelector('.debug-log');
+    const info = this.#getInfo();
+    DEBUG && console.log(info);
+    if (debugEl) debugEl.innerHTML = info;
+  }
+
+  #getInfo() {
+    return `orientation: ${screen.orientation.type}, angle: ${
+      screen.orientation.angle
+    }, width: ${screen.width}, height: ${screen.height}, style: ${
+      this.#currentStyle
+    }`;
   }
 }
 

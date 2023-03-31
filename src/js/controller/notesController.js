@@ -8,6 +8,7 @@ import sourceView from './../view/sourceView.js';
 import noteView from './../view/noteView.js';
 import descriptionView from './../view/descriptionView.js';
 import preconditionView from './../view/preconditionView.js';
+import debugView from './../view/debugView.js';
 
 class NotesController extends Controller {
   constructor() {
@@ -20,6 +21,9 @@ class NotesController extends Controller {
       this._setPage();
       const data = await model.getPage(this._page);
       DEBUG && console.log(data);
+      if (data.hasOwnProperty('isDebugViewOn') && data.isDebugViewOn) {
+        debugView.createContent();
+      }
       const detectOsEl = detectOsView.createContent();
       const styleBtnEl = styleBtnView.createContent(detectOsView.currentSystem);
       navView.createContent(data, detectOsEl, styleBtnEl);
