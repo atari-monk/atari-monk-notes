@@ -335,5 +335,6 @@ a {
 }
 
 .debug-log {
-   color: var(--font-color);
+  font-size: var(--font-size-note);
+  color: var(--font-color);
 }

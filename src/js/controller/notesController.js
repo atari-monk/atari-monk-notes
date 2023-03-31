@@ -19,13 +19,13 @@ class NotesController extends Controller {
       this._setPage();
       const data = await model.getPage(this._page);
       DEBUG && console.log(data);
-      if (data.hasOwnProperty('isDebugViewOn') && data.isDebugViewOn) {
-        debugView.createContent();
-      }
       navView.createContent(data);
       sourceView.createContent(data);
       descriptionView.createContent(data);
       preconditionView.createContent(data);
+      data.hasOwnProperty('isDebugViewOn') &&
+        data.isDebugViewOn &&
+        debugView.createContent();
       noteView.createContent(data);
     } catch (err) {
       console.log(err);

@@ -8,7 +8,7 @@ export class DebugView extends View {
   #createView() {
     const viewEl = this._getParentElement('template-debug', '.debug');
     const newView = this._getNewParent(viewEl);
-    this._templateChildHtml2(newView, '.debug-log', 'log', 'debug info');
+    this._templateChildHtml2(newView, '.debug-log', 'log', 'Debug Info');
     document.body.appendChild(newView);
   }
 }

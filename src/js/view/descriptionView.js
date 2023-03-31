@@ -2,6 +2,7 @@ import { View } from './view.js';
 
 export class DescriptionView extends View {
   createContent(data) {
+    if (data.hasOwnProperty('description') === false) return;
     document.body.appendChild(
       this.#createDescription(
         data.description,
