@@ -1,3 +1,4 @@
+import { HOME } from '../config.js';
 import { View } from './view.js';
 import detectOsView from '../view/detectOsView.js';
 
@@ -30,32 +31,59 @@ export class NavView extends View {
       const newNavItem = this._getNewParent(
         this._getParentElement('template-nav-item', '.nav-item')
       );
-      if (
-        navData.hasOwnProperty('isPageLink') === false ||
-        navData?.isPageLink === true
-      ) {
-        this._templateLink(
-          newNavItem,
-          'nav_link',
-          {
-            link: `#${navData.title.toLowerCase()}`,
-            text: navData.title,
-          },
-          '.nav-item-link'
-        );
+      if (this.#isNotSectionLink(navData)) {
+        if (this.#isHomeLink(navData))
+          this.#createHomePageLink(newNavItem, navData);
+        else this.#createOtherPageLink(newNavItem, navData);
       } else {
-        this._templateLink(
-          newNavItem,
-          'nav_link',
-          {
-            link: navData.link,
-            text: navData.title,
-          },
-          '.nav-item-link'
-        );
+        this.#createPageSectionLink(newNavItem, navData);
       }
       this.#navList.appendChild(newNavItem);
     });
+  }
+
+  #isNotSectionLink(navData) {
+    return navData.hasOwnProperty('link') === true;
+  }
+
+  #isHomeLink(navData) {
+    return navData.link === 'home';
+  }
+
+  #createHomePageLink(newNavItem, navData) {
+    this._templateLink(
+      newNavItem,
+      'nav_link',
+      {
+        link: HOME,
+        text: navData.title,
+      },
+      '.nav-item-link'
+    );
+  }
+
+  #createOtherPageLink(newNavItem, navData) {
+    this._templateLink(
+      newNavItem,
+      'nav_link',
+      {
+        link: navData.link,
+        text: navData.title,
+      },
+      '.nav-item-link'
+    );
+  }
+
+  #createPageSectionLink(newNavItem, navData) {
+    this._templateLink(
+      newNavItem,
+      'nav_link',
+      {
+        link: `#${navData.title.toLowerCase()}`,
+        text: navData.title,
+      },
+      '.nav-item-link'
+    );
   }
 }
 
