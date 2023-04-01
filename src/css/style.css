@@ -1,117 +1,162 @@
-body {
-  background-color: black;
-  color: rgb(42, 206, 42);
-  line-height: 1.6;
+@media (min-width: 1280px) and (max-width: 1920px) {
+  :root {
+    --inline-size: 80ch;
+  }
 }
 
-a {
-  color: rgb(42, 206, 42);
+@media (min-width: 100px) and (max-width: 360px) {
+  :root {
+    --inline-size: 40ch;
+  }
 }
 
-.hide {
-  display: none;
-}
+@media all {
+  
+  body {
+    background-color: black;
+    color: rgb(42, 206, 42);
+    line-height: 1.6;
+  }
 
-.note-icon img {
-  width: 35px;
-  cursor: pointer;
-  margin-left: 5px;
-}
+  a {
+    color: rgb(42, 206, 42);
+  }
 
-.cmd-item-copy {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  .hide {
+    display: none;
+  }
 
-.cmd-item-icon {
-  outline: var(--outline);
-  width: 40px;
-  cursor: pointer;
-}
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.card-img-windows {
-  max-width: 50px;
-  max-height: 50px;
-}
+  .center-text {
+    text-align: center;
+  }
 
-.card-img-android {
-  max-width: 50px;
-  max-height: 50px;
-}
+  .inline-text {
+    inline-size: var(--inline-size);
+    overflow-wrap: break-word;
+  }
 
-.card-img-unknown {
-  max-width: 50px;
-  max-height: 50px;
-}
+  .code {
+    font-family: 'Courier New', Courier, monospace;
+    word-break: break-all;
+  }
 
-.parent {
-  padding: 10px;
-}
+  .tab {
+    margin-left: 20px;
+  }
 
-.flex-parent {
-  display: flex;
-}
+  .debug-log {
+    color: var(--font-color);
+  }
 
-.child {
-  padding: 10px;
-}
+  .note-icon img {
+    width: 35px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
 
-.flex-child-left {
-  flex: 10;
-  background-color: rgb(51, 49, 49);
-}
+  .cmd-item-copy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-.flex-child-right {
-  flex: 0.3;
-  background-color: rgb(51, 49, 49);
-  position: relative;
-}
+  .cmd-item-icon {
+    outline: var(--outline);
+    width: 20px;
+    cursor: pointer;
+  }
 
-.mark-1 {
-  background-color: rgba(255, 0, 0, 0.3);
-}
+  .card-img-windows {
+    max-width: 30px;
+    max-height: 30px;
+  }
 
-.mark-2 {
-  background-color: rgba(255, 165, 0, 0.3);
-}
+  .card-img-android {
+    max-width: 30px;
+    max-height: 30px;
+  }
 
-.mark-3 {
-  background-color: rgba(255, 255, 0, 0.3);
-}
+  .card-img-unknown {
+    max-width: 30px;
+    max-height: 30px;
+  }
 
-.mark-4 {
-  background-color: rgba(0, 128, 0, 0.3);
-}
+  .parent {
+    padding: 10px;
+  }
 
-.mark-5 {
-  background-color: rgba(0, 0, 255, 0.3);
-}
+  .flex-parent {
+    display: flex;
+  }
 
-.mark-6 {
-  background-color: rgba(75, 0, 130, 0.3);
-}
+  .child {
+    padding: 10px;
+  }
 
-.mark-7 {
-  background-color: rgba(238, 130, 238, 0.3);
-}
+  .flex-child-left {
+    flex: 10;
+    background-color: rgb(51, 49, 49);
+  }
 
-.btn-off {
-  background-color: rgb(50, 182, 14);
-  padding: 5px;
-  cursor: pointer;
-  color: black;
-}
+  .flex-child-right {
+    flex: 0.3;
+    background-color: rgb(51, 49, 49);
+    position: relative;
+  }
 
-.btn-on {
-  background-color: rgb(127, 235, 97);
-  padding: 5px;
-  cursor: pointer;
-  color: black;
-}
+  .mark-1 {
+    background-color: rgba(255, 0, 0, 0.3);
+    color: rgb(42, 206, 42);
+  }
 
-.code {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: var(--font-size-code);
+  .mark-2 {
+    background-color: rgba(255, 165, 0, 0.3);
+    color: rgb(42, 206, 42);
+  }
+
+  .mark-3 {
+    background-color: rgba(255, 255, 0, 0.3);
+    color: rgb(42, 206, 42);
+  }
+
+  .mark-4 {
+    background-color: rgba(0, 128, 0, 0.3);
+    color: rgb(42, 206, 42);
+  }
+
+  .mark-5 {
+    background-color: rgba(0, 0, 255, 0.3);
+    color: rgb(42, 206, 42);
+  }
+
+  .mark-6 {
+    background-color: rgba(75, 0, 130, 0.3);
+    color: rgb(42, 206, 42);
+  }
+
+  .mark-7 {
+    background-color: rgba(238, 130, 238, 0.3);
+    color: rgb(42, 206, 42);
+  }
+
+  .btn-off {
+    background-color: rgb(50, 182, 14);
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+  }
+
+  .btn-on {
+    background-color: rgb(127, 235, 97);
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+  }
 }

@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="atari-monk" />
     <meta name="description" content="" />
     <title>Notes</title>
-    <link rel="stylesheet" href="./src/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="./src/css/print.css" media="print" />
+    <link rel="stylesheet" href="./src/css/style.css" />
     <script src="./src/js/lib/ua-parser.min.js"></script>
     <script type="module" src="./src/js/controller/notesController.js"></script>
   </head>
@@ -19,7 +20,7 @@
         </div>
       </template>
       <template id="template-nav">
-        <div class="nav">
+        <div class="nav center">
           <nav id="nav-nav" class="nav-nav" aria-label="primary-navigation">
             <ul class="nav-ul"></ul>
           </nav>
@@ -48,14 +49,12 @@
     </header>
     <template id="template-debug">
       <div class="debug center">
-        <p class="debug-log center-text">
-          {%LOG%}
-        </p>
+        <p class="debug-log center-text">{%LOG%}</p>
       </div>
     </template>
     <template id="template-note">
       <div class="note center">
-        <div class="note-text">
+        <div class="note-text inline-text">
           <p class="note-title center-text">{%TITLE%}</p>
           <p class="note-note">{%NOTE%}</p>
           <div class="note-icon">
@@ -68,7 +67,7 @@
     </template>
     <template id="template-cmd">
       <div class="cmd center">
-        <div class="cmd-ul"></div>
+        <div class="cmd-ul inline-text"></div>
       </div>
     </template>
     <template id="template-cmd-item">
