@@ -1,6 +1,13 @@
 import { View } from './view.js';
 
 export class CommandNoteAsideView extends View {
+  #injector;
+
+  constructor(injector) {
+    super();
+    this.#injector = injector;
+  }
+
   createContent(data, note, textParams) {
     return this.#createNote(data, note, textParams);
   }
@@ -11,25 +18,17 @@ export class CommandNoteAsideView extends View {
     const ulEl = newNote.querySelector('.cmd-ul');
     if (note.note.length == 1) {
       const formatText = note.note.join().format(...textParams);
-      const injectText = this.#injectText(formatText, data.inject);
+      const injectText = this.#injector.inject(formatText, data.inject);
       ulEl.appendChild(this.#createNoteItem(injectText));
     } else if (note.note.length > 1) {
-      note.note.forEach((line, i) => {
+      note.note.forEach((line) => {
         const formatText = line.format(...textParams);
-        const injectText = this.#injectText(formatText, data.inject);
+        const injectText = this.#injector.inject(formatText, data.inject);
         ulEl.appendChild(this.#createNoteItem(injectText));
       });
     }
     this.#setupCopyBtns(newNote);
     return newNote;
-  }
-
-  #injectText(text, inject) {
-    if (inject === undefined) return text;
-    inject.forEach((item) => {
-      if (text.includes(item.key)) text = this._injectText(text, item);
-    });
-    return text;
   }
 
   #createNoteItem(line) {

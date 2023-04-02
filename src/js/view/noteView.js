@@ -14,15 +14,17 @@ export class NoteView extends View {
   #asideNoteView;
   #commandNoteView;
   #commandNoteAsideView;
+  #injector;
 
-  constructor() {
+  constructor(injector) {
     super();
-    this.#noteView = new TextNoteView();
-    this.#noteAsideView = new NoteAsideView();
+    this.#injector = injector;
+    this.#noteView = new TextNoteView(this.#injector);
+    this.#noteAsideView = new NoteAsideView(this.#injector);
     this.#asideView = new AsideView();
     this.#asideNoteView = new AsideNoteView();
-    this.#commandNoteView = new CommandNoteView();
-    this.#commandNoteAsideView = new CommandNoteAsideView();
+    this.#commandNoteView = new CommandNoteView(this.#injector);
+    this.#commandNoteAsideView = new CommandNoteAsideView(this.#injector);
   }
 
   createContent(data) {
@@ -50,7 +52,7 @@ export class NoteView extends View {
             newNote.querySelector('.cmd-ul').appendChild(aside);
           }
         } else {
-          newNote = this.#commandNoteView.createContent(note);
+          newNote = this.#commandNoteView.createContent(data, note);
         }
       } else {
         newNote = this.#getNoteAsideView(note, newNote, data);
@@ -115,5 +117,3 @@ export class NoteView extends View {
     });
   }
 }
-
-export default new NoteView();

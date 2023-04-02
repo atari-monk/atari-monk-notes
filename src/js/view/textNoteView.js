@@ -1,7 +1,13 @@
-import * as tool from '../tool.js';
 import { View } from './view.js';
 
 export class TextNoteView extends View {
+  #injector;
+
+  constructor(injector) {
+    super();
+    this.#injector = injector;
+  }
+
   createContent(data, note) {
     return this.#createNote(note, data.inject);
   }
@@ -34,16 +40,8 @@ export class TextNoteView extends View {
       return;
     }
     const fullNote = note.note?.join('\n<br>');
-    const noteInjected = this.#injectText(fullNote, inject);
+    const noteInjected = this.#injector.inject(fullNote, inject);
     this._templateHtml(noteTextEl, 'note', noteInjected);
     this._centerText(note, noteTextEl);
-  }
-
-  #injectText(text, inject) {
-    if (inject === undefined) return text;
-    inject.forEach((item) => {
-      if (text.includes(item.key)) text = this._injectText(text, item);
-    });
-    return text;
   }
 }

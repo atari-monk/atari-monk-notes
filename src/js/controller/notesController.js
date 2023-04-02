@@ -3,10 +3,11 @@ import { Controller } from './controller.js';
 import model from '../model.js';
 import navView from '../view/navView.js';
 import sourceView from './../view/sourceView.js';
-import noteView from './../view/noteView.js';
+import { NoteView } from './../view/noteView.js';
 import descriptionView from './../view/descriptionView.js';
 import preconditionView from './../view/preconditionView.js';
 import debugView from './../view/debugView.js';
+import { Injector } from './../tool/injector.js';
 
 class NotesController extends Controller {
   constructor() {
@@ -26,7 +27,7 @@ class NotesController extends Controller {
       data.hasOwnProperty('isDebugViewOn') &&
         data.isDebugViewOn &&
         debugView.createContent();
-      noteView.createContent(data);
+      new NoteView(new Injector()).createContent(data);
     } catch (err) {
       console.log(err);
     }

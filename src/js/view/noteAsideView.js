@@ -2,6 +2,13 @@ import * as tool from '../tool.js';
 import { View } from './view.js';
 
 export class NoteAsideView extends View {
+  #injector;
+
+  constructor(injector) {
+    super();
+    this.#injector = injector;
+  }
+
   createContent(data, note, params) {
     if (params === undefined) return;
     const newNote = this.#createNote(note, params, data.inject);
@@ -39,20 +46,12 @@ export class NoteAsideView extends View {
       note.note?.join('\n<br>') + '\n',
       params
     );
-    const noteInjected = this.#injectText(noteWithParams, inject);
+    const noteInjected = this.#injector.inject(noteWithParams, inject);
     this._templateHtml(noteTextEl, 'note', noteInjected);
     this._centerText(note, noteTextEl);
   }
 
   #insertParams(text, params) {
     return text.format(...params);
-  }
-
-  #injectText(text, inject) {
-    if (inject === undefined) return text;
-    inject.forEach((item) => {
-      if (text.includes(item.key)) text = this._injectText(text, item);
-    });
-    return text;
   }
 }

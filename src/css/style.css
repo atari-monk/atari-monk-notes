@@ -1,6 +1,6 @@
 @media (min-width: 1280px) and (max-width: 1920px) {
   :root {
-    --inline-size: 80ch;
+    --inline-size: 100ch;
   }
 }
 

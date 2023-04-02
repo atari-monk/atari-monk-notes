@@ -2,26 +2,34 @@ import * as tool from '../tool.js';
 import { View } from './view.js';
 
 export class CommandNoteView extends View {
-  createContent(note) {
-    return this.#createNote(note);
+  #injector;
+
+  constructor(injector) {
+    super();
+    this.#injector = injector;
   }
 
-  #createNote(note) {
+  createContent(data, note) {
+    return this.#createNote(data, note);
+  }
+
+  #createNote(data, note) {
     const noteEl = this._getParentElement('template-cmd', '.cmd');
     const newNote = this._getNewParent(noteEl);
     const ulEl = newNote.querySelector('.cmd-ul');
     note.note.forEach((line) => {
-      ulEl.appendChild(this.#createNoteItem(line));
+      ulEl.appendChild(this.#createNoteItem(data, line));
     });
     this.#setupCopyBtns(newNote);
     return newNote;
   }
 
-  #createNoteItem(line) {
+  #createNoteItem(data, line) {
     const noteItemEl = this._getParentElement('template-cmd-item', 'div');
     const newNoteItem = this._getNewParent(noteItemEl);
     const noteTextEl = newNoteItem.querySelector('.cmd-item-note');
-    this._templateHtml(noteTextEl, 'note', line);
+    const injectText = this.#injector.inject(line, data.inject);
+    this._templateHtml(noteTextEl, 'note', injectText);
     noteTextEl.classList.add('code');
     return newNoteItem;
   }
