@@ -3,10 +3,12 @@ import { View } from './view.js';
 
 export class CommandNoteView extends View {
   #injector;
+  #beautifier;
 
-  constructor(injector) {
+  constructor(injector, beautifier) {
     super();
     this.#injector = injector;
+    this.#beautifier = beautifier;
   }
 
   createContent(data, note) {
@@ -16,22 +18,46 @@ export class CommandNoteView extends View {
   #createNote(data, note) {
     const noteEl = this._getParentElement('template-cmd', '.cmd');
     const newNote = this._getNewParent(noteEl);
+    if (note.hasOwnProperty('title')) {
+      this._templateChildHtml3(
+        newNote,
+        '.cmd-title',
+        'title',
+        this.#getTitle(note)
+      );
+    }
     const ulEl = newNote.querySelector('.cmd-ul');
     note.note.forEach((line) => {
-      ulEl.appendChild(this.#createNoteItem(data, line));
+      ulEl.appendChild(this.#createNoteItem(data, note, line));
     });
     this.#setupCopyBtns(newNote);
     return newNote;
   }
 
-  #createNoteItem(data, line) {
+  #getTitle(note) {
+    return Array.isArray(note.title) ? note.title.join('\n<br>') : note.title;
+  }
+
+  #createNoteItem(data, note, line) {
     const noteItemEl = this._getParentElement('template-cmd-item', 'div');
     const newNoteItem = this._getNewParent(noteItemEl);
     const noteTextEl = newNoteItem.querySelector('.cmd-item-note');
     const injectText = this.#injector.inject(line, data.inject);
-    this._templateHtml(noteTextEl, 'note', injectText);
+    const beautified = this.#beautifier.beautify(note, injectText);
+    this.#templateElement(note, noteTextEl, beautified);
     noteTextEl.classList.add('code');
     return newNoteItem;
+  }
+
+  #templateElement(note, noteTextEl, text) {
+    if (note.hasOwnProperty('content') === false) {
+      this._templateHtml(noteTextEl, 'note', text);
+    } else {
+      if (note.content === 'text')
+        this._templateElText(noteTextEl, 'note', text);
+      else if (note.content === 'html')
+        this._templateHtml(noteTextEl, 'note', text);
+    }
   }
 
   #setupCopyBtns(newNote) {

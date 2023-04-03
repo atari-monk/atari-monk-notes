@@ -15,16 +15,24 @@ export class NoteView extends View {
   #commandNoteView;
   #commandNoteAsideView;
   #injector;
+  #beautifier;
 
-  constructor(injector) {
+  constructor(injector, beautifier) {
     super();
     this.#injector = injector;
+    this.#beautifier = beautifier;
     this.#noteView = new TextNoteView(this.#injector);
     this.#noteAsideView = new NoteAsideView(this.#injector);
     this.#asideView = new AsideView();
     this.#asideNoteView = new AsideNoteView();
-    this.#commandNoteView = new CommandNoteView(this.#injector);
-    this.#commandNoteAsideView = new CommandNoteAsideView(this.#injector);
+    this.#commandNoteView = new CommandNoteView(
+      this.#injector,
+      this.#beautifier
+    );
+    this.#commandNoteAsideView = new CommandNoteAsideView(
+      this.#injector,
+      this.#beautifier
+    );
   }
 
   createContent(data) {
@@ -43,8 +51,8 @@ export class NoteView extends View {
           if (note.aside.hasOwnProperty('paramKey')) {
             newNote = this.#commandNoteAsideView.createContent(
               data,
-              note,
-              this.#asideView.getTextParams(data, note)
+              this.#asideView.getTextParams(data, note),
+              note
             );
           }
           if (note.aside.hasOwnProperty('isDetail') && note.aside.isDetail) {

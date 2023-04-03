@@ -55,6 +55,15 @@ export class View {
     );
   }
 
+  _templateChildHtml3(element, selector, template, data) {
+    const childEl = element.querySelector(selector);
+    childEl.innerHTML = childEl.innerHTML.replace(
+      new RegExp(`{%${template.toUpperCase()}%}`),
+      data
+    );
+    childEl.classList.remove('hide');
+  }
+
   _templateLink(element, template, data, selector = 'a') {
     const linkEl = element.querySelector(selector);
     linkEl.setAttribute('href', data.link);

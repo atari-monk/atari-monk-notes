@@ -1,12 +1,23 @@
 @media (min-width: 1280px) and (max-width: 1920px) {
   :root {
-    --inline-size: 100ch;
+    --inline-size: 70ch;
+  }
+
+  .code {
+    font-family: 'Courier New', Courier, monospace;
+    word-break: break-all;
+    white-space: pre;
   }
 }
 
 @media (min-width: 100px) and (max-width: 360px) {
   :root {
     --inline-size: 40ch;
+  }
+
+  .code {
+    font-family: 'Courier New', Courier, monospace;
+    word-break: break-all;
   }
 }
 
@@ -39,11 +50,6 @@
   .inline-text {
     inline-size: var(--inline-size);
     overflow-wrap: break-word;
-  }
-
-  .code {
-    font-family: 'Courier New', Courier, monospace;
-    word-break: break-all;
   }
 
   .tab {

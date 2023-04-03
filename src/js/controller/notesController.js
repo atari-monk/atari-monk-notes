@@ -8,6 +8,7 @@ import descriptionView from './../view/descriptionView.js';
 import preconditionView from './../view/preconditionView.js';
 import debugView from './../view/debugView.js';
 import { Injector } from './../tool/injector.js';
+import { Beautifier } from './../tool/beautifier.js';
 
 class NotesController extends Controller {
   constructor() {
@@ -27,7 +28,7 @@ class NotesController extends Controller {
       data.hasOwnProperty('isDebugViewOn') &&
         data.isDebugViewOn &&
         debugView.createContent();
-      new NoteView(new Injector()).createContent(data);
+      new NoteView(new Injector(), new Beautifier()).createContent(data);
     } catch (err) {
       console.log(err);
     }
