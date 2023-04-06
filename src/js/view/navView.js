@@ -5,10 +5,11 @@ import detectOsView from '../view/detectOsView.js';
 export class NavView extends View {
   #navList;
 
-  createContent(data) {
+  createContent(data, isOnlyHomeLink = false) {
     const nav = this.#createNav();
     this.#navList = nav.querySelector('.nav-ul');
-    this.#createNavLinks(data);
+    this.#createHomeLink(data);
+    isOnlyHomeLink === false && this.#createPageSectionLinks(data);
     document.body.appendChild(this.#createTitle(data));
     document.body.appendChild(nav);
     document.body.appendChild(detectOsView.createContent());
@@ -26,28 +27,27 @@ export class NavView extends View {
     return this._getNewParent(this._getParentElement('template-nav', '.nav'));
   }
 
-  #createNavLinks(data) {
-    data.nav.forEach((navData) => {
+  #createHomeLink(data) {
+    const navData = data.nav.filter(
+      (d) => d.hasOwnProperty('link') && d.link === 'home'
+    )[0];
+    if (navData === undefined) return;
+    const newNavItem = this._getNewParent(
+      this._getParentElement('template-nav-item', '.nav-item')
+    );
+    this.#createHomePageLink(newNavItem, navData);
+    this.#navList.appendChild(newNavItem);
+  }
+
+  #createPageSectionLinks(data) {
+    const nav = data.nav.filter((d) => d.hasOwnProperty('link') === false);
+    nav.forEach((navData) => {
       const newNavItem = this._getNewParent(
         this._getParentElement('template-nav-item', '.nav-item')
       );
-      if (this.#isNotSectionLink(navData)) {
-        if (this.#isHomeLink(navData))
-          this.#createHomePageLink(newNavItem, navData);
-        else this.#createOtherPageLink(newNavItem, navData);
-      } else {
-        this.#createPageSectionLink(newNavItem, navData);
-      }
+      this.#createPageSectionLink(newNavItem, navData);
       this.#navList.appendChild(newNavItem);
     });
-  }
-
-  #isNotSectionLink(navData) {
-    return navData.hasOwnProperty('link') === true;
-  }
-
-  #isHomeLink(navData) {
-    return navData.link === 'home';
   }
 
   #createHomePageLink(newNavItem, navData) {
@@ -56,18 +56,6 @@ export class NavView extends View {
       'nav_link',
       {
         link: HOME,
-        text: navData.title,
-      },
-      '.nav-item-link'
-    );
-  }
-
-  #createOtherPageLink(newNavItem, navData) {
-    this._templateLink(
-      newNavItem,
-      'nav_link',
-      {
-        link: navData.link,
         text: navData.title,
       },
       '.nav-item-link'
