@@ -11,6 +11,7 @@ export class NavView extends View {
     this.#createHomeLink(data);
     isOnlyHomeLink === false && this.#createPageSectionLinks(data);
     document.body.appendChild(this.#createTitle(data));
+    this.#setPageMetaTitle(data);
     document.body.appendChild(nav);
     document.body.appendChild(detectOsView.createContent());
   }
@@ -72,6 +73,12 @@ export class NavView extends View {
       },
       '.nav-item-link'
     );
+  }
+
+  #setPageMetaTitle(data) {
+    if (document.title != data.title) {
+      document.title = data.title;
+    }
   }
 }
 
