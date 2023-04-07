@@ -1,0 +1,97 @@
+:root {
+  --inline-size: 66ch;
+}
+
+a {
+  color: rgb(42, 206, 42);
+}
+
+.hide {
+  display: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.inline-text {
+  inline-size: var(--inline-size);
+  overflow-wrap: break-word;
+}
+
+.card-img-windows {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.card-img-android {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.card-img-unknown {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+@media (max-width: 1920px) {
+  body {
+    font-family: 'Arial';
+    background-color: black;
+    color: rgb(42, 206, 42);
+    line-height: 1.6;
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 2rem);
+  }
+
+  li {
+    padding: 0.7vw;
+  }
+}
+
+@media (max-width: 1280px) {
+  body {
+    font-family: 'Arial';
+    background-color: black;
+    color: rgb(42, 206, 42);
+    line-height: 1.6;
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.9rem);
+  }
+
+  li {
+    padding: 1vw;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  body {
+    font-family: 'Arial';
+    background-color: black;
+    color: rgb(42, 206, 42);
+    line-height: 1.6;
+    font-size: clamp(0.5rem, 0.75rem + 2vw, 1rem);
+  }
+
+  li {
+    padding: 1.75vw;
+  }
+}
+
+@media (max-width: 450px) and (orientation: portrait) {
+  body {
+    font-family: 'Arial';
+    background-color: black;
+    color: rgb(42, 206, 42);
+    line-height: 1.6;
+    font-size: clamp(0.5rem, 0.75rem + 2.5vw, 1.2rem);
+  }
+
+  li {
+    padding: 3.2vw;
+  }
+}
