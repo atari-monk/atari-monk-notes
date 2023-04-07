@@ -23,6 +23,8 @@ class NotesRouter extends Controller {
       if (data.hasOwnProperty('isKey') === false || data.isKey === false)
         this.#notesController.controlNotes(data);
       else this.#keyNotesController.controlNotes(data);
+      if (data.hasOwnProperty('isScrollToBottom') && data.isScrollToBottom)
+        navView._scrollToBottom();
     } catch (err) {
       console.log(err);
     }
