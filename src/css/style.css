@@ -215,15 +215,15 @@ a {
     font-family: 'Arial';
     background-color: black;
     color: rgb(42, 206, 42);
-    line-height: 1.6;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
+    line-height: 1.8;
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.1rem);
   }
 
   .code {
     font-family: 'Courier New', Courier, monospace;
     word-break: break-all;
     white-space: pre;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 0.8rem);
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
   }
 
   .btn-off {
@@ -231,7 +231,7 @@ a {
     padding: 5px;
     cursor: pointer;
     color: black;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 0.75rem);
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
   }
 
   .btn-on {
@@ -240,7 +240,11 @@ a {
     cursor: pointer;
     color: black;
     font-weight: bold;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 0.75rem);
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
+  }
+
+  li {
+    padding: 1.6vw;
   }
 }
 
@@ -249,15 +253,15 @@ a {
     font-family: 'Arial';
     background-color: black;
     color: rgb(42, 206, 42);
-    line-height: 1.6;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 0.75rem);
+    line-height: 1.9;
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.1rem);
   }
 
   .code {
     font-family: 'Courier New', Courier, monospace;
     word-break: break-all;
     white-space: pre;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 0.7rem);
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
   }
 
   .btn-off {
@@ -265,7 +269,7 @@ a {
     padding: 5px;
     cursor: pointer;
     color: black;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 0.7rem);
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
   }
 
   .btn-on {
@@ -274,6 +278,10 @@ a {
     cursor: pointer;
     color: black;
     font-weight: bold;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 0.7rem);
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
+  }
+
+  li {
+    padding: 3.2vw;
   }
 }
