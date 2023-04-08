@@ -44,7 +44,9 @@ export class CommandNoteAsideView extends View {
     const formatText = line.format(...textParams);
     const injectText = this.#injector.inject(formatText, data.inject);
     const beautified = this.#beautifier.beautify(note, injectText);
-    this.#templateElement(note, noteTextEl, beautified);
+    const mystep = beautified.replace(new RegExp(' < ', 'g'), '<');
+    const mystep2 = mystep.replace(new RegExp(' > ', 'g'), '>');
+    this.#templateElement(note, noteTextEl, mystep2);
     noteTextEl.classList.add('code');
     return newNoteItem;
   }

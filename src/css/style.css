@@ -37,23 +37,11 @@ a {
   color: var(--font-color);
 }
 
-.note-icon img {
-  width: 35px;
-  cursor: pointer;
-  margin-left: 5px;
-}
-
 .cmd-item-copy {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.cmd-item-icon {
-  outline: var(--outline);
-  width: 20px;
-  cursor: pointer;
 }
 
 .card-img-windows {
@@ -155,7 +143,7 @@ a {
     font-family: 'Courier New', Courier, monospace;
     word-break: break-all;
     white-space: pre;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.5rem);
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.6rem);
   }
 
   .btn-off {
@@ -173,6 +161,20 @@ a {
     color: black;
     font-weight: bold;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.5rem);
+  }
+
+  .cmd-item-icon {
+    width: 3vw;
+    cursor: pointer;
+  }
+
+  .note-icon img {
+    width: 3vw;
+    cursor: pointer;
+  }
+
+  li {
+    padding: 0.5vw;
   }
 }
 
@@ -189,7 +191,7 @@ a {
     font-family: 'Courier New', Courier, monospace;
     word-break: break-all;
     white-space: pre;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.2rem);
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 0.9rem);
   }
 
   .btn-off {
@@ -207,6 +209,20 @@ a {
     color: black;
     font-weight: bold;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.1rem);
+  }
+
+  .cmd-item-icon {
+    width: 2vw;
+    cursor: pointer;
+  }
+
+  .note-icon img {
+    width: 2vw;
+    cursor: pointer;
+  }
+
+  li {
+    padding: 0.5vw;
   }
 }
 
@@ -223,7 +239,7 @@ a {
     font-family: 'Courier New', Courier, monospace;
     word-break: break-all;
     white-space: pre;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 0.9rem);
   }
 
   .btn-off {
@@ -241,6 +257,16 @@ a {
     color: black;
     font-weight: bold;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
+  }
+
+  .cmd-item-icon {
+    width: 3vw;
+    cursor: pointer;
+  }
+
+  .note-icon img {
+    width: 3vw;
+    cursor: pointer;
   }
 
   li {
@@ -261,7 +287,7 @@ a {
     font-family: 'Courier New', Courier, monospace;
     word-break: break-all;
     white-space: pre;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
+    font-size: clamp(0.1rem, 0.75rem + 1.5vw, 0.5rem);
   }
 
   .btn-off {
@@ -279,6 +305,16 @@ a {
     color: black;
     font-weight: bold;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
+  }
+
+  .cmd-item-icon {
+    width: 4vw;
+    cursor: pointer;
+  }
+
+  .note-icon img {
+    width: 4vw;
+    cursor: pointer;
   }
 
   li {

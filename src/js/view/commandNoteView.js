@@ -44,7 +44,9 @@ export class CommandNoteView extends View {
     const noteTextEl = newNoteItem.querySelector('.cmd-item-note');
     const injectText = this.#injector.inject(line, data.inject);
     const beautified = this.#beautifier.beautify(note, injectText);
-    this.#templateElement(note, noteTextEl, beautified);
+    const mystep = beautified.replace(new RegExp(' < ', 'g'), '<');
+    const mystep2 = mystep.replace(new RegExp(' > ', 'g'), '>');
+    this.#templateElement(note, noteTextEl, mystep2);
     noteTextEl.classList.add('code');
     return newNoteItem;
   }
