@@ -39,7 +39,7 @@ export class TextNoteView extends View {
       noteTextEl.classList.add('hide');
       return;
     }
-    const fullNote = note.note?.join('\n<br>');
+    const fullNote = Array.isArray(note.note) ? note.note?.join('\n<br>') : note.note;
     const noteInjected = this.#injector.inject(fullNote, inject);
     this._templateHtml(noteTextEl, 'note', noteInjected);
     this._centerText(note, noteTextEl);
