@@ -1,9 +1,13 @@
 :root {
   --inline-size: 66ch;
+  /* --font-color: rgb(42, 206, 42); */
+  --font-color: rgb(255, 255, 255);
+  --btn-detail-on: rgb(163, 157, 157);
+  --btn-detail-off: rgb(121, 115, 115);
 }
 
 a {
-  color: rgb(42, 206, 42);
+  color: var(--font-color);
 }
 
 .hide {
@@ -27,10 +31,6 @@ a {
 
 .tab {
   margin-left: 20px;
-}
-
-.top-space {
-  margin-top: 30px;
 }
 
 .debug-log {
@@ -126,7 +126,6 @@ a {
   z-index: 9999;
   background-color: black;
   color: white;
-  padding: 10% 0;
   text-align: center;
 }
 
@@ -134,7 +133,7 @@ a {
   body {
     font-family: 'Arial';
     background-color: black;
-    color: rgb(42, 206, 42);
+    color: var(--font-color);
     line-height: 1.6;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 2rem);
   }
@@ -147,7 +146,7 @@ a {
   }
 
   .btn-off {
-    background-color: rgb(50, 182, 14);
+    background-color: var(--btn-detail-off);
     padding: 5px;
     cursor: pointer;
     color: black;
@@ -155,11 +154,10 @@ a {
   }
 
   .btn-on {
-    background-color: rgb(127, 235, 97);
+    background-color: var(--btn-detail-on);
     padding: 5px;
     cursor: pointer;
     color: black;
-    font-weight: bold;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.5rem);
   }
 
@@ -182,7 +180,7 @@ a {
   body {
     font-family: 'Arial';
     background-color: black;
-    color: rgb(42, 206, 42);
+    color: var(--font-color);
     line-height: 1.6;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.4rem);
   }
@@ -191,11 +189,11 @@ a {
     font-family: 'Courier New', Courier, monospace;
     word-break: break-all;
     white-space: pre;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 0.9rem);
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.1rem);
   }
 
   .btn-off {
-    background-color: rgb(50, 182, 14);
+    background-color: var(--btn-detail-off);
     padding: 5px;
     cursor: pointer;
     color: black;
@@ -203,11 +201,10 @@ a {
   }
 
   .btn-on {
-    background-color: rgb(127, 235, 97);
+    background-color: var(--btn-detail-on);
     padding: 5px;
     cursor: pointer;
     color: black;
-    font-weight: bold;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.1rem);
   }
 
@@ -230,7 +227,7 @@ a {
   body {
     font-family: 'Arial';
     background-color: black;
-    color: rgb(42, 206, 42);
+    color: var(--font-color);
     line-height: 1.8;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.1rem);
   }
@@ -243,7 +240,7 @@ a {
   }
 
   .btn-off {
-    background-color: rgb(50, 182, 14);
+    background-color: var(--btn-detail-off);
     padding: 5px;
     cursor: pointer;
     color: black;
@@ -251,11 +248,10 @@ a {
   }
 
   .btn-on {
-    background-color: rgb(127, 235, 97);
+    background-color: var(--btn-detail-on);
     padding: 5px;
     cursor: pointer;
     color: black;
-    font-weight: bold;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
   }
 
@@ -278,7 +274,7 @@ a {
   body {
     font-family: 'Arial';
     background-color: black;
-    color: rgb(42, 206, 42);
+    color: var(--font-color);
     line-height: 1.9;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.1rem);
   }
@@ -291,7 +287,7 @@ a {
   }
 
   .btn-off {
-    background-color: rgb(50, 182, 14);
+    background-color: var(--btn-detail-off);
     padding: 5px;
     cursor: pointer;
     color: black;
@@ -299,11 +295,10 @@ a {
   }
 
   .btn-on {
-    background-color: rgb(127, 235, 97);
+    background-color: var(--btn-detail-on);
     padding: 5px;
     cursor: pointer;
     color: black;
-    font-weight: bold;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
   }
 

@@ -1,9 +1,11 @@
 :root {
   --inline-size: 66ch;
+  /* --font-color: rgb(42, 206, 42); */
+  --font-color: rgb(255, 255, 255);
 }
 
 a {
-  color: rgb(42, 206, 42);
+  color: var(--font-color);
 }
 
 .hide {
@@ -44,7 +46,7 @@ a {
   body {
     font-family: 'Arial';
     background-color: black;
-    color: rgb(42, 206, 42);
+    color: var(--font-color);
     line-height: 1.6;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 2rem);
   }
@@ -58,7 +60,7 @@ a {
   body {
     font-family: 'Arial';
     background-color: black;
-    color: rgb(42, 206, 42);
+    color: var(--font-color);
     line-height: 1.6;
     font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.9rem);
   }
@@ -72,7 +74,7 @@ a {
   body {
     font-family: 'Arial';
     background-color: black;
-    color: rgb(42, 206, 42);
+    color: var(--font-color);
     line-height: 1.6;
     font-size: clamp(0.5rem, 0.75rem + 2vw, 1rem);
   }
@@ -86,7 +88,7 @@ a {
   body {
     font-family: 'Arial';
     background-color: black;
-    color: rgb(42, 206, 42);
+    color: var(--font-color);
     line-height: 1.6;
     font-size: clamp(0.5rem, 0.75rem + 2.5vw, 1.2rem);
   }
