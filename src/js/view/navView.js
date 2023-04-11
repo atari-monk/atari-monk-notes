@@ -5,11 +5,11 @@ import detectOsView from '../view/detectOsView.js';
 export class NavView extends View {
   #navList;
 
-  createContent(data, isOnlyHomeLink = false) {
+  createContent(data) {
     const nav = this.#createNav();
     this.#navList = nav.querySelector('.nav-ul');
     this.#createHomeLink(data);
-    isOnlyHomeLink === false && this.#createPageSectionLinks(data);
+    this.#createPageSectionLinks(data);
     document.body.appendChild(this.#createTitle(data));
     this.#setPageMetaTitle(data);
     document.body.appendChild(nav);

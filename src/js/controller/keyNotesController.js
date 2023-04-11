@@ -11,7 +11,7 @@ import { Beautifier } from './../tool/beautifier.js';
 
 export class KeyNotesController extends Controller {
   async controlNotes(data) {
-    navView.createContent(data, true);
+    navView.createContent(data);
     const keyView = new KeyView();
     keyView.createContent(data);
     keyView.protect();
