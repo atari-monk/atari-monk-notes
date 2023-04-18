@@ -24,7 +24,7 @@ export class TextNoteView extends View {
     const noteTextEl = newNote.querySelector('.note-note');
     this.#setNote(note, inject, noteTextEl);
     this._setAttribute(note, 'navId', newNote, 'id');
-    this._hideElement(note, 'isCopy', newNote, '.note-icon', 'hide');
+    this._showElement(note, 'isCopy', newNote, '.note-icon');
     if (note.hasOwnProperty('isCode') && note.isCode)
       noteTextEl.classList.add('code');
     return newNote;

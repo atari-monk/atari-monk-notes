@@ -96,6 +96,13 @@ export class View {
     childEl.classList.add(cssClass);
   }
 
+  _showElement(data, propName, parentEl, selector, cssClass = 'hide') {
+    if (data.hasOwnProperty(propName) === false || data[propName] === false)
+      return;
+    const childEl = parentEl.querySelector(selector);
+    childEl.classList.remove(cssClass);
+  }
+
   _createBr() {
     return document.createElement('br');
   }
