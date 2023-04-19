@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "nr": 1,
+      "title": "Title 1",
+      "t1": "t1 value 1",
+      "t2": "t2 value 1"
+    },
+    {
+      "nr": 2,
+      "title": "Title 2",
+      "t1": "t1 value 2",
+      "t2": "t2 value 2"
+    },
+    {
+      "nr": 3,
+      "title": "Title 3",
+      "t1": "t1 value 3",
+      "t2": "t2 value 3"
+    }
+  ]
+}

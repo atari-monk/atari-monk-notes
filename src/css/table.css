@@ -1,0 +1,68 @@
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  color: #fff;
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+thead {
+  background-color: #555;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #444;
+}
+
+/* Hover effect */
+tbody tr:hover {
+  background-color: #555;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    content: attr(data-column);
+  }
+}
