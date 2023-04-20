@@ -2,6 +2,11 @@ param (
   [string]$commitMessage
 )
 
+if (!$commitMessage) {
+  Write-Error "Commit message is required. Please provide a commit message as an argument."
+  exit
+}
+
 $repoPath = "C:\atari-monk\Code\js-notes-templated"
 $scriptPath = "C:\atari-monk\Code\js-notes-templated\script"
 
