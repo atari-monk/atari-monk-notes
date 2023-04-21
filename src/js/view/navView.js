@@ -6,6 +6,7 @@ export class NavView extends View {
   #navList;
 
   createContent(data) {
+    if (data.hasOwnProperty('nav') === false) return;
     const nav = this.#createNav();
     this.#navList = nav.querySelector('.nav-ul');
     this.#createHomeLink(data);

@@ -6,6 +6,7 @@ import { AsideView } from './asideView.js';
 import { AsideNoteView } from './asideNoteView.js';
 import { CommandNoteView } from './commandNoteView.js';
 import { CommandNoteAsideView } from './commandNoteAsideView.js';
+import { ContentView } from './contentView.js';
 
 export class NoteView extends View {
   #noteView;
@@ -14,6 +15,7 @@ export class NoteView extends View {
   #asideNoteView;
   #commandNoteView;
   #commandNoteAsideView;
+  #contentView;
   #injector;
   #beautifier;
 
@@ -33,6 +35,7 @@ export class NoteView extends View {
       this.#injector,
       this.#beautifier
     );
+    this.#contentView = new ContentView();
   }
 
   createContent(data) {
@@ -62,6 +65,8 @@ export class NoteView extends View {
         } else {
           newNote = this.#commandNoteView.createContent(data, note);
         }
+      } else if (this.#isType(note, 'content')) {
+        newNote = this.#contentView.createContent(note);
       } else {
         newNote = this.#getNoteAsideView(note, newNote, data);
       }
