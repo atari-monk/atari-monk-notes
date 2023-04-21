@@ -1,30 +1,18 @@
-function parseData(data) {
-  const links = [];
+const data =
+  "1. Intro. 0-7.{%BR%}2. Instal Node.js. 7-13.{%BR%}3. <a href='#about'>About Node.js</a>. 13-21.{%BR%}4. <a href='#cli'>Node.js Cli</a>. 21-27.{%BR%}5. <a href='#core-modules'>Using Core Modules</a>. 27-33.{%BR%}6. <a href='#io-sync'>Read/Write Files</a>. 33-41.{%BR%}7. <a href='#blocking'>Blocking and non-blocking: Asynchronous nature of node.js</a>. 41-51.{%BR%}8. <a href='#io-async'>Read/Write Files Asynchronously</a>. 51-1:05.{%BR%}9. <a href='#web-server'>Creating a Simple Web Server</a>. 1:05-1:18.{%BR%}10. <a href='#routing'>Routing</a>. 1:18-1:33.{%BR%}11. <a href='#simple-api'>Building a (VERY) Simple API</a>. 1:33-1:48.{%BR%}12. Html templating: Buildding the templates. 1:48-2:02.{%BR%}13. <a href='#filling-templates'>Html templating: Filling the templates</a>. 2:02-2:22.{%BR%}14. <a href='#parsing-variables'>Parsing variables from urls</a>. 2:22-2:33.{%BR%}15. <a href='#own-modules'>Using Modules 2: Our Own Modules</a>. 2:33-2:40.{%BR%}16. <a href='#npm'>Introduction to npm and package.json file</a>. 2:40-2:45.{%BR%}17. <a href='#package-installs'>Types of packages and installs</a>. 2:45-2:58.{%BR%}18. <a href='#third-party'>Using modules 3: 3rd party modules</a>. 2:58-3:06.{%BR%}19. <a href='#versioning'>Package Versioning And Updating</a>. 3:06-3:18.{%BR%}20. <a href='#prettier'>Setting up Prettier in VSCode</a>. 3:18-3:30.{%BR%}21. Recap and what's next. 3:30-3:32.";
 
-  // Split the data into lines
-  const lines = data.split('{%BR%}');
-
-  // Loop through each line
-  for (const line of lines) {
-    // Extract the link, title, and time from the line
-    const regex = /<a href=#(.+)>(.+)<\/a> (.+)/;
-    const match = line.match(regex);
-    if (match) {
-      const link = match[1];
-      const title = match[2];
-      const time = match[3];
-
-      // Add a new link object to the links array
-      links.push({ link, title, time });
-    }
+const links = [];
+const sections = data.split('{%BR%}');
+for (const section of sections) {
+  const match = section.match(/<a href='#(.*?)'>(.*?)<\/a>\. (\d.+)$/);
+  if (match) {
+    const link = match[1];
+    const title = match[2];
+    const time = match[3];
+    links.push({ link, title, time });
   }
-
-  // Return the links array in a JSON object with a "links" property
-  return { links };
 }
 
-const data =
-  '5. <a href=#naming_rules>Naming Rules.</a> 35.5-39.5.{%BR%}6. <a href=#importing_assets>Importing Assets.</a> 39.5-41.{%BR%}7. <a href=#post_processing>Post Processing.</a> 41-56.{%BR%}8. <a href=#character_controller>Character Controller.</a> 56-1:15.{%BR%}9. <a href=#character_visual_rotation>Character Visual, Rotation.</a> 1:15-1:23.{%BR%}10. <a href=#animations>Animations.</a> 1:23-1:43.{%BR%}11. <a href=#cinemachine>Cinemachine.</a> 1:43-1:49.{%BR%}12. <a href=#input_system_refactor>Input System Refactor.</a> 1:49-2:04.{%BR%}13. <a href=#collision_detection>Collision Detection.</a> 2:04-2:17.{%BR%}14. <a href=#clear_counter>Clear Counter.</a> 2:17-02:38.{%BR%}15. <a href=#interact_action>Interact Action, C# Events.</a> 02:38-02:48.{%BR%}16. <a href=#singleton>Selected Counter Visual, Singleton Pattern.</a> 02:48-03:11.{%BR%}17. <a href=#kitchen_object>Kitchen Object, Scriptable Objects.</a> 03:11-03:25.{%BR%}18. <a href=#player_pickup>Player Pick up, C# Interfaces.</a> 03:25-03:38.{%NAV2%}';
-
-const jsonData = parseData(data);
-console.log(JSON.stringify(jsonData, null, 2));
+const result = { links };
+const jsonResult = JSON.stringify(result, null, 2);
+console.log(jsonResult);
