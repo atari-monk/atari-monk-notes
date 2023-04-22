@@ -16,11 +16,11 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "file-dialog",
+      "name": "server",
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "./server-src/file-dialog.js",
+      "program": "./server-src/server.js",
       "cwd": "${workspaceFolder}",
     }
   ]

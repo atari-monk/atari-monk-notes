@@ -1,0 +1,15 @@
+<form method="POST" action="/processData">
+  <div>
+    <label for="isKey">Is Key:</label>
+    <input type="checkbox" id="isKey" name="isKey" <% if (data.isKey) { %>checked<% } %>>
+  </div>
+  <div>
+    <label for="isScrollToBottom">Is Scroll To Bottom:</label>
+    <input type="checkbox" id="isScrollToBottom" name="isScrollToBottom" <% if (data.isScrollToBottom) { %>checked<% } %>>
+  </div>
+  <div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="<%= data.title %>">
+  </div>
+  <button type="submit">Submit</button>
+</form>

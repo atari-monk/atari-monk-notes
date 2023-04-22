@@ -2,14 +2,18 @@ const fs = require('fs');
 const path = require('path');
 
 class FileDialog {
+  #dirs;
   constructor(root) {
     this.root = root;
+    this.#dirs = [];
   }
 
+  //this handles directories
   handleRequest(req, res) {
     let fileName = req.query.directoryPath;
     if (fileName === undefined) fileName = this.root;
-    fileName = fileName.replace(/\\/g, '/');
+    //fileName = fileName.replace(/\\/g, '/');
+    this.#dirs.push(fileName);
     fs.readdir(fileName, (err, files) => {
       if (err) {
         console.error(`Error reading directory: ${fileName}`);
@@ -22,11 +26,11 @@ class FileDialog {
       const types = filepaths.map((filepath) => {
         return fs.statSync(filepath).isDirectory() ? 'directory' : 'file';
       });
-
       res.render('file-dialog', { filepaths, files, types });
     });
   }
 
+  //this handles files
   handleSelected(req, res) {
     let fileName = req.query.file;
     if (fileName === undefined) {
@@ -34,8 +38,10 @@ class FileDialog {
       res.status(400).send('Error! No file name provided.');
       return;
     }
-    console.log('File path:', path.join(this.root, fileName));
-    res.send(`File path: ${path.join(this.root, fileName)}`);
+    const filePath = path.join(this.#dirs.pop(), fileName);
+    console.log('FileDialog -> File name:', fileName);
+    console.log('FileDialog -> File path:', filePath);
+    res.render('file-menu', { fileName, filePath });
   }
 }
 exports.FileDialog = FileDialog;
