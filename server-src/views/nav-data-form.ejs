@@ -1,0 +1,17 @@
+<form action="/update-nav" method="POST">
+  <% for (var i = 0; i < nav.length; i++) { %>
+    <div>
+      <label for="title_<%= i %>">Title:</label>
+      <input type="text" id="title_<%= i %>" name="title_<%= i %>" value="<%= nav[i].title %>">
+      <label for="link_<%= i %>">Link:</label>
+      <input type="text" id="link_<%= i %>" name="link_<%= i %>" value="<%= nav[i].link %>">
+    </div>
+  <% } %>
+  <div>
+    <label for="new_title">New Title:</label>
+    <input type="text" id="new_title" name="new_title">
+    <label for="new_link">New Link:</label>
+    <input type="text" id="new_link" name="new_link">
+  </div>
+  <button type="submit">Save Changes</button>
+</form>
