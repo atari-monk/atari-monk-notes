@@ -3,6 +3,7 @@ const { FileDialog } = require('./FileDialog');
 const bodyParser = require('body-parser');
 const { TopDataEditor } = require('./TopDataEditor');
 const { NavDataEditor } = require('./NavDataEditor');
+const { SourceDataEditor } = require('./SourceDataEditor');
 
 const expressConfig = new ExpressConfig();
 const fileDialog = new FileDialog(
@@ -10,6 +11,7 @@ const fileDialog = new FileDialog(
 );
 const topDataEditor = new TopDataEditor();
 const navDataEditor = new NavDataEditor();
+const sourceDataEditor = new SourceDataEditor();
 
 expressConfig.app.get('/', fileDialog.handleRequest.bind(fileDialog));
 expressConfig.app.get(
@@ -31,5 +33,13 @@ expressConfig.app.get(
 expressConfig.app.post(
   '/processForm/nav-data',
   navDataEditor.save.bind(navDataEditor)
+);
+expressConfig.app.get(
+  '/files/selected/edit-source-data',
+  sourceDataEditor.edit.bind(sourceDataEditor)
+);
+expressConfig.app.post(
+  '/processForm/source-data',
+  sourceDataEditor.save.bind(sourceDataEditor)
 );
 expressConfig.start(process.env.PORT || 3000);

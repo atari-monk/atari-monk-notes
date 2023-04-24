@@ -32,17 +32,23 @@ class SourceDataEditor {
 
   async save(req, res) {
     const { source } = this.serverData;
-    const {
-      new_title,
-      new_link,
-      ...updatedLinks
-    } = req.body;
+    const { new_text, new_link, ...updatedLinks } = req.body;
 
     // Update existing links
-    
+    for (let i = 0; i < source.links.length; i++) {
+      const link = source.links[i];
+      if (updatedLinks[`link_${i}`] !== undefined) {
+        link.text = updatedLinks[`link_${i}`];
+      }
+      if (updatedLinks[`text_${i}`] !== undefined) {
+        link.link = updatedLinks[`text_${i}`];
+      }
+    }
 
     // Add new link
-    
+    if (new_text && new_link) {
+      source.links.push({ link: new_link, text: new_text });
+    }
 
     const jsonString = JSON.stringify(this.serverData);
     try {
