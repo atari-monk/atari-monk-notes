@@ -1,0 +1,29 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My EJS view</title>
+  </head>
+  <body>
+    <h1>Edit Description</h1>
+    <form action="/processForm/description-data" method="POST">
+      <label>
+        <input type="checkbox" name="isCenter" <% if (data.description.isCenter) { %>checked<% } %>>
+        Is Center
+      </label>
+      <br>
+      <label>
+        Description:
+        <% if (Array.isArray(data.description.description)) { %>
+          <% for (var i = 0; i < data.description.description.length; i++) { %>
+            <input type="text" name="description[]" value="<%= data.description.description[i] %>"><br>
+          <% } %>
+        <% } else { %>
+          <input type="text" name="description" value="<%= data.description.description %>"><br>
+        <% } %>
+      </label>
+      <br>
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
