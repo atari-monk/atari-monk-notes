@@ -31,9 +31,29 @@ class NavDataEditor {
   }
 
   async save(req, res) {
-    const { isKey, isScrollToBottom, title } = req.body;
-    // do something with the data
-   
+    const { nav } = this.serverData;
+    const {
+      new_title,
+      new_link,
+      ...updatedLinks
+    } = req.body;
+
+    // Update existing links
+    for (const i in nav) {
+      const linkData = updatedLinks[`link_${i}`];
+      if (linkData) {
+        nav[i].title = updatedLinks[`title_${i}`];
+        nav[i].link = linkData;
+      }
+    }
+
+    // Add new link
+    if (new_title && new_link) {
+      nav.push({ title: new_title, link: new_link });
+    } else if (new_title && new_link == false) {
+      nav.push({ title: new_title });
+    }
+
     const jsonString = JSON.stringify(this.serverData);
     try {
       await fs.writeFile(this.serverPath, jsonString);

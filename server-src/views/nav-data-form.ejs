@@ -1,10 +1,10 @@
-<form action="/update-nav" method="POST">
-  <% for (var i = 0; i < nav.length; i++) { %>
+<form method="POST" action="/processForm/nav-data">
+  <% for (var i = 0; i < data.nav.length; i++) { %>
     <div>
       <label for="title_<%= i %>">Title:</label>
-      <input type="text" id="title_<%= i %>" name="title_<%= i %>" value="<%= nav[i].title %>">
+      <input type="text" id="title_<%= i %>" name="title_<%= i %>" value="<%= data.nav[i].title %>">
       <label for="link_<%= i %>">Link:</label>
-      <input type="text" id="link_<%= i %>" name="link_<%= i %>" value="<%= nav[i].link %>">
+      <input type="text" id="link_<%= i %>" name="link_<%= i %>" value="<%= data.nav[i].link %>">
     </div>
   <% } %>
   <div>

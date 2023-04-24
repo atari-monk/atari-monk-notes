@@ -20,10 +20,16 @@ expressConfig.app.get(
   '/files/selected/edit-top-data',
   topDataEditor.edit.bind(topDataEditor)
 );
-expressConfig.app.post('/processForm/top-data', topDataEditor.save.bind(topDataEditor));
+expressConfig.app.post(
+  '/processForm/top-data',
+  topDataEditor.save.bind(topDataEditor)
+);
 expressConfig.app.get(
   '/files/selected/edit-nav-data',
-  topDataEditor.edit.bind(navDataEditor)
+  navDataEditor.edit.bind(navDataEditor)
 );
-expressConfig.app.post('/processForm/nav-data', navDataEditor.save.bind(navDataEditor));
+expressConfig.app.post(
+  '/processForm/nav-data',
+  navDataEditor.save.bind(navDataEditor)
+);
 expressConfig.start(process.env.PORT || 3000);
