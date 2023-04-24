@@ -1,0 +1,27 @@
+<form method="POST" action="/processForm/source-data">
+  <input type="hidden" name="navId" value="<%= data.source.navId %>">
+
+  <h2><%= data.source.title %></h2>
+
+  <% for (let i = 0; i < data.source.links.length; i++) { %>
+    <div>
+      <label for="link_<%= i %>">Link <%= i + 1 %> URL:</label>
+      <input type="text" id="link_<%= i %>" name="link_<%= i %>" value="<%= data.source.links[i].link %>">
+    </div>
+    <div>
+      <label for="text_<%= i %>">Link <%= i + 1 %> Text:</label>
+      <input type="text" id="text_<%= i %>" name="text_<%= i %>" value="<%= data.source.links[i].text %>">
+    </div>
+  <% } %>
+
+  <div>
+    <label for="new_link">New Link URL:</label>
+    <input type="text" id="new_link" name="new_link">
+  </div>
+  <div>
+    <label for="new_text">New Link Text:</label>
+    <input type="text" id="new_text" name="new_text">
+  </div>
+
+  <button type="submit">Save Changes</button>
+</form>
