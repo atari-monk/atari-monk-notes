@@ -22,9 +22,9 @@ class PreconditionsDataEditor extends editor.Editor {
         res.status(500).send('Error parsing data');
         return;
       }
-      const data = dataObj;
-      this.serverData = data;
-      res.render('preconditions-form', { data });
+      const precondition = dataObj.precondition;
+      this.serverData = dataObj;
+      res.render('preconditions-form', { precondition });
     } catch (err) {
       console.error(err);
       res
