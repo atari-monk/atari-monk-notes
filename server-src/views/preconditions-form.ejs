@@ -1,0 +1,11 @@
+<form action="/submit-form" method="POST">
+  <input type="hidden" name="navId" value="<%= precondition.navId %>">
+  <h3><%= precondition.title %></h3>
+  <% for (var i=0; i<precondition.list.length; i++) { %>
+    <div>
+      <label for="listItem<%= i %>">List Item <%= i+1 %></label>
+      <input type="text" name="list[]" id="listItem<%= i %>" value="<%= precondition.list[i] %>">
+    </div>
+  <% } %>
+  <button type="submit">Save</button>
+</form>

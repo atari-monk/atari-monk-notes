@@ -5,6 +5,7 @@ const { TopDataEditor } = require('./TopDataEditor');
 const { NavDataEditor } = require('./NavDataEditor');
 const { SourceDataEditor } = require('./SourceDataEditor');
 const { DescriptionDataEditor } = require('./DescriptionDataEditor');
+const { PreconditionsDataEditor } = require('./preconditions-data-editor');
 
 const expressConfig = new ExpressConfig();
 const fileDialog = new FileDialog(
@@ -16,6 +17,7 @@ const editors = [
   new NavDataEditor(),
   new SourceDataEditor(),
   new DescriptionDataEditor(),
+  new PreconditionsDataEditor()
 ];
 
 expressConfig.app.get('/', fileDialog.handleRequest.bind(fileDialog));
