@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form method="post" action="/processForm/content-data">
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="title" value="<%= content.title %>" /><br />
+
+  <% for (var i=0; i < content.links.length; i++) { %>
+    <label for="link<%= i %>">Link <%= i+1 %>:</label>
+    <input type="text" id="link<%= i %>" name="links[<%= i %>][link]" value="<%= content.links[i].link %>" /><br />
+
+    <label for="title<%= i %>">Title <%= i+1 %>:</label>
+    <input type="text" id="title<%= i %>" name="links[<%= i %>][title]" value="<%= content.links[i].title %>" /><br />
+
+    <label for="time<%= i %>">Time <%= i+1 %>:</label>
+    <input type="text" id="time<%= i %>" name="links[<%= i %>][time]" value="<%= content.links[i].time %>" /><br />
+  <% } %>
+
+  <div id="newlink">
+    <label for="linknew">New Link:</label>
+    <input type="text" id="linknew" name="newlink" /><br />
+
+    <label for="titlenew">New Title:</label>
+    <input type="text" id="titlenew" name="newtitle" /><br />
+
+    <label for="timenew">New Time:</label>
+    <input type="text" id="timenew" name="newtime" /><br />
+  </div>
+
+  <button type="button" id="addlink">Add New Link</button>
+
+  <input type="hidden" id="navId" name="navId" value="<%= content.navId %>" />
+  <input type="submit" value="Save" />
+</form>
+<script>
+  var linkIndex = <%%= content.links.length %%>;
+
+  document.getElementById("addlink").addEventListener("click", function() {
+    var newLinkDiv = document.createElement("div");
+    newLinkDiv.innerHTML = `
+      <label for="link${linkIndex}">New Link:</label>
+      <input type="text" id="link${linkIndex}" name="links[${linkIndex}][link]" value="" /><br />
+
+      <label for="title${linkIndex}">New Title:</label>
+      <input type="text" id="title${linkIndex}" name="links[${linkIndex}][title]" value="" /><br />
+
+      <label for="time${linkIndex}">New Time:</label>
+      <input type="text" id="time${linkIndex}" name="links[${linkIndex}][time]" value="" /><br />
+    `;
+    document.getElementById("newlink").appendChild(newLinkDiv);
+    linkIndex++;
+  });
+</script>
+</body>
+</html>

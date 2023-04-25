@@ -1,0 +1,11 @@
+<form method="POST" action="/files/selected/edit-content-data">
+  <label for="contentTitle">Select Content:</label>
+  <select name="contentTitle" id="contentTitle">
+    <% notes.forEach(function(note) {
+         if (note.type === 'content') { %>
+           <option value="<%= note.title %>"><%= note.title %></option>
+    <%   }
+       }); %>
+  </select>
+  <button type="submit">Submit</button>
+</form>

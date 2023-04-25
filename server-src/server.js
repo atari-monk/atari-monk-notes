@@ -6,6 +6,7 @@ const { NavDataEditor } = require('./NavDataEditor');
 const { SourceDataEditor } = require('./SourceDataEditor');
 const { DescriptionDataEditor } = require('./DescriptionDataEditor');
 const { PreconditionsDataEditor } = require('./preconditions-data-editor');
+const { ContentEditor } = require('./content-editor');
 
 const expressConfig = new ExpressConfig();
 const fileDialog = new FileDialog(
@@ -17,8 +18,10 @@ const editors = [
   new NavDataEditor(),
   new SourceDataEditor(),
   new DescriptionDataEditor(),
-  new PreconditionsDataEditor()
+  new PreconditionsDataEditor(),
 ];
+
+const selectiveEditors = [new ContentEditor()];
 
 expressConfig.app.get('/', fileDialog.handleRequest.bind(fileDialog));
 expressConfig.app.get(
@@ -28,6 +31,12 @@ expressConfig.app.get(
 
 for (const editor of editors) {
   expressConfig.app.get(editor.getEditRoute(), editor.edit.bind(editor));
+  expressConfig.app.post(editor.getSaveRoute(), editor.save.bind(editor));
+}
+
+for (const editor of selectiveEditors) {
+  expressConfig.app.get(editor.getSelectRoute(), editor.select.bind(editor));
+  expressConfig.app.post(editor.getEditRoute(), editor.edit.bind(editor));
   expressConfig.app.post(editor.getSaveRoute(), editor.save.bind(editor));
 }
 
