@@ -1,7 +1,10 @@
 const fs = require('fs').promises;
+const editor = require('./editor');
 
-class NavDataEditor {
+class NavDataEditor extends editor.Editor {
   constructor() {
+    super('C:/atari-monk/Code/js-notes-templated/src/json');
+    this.name = 'nav';
     this.serverData = null;
     this.serverPath = null;
   }
@@ -32,11 +35,7 @@ class NavDataEditor {
 
   async save(req, res) {
     const { nav } = this.serverData;
-    const {
-      new_title,
-      new_link,
-      ...updatedLinks
-    } = req.body;
+    const { new_title, new_link, ...updatedLinks } = req.body;
 
     // Update existing links
     for (const i in nav) {

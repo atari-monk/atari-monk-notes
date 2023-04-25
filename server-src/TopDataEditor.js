@@ -1,7 +1,10 @@
 const fs = require('fs').promises;
+const editor = require('./editor');
 
-class TopDataEditor {
+class TopDataEditor extends editor.Editor {
   constructor() {
+    super('C:/atari-monk/Code/js-notes-templated/src/json');
+    this.name = 'top';
     this.serverData = null;
     this.serverPath = null;
   }
