@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON File Creator</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="text"], textarea {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			margin-bottom: 20px;
+			font-size: 16px;
+			line-height: 24px;
+			resize: vertical;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		button:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+	<h1>JSON File Creator</h1>
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name">
+
+		<label for="json">JSON:</label>
+		<textarea id="json" name="json"></textarea>
+
+		<button type="button" id="save">Save</button>
+	</form>
+
+	<script>
+		$(document).ready(function() {
+			$('#save').click(function() {
+				var name = $('#name').val();
+				var json = $('#json').val();
+
+				if (name && json) {
+					var data = 'data:text/json;charset=utf-8,' + encodeURIComponent(json);
+					var link = document.createElement('a');
+					link.setAttribute('href', data);
+					link.setAttribute('download', name + '.json');
+					link.click();
+				} else {
+					alert('Please enter both a name and a JSON object.');
+				}
+			});
+		});
+	</script>
+</body>
+</html>
