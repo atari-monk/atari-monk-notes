@@ -7,20 +7,21 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "form-server",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "program": "./server-src/form-server.js"
-    },
-    {
-      "type": "node",
-      "request": "launch",
       "name": "server",
       "skipFiles": [
         "<node_internals>/**"
       ],
       "program": "./server-src/server.js",
+      "cwd": "${workspaceFolder}",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "api",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "./api-src/api.js",
       "cwd": "${workspaceFolder}",
     }
   ]
