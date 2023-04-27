@@ -1,89 +1,58 @@
-const express = require('express');
 const fs = require('fs/promises');
 const path = require('path');
 
-class JsonApi {
-  constructor(jsonPath) {
-    this.jsonPath = path.join(__dirname, jsonPath);
-    this.data = [];
+class FilesApi {
+  #rootFolder;
+
+  constructor() {
+    this.#rootFolder = 'C:\\atari-monk\\Code\\js-notes-templated\\src\\json';
   }
 
-  async load() {
-    try {
-      const jsonData = await fs.readFile(this.jsonPath, 'utf-8');
-      this.data = JSON.parse(jsonData);
-    } catch (err) {
-      console.error(err);
-    }
-  }
-
-  async save() {
-    try {
-      const jsonData = JSON.stringify(this.data, null, 2);
-      await fs.writeFile(this.jsonPath, jsonData);
-    } catch (err) {
-      console.error(err);
-    }
-  }
-
-  async getAll(req, res) {
-    await this.load();
-    res.json(this.data);
-  }
-
-  async getOne(req, res) {
-    const id = req.params.id;
-    await this.load();
-    const item = this.data.find((item) => item.id === Number(id));
-    if (item) {
-      res.json(item);
-    } else {
-      res.status(404).json({ message: 'Item not found' });
-    }
-  }
-
-  async create(req, res) {
-    const newItem = req.body;
-    await this.load();
-    this.data.push(newItem);
-    await this.save();
-    res.status(201).json(newItem);
-  }
-
-  async update(req, res) {
-    const id = req.params.id;
-    const updatedItem = req.body;
-    await this.load();
-    const index = this.data.findIndex((item) => item.id === id);
-    if (index !== -1) {
-      this.data[index] = updatedItem;
-      await this.save();
-      res.json(updatedItem);
-    } else {
-      res.status(404).json({ message: 'Item not found' });
-    }
-  }
-
-  async delete(req, res) {
-    const id = req.params.id;
-    await this.load();
-    const index = this.data.findIndex((item) => item.id === id);
-    if (index !== -1) {
-      const deletedItem = this.data.splice(index, 1)[0];
-      await this.save();
-      res.json(deletedItem);
-    } else {
-      res.status(404).json({ message: 'Item not found' });
-    }
+  async #getAll(req, res) {
+    const files = await this.#load(res);
+    res.status(200).json({
+      status: 'success',
+      data: {
+        files,
+      },
+    });
   }
 
   registerRoutes(app) {
-    app.get('/items', this.getAll.bind(this));
-    app.get('/items/:id', this.getOne.bind(this));
-    app.post('/items', this.create.bind(this));
-    app.put('/items/:id', this.update.bind(this));
-    app.delete('/items/:id', this.delete.bind(this));
+    app.get('/api/v1/files', this.#getAll.bind(this));
+  }
+
+  async #load(res) {
+    try {
+      const dirOrFileNames = await fs.readdir(this.#rootFolder);
+      const data = await this.#getFileObjects(dirOrFileNames);
+      return data;
+    } catch (err) {
+      const msg = `Error reading directory: ${this.#rootFolder}, msg: ${
+        err.message
+      }`;
+      console.error(msg);
+      res.status(500).send(msg);
+    }
+  }
+
+  async #getFileObjects(dirOrFileNames) {
+    const data = [];
+    for (const dirOrFileName of dirOrFileNames) {
+      await this.#getFileObject(dirOrFileName, data);
+    }
+    return data;
+  }
+
+  async #getFileObject(dirOrFileName, data) {
+    let item = {};
+    item.name = dirOrFileName;
+    const absolutePath = path.join(this.#rootFolder, dirOrFileName);
+    const stats = await fs.stat(absolutePath);
+    item.type = stats.isDirectory() ? 'directory' : 'file';
+    item.path = absolutePath;
+    data.push(item);
   }
 }
 
-exports.JsonApi = JsonApi;
+exports.FilesApi = FilesApi;
