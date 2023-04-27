@@ -1,5 +1,5 @@
-const { ExpressConfig } = require('./express-config');
-const { JsonApi } = require('./json-api');
+const { ExpressConfig } = require('../express-config');
+const { JsonApi } = require('./json');
 
 const expressConfig = new ExpressConfig();
 
