@@ -9,12 +9,12 @@ class FilesApi {
   }
 
   async #getAll(req, res) {
-    const files = await this.#load(res);
+    const data = {};
+    data.files = await this.#load(res);
     res.status(200).json({
       status: 'success',
-      data: {
-        files,
-      },
+      results: data.files.length,
+      data,
     });
   }
 
@@ -24,9 +24,7 @@ class FilesApi {
 
   async #load(res) {
     try {
-      const dirOrFileNames = await fs.readdir(this.#rootFolder);
-      const data = await this.#getFileObjects(dirOrFileNames);
-      return data;
+      return await this.#getFileObjects(await fs.readdir(this.#rootFolder));
     } catch (err) {
       const msg = `Error reading directory: ${this.#rootFolder}, msg: ${
         err.message
@@ -38,20 +36,20 @@ class FilesApi {
 
   async #getFileObjects(dirOrFileNames) {
     const data = [];
-    for (const dirOrFileName of dirOrFileNames) {
-      await this.#getFileObject(dirOrFileName, data);
+    for (const [index, dirOrFileName] of dirOrFileNames.entries()) {
+      data.push(await this.#getFileObject(index, dirOrFileName));
     }
     return data;
   }
 
-  async #getFileObject(dirOrFileName, data) {
-    let item = {};
-    item.name = dirOrFileName;
-    const absolutePath = path.join(this.#rootFolder, dirOrFileName);
-    const stats = await fs.stat(absolutePath);
-    item.type = stats.isDirectory() ? 'directory' : 'file';
-    item.path = absolutePath;
-    data.push(item);
+  async #getFileObject(index, dirOrFileName) {
+    let obj = {};
+    obj.id = index + 1;
+    obj.name = dirOrFileName;
+    const absPath = path.join(this.#rootFolder, dirOrFileName);
+    obj.type = (await fs.stat(absPath)).isDirectory() ? 'directory' : 'file';
+    obj.path = absPath;
+    return obj;
   }
 }
 
