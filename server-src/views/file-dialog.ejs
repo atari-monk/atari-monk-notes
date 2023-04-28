@@ -9,17 +9,17 @@
 <body>
   <h1>Choose a file or directory:</h1>
   <ul>
-    <% for (let i=0; i < files.length; i++) { %>
-      <% if (types[i]==='directory' ) { %>
-        <li><a href="?directoryPath=<%= filepaths[i] %>">
-            <%= files[i] %>
+    <% for (let i=0; i < data.files.length; i++) { %>
+      <% if (data.files[i].type === 'directory') { %>
+        <li><a href="?id=<%= data.files[i].id %>">
+            <%= data.files[i].name %>
           </a>/</li>
-        <% } else { %>
-          <li><a href="/files/selected?file=<%= files[i] %>">
-              <%= files[i] %>
-            </a></li>
-          <% } %>
-            <% } %>
+      <% } else { %>
+        <li><a href="/selectFile?id=<%= data.files[i].id %>">
+            <%= data.files[i].name %>
+          </a></li>
+      <% } %>
+    <% } %>
   </ul>
 </body>
 

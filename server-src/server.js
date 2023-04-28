@@ -25,7 +25,7 @@ const selectiveEditors = [new ContentEditor()];
 
 expressConfig.app.get('/', fileDialog.handleRequest.bind(fileDialog));
 expressConfig.app.get(
-  '/files/selected',
+  '/selectFile',
   fileDialog.handleSelected.bind(fileDialog)
 );
 
