@@ -50,9 +50,9 @@ class FilesApi {
   }
 
   registerRoutes(app) {
-    app.get('/api/v1/files', this.#getRootDirs.bind(this));
-    app.get('/api/v1/files/:dirId', this.#getDirFiles.bind(this));
-    app.get('/api/v1/files/:dirId/:fileId', this.#getFile.bind(this));
+    app.route('/api/v1/files').get(this.#getRootDirs.bind(this));
+    app.route('/api/v1/files/:dirId').get(this.#getDirFiles.bind(this));
+    app.route('/api/v1/files/:dirId/:fileId').get(this.#getFile.bind(this));
   }
 
   async #load(res, path) {
