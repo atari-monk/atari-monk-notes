@@ -1,6 +1,6 @@
 {
   "isKey": false,
-  "isScrollToBottom": false,
+  "isScrollToBottom": true,
   "title": "Node.js Course",
   "nav": [
     {
@@ -399,7 +399,12 @@
         {
           "link": "#param-middleware",
           "title": "Param Middleware",
-          "time": "2:30-x"
+          "time": "2:30-2:41"
+        },
+        {
+          "link": "#chain-middleware",
+          "title": "Chaining multiple Middleware functions",
+          "time": "2:41-x"
         }
       ]
     },
@@ -1724,6 +1729,28 @@
       "type": "text",
       "navId": "param-middleware",
       "title": "Param Middleware",
+      "note": [
+        "Param middleware enables validation for params in url. Thanks to that all the CRUD methods dont have to do it. Export checkID from resorce controller. Add it to middleware stack in resource router."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "",
+      "note": [
+        "exports.checkID = (req, res, next, val) => { console.log(`Tour id is: ${val}`); if (req.params.id * 1 > tours.length) { return res.status(404).json({ status: 'fail', message: 'Invalid ID', }); } next(); };",
+        "router.param('id', tourController.checkID);"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "chain-middleware",
+      "title": "Chaining multiple Middleware functions",
       "note": [""]
     },
     {

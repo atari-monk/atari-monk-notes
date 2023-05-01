@@ -105,7 +105,11 @@
         },
         {
           "link": "notes.html?page=note/javascript-tips",
-          "text": "Javascript Tips"
+          "text": "My Notes"
+        },
+        {
+          "link": "notes.html?page=note/pokemon-tutorial",
+          "text": "Pokemon Tutorial"
         },
         {
           "link": "#",

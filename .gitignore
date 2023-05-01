@@ -372,7 +372,3 @@ MigrationBackup/
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
-
-#atari monk
-*src/json
-script/server-code.txt

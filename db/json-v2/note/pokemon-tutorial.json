@@ -1,7 +1,7 @@
 {
   "isKey": false,
-  "isScrollToBottom": false,
-  "title": "",
+  "isScrollToBottom": true,
+  "title": "Pokemon Tutorial",
   "nav": [
     {
       "title": "Home",
@@ -28,8 +28,8 @@
     "title": "Source",
     "links": [
       {
-        "link": "",
-        "text": ""
+        "link": "https://youtu.be/yP5DKzriqXA",
+        "text": "Source"
       },
       {
         "link": "",
@@ -41,7 +41,7 @@
     "navId": "description",
     "isCenter": true,
     "title": "Description",
-    "description": [""]
+    "description": ["It looks like i can relax with this."]
   },
   "precondition": {
     "navId": "preconditions",
