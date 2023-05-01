@@ -32,8 +32,16 @@
         "text": "Source"
       },
       {
-        "link": "",
-        "text": ""
+        "link": "https://itch.io/",
+        "text": "Indy games page"
+      },
+      {
+        "link": "https://cypor.itch.io/12x12-rpg-tileset",
+        "text": "Tile set"
+      },
+      {
+        "link": "https://www.mapeditor.org/download.html",
+        "text": "Tile map editor"
       }
     ]
   },
@@ -60,9 +68,9 @@
       "title": "Content",
       "links": [
         {
-          "link": "#chapter1",
-          "title": "Chapter 1",
-          "time": "0-10"
+          "link": "#tile-editor",
+          "title": "Tile Editor",
+          "time": "0-x"
         },
         {
           "link": "#chapter2",
@@ -78,9 +86,9 @@
     },
     {
       "type": "text",
-      "navId": "",
-      "title": "",
-      "note": [""]
+      "navId": "tile-editor",
+      "title": "Tile Editor",
+      "note": ["Grab assets from itch.io. Grab Tiled, tile map editor. New Tileset, tile size is 12px rect.Source is image with most icons on grid called 'asset pack'. Saved. New file, new map, map size in tiles 70x40, 840x480 px. Create Water Layer. Select all water tiles, click dice icon to randomize tiles, select bucket and fill map. Add new layer named Island. Select land mass on water. Place it in middle of map. Select green tile, extend rows. Select edge tiles from set and finish extended island. Add layer named 'Plateau'. Add plateau using 'land on land' image. Add House layer, add house image with stamp brush. Select Island layer, rect select part of island, copy, paste to expand it. Add Trees layer, add row of trees. Add another layer above, put new trees between first row. Many rows can be added expanding layers."]
     },
     {
       "type": "text",
