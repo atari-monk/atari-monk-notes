@@ -61,7 +61,7 @@ export class NoteView extends View {
             newNote.querySelector('.cmd-ul').appendChild(aside);
           }
         } else {
-          newNote = this.#commandNoteView.createContent(note);
+          newNote = this.#commandNoteView.createContent(data, note);
         }
       } else if (this.#isType(note, 'content')) {
         newNote = this.#contentView.createContent(note);

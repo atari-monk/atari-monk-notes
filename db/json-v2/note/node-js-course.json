@@ -1,5 +1,5 @@
 {
-  "isKey": true,
+  "isKey": false,
   "isScrollToBottom": false,
   "title": "Node.js Course",
   "nav": [
@@ -624,10 +624,15 @@
     {
       "type": "cmd",
       "aside": {
-        "paramKey": "url",
         "isDetail": true
       },
-      "note": ["{0}"]
+      "note": ["{0}"],
+      "params": [
+        {
+          "name": "http://127.0.0.1:8000/product?id=0",
+          "desc": "url to test parse url"
+        }
+      ]
     },
     {
       "type": "text",
@@ -699,21 +704,53 @@
       "type": "cmd",
       "content": "html",
       "aside": {
-        "paramKey": "i1",
         "isDetail": true
       },
-      "title": "",
-      "note": ["npm -h", "npm i -h", "{0}", "{1}", "{2}"]
+      "note": ["npm -h", "npm i -h", "{0}", "{1}", "{2}"],
+      "params": [
+        {
+          "name": "npm i slugify",
+          "desc": "cmd to install package as dependency"
+        },
+        {
+          "name": "npm i nodemon --save-dev",
+          "desc": "nodemon restarts server on modification of a file"
+        },
+        {
+          "name": "npm i nodemon -g",
+          "desc": "installs globaly"
+        }
+      ]
     },
     {
       "type": "cmd",
       "content": "html",
       "aside": {
-        "paramKey": "i2",
         "isDetail": true
       },
-      "title": "",
-      "note": ["{0}", "{1}", "{2}", "{3}", "{4}"]
+      "note": ["{0}", "{1}", "{2}", "{3}", "{4}"],
+      "params": [
+        {
+          "name": "node i",
+          "desc": "hit tab for autocomplete"
+        },
+        {
+          "name": "nodemon index.js",
+          "desc": "Insted of using node index.js, use nodemon index.js for auto-restarting server."
+        },
+        {
+          "name": "\"start\": \"nodemon index.js\"",
+          "desc": "To run with alias, add script in scripts section of package.json."
+        },
+        {
+          "name": "npm run start",
+          "desc": "cmd to run npm scripts from package.json"
+        },
+        {
+          "name": "npm start",
+          "desc": "for name start, run can be omitted"
+        }
+      ]
     },
     {
       "type": "text",
@@ -868,10 +905,23 @@
       "content": "html",
       "beautify": "none",
       "aside": {
-        "paramKey": "http",
         "isDetail": true
       },
-      "note": ["{0}<br>{1}<br>{2}"]
+      "note": ["{0}<br>{1}<br>{2}"],
+      "http": [
+        {
+          "name": "GET /maps HTTP/1.1",
+          "desc": "Start line: Http method + request target + http version"
+        },
+        {
+          "name": "Host: www.google.com<br>User-Agent: Mozilla/5.0<br>Accept-Language: en-US",
+          "desc": "Http request headers. Information about request. Many options."
+        },
+        {
+          "name": "&lt;BODY&gt;",
+          "desc": "Request body. Only when sending data to server."
+        }
+      ]
     },
     {
       "type": "text",
@@ -884,10 +934,23 @@
       "content": "html",
       "beautify": "none",
       "aside": {
-        "paramKey": "http2",
         "isDetail": true
       },
-      "note": ["{0}<br>{1}<br>{2}"]
+      "note": ["{0}<br>{1}<br>{2}"],
+      "params": [
+        {
+          "name": "HTTP/1.1 200 OK",
+          "desc": "Start line: http version + status code + status message"
+        },
+        {
+          "name": "Date: Sat, 19 Jan 2021<br>Content-Type: text/html<br>Transfer-Encoding: chunked",
+          "desc": "Http response headers."
+        },
+        {
+          "name": "&lt;BODY&gt;",
+          "desc": "Response body. (most)"
+        }
+      ]
     },
     {
       "type": "text",
@@ -978,12 +1041,17 @@
       "content": "html",
       "beautify": "js",
       "aside": {
-        "paramKey": "events",
         "isDetail": true
       },
       "title": "Example",
       "note": [
         "const server = http.createServer();{%BR%} {0}('request', {%BR%} (req, res) => {%BR%}{ {%BR%}console.log('Request recived');{%BR%} res.end('Request recived');{%BR%}});"
+      ],
+      "params": [
+        {
+          "name": "server.on",
+          "desc": "creates event listener"
+        }
       ]
     },
     {
@@ -1085,15 +1153,36 @@
     },
     {
       "type": "cmd",
+      "aside": {
+        "isDetail": true
+      },
       "beautify": "js",
       "title": "Wrapping",
       "note": [
         "(function({0}, {1}, {2}, {3}, {4}) {\r\n//Module code lives here...\r\n});"
       ],
-      "aside": {
-        "paramKey": "wrapping",
-        "isDetail": true
-      }
+      "params": [
+        {
+          "name": "exports",
+          "desc": "ref to module.exports, used to export object from a module"
+        },
+        {
+          "name": "require",
+          "desc": "function to require modules"
+        },
+        {
+          "name": "module",
+          "desc": "ref to current module"
+        },
+        {
+          "name": "__filename",
+          "desc": "absolute path to current module file"
+        },
+        {
+          "name": "__dirname",
+          "desc": "directory name of current module"
+        }
+      ]
     },
     {
       "type": "text",
@@ -1347,10 +1436,19 @@
       "beautify": "none",
       "content": "html",
       "aside": {
-        "paramKey": "get",
         "isDetail": true
       },
-      "note": ["/api/{0}/tours", "{1}"]
+      "note": ["/api/{0}/tours", "{1}"],
+      "params": [
+        {
+          "name": "v1",
+          "desc": "Defining version allows verssioning without breaking prevoius apis."
+        },
+        {
+          "name": "(req, res) => {}",
+          "desc": "route handler"
+        }
+      ]
     },
     {
       "type": "cmd",
@@ -1636,116 +1734,6 @@
       "note": ["End.{%NAV%}"]
     }
   ],
-  "param": {
-    "get": [
-      {
-        "name": "v1",
-        "desc": "Defining version allows verssioning without breaking prevoius apis."
-      },
-      {
-        "name": "(req, res) => {}",
-        "desc": "route handler"
-      }
-    ],
-    "url": [
-      {
-        "name": "http://127.0.0.1:8000/product?id=0",
-        "desc": "url to test parse url"
-      }
-    ],
-    "i1": [
-      {
-        "name": "npm i slugify",
-        "desc": "cmd to install package as dependency"
-      },
-      {
-        "name": "npm i nodemon --save-dev",
-        "desc": "nodemon restarts server on modification of a file"
-      },
-      {
-        "name": "npm i nodemon -g",
-        "desc": "installs globaly"
-      }
-    ],
-    "i2": [
-      {
-        "name": "node i",
-        "desc": "hit tab for autocomplete"
-      },
-      {
-        "name": "nodemon index.js",
-        "desc": "Insted of using node index.js, use nodemon index.js for auto-restarting server."
-      },
-      {
-        "name": "\"start\": \"nodemon index.js\"",
-        "desc": "To run with alias, add script in scripts section of package.json."
-      },
-      {
-        "name": "npm run start",
-        "desc": "cmd to run npm scripts from package.json"
-      },
-      {
-        "name": "npm start",
-        "desc": "for name start, run can be omitted"
-      }
-    ],
-    "http": [
-      {
-        "name": "GET /maps HTTP/1.1",
-        "desc": "Start line: Http method + request target + http version"
-      },
-      {
-        "name": "Host: www.google.com<br>User-Agent: Mozilla/5.0<br>Accept-Language: en-US",
-        "desc": "Http request headers. Information about request. Many options."
-      },
-      {
-        "name": "&lt;BODY&gt;",
-        "desc": "Request body. Only when sending data to server."
-      }
-    ],
-    "http2": [
-      {
-        "name": "HTTP/1.1 200 OK",
-        "desc": "Start line: http version + status code + status message"
-      },
-      {
-        "name": "Date: Sat, 19 Jan 2021<br>Content-Type: text/html<br>Transfer-Encoding: chunked",
-        "desc": "Http response headers."
-      },
-      {
-        "name": "&lt;BODY&gt;",
-        "desc": "Response body. (most)"
-      }
-    ],
-    "events": [
-      {
-        "name": "server.on",
-        "desc": "creates event listener"
-      }
-    ],
-    "wrapping": [
-      {
-        "name": "exports",
-        "desc": "ref to module.exports, used to export object from a module"
-      },
-      {
-        "name": "require",
-        "desc": "function to require modules"
-      },
-      {
-        "name": "module",
-        "desc": "ref to current module"
-      },
-      {
-        "name": "__filename",
-        "desc": "absolute path to current module file"
-      },
-      {
-        "name": "__dirname",
-        "desc": "directory name of current module"
-      }
-    ]
-  },
   "inject": [
     {
       "key": "{%BR%}",
