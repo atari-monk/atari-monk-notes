@@ -1,0 +1,97 @@
+{
+  "title": "Identity db as separate lib package",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-7.0&tabs=netcore-cli",
+          "text": "Source Tutorial"
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": [
+        "Generated identity wab app.",
+        "Cut db part and move it to separete lib.",
+        "Identity ef core db will be in seperate solution.",
+        "It will be consumed by web apps as nuget."
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": [
+        "VSCode"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": [
+            "Setup project."
+          ],
+          "codes": [
+            {
+              "format": [
+                "dotnet new sln",
+                "dotnet new classlib -n {0}",
+                "dotnet sln add ./{0}/",
+                "dotnet build"
+              ],
+              "params": [
+                {
+                  "name": "Identity.Db",
+                  "desc": "lib name"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Scaffold Identity in ASP.NET Core projects.",
+            "Move data folder form web app to lib.",
+            "Add ef core nugets."
+          ],
+          "codes": [
+            {
+              "format": [
+                "dotnet new webapp --auth Individual -uld -o Identity.WebApp"
+              ],
+              "params": [
+                {
+                  "name": "Identity.Db",
+                  "desc": "lib name"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "On hold, todo- investigate identity/authentication/authorization."
+  ]
+}

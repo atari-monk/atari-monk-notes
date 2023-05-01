@@ -1,0 +1,50 @@
+{
+  "title": "Przypadkowe Myśli",
+  "nav": [
+    {
+      "title": "Strona Główna",
+      "link": "home"
+    }
+  ],
+  "note": [
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "05.04.2023 23:36",
+      "note": [
+        "O tyle udało mi się dziś powiększyć swoją wiedzę. Pomnożyć to razy liczbę dni życia. To wszystko co mam. Praktycznie nic.",
+        "Zabawne ale po tej myśli, klinkęło mi się <a href='https://youtu.be/40UpmHHNBrE'>klip</a> który wpasował się w ten nastrój."
+      ]
+    }
+  ],
+  "inject": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%NAV2%}",
+      "text": "<br><a href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%CONTENT2%}",
+      "text": "<a href='#content'>Back to Content</a>"
+    }
+  ]
+}

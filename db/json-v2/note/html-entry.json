@@ -1,0 +1,250 @@
+{
+  "title": "Html beginner tutorial",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": [
+      "Beginner guide to html.",
+      "Web official tag language for web pages."
+    ]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://www.youtube.com/watch?v=kUMe1FH4CHE",
+        "text": "Source Tutorial"
+      },
+      {
+        "link": "https://github.com/atari-monk/html-tutorial",
+        "text": "Repo"
+      },
+      {
+        "link": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        "text": "MDN HTML docs"
+      },
+      {
+        "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element",
+        "text": "HTML elements reference"
+      },
+      {
+        "link": "https://validator.w3.org/",
+        "text": "HTML validator"
+      },
+      {
+        "link": "https://www.freeformatter.com/html-escape.html",
+        "text": "HTML Escape/Unescape"
+      },
+      {
+        "link": "https://chrome.google.com/webstore/category/extensions",
+        "text": "Chrome Web Store"
+      }
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["First time Notes from watching videos once.", "Code in repo."]
+  },
+  "note": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "title": "Setup",
+      "note": [
+        "chrome extension dark new tab",
+        "VSC extension prettier - code formatter",
+        "VSC extension vscode-icons",
+        "VSC extension github theme, set dark default",
+        "VSC extension live server"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Lesson01 - template",
+      "note": [
+        "index.html - lower case convention for hosting reasons",
+        "index.html - lower case convention for hosting reasons",
+        "html - html page",
+        "head - metadata on the page",
+        "body - seen in browser",
+        "h1 - header",
+        "p - paragraph, write p and hit tab"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Lesson02 - template",
+      "note": [
+        "meta author",
+        "meta desc",
+        "alt+z to Word Wrap in vscode",
+        "icon"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Lesson03 - text",
+      "note": [
+        "alt+z on new file",
+        "shift + alt + down - 'line or many lines'",
+        "h1 title, h2 topic, h3 subtopic",
+        "headers give hierarchy to content",
+        "hr - line",
+        "white space collapsing in html",
+        "br - line break",
+        "block element - breaks line, like p, h1",
+        "inline element - dosnt break line like em - emphasise, strong - strong emphasise",
+        "abbr - tooltip with expand of abbrevietion",
+        "html entity - special chars",
+        "&nbsp; - space",
+        "&lt; - <",
+        "&copy; - 'right symbol'",
+        "address - paragraph with address",
+        "<!-- --> - comment",
+        "ctr+u or inspect in browser shows page code so also comments",
+        "in page code one can see live server javascript addons"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Lesson04 - lists",
+      "note": [
+        "ctrl+D to highlight same section below",
+        "li - list element, type li press tab",
+        "ol - ordered list",
+        "ul - unordered list",
+        "li - dosnt create extra space between lines unless p is in the li",
+        "dl - description list",
+        "dt - description term",
+        "dd- description detail"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Lesson05 - link",
+      "note": [
+        "a - link pages",
+        "href - absolute text ip address for other servers",
+        "relative path on same server, project",
+        "lorem*1 - adds placeholder text",
+        "section - divides page into sections with attribute id (name)",
+        "nav - navigation, for ex. on list with a (anchors)",
+        "# - before id name in href to section",
+        "in anchor (a) text place shortest possible desc of destination page",
+        "download - in lets download some resource",
+        "mailto: - mail in href, not used since crawlers colect mails, contact forms instead",
+        "tel:",
+        "target='_blank' - link opens new tab",
+        "/ - in href links to default page in same folder"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Lesson06 - image",
+      "note": [
+        "img tab - for img markup",
+        "alt - text if img is not reachable",
+        "title - text in tooltip on img",
+        "width, height - tell browser default img size so it dosent shift it",
+        "loading - eager is default, lazy - loads only when scrolling",
+        "br*150 - types 150 break lines",
+        "figure - html element used with img and figcaption element (desc)",
+        "single ' can be used inside \"\"",
+        "code - element for code display"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Lesson07 - semantic tags",
+      "note": [
+        "h1 - one per page, title",
+        "h2 - subtopic",
+        "h1 to h3 per page",
+        "nav",
+        "hr - topic change",
+        "header - header of the page",
+        "main - marks main page content",
+        "footer - footer of a page",
+        "multiple nav should be labeled",
+        "article - clear topic with h2",
+        "can contain sections with h3",
+        "aside",
+        "details",
+        "summary",
+        "mark - highlight text",
+        "time - with datetime attribute",
+        "div - dividers, do not use them as they dont provide meaning to assistive technology",
+        "span - as div, use only when no other semantic element with more meaning",
+        "html outliner - chrome extension"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "lesson08 - tables",
+      "note": [
+        "tables structure data, do not use them as page layout as in 90's",
+        "table",
+        "tr - table row",
+        "td - table data",
+        "shift alt down arrow on selected row helps",
+        "to see table css is needed",
+        "table expands to it's content, not to width of page",
+        "th - table headings",
+        "colspan, rowspan - attributes",
+        "semantics of table",
+        "table",
+        "caption",
+        "thead",
+        "tbody",
+        "tfoot",
+        "scope - th attribute row or column"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Lesson09 - input forms",
+      "note": [
+        "add nav section, add article, h2",
+        "form - with action, method",
+        "dont send sensitive info with get as they are in url"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Lesson10 - beginner project",
+      "note": [
+        "every tag of html has inteli sense, just type name and press tab"
+      ]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["Nice starting point."]
+    }
+  ]
+}

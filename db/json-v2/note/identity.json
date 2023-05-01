@@ -1,0 +1,223 @@
+{
+  "title": "Identity web app",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": [
+      "Asp.Net Core MVC Web app with identity authentication/authorization system."
+    ]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-7.0&tabs=netcore-cli",
+        "text": "Source Tutorial"
+      },
+      {
+        "link": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-7.0&tabs=netcore-cli",
+        "text": "Scaffold Identity"
+      }
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["Azure account", "VSCode"]
+  },
+  "note": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "title": "Current path",
+      "note": [
+        "cd C:\\atari-monk\\Code\\net-web-tutorial\\Identity.WebApp",
+        "code ."
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": ["Steps done.", "Generate web app with identity."],
+      "note": [
+        "dotnet new list",
+        "dotnet new mvc --auth Individual -uld -n Identity.WebApp",
+        "dotnet new sln",
+        "dotnet sln add Identity.WebApp"
+      ],
+      "params": [
+        {
+          "desc": "optional to check options"
+        },
+        {
+          "desc": "This uses LocalDb. There is option with SQLite"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "note": ["{0}"],
+      "params": [
+        {
+          "name": "*.vscode",
+          "desc": "add to .gitignore"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Do migrations.",
+      "note": [
+        "dotnet tool update --global dotnet-ef",
+        "cd .\\Identity.WebApp\\",
+        "dotnet ef database update"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Run the app and register a user and login.",
+      "note": ["dotnet run"]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Configure Identity services.",
+        "I copied default settings from msdocs and put it in class invoked in program.cs.",
+        "It's refactored to better readability."
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Add my db connection string buider lib, with help of",
+        "<a href='notes.html?page=nuget'>Nuget</a>",
+        "<a href='notes.html?page=azure-secrets'>Azure Secrets</a>"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Scaffold Identity UI.",
+      "note": [
+        "dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design",
+        "dotnet add package Microsoft.EntityFrameworkCore.Design",
+        "dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+        "dotnet add package Microsoft.AspNetCore.Identity.UI",
+        "dotnet add package Microsoft.EntityFrameworkCore.SqlServer",
+        "dotnet add package Microsoft.EntityFrameworkCore.Tools",
+        "dotnet tool install -g dotnet-aspnet-codegenerator",
+        "dotnet tool update -g dotnet-aspnet-codegenerator",
+        "dotnet aspnet-codegenerator identity -h",
+        "dotnet aspnet-codegenerator identity -dc Identity.WebApp.Data.ApplicationDbContext"
+      ],
+      "params": [
+        {
+          "desc": "this should generate all available UI"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Error thrown.",
+        "Cannot use an existing DbContext with the '--useDefaultUI' option",
+        "Removed --useDefaultUI from command. Fixed error."
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Removed null warns/problems from generated code."
+    },
+    {
+      "isCopy": false,
+      "title": "Add [Authorize] on privacy page in controller. To test identity."
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Upgraded connection builder to handle locally trusted connection.",
+        "I dont like to clear all nugets, it take ages to restore them after that.",
+        "ToDo: why it was suggested?",
+        "Created local db by ef core migrations.",
+        "Tested register, login, logout locally."
+      ],
+      "note": [
+        "dotnet nuget locals temp -c",
+        "dotnet nuget locals global-packages -c",
+        "dotnet ef database update"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Below commands was used to deploy to Azure.",
+        "Based on <a href=''>todo-app-azure (todo: add link)</a>",
+        "As output, there is connection string."
+      ],
+      "note": [
+        "az login",
+        "az login --tenant id",
+        "az group create --name identity-web-app-rg --location swedencentral --tags identity-web-app resource group",
+        "az webapp create --name atari-monk-identity-web-app --runtime 'DOTNETCORE:7.0' --plan atari-monk-appservice-plan1 --resource-group identity-web-app-rg",
+        "az sql db create --resource-group az-sql-db1-rg --server atari-monk-sql-server1 --name identityDb",
+        "az webapp connection create sql --resource-group identity-web-app-rg --name atari-monk-identity-web-app --target-resource-group az-sql-db1-rg --server atari-monk-sql-server1 --database identityDb --client-type dotnet --query configurations"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Connection string from Azure was input as local secrets.",
+      "note": [
+        "dotnet user-secrets set 'Server' 'atari-monk-sql-server1.database.windows.net'",
+        "dotnet user-secrets set 'DbPort' '1433'",
+        "dotnet user-secrets set 'DbUser' 'atari-monk'",
+        "dotnet user-secrets set 'DbPassword' 'x'",
+        "dotnet user-secrets set 'Database' 'identityDb'"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Deploy migrations on Azure sql server.",
+      "note": ["dotnet ef database update"]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Build and Deploy web app on Azure App Services. (Right-click on publish folder and select Deploy to Web App). Test app."
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "At this point i had realised that db on Azure was above S0 witch costed me. Had to mail with support. They agread to forgive cost on 04.12.2022.",
+        "I deleted all resources before mailing with them."
+      ]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["I dont know yet."]
+    }
+  ]
+}

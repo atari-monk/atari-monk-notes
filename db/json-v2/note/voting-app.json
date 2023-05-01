@@ -1,0 +1,206 @@
+{
+  "title": "Deploy VotingApp",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": ["Deploy two container app with Docker Compose on Azure."]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://learn.microsoft.com/en-us/azure/container-instances/tutorial-docker-compose",
+        "text": "Source Tutorial"
+      }
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": [
+      "I have Azure free account set up.",
+      "Using a local installation of Azure CLI."
+    ]
+  },
+  "notes": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": true,
+      "title": "Create resource group",
+      "note": ["az group create --name {0} --location {1}"],
+      "params": [
+        {
+          "name": "common-resource-group",
+          "desc": "Choose your Resource Group name"
+        },
+        {
+          "name": "swedencentral",
+          "desc": "Choose your Location name"
+        }
+      ]
+    },
+    {
+      "isCopy": true,
+      "title": "Create azure container registry",
+      "note": ["az acr create --resource-group {0} --name {1} --sku Basic"],
+      "params": [
+        {
+          "name": "common-resource-group",
+          "desc": "Choose your Resource Group name"
+        },
+        {
+          "name": "atari-monk-acr",
+          "desc": "Choose your Azure Container Registry name"
+        }
+      ]
+    },
+    {
+      "isCopy": true,
+      "title": "Login to your azure container registry.",
+      "note": ["az acr login --name {0}"],
+      "params": [
+        {
+          "name": "atari-monk-acr",
+          "desc": "Choose your Azure Container Registry name"
+        }
+      ]
+    },
+    {
+      "isCopy": true,
+      "title": "Get code of example app.",
+      "note": [
+        "cd C:\\atarimonk\\Code",
+        "git clone https://github.com/Azure-Samples/azure-voting-app-redis.git",
+        "cd azure-voting-app-redis"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Modiffy docker compose file.",
+      "note": [
+        "front ports to 80:80, image to atarimonkacr.azurecr.io/azure-vote-front:v1"
+      ]
+    },
+    {
+      "isCopy": true,
+      "title": "Run locally.",
+      "note": ["docker-compose up --build -d", "docker images", "docker ps"]
+    },
+    {
+      "isCopy": true,
+      "title": "Test url in browser.",
+      "note": ["http://localhost:80"]
+    },
+    {
+      "isCopy": true,
+      "title": "Run down locall instances.",
+      "note": ["docker-compose down"]
+    },
+    {
+      "isCopy": true,
+      "title": "Push image to container registry.",
+      "note": ["docker-compose push"]
+    },
+    {
+      "isCopy": true,
+      "title": "Verify if image is in repository.",
+      "note": ["az acr repository show --name {0} --repository {1}"],
+      "params": [
+        {
+          "name": "atari-monk-acr",
+          "desc": "Choose your Azure Container Registry name"
+        },
+        {
+          "name": "azure-vote-front",
+          "desc": "Choose your Repository name"
+        }
+      ]
+    },
+    {
+      "isCopy": true,
+      "title": "Login to Azure to use docker commands.",
+      "note": ["docker login azure"]
+    },
+    {
+      "isCopy": true,
+      "title": "Add your acr context",
+      "note": ["docker context create aci {0}"],
+      "params": [
+        {
+          "name": "atari-monk-acr-context",
+          "desc": "Choose your Azure Container Registry Context name"
+        }
+      ]
+    },
+    {
+      "isCopy": true,
+      "title": "Verify you added",
+      "note": ["docker context ls"]
+    },
+    {
+      "isCopy": true,
+      "title": "Set context",
+      "note": ["docker context use {0}"],
+      "params": [
+        {
+          "name": "atari-monk-acr-context",
+          "desc": "Choose your Azure Container Registry Context name"
+        }
+      ]
+    },
+    {
+      "isCopy": true,
+      "title": "Start app in azure container instances.",
+      "note": ["docker compose up"]
+    },
+    {
+      "isCopy": false,
+      "title": ["Get app ip.", "Test ip in browser"],
+      "note": ["docker ps"]
+    },
+    {
+      "isCopy": false,
+      "title": "Todo: To see logs..."
+    },
+    {
+      "isCopy": true,
+      "title": "To stop and delete containers",
+      "note": ["docker compose down"]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": [
+        "My first tutorial on containers from learn.microsoft.com.",
+        "Dont know apps tech.",
+        "It worked but is kind of useless to me.",
+        "I tried to use this steps for Command api repo and db.",
+        "I think it failed becouse sql server container didnt have 2Gb memory, witch is min requirement."
+      ]
+    }
+  ]
+}

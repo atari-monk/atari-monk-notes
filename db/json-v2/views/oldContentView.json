@@ -1,0 +1,33 @@
+{
+  "note": [
+    {
+      "type": "text",
+      "navId": "content",
+      "title": "Content, Part 1",
+      "note": [
+        "1. Intro. 0-7.{%BR%}2. Instal Node.js. 7-13.{%BR%}3. <a href='#about'>About Node.js</a>. 13-21.{%BR%}4. <a href='#cli'>Node.js Cli</a>. 21-27.{%BR%}5. <a href='#core-modules'>Using Core Modules</a>. 27-33.{%BR%}6. <a href='#io-sync'>Read/Write Files</a>. 33-41.{%BR%}7. <a href='#blocking'>Blocking and non-blocking: Asynchronous nature of node.js</a>. 41-51.{%BR%}8. <a href='#io-async'>Read/Write Files Asynchronously</a>. 51-1:05.{%BR%}9. <a href='#web-server'>Creating a Simple Web Server</a>. 1:05-1:18.{%BR%}10. <a href='#routing'>Routing</a>. 1:18-1:33.{%BR%}11. <a href='#simple-api'>Building a (VERY) Simple API</a>. 1:33-1:48.{%BR%}12. Html templating: Buildding the templates. 1:48-2:02.{%BR%}13. <a href='#filling-templates'>Html templating: Filling the templates</a>. 2:02-2:22.{%BR%}14. <a href='#parsing-variables'>Parsing variables from urls</a>. 2:22-2:33.{%BR%}15. <a href='#own-modules'>Using Modules 2: Our Own Modules</a>. 2:33-2:40.{%BR%}16. <a href='#npm'>Introduction to npm and package.json file</a>. 2:40-2:45.{%BR%}17. <a href='#package-installs'>Types of packages and installs</a>. 2:45-2:58.{%BR%}18. <a href='#third-party'>Using modules 3: 3rd party modules</a>. 2:58-3:06.{%BR%}19. <a href='#versioning'>Package Versioning And Updating</a>. 3:06-3:18.{%BR%}20. <a href='#prettier'>Setting up Prettier in VSCode</a>. 3:18-3:30.{%BR%}21. Recap and what's next. 3:30-3:32.{%NAV2%}"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Part 2",
+      "note": [
+        "1. Intro. 0-1.{%BR%}2. <a href='#web'>How Web Works</a>. 1-14.{%BR%}3. <a href='#http'>Http in action</a>. 14-20.{%BR%}4. <a href='#back-end'>Front End vs Back End Dev</a>. 20-26.{%BR%}5. <a href='#dynamic-api'>Static vs Dynamic vs API</a>. 26-35.{%NAV2%}"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Part 3",
+      "note": [
+        "1. Intro. 0-1.{%BR%}2. <a href='#node-build'>How Node js is buld</a>. 1-5{%BR%}3. <a href='#node-threads'>Threading in node js</a>. 5-10.{%BR%}4. <a href='#event-loop'>Event Loop</a>. 10-21.{%BR%}5. <a href='#evloop-example'>Event Loop Example</a>. 21-40.{%BR%}6. <a href='#event-driven'>Events driven architecture</a>. 40-45.{%BR%}7. <a href='#event-example'>Events example</a>. 45-58.{%BR%}8. <a href='#streams'>Streams</a>. 58-64.{%BR%}9. <a href='#streams-practice'>Streams in Practice</a>. 64-81.{%BR%}10. <a href='#modules'>About Modules</a>. 81-90. {%BR%} 11. <a href='#modules-practice'>Modules in practice</a>. 90-x.{%NAV2%}"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Part 4",
+      "note": [
+        "1. Intro. 0-1.{%BR%}2. <a href='#hell'>Callback hell</a>. 1-x.{%NAV2%}"
+      ]
+    }
+  ]
+}

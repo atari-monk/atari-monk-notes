@@ -1,0 +1,175 @@
+{
+  "isKey": false,
+  "isScrollToBottom": false,
+  "title": "Test Title",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "#",
+        "text": "test link"
+      },
+      {
+        "link": "#",
+        "text": "test link2"
+      }
+    ]
+  },
+  "description": {
+    "navId": "description",
+    "isCenter": true,
+    "title": "Description",
+    "description": ["test description"]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["test precondition", "test precondition2"]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "title": "Notes"
+    },
+    {
+      "type": "text",
+      "title": "test isCopy: none"
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "test isCopy: false"
+    },
+    {
+      "type": "text",
+      "isCopy": true,
+      "title": "test isCopy: true"
+    },
+    {
+      "type": "text",
+      "navId": "content",
+      "isCopy": false,
+      "isCenter": false,
+      "title": "Content",
+      "note": ["1. <a href=#></a>{%BR%}2. <a href=#></a>{%BR%}{%NAV2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "isCopy": false,
+      "title": "",
+      "note": [""]
+    },
+    {
+      "type": "note-aside",
+      "navId": "",
+      "isCopy": false,
+      "title": "",
+      "note": ["{%TAB%}"],
+      "params": [
+        {
+          "name": "",
+          "desc": ""
+        },
+        {
+          "name": "",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "aside": {
+        "paramKey": "",
+        "isDetail": true
+      },
+      "title": "",
+      "note": [""]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "",
+      "note": [""]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "beautify": "js",
+      "title": "",
+      "note": [""]
+    },
+    {
+      "type": "text",
+      "navId": "summary",
+      "isCenter": true,
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["{%NAV%}"]
+    }
+  ],
+  "param": {
+    "": [
+      {
+        "name": "",
+        "desc": ""
+      }
+    ]
+  },
+  "inject": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%NAV2%}",
+      "text": "<br><a href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%CONTENT2%}",
+      "text": "<a href='#content'>Back to Content</a>"
+    }
+  ]
+}

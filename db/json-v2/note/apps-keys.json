@@ -1,0 +1,130 @@
+{
+  "title": "Apps Keys",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": [
+      "Apps key mapping.",
+      "There should be app there that mapps all keys to one set.",
+      "One could use this mapping in all apps becouse of the middleware translating it."
+    ]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://docs.blender.org/manual/en/latest/index.html",
+        "text": "Blender Manual"
+      }
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["Windows 11/10", "Apps"]
+  },
+  "note": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "title": "VSCode",
+      "note": ["{0}{%BR%}, {1}{%BR%}, {2}{%BR%}, {3}{%BR%}, {4}{%BR%}"],
+      "params": [
+        {
+          "name": "ctrl-`",
+          "desc": "toggle console"
+        },
+        {
+          "name": "ctrl-b",
+          "desc": "toggle explorer"
+        },
+        {
+          "name": "Win + .",
+          "desc": "emojis dialog"
+        },
+        {
+          "name": "ctrl + shift + k",
+          "desc": "delete line"
+        },
+        {
+          "name": "Ctrl-C",
+          "desc": "stop web server in VSCode console"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Chrome",
+      "note": ["{0}"],
+      "params": [
+        {
+          "name": "F12",
+          "desc": "dev tools"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Blender ver 3.4",
+      "note": [
+        "{0}",
+        "{1}",
+        "Edge length - edit mode/Viewport Overlays(main view right top menu)/Mesurment/Edge Length."
+      ],
+      "params": [
+        {
+          "name": "ctrl-a",
+          "desc": "Apply scale, rotation, possition."
+        },
+        {
+          "name": "tab",
+          "desc": "Togle edit/object mode."
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Visual Studio 2022",
+      "note": ["{0}", "{1}"],
+      "params": [
+        {
+          "name": "ctrl + shift + l",
+          "desc": "Delete line."
+        },
+        {
+          "name": "ctrl + r, ctrl + r",
+          "desc": "Rename."
+        }
+      ]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["Know your controls."]
+    }
+  ]
+}

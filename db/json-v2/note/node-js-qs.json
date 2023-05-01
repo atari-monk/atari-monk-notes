@@ -1,0 +1,140 @@
+{
+  "title": "Quickstart for node.js in azure.",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": ["Quickstart for node.js in azure."]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://learn.microsoft.com/en-us/azure/app-service/quickstart-nodejs?tabs=linux&pivots=development-environment-vscode",
+        "text": "Source Tutorial"
+      },
+      {
+        "link": "https://nodejs.org/en/",
+        "text": "NodeJS"
+      },
+      {
+        "link": "https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice",
+        "text": "Azure App Service extension for VSCode"
+      },
+      {
+        "link": "https://github.com/atari-monk/js-web-tutorial",
+        "text": "Repo"
+      }
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": [
+      "Azure account with an active subscription.",
+      "Install Node.js and npm.",
+      "VSCode"
+    ]
+  },
+  "note": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Verify that Node.js is installed.",
+        "Create a Node.js application using the Express Generator.",
+        "Install the NPM packages to the app.",
+        "Start the development server with debug information.",
+        "Test in the browser."
+      ],
+      "note": [
+        "node --version",
+        "cd {0} && npx express-generator {1} --view ejs",
+        "cd {1} && npm install",
+        "DEBUG={1}:* npm start",
+        "http://localhost:3000"
+      ],
+      "params": [
+        {
+          "name": "js-web-tutorial",
+          "desc": "repo folder"
+        },
+        {
+          "name": "myExpressApp",
+          "desc": "app name"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Deploy to cloud using VSCode Azure extension.",
+        "Sign in. Azure email should be in status bar and subscription in explorer.",
+        "Right-click on App Services, Create new Web App. A Linux container is used by default.",
+        "Name unique in Azure ('A-Z', 'a-z', '0-9', '-').",
+        "Select Node runtime stack and Node.js latest LTS (long term support) version.",
+        "Select pricing tier Free (F1).",
+        "All options are in right click menu of App Services in explorer."
+      ],
+      "note": ["{0}"],
+      "params": [
+        {
+          "name": "atari-monk-myExpressApp",
+          "desc": "example name"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Error - Couldn't detect a version for the platform 'nodejs' in the repo.",
+        "Fix was: In .vscode/settings.json paste"
+      ],
+      "note": [
+        "'appService.defaultWebAppToDeploy': '{0}'",
+        "'appService.deploySubpath': '{1}'"
+      ],
+      "params": [
+        {
+          "name": "js-web-tutorial",
+          "desc": "repo folder"
+        },
+        {
+          "name": "myExpressApp",
+          "desc": "app name/folder"
+        }
+      ]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": [
+        "Node js app template was done.",
+        "It was deplyed on Azure, after providing basic settings."
+      ]
+    }
+  ]
+}

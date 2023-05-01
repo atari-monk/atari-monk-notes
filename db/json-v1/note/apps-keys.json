@@ -1,0 +1,154 @@
+{
+  "title": "Apps Keys",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://docs.blender.org/manual/en/latest/index.html",
+          "text": "Blender Manual"
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": [
+        "Apps key mapping",
+        "There should be app there that mapps all keys to one set",
+        "so that you can use this one mapping in all apps becouse of the middleware translating it"
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": [
+        "Windows 11/10",
+        "Apps"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": [
+            "VSCode"
+          ],
+          "codes": [
+            {
+              "format": [
+                "{0}",
+                "{1}",
+                "{2}",
+                "{3}"
+              ],
+              "params": [
+                {
+                  "name": "ctrl-`",
+                  "desc": "toggle console"
+                },
+                {
+                  "name": "ctrl-b",
+                  "desc": "toggle explorer"
+                },
+                {
+                  "name": "Win + .",
+                  "desc": "emojis dialog"
+                },
+                {
+                  "name": "ctrl + shift + k",
+                  "desc": "delete line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Chrome"
+          ],
+          "codes": [
+            {
+              "format": [
+                "{0}"
+              ],
+              "params": [
+                {
+                  "name": "F12",
+                  "desc": "dev tools"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Blender ver 3.4"
+          ],
+          "codes": [
+            {
+              "format": [
+                "{0}",
+                "{1}",
+                "edge length - edit mode/Viewport Overlays(main view right top menu)/Mesurment/Edge Length"
+              ],
+              "params": [
+                {
+                  "name": "ctrl-a",
+                  "desc": "apply scale, rotation, possition"
+                },
+                {
+                  "name": "tab",
+                  "desc": "togle edit/object mode"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Visual Studio 2022"
+          ],
+          "codes": [
+            {
+              "format": [
+                "{0}",
+                "{1}"
+              ],
+              "params": [
+                {
+                  "name": "ctrl + shift + l",
+                  "desc": "delete line"
+                },
+                {
+                  "name": "ctrl + r, ctrl + r",
+                  "desc": "rename"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Know your controls."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "VSCode Extensions",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Notes"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
+          "text": "Live Server"
+        }
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": [
+            "Live Server"
+          ],
+          "codes": [
+            {
+              "format": [
+                "To specify port",
+                "{0}",
+                "{1}",
+                "{2}"
+              ],
+              "params": [
+                {
+                  "name": ".vscode",
+                  "desc": "in folder"
+                },
+                {
+                  "name": "settings.json",
+                  "desc": "create or update config file"
+                },
+                {
+                  "name": "\"liveServer.settings.port\": 5500",
+                  "desc": "add setting for port"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "title": "net-my-libs",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://github.com/atari-monk/net-my-libs",
+          "text": "Repo"
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": [
+        "My Repo with my .net libraries."
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": [
+        "VSCode"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": [
+            "my-libs History"
+          ],
+          "codes": [
+            {
+              "format": [
+                "My github was created july 2021.",
+                "At the time, among other things, i was interested in cli apps and CommandDotNet cli lib.",
+                "Couple of cli apps where produced.",
+                "Code that i would reuse in them, or one i wanted to learn in separate assembly,",
+                "was ending up in it's separate repos, solutions and projects.",
+                "These libs were build by generated scripts and",
+                "referenced in projs with absolute paths to dlls.",
+                "Beginning 2023 i consolidated these libs in one repo and solution.",
+                "Net6.0 was upgraded to Net7.0",
+                "Replacing paths, Local Nuggets were generated."
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Config.Wrapper lib proj"
+          ],
+          "codes": [
+            {
+              "format": [
+                "History",
+                "I think this was added because cli app didn't had json config build in.",
+                "Beginning 2022 .net web apps had json config files set in di container by default.",
+                "Cli did not. So i readed hastily some msdocs about that.",
+                "Once json config was set and used in test app,",
+                "i begun to use this lib in my cli apps.",
+                "At 02.2023 my apps were still using it.<br>"
+              ]
+            },
+            {
+              "format": [
+                "Structure",
+                "This lib is for setup and use of .net json config system in cli app.<br>",
+                "ConfigBuilder class",
+                "Configures config sys based on msdocs.",
+                "Sets base dir.",
+                "Sets two json files, one optional.",
+                "Sets environmentalVariables.",
+                "(nice chaining of config methods)<br>",
+                "ConfigReader class",
+                "Reads json object to .net class.",
+                "Two methods for two ways of doing that",
+                "(possible null return, other with not null and default obj)<br>",
+                "ConfigTool static class",
+                "Static class tool wrapper for .net json config.<br>",
+                "DirectorySys class",
+                "Wrapper to make file sys testable.<br>",
+                "ConfigSuite class",
+                "This is a set of modules witch only has one.",
+                "ToDo: investigate why. Can't change now, becouse used in apps.<br>",
+                "AppConfigSet class",
+                "Unity container module registering this lib.",
+                "There is one instance of config per app, kind of setup.",
+                "There is also class for MDI container.",
+                "Unity is now deprecated.<br>",
+                "Rating",
+                "I still use this library, it seems to work fine. It's written quite solid for my taste."
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Config.Wrapper.Tests proj"
+          ],
+          "codes": [
+            {
+              "format": [
+                "ConfigFileTests - abstract class",
+                "Constants with paths, methods for config test api.",
+                "Integration test.",
+                "Checks scenarions: file ok, no file, bad file.<br>",
+                "ConfigBuilderTests - xunit test class",
+                "Tests required dependencies, tests ArgumentNullException on nulls.",
+                "Tests FileNotFoundException.",
+                "Tests ok scenario when ok file is there.<br>",
+                "ConfigReaderTests - xunit test class",
+                "Tests required dependencies, tests ArgumentNullException on nulls",
+                "Test when json config has bad format, not machting model class (InvalidOperationException).",
+                "Test if ok file is readed as expected with correct values ending in memory."
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Config.Wrapper.CLI.TestApp - cli test app"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Using lib in test app for example.",
+                "Tests json with string, int, bool.<br>",
+                "TestSettings - model class<br>",
+                "Program.cs",
+                "Builds config with new keyword and asserts redead values.<br>"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "DIHelper lib proj"
+          ],
+          "codes": [
+            {
+              "format": [
+                "History",
+                "This was made to support Dependency injection container use.<br>",
+                "Structure",
+                "Bootstraper",
+                "It creates app and runs it with optional args params.",
+                "It uses DependencySuite to register apps components.",
+                "In CreateApp method, it resolves app from di container, and runs apps Setup method.<br>",
+                "MultiBootstraper",
+                "This bootstraper has a dictionary of suites.",
+                "Suits have keys with two flags.",
+                "Suit can be ComponentSuite or AppSuite.",
+                "Each type is setup separetly.<br>",
+                "DependencySet abstract",
+                "It's a concept of a module.",
+                "It holds container and registers components of a module.<br>",
+                "DependencySuite",
+                "It's a concept of a container for a list of modules.",
+                "It registers modules.",
+                "Registerd modules, register their dependencies.",
+                "It also has method for resolving type.<br>",
+                "Program",
+                "These interfaces define cli app entry and setup methods.<br>",
+                "MicrosoftDI and Unity",
+                "These folders contain classes implementing module (DependencySet) and module set (DependencySuite),",
+                "for Unity Container and MicrosoftDI Container.",
+                "DependencySuite has template method, categorizing modules and their order of registering.",
+                "Unfortunatly, Unity Container version 5.11.7 was deprecated by author."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "In progres."
+  ]
+}

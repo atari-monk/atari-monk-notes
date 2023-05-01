@@ -1,0 +1,197 @@
+{
+  "isKey": false,
+  "isScrollToBottom": false,
+  "title": "Creative Session",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://chat.openai.com/chat",
+        "text": "chatgpt"
+      },
+      {
+        "link": "https://www.google.com/",
+        "text": "google"
+      },
+      {
+        "link": "https://github.com/atari-monk/creative-session",
+        "text": "creative-session repo"
+      }
+    ]
+  },
+  "description": {
+    "navId": "description",
+    "isCenter": false,
+    "title": "Description",
+    "description": ["<span class='tab'></span>Idea is to just freecode with chatgpt, google. Whatever i want. In session up to 4 hrs. Just do it becouse i have a software in my mind. Not becouse i want a reward, audience, folowers or anything but this flow. I can stream it thow. It feels better to not talk only to yourself for some weird reason."]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["Prepared this page.", "New repo 'creative-session' on github."]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "title": "Notes"
+    },
+    {
+      "type": "text",
+      "navId": "content",
+      "isCenter": false,
+      "title": "Content",
+      "note": [
+        "<ol><li><a href=#session1>Sesion 1</a></li><li><a href=#session2>Sesion 2</a></li><li><a href=#session3>Sesion 3</a></li></ol>{%NAV2%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "session1",
+      "title": "Session 1, 13.04.2023 16:45-20:00, Spears Fighting Game",
+      "note": [
+        "{%TAB%} Question: I played Shogun2 with Oda faction. Can you please write classes with prototype of a game for me ? I want players to be rectangles. They should have ability to move left and right on some ground, jump. I want them to have spears as a weapon. Use WSAD for movement. Space is for spear atack. They should have health bars in top of the screen on left and right. Plese use html, css, js for this. {%BR_TAB%} Answear: it provided html and css, kind of workable. Js was with a lot of features, kind of impressive for a prototype, but it didnt even compile and was painfully slow generated. Unworkable. Lets try simpler stuff. Simple prototype, adding small features. {%BR_TAB%} Question: Can you please write classes with prototype of a game for me ? Place a rectangle player on the ground. Make it move with WSAD. Plese use html, css, js for this. {%BR_TAB%} Answear: It generated working prototype. Simple but working. {%BR_TAB%} Question: Plese add a ground for player to walk on. Make it fill the screen width. {%BR_TAB%} Answear: It fucked things up. {%BR_TAB%} I played with it for 2hours 50 minutes. It updated to responsive look of the page, added Player moving with WSAD, gravity and simple jump. Result is in session1 folder. {%BR_TAB%}Problem is responces are to slow and cut before end. Probably to buy it with currency. Once again worst of our behavior fucks up things with promise. Maybe it could be used for prototyping in some form, but this session failed to sattisfy. My take on this is that it needs another chance. With more carefully crafted questions that add 10 features to prototype. Wonder if it can handle that. It has potential but prolly it will be used to control and as a weapon.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "session2",
+      "title": "Session 2, Prepared questions, 23 minutes, 13.04.2023 22:00-01:40",
+      "note": [
+        "<ol><li>Write html for responsive web page that can be used for prototyping games.</li><li>Write css for responsive web page that can be used for prototyping games, styling html you wrote.</li><li>Write js class with basic game loop for parts you wrote.</li><li>Write js class with player prototype, useable in parts you wrote before, visualize player as rectangle.</li><li>Write js class that adds gravity to prototype you wrote this far.</li><li>Write js code i need to add to player so he has gravity, make it work for parts we wrote so far.</li><li>Write js code to add jumping to solution so far, so that player has parabolic trajectory jump.</li><li>Add js class with spear that i can add to game prototype we wrote so far.</li><li>Write js code i need to add to make player pick up spear and move with it.</li><li>Write js code i need to add to animate player thrust a spear in direction where it's pointing.</li></ol> {%TAB%} Notes on chatgpt responses and testing them. <ol><li>Included also css, so, result for question 2.</li><li>Skip.</li><li>It dosent contain erros, but it dosent have testable feature yet.</li><li>It produced rectangle in canvas as expected.</li><li>It produced gravity for player, i wanted graviti class, but this counts. Also there was canvas not defined, but it repaired the bug. Even used prop instead of dependency for game and player, witch i like more (I would use dependency by default). This also answeared question 6.</li><li>Skip.</li><li>It provided player class with additions to handle jumping. I need to ask additional stuff to fill gaps so i can test the jump. I needed to debug, but when i pointed out to it that displaycement in jump formula was 0 he corrected. Jump works. It's weird but it counts.</li><li>It added spear. There was a need to polish with additional questions, but it always goes closer to what is expected. At this point i need to make player move with WSAD, becouse that siped our attention so far. It did well on that.</li><li>I am amaized, a bit (lets agree universe needed 14bln yeras for this). It did problem of grabing and realeasing spear no problem. It needs cosmetic tweaks but it works. I need to stop here.</li><li>It broke prevoius features. Whole thing is not controlable anymore therefore useless. I think i need simpler idea and even smaller steps to control prototyping to extent where new feature can be added esier.</li></ol>{%CONTENT2%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "session3",
+      "title": "Session 3, 15.04.2023 13:40-16.04.2023 00:18.",
+      "note": ["Questions aimed at producing game prototyping page. <ol><li>Write only html, no css, no js for now. I want responsive design. Plese add canvas, start, pause and reset buttons.</li><li>Can you style that page ? I would like black backgroud. I want to see canvas border. Make buttons look better. Write only css.</li><li>Make canvas bigger, center button under the canvas. Use separate css file for this.</li><li>I noticed that on mobile landscape mode, canvas and buttuns dont fill the screen, can you correct ?</li><li>Can you make canvas fill the screen. Leave small button. Create overlay witch is transparent but adds 3 button we had on page. Dont code logic for that yet.</li><li>At this point i am already raging with fury. All i want is page, black with canvas, overlay with buttons. Lets see it can produce that. I dont note or limit questions at this point. Only goal and result.</li><li>It is unable to reach quite simple objective. Reset chat.</li></ol>"]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Goal is page with canvas. Black, border on edge of screen.",
+      "note": ["We, i and it was able to achive wanted canvas."]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Goal is in the bottom right corner, place a small button.",
+      "note": [
+        "A little to long on styling button hell, but i and it victoriuous."
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Goal is transparent overlay with text hello world. Show overlay on small button press. Hide it after it;s clicked anywhere.",
+      "note": ["We, i and it was able to achive wanted overlay."]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Goal is Put start and reset buttons in center of overlay.",
+      "note": ["We, i and it was able to achive wanted overlay buttons."]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Goal is to add a game class that will update and render game objects using proper frame delta time. Make it start and reset with our buttons, also pause when overlay button is pressed and resume when overlay is closed.",
+      "note": [
+        "We, i and it was able to achive wanted game class. Needs to be used/tested."
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Goal is to add GameObject class, render it as rectangle.",
+      "note": [
+        "I got stuck here. Unable to test Game class. Need to use proper ones from some project."
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Goal is to add GameObject class, render it as rectangle.",
+      "note": [
+        "I got stuck here. Unable to test Game class. Need to use proper ones from some project."
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Continue on session 3.",
+      "note": [
+        "Fixed overlay, removed game class. I want animator class. Went for canvas class first.  For setup and drawing test. Added some canvas config and test of drawing. Now i need some animation, time to add animator class. I need also GameObject to properlly test animator. Animator kind of works. Now can i handle start in overlay ? It started on button. Code needs testing and to make it pretty, othervise it will rot as usual. Need to end here for now. 20:34 - 23:00 18.04.2023 I made it provide a sript with project code, then i asked for pause btn to work, code was correct in sense of concept, but nasty merge was needed manually."
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "summary",
+      "isCenter": true,
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["Not yet{%NAV%}"]
+    }
+  ],
+  "param": {
+    "": [
+      {
+        "name": "",
+        "desc": ""
+      }
+    ]
+  },
+  "inject": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%NAV2%}",
+      "text": "<br><a href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%CONTENT2%}",
+      "text": "<a href='#content'>Back to Content</a>"
+    }
+  ]
+}

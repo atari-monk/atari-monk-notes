@@ -1,0 +1,32 @@
+{
+  "title": "ChatGPT",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Questions"
+    }
+  ],
+  "section": [
+    {
+      "navId": "questions",
+      "title": "Questions",
+      "links": [
+        {
+          "link": "notes.html?page=note/form-server",
+          "text": "Html Form Server"
+        },
+        {
+          "link": "notes.html?page=note/github-api",
+          "text": "GitHub API"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    }
+  ]
+}

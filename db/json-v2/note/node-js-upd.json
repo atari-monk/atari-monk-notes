@@ -1,0 +1,100 @@
+{
+  "title": "Update with npm",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": ["Update Node.js on Windows"]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://nodejs.org/en/",
+        "text": "Ok Source"
+      },
+      {
+        "link": "https://phoenixnap.com/kb/update-node-js-version",
+        "text": "Fail Source"
+      }
+    ]
+  },
+  "note": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "title": "On Windows, just use installer :(",
+      "note": [
+        "Use Source link, download and use installer",
+        "Problems with additional tools chocolatey",
+        "{0}"
+      ],
+      "params": [
+        {
+          "name": "node -v",
+          "desc": "check which version you are currently using"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Update Node.js on Windows with NPM",
+        "Fails",
+        "ERR! notsup Valid OS: !win32"
+      ],
+      "note": ["{0}", "{1}", "{2}", "{3}", "{4}", "{5}"],
+      "params": [
+        {
+          "name": "node -v",
+          "desc": "check which version you are currently using"
+        },
+        {
+          "name": "npm cache clean -f",
+          "desc": "clear npm cache"
+        },
+        {
+          "name": "npm install -g n",
+          "desc": "Install n globally"
+        },
+        {
+          "name": "sudo n stable",
+          "desc": "use n module to install the latest stable release of Node.js"
+        },
+        {
+          "name": "sudo n latest",
+          "desc": "or use this for release with the latest features"
+        },
+        {
+          "name": "n [version.number]",
+          "desc": "or use this for sepecific version"
+        }
+      ]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["Shame."]
+    }
+  ]
+}

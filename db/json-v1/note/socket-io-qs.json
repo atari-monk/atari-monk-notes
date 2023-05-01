@@ -1,0 +1,149 @@
+{
+  "title": "Socket.IO template Azure deploy",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://theargylemvp.com/2021/08/21/deploying-socket-io-to-azure-web-app/",
+          "text": "Source Tutorial"
+        },
+        {
+          "link": "https://socket.io/get-started/chat",
+          "text": "Official get started"
+        },
+        {
+          "link": "https://github.com/atari-monk/socket-io-qs",
+          "text": "Repo"
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": [
+        "Socket.IO enables bidirectional communication between (Node.js) server and (Browser/Node.js) client.",
+        "It's most popular on the web for this.",
+        "Official get started combines server and client under one namespace. I tested it locally.",
+        "When i deploy on azure cloud, i prefered them separated."
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": [
+        "VSCode",
+        "Node.js"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": [
+            "Setup project.",
+            "In git bash or VSCode terminal."
+          ],
+          "codes": [
+            {
+              "format": [
+                "cd {0}",
+                "npm init",
+                "npm install socket.io",
+                "npm install express"
+              ],
+              "params": [
+                {
+                  "name": "chat-server",
+                  "desc": "proj folder"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Add to .gitignore"
+          ],
+          "codes": [
+            {
+              "format": [
+                "node_modules",
+                ".vscode"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Add code from sources.",
+            "Add index.js with server code.",
+            "Add folder- chat-client.",
+            "Add index.html with chat client code."
+          ]
+        },
+        {
+          "text": [
+            "Run server locally.",
+            "Ctrl+C to kill it.",
+            "With live server extension, open two instances of chat client page.",
+            "Send message with one client.",
+            "Check if it was recived by server and send to another clinet."
+          ],
+          "codes": [
+            {
+              "format": [
+                "node index.js"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Deploy to Azure.",
+            "VSCode Azure extension.",
+            "App Services.",
+            "Create New Web App.",
+            "Right click on chat-server, Deploy to Web App.",
+            "Choose web app name and assign folder to it in popup.",
+            "After server is deployed, deploy client page with github pages.",
+            "Test it."
+          ],
+          "codes": [
+            {
+              "format": [
+                "{0}"
+              ],
+              "params": [
+                {
+                  "name": "atari-monk-chat-server",
+                  "desc": "example name"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Quite powerfull and easy to use framework."
+  ]
+}

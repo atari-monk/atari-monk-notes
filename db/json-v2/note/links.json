@@ -1,0 +1,176 @@
+{
+  "title": "Links",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Links"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": ["Content curated by me.", "Content i like to play with."]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "links",
+      "isCopy": false,
+      "title": "Links",
+      "note": []
+    },
+    {
+      "type": "text",
+      "navId": "content",
+      "isCopy": false,
+      "isCenter": true,
+      "title": "Content",
+      "note": ["1. <a href=#classic_games>Classic Games</a>{%BR%}2. <a href=#shows>Shows</a>{%BR%}3. <a href=#tools>Tools</a>{%NAV2%}"]
+    },
+    {
+      "type": "note-aside",
+      "navId": "classic_games",
+      "isCopy": false,
+      "isCenter": true,
+      "title": "Classic Games",
+      "note": ["{0}", "{1}", "{2}", "{3}{%CONTENT%}"],
+      "params": [
+        {
+          "name": "<a href=\"https://playclassic.games/games/puzzle-solving-dos-games-online/play-lemmings-online/play/\">Lemings</a>",
+          "desc": "Briliant 8 bit era game. Such a fun model of herd."
+        },
+        {
+          "name": "<a href=\"http://xproger.info/projects/OpenLara/\">Tomb Raider</a>",
+          "desc": "Lara Croft is a fantasy of people."
+        },
+        {
+          "name": "<a href=\"https://www.retrogames.cz/play_022-NES.php?language=EN\">Contra</a>",
+          "desc": "8 bit classic, in Poland, hit on PEGASUS console."
+        },
+        {
+          "name": "<a href=\"https://www.retrogames.cc/psx-games/final-fantasy-vii-usa-disc-1.html\">Final Fantasy VII</a>",
+          "desc": "One of the best game of Playstation I period."
+        }
+      ]
+    },
+    {
+      "type": "note-aside",
+      "navId": "shows",
+      "isCenter": true,
+      "isCopy": false,
+      "title": "Shows",
+      "note": [
+        "{0}",
+        "{1}",
+        "{2}",
+        "{3}",
+        "{4}",
+        "{5}",
+        "{6}",
+        "{7}",
+        "{8}",
+        "{%CONTENT%}"
+      ],
+      "params": [
+        {
+          "name": "<a href=\"https://www.youtube.com/@BohemianEagle/videos\">Jingles</a>",
+          "desc": "Interesting guy with freindly voice will make second breakfast go down."
+        },
+        {
+          "name": "<a href=\"https://www.youtube.com/@TimDillonShow/videos\">Tim Dilon</a>",
+          "desc": "Comedy prodigy will make your sunday louder and entertaining."
+        },
+        {
+          "name": "<a href=\"https://www.youtube.com/@orangepill/videos\">Max & Stacy</a>",
+          "desc": "Financial scandal experts will make you move to EL-Salvador."
+        },
+        {
+          "name": "<a href=\"https://www.youtube.com/@StansberryMedia/videos\">Stansberry</a>",
+          "desc": "Answears if rich people can be entertaining."
+        },
+        {
+          "name": "<a href=\"https://www.youtube.com/@Goldsilver/videos\">Mike Maloney</a>",
+          "desc": "Hard money seller."
+        },
+        {
+          "name": "<a href=\"https://www.youtube.com/@SaturdayNightLive\">SaturdayNightLive</a>",
+          "desc": "Comedy show."
+        },
+        {
+          "name": "<a href=\"https://www.youtube.com/@Thunderf00t\">Thunderf00t</a>",
+          "desc": "Scientist of YT."
+        },
+        {
+          "name": "<a href=\"https://www.youtube.com/@freecodecamp\">freecodecamp</a>",
+          "desc": "Tutorial hell of YT."
+        }
+        ,
+        {
+          "name": "<a href=\"https://www.youtube.com/@ImnotNorm\">ImnotNorm</a>",
+          "desc": "Art of Norm Macdonald."
+        }
+      ]
+    },
+    {
+      "type": "note-aside",
+      "navId": "tools",
+      "isCenter": true,
+      "isCopy": false,
+      "title": "Tools",
+      "note": ["{0}{%CONTENT%}"],
+      "params": [
+        {
+          "name": "<a href=\"https://translate.google.com/\">Google Translate</a>",
+          "desc": "Text to Speach ability."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "summary",
+      "isCenter": true,
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["Enjoy.{%NAV%}"]
+    }
+  ],
+  "inject": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%NAV2%}",
+      "text": "<br><a href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%CONTENT2%}",
+      "text": "<a href='#content'>Back to Content</a>"
+    }
+  ]
+}

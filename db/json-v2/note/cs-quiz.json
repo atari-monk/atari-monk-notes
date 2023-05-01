@@ -1,0 +1,91 @@
+{
+  "title": "C# quiz",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": [
+      "I illustrated each question with code snipet, link in <a href='#source'>Source</a>.",
+      "I still dont quite get last question (not included)."
+    ]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://github.com/atari-monk/net-my-libs/tree/main/Net.Examples.Cli",
+        "text": "Cli to run code snipets"
+      },
+      {
+        "link": "https://github.com/atari-monk/net-my-libs/tree/main/Net.Examples/JobTest1",
+        "text": "Code snipet for each question"
+      }
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["VSCode"]
+  },
+  "note": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "title": "Question1 : Describe ways to return more than one value from method.",
+      "note": ["Ref, Out, Struct, Class, Tuple, Array, List, Dictionary"]
+    },
+    {
+      "isCopy": false,
+      "title": "Given this <a href='https://github.com/atari-monk/net-my-libs/blob/main/Net.Examples/JobTest1/Question2/ReplyQ2.cs'>this code</a>, what is output?",
+      "note": [
+        "B1, A2. Method1 is overriden in ClassB ergo B1, Method2 is not overriden ergo A2."
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Given <a href='https://github.com/atari-monk/net-my-libs/blob/main/Net.Examples/JobTest1/Question3/ReplyQ3.cs'>this code</a>, what is output?",
+      "note": [
+        "While has no termination condition due to double not beeing precise like int."
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Given <a href='https://github.com/atari-monk/net-my-libs/blob/main/Net.Examples/JobTest1/Question4/ReplyQ4.cs'>this code</a>, what is output?",
+      "note": [
+        "Result is 7 due to scope of variable, method has only local var."
+      ]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": [
+        "Had no problem with those, when i had compiler and no time constraint.",
+        "20 minutes was given for this, without tools.",
+        "Eventually AI will take the job anyway."
+      ]
+    }
+  ]
+}

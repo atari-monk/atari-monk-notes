@@ -1,0 +1,1779 @@
+{
+  "isKey": true,
+  "isScrollToBottom": false,
+  "title": "Node.js Course",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://github.com/jonasschmedtmann",
+        "text": "Source Tutorial"
+      },
+      {
+        "link": "https://github.com/atari-monk/node.js-course",
+        "text": "My node.js-course Repo"
+      },
+      {
+        "link": "https://nodejs.org/en/",
+        "text": "Node.js"
+      },
+      {
+        "link": "https://www.npmjs.com/",
+        "text": "npm"
+      },
+      {
+        "link": "https://www.npmjs.com/package/superagent",
+        "text": "superagent"
+      },
+      {
+        "link": "https://expressjs.com/",
+        "text": "expressjs"
+      }
+    ]
+  },
+  "description": {
+    "navId": "description",
+    "isCenter": true,
+    "title": "Description",
+    "description": ["Notes on Node.js introduction."]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["VSCode"]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "title": "Notes"
+    },
+    {
+      "type": "content",
+      "navId": "content",
+      "title": "Content, Part 1",
+      "links": [
+        {
+          "title": "Intro",
+          "time": "0-7"
+        },
+        {
+          "title": "Instal Node.js",
+          "time": "7-13"
+        },
+        {
+          "link": "#about",
+          "title": "About Node.js",
+          "time": "13-21"
+        },
+        {
+          "link": "#cli",
+          "title": "Node.js Cli",
+          "time": "21-27"
+        },
+        {
+          "link": "#core-modules",
+          "title": "Using Core Modules",
+          "time": "27-33"
+        },
+        {
+          "link": "#io-sync",
+          "title": "Read/Write Files",
+          "time": "33-41"
+        },
+        {
+          "link": "#blocking",
+          "title": "Blocking and non-blocking: Asynchronous nature of node.js",
+          "time": "41-51"
+        },
+        {
+          "link": "#io-async",
+          "title": "Read/Write Files Asynchronously",
+          "time": "51-1:05"
+        },
+        {
+          "link": "#web-server",
+          "title": "Creating a Simple Web Server",
+          "time": "1:05-1:18"
+        },
+        {
+          "link": "#routing",
+          "title": "Routing",
+          "time": "1:18-1:33"
+        },
+        {
+          "link": "#simple-api",
+          "title": "Building a (VERY) Simple API",
+          "time": "1:33-1:48"
+        },
+        {
+          "title": "Html templating: Buildding the templates",
+          "time": "1:48-2:02"
+        },
+        {
+          "link": "#filling-templates",
+          "title": "Html templating: Filling the templates",
+          "time": "2:02-2:22"
+        },
+        {
+          "link": "#parsing-variables",
+          "title": "Parsing variables from urls",
+          "time": "2:22-2:33"
+        },
+        {
+          "link": "#own-modules",
+          "title": "Using Modules 2: Our Own Modules",
+          "time": "2:33-2:40"
+        },
+        {
+          "link": "#npm",
+          "title": "Introduction to npm and package.json file",
+          "time": "2:40-2:45"
+        },
+        {
+          "link": "#package-installs",
+          "title": "Types of packages and installs",
+          "time": "2:45-2:58"
+        },
+        {
+          "link": "#third-party",
+          "title": "Using modules 3: 3rd party modules",
+          "time": "2:58-3:06"
+        },
+        {
+          "link": "#versioning",
+          "title": "Package Versioning And Updating",
+          "time": "3:06-3:18"
+        },
+        {
+          "link": "#prettier",
+          "title": "Setting up Prettier in VSCode",
+          "time": "3:18-3:30"
+        },
+        {
+          "title": "Recap and what's next",
+          "time": "3:30-3:32"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Content, Part 2",
+      "links": [
+        {
+          "title": "Intro",
+          "time": "0-1"
+        },
+        {
+          "link": "#web",
+          "title": "How Web Works",
+          "time": "1-14."
+        },
+        {
+          "link": "#http",
+          "title": "Http in action",
+          "time": "14-20."
+        },
+        {
+          "link": "#back-end",
+          "title": "Front End vs Back End Dev",
+          "time": "20-26."
+        },
+        {
+          "link": "#dynamic-api",
+          "title": "Static vs Dynamic vs API",
+          "time": "26-35."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Content, Part 3",
+      "links": [
+        {
+          "title": "Intro",
+          "time": "0-1"
+        },
+        {
+          "link": "#node-build",
+          "title": "How Node js is buld",
+          "time": "1-5"
+        },
+        {
+          "link": "#node-threads",
+          "title": "Threading in node js",
+          "time": "5-10."
+        },
+        {
+          "link": "#event-loop",
+          "title": "Event Loop",
+          "time": "10-21."
+        },
+        {
+          "link": "#evloop-example",
+          "title": "Event Loop Example",
+          "time": "21-40."
+        },
+        {
+          "link": "#event-driven",
+          "title": "Events driven architecture",
+          "time": "40-45."
+        },
+        {
+          "link": "#event-example",
+          "title": "Events example",
+          "time": "45-58."
+        },
+        {
+          "link": "#streams",
+          "title": "Streams",
+          "time": "58-64."
+        },
+        {
+          "link": "#streams-practice",
+          "title": "Streams in Practice",
+          "time": "64-81."
+        },
+        {
+          "link": "#modules",
+          "title": "About Modules",
+          "time": "81-90. "
+        },
+        {
+          "link": "#modules-practice",
+          "title": "Modules in practice",
+          "time": "90-106."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Content, Part 4",
+      "links": [
+        {
+          "title": "Intro",
+          "time": "0-1"
+        },
+        {
+          "link": "#hell",
+          "title": "Callback hell",
+          "time": "1-14"
+        },
+        {
+          "link": "#promise-consume",
+          "title": "Consume Promises",
+          "time": "14-21"
+        },
+        {
+          "link": "#promise-building",
+          "title": "Building Promises",
+          "time": "21-35"
+        },
+        {
+          "link": "#async-promise",
+          "title": "Consume Promise with async await",
+          "time": "35-43"
+        },
+        {
+          "link": "#async-return",
+          "title": "Returning values from async functions",
+          "time": "43-56"
+        },
+        {
+          "link": "#promise-all",
+          "title": "Waiting for multiple promises simultaneously",
+          "time": "56-62"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Content, Part 5",
+      "links": [
+        {
+          "title": "Intro",
+          "time": "0-1"
+        },
+        {
+          "link": "#express",
+          "title": "What is Express",
+          "time": "1-3"
+        },
+        {
+          "link": "#postman",
+          "title": "Install Postman",
+          "time": "3-6"
+        },
+        {
+          "link": "#express-setup",
+          "title": "Install Express",
+          "time": "6-21"
+        },
+        {
+          "link": "#api-design",
+          "title": "APIS and restful API design",
+          "time": "21-37"
+        },
+        {
+          "link": "#api-get",
+          "title": "Starting our API: Handling GET requests",
+          "time": "37-49"
+        },
+        {
+          "link": "#api-post",
+          "title": "Handling POST requests",
+          "time": "49-65"
+        },
+        {
+          "link": "#url-param",
+          "title": "Responding to Url Parameters",
+          "time": "1:05-1:17"
+        },
+        {
+          "link": "#api-patch",
+          "title": "Handling Patch requests",
+          "time": "1:17-1:24"
+        },
+        {
+          "link": "#api-delete",
+          "title": "Handling Delete requests",
+          "time": "1:24-1:26"
+        },
+        {
+          "link": "#api-refactor",
+          "title": "Refactoring our routes",
+          "time": "1:26-1:33"
+        },
+        {
+          "link": "#middleware",
+          "title": "Middleware and the request response cycle",
+          "time": "1:33-1:38"
+        },
+        {
+          "link": "#own-middleware",
+          "title": "Creating our own Middleware",
+          "time": "1:38-1:47"
+        },
+        {
+          "link": "#middleware-lib",
+          "title": "Using 3rd party middleware",
+          "time": "1:47-1:57"
+        },
+        {
+          "link": "#users-route",
+          "title": "Implementing the users routes",
+          "time": "1:57-2:03"
+        },
+        {
+          "link": "#multiple-routers",
+          "title": "Creating and mounting multiple routers",
+          "time": "2:03-2:12"
+        },
+        {
+          "link": "#file-structure",
+          "title": "A Better file structure",
+          "time": "2:12-2:30"
+        },
+        {
+          "link": "#param-middleware",
+          "title": "Param Middleware",
+          "time": "2:30-x"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "about",
+      "title": "About Node.js",
+      "note": [
+        "NODE.JS IS A JAVASCRIPT RUNTIME BUILT ON GOOGLE’S OPEN-SOURCE V8 JAVASCRIPT ENGINE.{%BR%} Node.js as a web server; server side of web development; (back-end).{%BR%} Single-threaded; based on event driven, non-blocking I/O model.{%BR%} For building fast and scalable data-intensive apps;{%BR%} API with database behind it (preferably NoSQL);{%BR%} Data streaming (think YouTube);{%BR%} Real-time chat application;{%BR%} Server-side web application.{%BR%} Not For CPU-intensive heavy server-side processing.{%BR%} JavaScript across the entire stack.{%BR%} NPM: huge library of open-source packages available for everyone for free;{%BR%} Very active developer community.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "note-aside",
+      "navId": "cli",
+      "title": "Node.js Cli",
+      "note": [
+        "{0}{%BR%} const name = 'jonas'{%BR%} name{%BR%} 7+3{%BR%} exit{%BR%} {1}{%BR%} 3*8{%BR%} {2}{%BR%} +6{%BR%} {3}{%BR%} {4}"
+      ],
+      "params": [
+        {
+          "name": "node",
+          "desc": "starts node repl (Read-Eval-Print Loop)"
+        },
+        {
+          "name": "Tab",
+          "desc": "hit tab or twice, to see all js/node modules"
+        },
+        {
+          "name": "_",
+          "desc": "this holds previous result"
+        },
+        {
+          "name": "String.",
+          "desc": "hit tab or twice, to see all about string"
+        },
+        {
+          "name": "ctrl+d",
+          "desc": "to exit"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "note-aside",
+      "navId": "core-modules",
+      "title": "Using Core Modules",
+      "note": [
+        "Create index.js in proj folder root, log hello world to console.{%BR%} {0}.{%BR%} node.js is build on concept of module.{%BR%} it can do things browser cant, like use file system.{%BR%} {1}{%BR%} Docs - extensive information.{%BR%} {2}.{%BR%} modules on left, for example File system."
+      ],
+      "params": [
+        {
+          "name": "node index.js",
+          "desc": "command to run node.js scripts, no need of html :)"
+        },
+        {
+          "name": "const fs = require('fs');",
+          "desc": "import module with file system"
+        },
+        {
+          "name": "<a href='https://nodejs.org/en/docs/'>Docs</a>",
+          "desc": "select version to browse docs"
+        }
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "js",
+      "note": ["const hello = 'Hello world'; console.log(hello);"]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "io-sync"
+    },
+    {
+      "type": "cmd",
+      "navId": "io-sync",
+      "content": "text",
+      "beautify": "js",
+      "title": "Read/Write Files",
+      "note": [
+        "const fs = require('fs'); console.log(\"blocking, sync\"); const textIn = fs.readFileSync('./txt/input.txt', 'utf-8'); console.log(textIn); const textOut = `This is what we know about the avocado: ${textIn}.\nCreated on ${Date.now()}`; fs.writeFileSync('./txt/output.txt', textOut);"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "blocking",
+      "title": "Blocking and non-blocking: Asynchronous nature of node.js.",
+      "note": [
+        "{%TAB%}Synchronous.{%BR%} Blocking.{%BR%} Basically means running code in sequence line by line.{%BR%} each line has to finish before next runs.{%BR_TAB%}Asynchronous.{%BR%} Non-Blocking.{%BR%} Heavy task is run in background with callback,{%BR%} so main code can run.{%BR%} After heavy task ends, callback is called.{%BR%}{%TAB%}Node.js has single main thread and background for time consuming tasks.{%BR%} That's why it's important to use asynchronous code.{%BR%} 10 users use same thread, to not block it use async code.{%BR%} Sync would block main thread, async delegates to 'background' and uses callbacks on main after task finishes.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "io-async"
+    },
+    {
+      "type": "cmd",
+      "navId": "io-async",
+      "content": "text",
+      "beautify": "js",
+      "title": "Read/Write Files Asynchronously",
+      "note": [
+        "const fs = require('fs'); console.log(\"non-blocking, async\"); fs.readFile('./txt/start.txt', 'utf-8', (err, data) => { console.log(data); }); console.log('Will read file!');"
+      ]
+    },
+    {
+      "type": "cmd",
+      "navId": "io-async",
+      "content": "text",
+      "beautify": "js",
+      "title": "Callbacks",
+      "note": [
+        "const fs = require('fs'); console.log(\"non-blocking, async\"); fs.readFile('./txt/start.txt', 'utf-8', (err, data1) => { if(err) return console.log('ERROR! 💥'); fs.readFile(`./txt/${data1}.txt`, 'utf-8', (err, data2) => { console.log(data2); fs.readFile('./txt/append.txt', 'utf-8', (err, data3) => { console.log(data3); fs.writeFile('./txt/final.txt', `${data2}\n${data3}`, 'utf-8', err => { console.log('Your file have been written 😊'); }); }); }); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "web-server"
+    },
+    {
+      "type": "cmd",
+      "navId": "web-server",
+      "content": "text",
+      "beautify": "js",
+      "title": "Creating a Simple Web Server",
+      "note": [
+        "const http = require('http'); console.log(\"Server\"); const server = http.createServer((req, res) => { res.end('Hello from the server!'); }); server.listen(8000, '127.0.0.1', () => { console.log('Listening to requests on port 8000'); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "routing",
+      "title": "Routing",
+      "note": [
+        "Routing - Implementing different actions for different URLs.{%BR%} Implementing simple if statement routing.{%BR%} Response with 404 error, Chrome F12, Console error, Network tab, status 404 on routing."
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "js",
+      "note": [
+        "const http = require('http'); const url = require('url'); console.log(\"Server with 'if' routing\"); const server = http.createServer((req, res) => { const pathName = req.url; if (pathName === '/' || pathName === '/overview') { res.end('This is the OVERVIEW'); } else if (pathName === '/product') { res.end('This is the PRODUCT'); } else { res.writeHead(404, { 'Content-type': 'text/html', 'my-own-header': 'hello world' }); res.end('<h1>Page not found!</h1>'); } }); server.listen(8000, '127.0.0.1', () => { console.log('Listening to requests on port 8000'); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "simple-api",
+      "title": "Building a (VERY) Simple API",
+      "note": [
+        "API - Service that returns data.{%BR%} './' - (dot) represents directory from which node cmd is invoked (with path to js file).{%BR%} '.' in require module import means file directory, not node cmd execution directory.{%BR%} '__dirname' - global variable with path to directory where node executed js file resides."
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "js",
+      "note": [
+        "const http = require('http'); const fs = require('fs'); const url = require('url'); console.log(\"Server\"); const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, 'utf-8'); const dataObj = JSON.parse(data); const server = http.createServer((req, res) => { const pathName = req.url; if (pathName === '/' || pathName === '/overview') { res.end('This is the OVERVIEW'); } else if (pathName === '/product') { res.end('This is the PRODUCT'); } else if (pathName === '/api') { res.writeHead(200, {'Content-type': 'application/json'}); res.end(data); } else { res.writeHead(404, { 'Content-type': 'text/html', 'my-own-header': 'hello world' }); res.end('<h1>Page not found!</h1>'); } }); server.listen(8000, '127.0.0.1', () => { console.log('Listening to requests on port 8000'); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "filling-templates",
+      "title": "Html templating: Filling the templates",
+      "note": ["Use replace method to put js object values in html templates."]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "js",
+      "note": [
+        "const http = require('http'); const fs = require('fs'); const url = require('url'); console.log(\"Server fill templates\"); const replaceTemplate = (temp, product) => { let output = temp.replace(/{%PRODUCTNAME%}/g, product.productName); output = output.replace(/{%IMAGE%}/g, product.image); output = output.replace(/{%PRICE%}/g, product.price); output = output.replace(/{%FROM%}/g, product.from); output = output.replace(/{%NUTRIENTS%}/g, product.nutrients); output = output.replace(/{%QUANTITY%}/g, product.quantity); output = output.replace(/{%DESCRIPTION%}/g, product.description); output = output.replace(/{%ID%}/g, product.id); if (product.organic === false) \r\noutput = output.replace(/{%NOT_ORGANIC%}/g, 'not-organic'); return output; } const tempOverview = fs.readFileSync(\r\n`${__dirname}/templates/template-overview.html`, 'utf-8'); const tempCard = fs.readFileSync(\r\n`${__dirname}/templates/template-card.html`, 'utf-8'); const tempProduct = fs.readFileSync(\r\n`${__dirname}/templates/template-product.html`, 'utf-8'); const data = fs.readFileSync(\r\n`${__dirname}/dev-data/data.json`, 'utf-8'); const dataObj = JSON.parse(data); const server = http.createServer((req, res) => { const pathName = req.url; \r\n// Overview page\r\n if (pathName === '/' || pathName === '/overview') { res.writeHead(200, { 'Content-type': 'text/html' }); const cardHtml = dataObj.map(\r\nel => replaceTemplate(tempCard, el)).join(''); const output = tempOverview.replace(\r\n/{%PRODUCT_CARDS%}/g, cardHtml); res.end(output); \r\n// Product page\r\n } else if (pathName === '/product') { res.end('This is the PRODUCT'); \r\n// API\r\n } else if (pathName === '/api') { res.writeHead(200, { 'Content-type': 'application/json' }); res.end(data); \r\n// Not found\r\n } else { res.writeHead(404, { 'Content-type': 'text/html', 'my-own-header': 'hello world' }); res.end('<h1>Page not found!</h1>'); } }); server.listen(8000, '127.0.0.1', () => { console.log('Listening to requests on port 8000'); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "parsing-variables"
+    },
+    {
+      "type": "cmd",
+      "navId": "parsing-variables",
+      "content": "text",
+      "beautify": "js",
+      "title": "Parsing variables from urls",
+      "note": [
+        "const { query, pathname } = url.parse(req.url, true); res.writeHead(200, { 'Content-type': 'text/html' }); const product = dataObj[query.id]; const output = replaceTemplate(\r\ntempProduct,\r\n product); res.end(output);"
+      ]
+    },
+    {
+      "type": "cmd",
+      "aside": {
+        "paramKey": "url",
+        "isDetail": true
+      },
+      "note": ["{0}"]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "own-modules",
+      "title": "Using Modules 2: Our Own Modules",
+      "note": ["In node.js every file is a module."]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "js",
+      "title": "Syntax for export from module",
+      "note": ["module.exports = (temp, product) => { ..."]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "js",
+      "title": "Syntax for import from module",
+      "note": [
+        "const replaceTemplate = require(\r\n'./modules/replaceTemplate')"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "note-aside",
+      "navId": "npm",
+      "title": "Introduction to npm and package.json file.",
+      "note": [
+        "{%TAB%}npm - Largest online packages host, CLI app.{%BR%} Go to page using Source link and search for express, 8 million downloads/week.{%BR%} Installed with Node.js.{%BR%} {0}{%BR%} It has dialog for project info.{%BR%} Package name: (2-node-farm) node-farm.{%BR%} Version: (1.0.0).{%BR%} Description: Learning Node.js.{%BR%} Entry point: (1-hello-world.js) index.js.{%BR%} Test command:{%BR%} Git repository:{%BR%} Keywords:{%BR%} Author: Jonas Schmedtmann.{%BR%} License: (ISC).{%BR%} Saved as package.json."
+      ],
+      "params": [
+        {
+          "name": "npm init",
+          "desc": "init on proj folder"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "note-aside",
+      "navId": "package-installs",
+      "title": "Types of packages and installs",
+      "note": [
+        "{%TAB%}Package install types:{%BR%} Dependency (our code depends on this library).{%BR%} Dev dependency (tool outside code).{%BR%}{%TAB%}Install types:{%BR%}{0}{%BR%}{1}"
+      ],
+      "params": [
+        {
+          "name": "local",
+          "desc": "for project"
+        },
+        {
+          "name": "global",
+          "desc": "for machine"
+        }
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "html",
+      "aside": {
+        "paramKey": "i1",
+        "isDetail": true
+      },
+      "title": "",
+      "note": ["npm -h", "npm i -h", "{0}", "{1}", "{2}"]
+    },
+    {
+      "type": "cmd",
+      "content": "html",
+      "aside": {
+        "paramKey": "i2",
+        "isDetail": true
+      },
+      "title": "",
+      "note": ["{0}", "{1}", "{2}", "{3}", "{4}"]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "third-party",
+      "title": "Using modules 3: 3rd party modules",
+      "note": [
+        "const slugify = require('slugify'); When using new lib. Search lib on npm page and read it's page. Usually there is code snippet with 'how to use'. Slugify is lib that changes data id's in url params (or where used) into strings with some names. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "note-aside",
+      "navId": "versioning",
+      "title": "Package Versioning And Updating",
+      "note": [
+        "Semantic version notation.{%BR%}^{0}.{1}.{2}{%BR%}{3}{%BR%}{4}{%BR%}{5}{%BR%}{6}{%BR%}{7}{%BR%}{8}{%BR%}npm i express{%BR%}npm unistall express{%BR%}{9}{%BR%}{10}{%BR%}Json configs are used to restre proj.{%BR%}"
+      ],
+      "params": [
+        {
+          "name": "1",
+          "desc": "Major Version. New realese. Can have breaking changes."
+        },
+        {
+          "name": "18",
+          "desc": "Minor Version. New features, no braking changes. Backward compatible."
+        },
+        {
+          "name": "11",
+          "desc": "Patch Version. Intended to fix bugs."
+        },
+        {
+          "name": "^",
+          "desc": "Means it will be updated to Minor releases."
+        },
+        {
+          "name": "npm outdated",
+          "desc": "Lists outdated packeges."
+        },
+        {
+          "name": "npm install slugify@1.0.0",
+          "desc": "Install specific version."
+        },
+        {
+          "name": "~",
+          "desc": "Accept only Patch releases."
+        },
+        {
+          "name": "npm update slugify",
+          "desc": "Update package."
+        },
+        {
+          "name": "*",
+          "desc": "Accept all releases."
+        },
+        {
+          "name": "npm i",
+          "desc": "Reinstal after node_modules removal. (or npm install)"
+        },
+        {
+          "name": "package-lock.json",
+          "desc": "This file locks versions. So proj can restore them."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "note-aside",
+      "navId": "prettier",
+      "title": "Setting up Prettier in VSCode",
+      "note": [
+        "Extnsions:{%BR%}DotENV{%BR%}ESLint{%BR%}Image preview{%BR%}Pub beautify{%BR%}TabNine{%BR%}TODO Highlight{%BR%}Theme - Oceanic Next{%BR%}Prettier - Code formatter (js, css, html){%BR%}ctrl + ,{%BR%}format on save{%BR%}{0}{%BR%}\"singleQuote\": true"
+      ],
+      "params": [
+        {
+          "name": ".prettierrc",
+          "desc": "config file"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "web",
+      "title": "How Web Works"
+    },
+    {
+      "type": "text",
+      "title": "What happens when we access a webpage",
+      "note": [
+        "Client sends request to server. Server sends response. Client is for example, browser, postman, swagger, curl or any other client app. This is Request-response model or Client-server architecture."
+      ]
+    },
+    {
+      "type": "note-aside",
+      "note": ["{0}://www.{1}/{2}"],
+      "params": [
+        {
+          "name": "https",
+          "desc": "Protocol, http or https"
+        },
+        {
+          "name": "google.com",
+          "desc": "Domain name"
+        },
+        {
+          "name": "maps",
+          "desc": "Resource"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "note": [
+        "DNS. DNS Lookup. Special servers converting domain names to ip addresses. ISP - internet service provider company provides this service. DNS sends address back to browser."
+      ]
+    },
+    {
+      "type": "note-aside",
+      "note": ["{0}://{1}:{2}"],
+      "params": [
+        {
+          "name": "https",
+          "desc": "Protocol, http or https"
+        },
+        {
+          "name": "216.58.211.206",
+          "desc": "IP adress"
+        },
+        {
+          "name": "443",
+          "desc": "Port number, default 443 for HTTPS, 80 for HTTP."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "note": [
+        "Once adress is translated, TCP/IP socket connection is established between client and server. This transfer all data. Client sends HTTP Request."
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "html",
+      "beautify": "none",
+      "aside": {
+        "paramKey": "http",
+        "isDetail": true
+      },
+      "note": ["{0}<br>{1}<br>{2}"]
+    },
+    {
+      "type": "text",
+      "note": [
+        "Get requests data, Post sends data, Put/Patch modiffy data. Request target '/maps' points to maps resource. '/' would point to google.com. Https is encrypted using tls or ssl. Server sends response."
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "html",
+      "beautify": "none",
+      "aside": {
+        "paramKey": "http2",
+        "isDetail": true
+      },
+      "note": ["{0}<br>{1}<br>{2}"]
+    },
+    {
+      "type": "text",
+      "note": [
+        "Status 404 means not found. Response headers/body is defined by backed dev. Website has many request/responses. Index.html is loaded first, scanned fo assets: js, css, images. Process is repeated for each file. When files are downloaded, page is rendered.{%BR_TAB%}Btw, TCP breaks down request into thousands packets. Reassembles response at destination. IP sends and routes packets.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "http",
+      "title": "Http in action",
+      "note": [
+        "Open some web page in Chrome. F12 for dev tools. Network tab. Disable cache. Refresh to see all requests and their status. Click on document to see request and response and their headers and stuff.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "back-end",
+      "title": "Front End vs Back End Dev",
+      "note": [
+        "{%TAB%}Front end. Dev Web page in browser. Front-end stack is html, css, js. Frameworks like react, angular, redux, grapql. {%BR_TAB%} Back end. Everything on web server. Web server is a computer conected to internet, storing web files, running http server that handless requests/responces comunicating with browser. Static server can hadle static pages. Dynamic server runs app. All these elements comunicate. Web server comunicates with database. Node js as dynamic web server and mongo db is a back-end stack. Alternatives are php, mysql; phyton, postgresql. Full-stack dev is someone who does front-end and back-end, they becomming rare as front-end became so complex. Node js can be used for IoT devices.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "dynamic-api",
+      "title": "Static vs Dynamic vs API",
+      "note": [
+        "{%TAB%}Static website is just html, css, js files on server that browser downloads and renders page. {%BR_TAB%} Dynamic website is database and app running on server that gets data, builds website using templates and sends these files to browser. {%BR_TAB%} Browsers are powerfull therfore api raise. API powered website has database, gets data then sends json data not entire page. Page is then build on client side, from templates using frameworks like react or angular. Dynamic pages are server side rendered. API are client siede rendered. API can be consumed by many clients buid with diffrent stack, advantage over dynamic page.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "node-build",
+      "title": "How Node js is buld",
+      "note": [
+        "{%TAB%} Node's dependencies are V8 engine (js, c++) and libuv (c++). V8 convers js into machine code. libuv is open surce lib with async i/o. libuv gives node accesss to operating system, file system, networking and more, also implements event loop (easy tasks) and thread pool (heavy tasks). It also depends on http-parser, c-ares, OpenSSL, zlib.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "node-threads",
+      "title": "Threading in node js",
+      "note": [
+        "{%TAB%} Node js process is instance of c++ program executing on pc. It has single Thread (sequence of instructions). It runs, initialize program, execute top-level code, require modules, register event callbacks, start event loop, thread pool (4 by default up to 128). Event loop automatically offloads heavy tasks to thread pool. That are file system api's, cryptography, compression, dns lookups.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "event-loop",
+      "title": "Event Loop",
+      "note": [
+        "{%TAB%} Event loop executes code in callback functions. Event driven architecture. New http request, timer expired, finished file reading, all emit events handled by event loop, by calling callbacks. Event loop does orchestration. There is sequence of proccesing in event loop. First Expired timer callbacks are handled with use of callback queues. Queue is all processed before next phase. I/O polling (looking for new i/o events for queue) and I/O callbacks. setImmediate callbacks, timer that callback is needed to be process immediatly after i/o calbacks. Close callbacks, when socket or web server shuts down. There is also Process.nexttick() queue and other microtasks queue witch is handled betwwen phases and it deals with resolved promisses, nexttick is like immediate concept for some advances stuff. All this phases are one tick. If any pending timers or i/o tasks it runs next tick else program finishes. {%BR_TAB%} Node js has user requests handled by single thread offloading to thread poool of 4 by event loop. Apache php has new thread for each user request (more resource intensive). Main think in node js is to not block main thread. Witch means. Dont use sync functions in fs, crypto, zlib modules in callback functions. Dont do complex calculations like loops inside loops. Dont use to complex regular expresssions. Be carfull with large json.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "evloop-example",
+      "title": "Event Loop Example",
+      "note": [
+        "<a href='https://github.com/atari-monk/node.js-course/blob/main/2-how-node-works/event-loop.js'>Example</a>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "note": [
+        "const fs = require('fs'); const crypto = require('crypto'); const start = Date.now(); process.env.UV_THREADPOOL_SIZE = 1; \r\n//doesnt work on windows\r\n setTimeout(() => console.log('Timer 1 finished'), 0); setImmediate(() => console.log('Immediate 1 finished')); fs.readFile('test-file.txt', () => { console.log('I/O finished'); console.log('------------------------'); setTimeout(() => console.log('Timer 2 finished'), 0); setTimeout(() => console.log('Timer 3 finished'), 3000); setImmediate(() => console.log('Immediate 2 finished')); process.nextTick(() => console.log('Process.nextTick')); crypto.pbkdf2('password', 'salt', 100000, 1024, 'sha512', \r\n() => { console.log(Date.now() - start, 'Password encypted'); }); crypto.pbkdf2('password', 'salt', 100000, 1024, 'sha512', \r\n() => { console.log(Date.now() - start, 'Password encypted'); }); crypto.pbkdf2('password', 'salt', 100000, 1024, 'sha512', \r\n() => { console.log(Date.now() - start, 'Password encypted'); }); crypto.pbkdf2('password', 'salt', 100000, 1024, 'sha512', \r\n() => { console.log(Date.now() - start, 'Password encypted'); }); }); console.log('Hello from the top-level code');"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "event-driven",
+      "title": "Events driven architecture",
+      "note": [
+        "Event emitter, emits named events when something important happens in app, request for server, timer expiring, file reded. Event listener pick up events and call callback functions. Emitter and listener is Observer Pattern. This structure decouples modules and makes easy to answear multiple times to same event by setting up multiple listeners."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "html",
+      "beautify": "js",
+      "aside": {
+        "paramKey": "events",
+        "isDetail": true
+      },
+      "title": "Example",
+      "note": [
+        "const server = http.createServer();{%BR%} {0}('request', {%BR%} (req, res) => {%BR%}{ {%BR%}console.log('Request recived');{%BR%} res.end('Request recived');{%BR%}});"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "event-example",
+      "title": "Events example",
+      "note": [
+        "<a href='https://github.com/atari-monk/node.js-course/blob/main/2-how-node-works/events.js'>Events</a>{%BR%}<a href='https://github.com/atari-monk/node.js-course/blob/main/2-how-node-works/events-server.js'>Events Server</a>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "js",
+      "title": "Events example",
+      "note": [
+        "const EventEmitter = require('events'); class Sales extends EventEmitter { constructor() { super(); } } const myEmitter = new Sales(); myEmitter.on('newSale', () => { console.log('There was a new sale!'); }); myEmitter.on('newSale', () => { console.log('Customer name: Jonas'); }); myEmitter.on('newSale', (stock) => { console.log(`There are now ${stock} items left in stock.`); }); myEmitter.emit('newSale', 9);"
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "js",
+      "title": "Events Server example",
+      "note": [
+        "const http = require('http'); const server = http.createServer(); server.on('request', (req, res) => { console.log('Request recived!'); console.log(req.url); res.end('Request recived'); }); server.on('request', (req, res) => { console.log('Another request 😊'); }); server.on('close', () => { console.log('Server closed'); }); server.listen(8000, '127.0.0.1', () => { console.log('Waiting for requests...'); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "streams",
+      "title": "Streams",
+      "note": [
+        "Streams - Uses to process (read/write) data piece by piece (chunks) without completing the whole read or write operation, therefore without keeping all the data in memory. Efficient in terms of memory and time. Less memory used, no need to wait for all data. Streams are EventEmitter class."
+      ]
+    },
+    {
+      "type": "text",
+      "note": [
+        "<table><thead><tr><th>Stream name</th><th>Description</th><th>Examples</th><th>Events</th><th>Methods</th></tr></thead><tbody><tr><td>Readable Streams</td><td>read data</td><td>http requests<br>fs read streams</td><td>data<br>end</td><td>pipe<br>read</td></tr><tr><td>Writable Streams</td><td>write data</td><td>http responses<br>fs write streams</td><td>drain<br>finish</td><td>write<br>end</td></tr><tr><td>Duplex Streams</td><td>read/write</td><td>net web socket</td><td></td><td></td></tr><tr><td>Transform Streams</td><td>duplex with transform data</td><td>zlib Gzip creation</td><td></td><td></td></tr></tbody></table>"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "streams-practice",
+      "title": "Streams in Practice",
+      "note": [
+        "<a href='https://github.com/atari-monk/node.js-course/blob/main/2-how-node-works/streams-none.js'>No stream</a>, <a href='https://github.com/atari-monk/node.js-course/blob/main/2-how-node-works/streams-dont.js'>Stream dont</a>, <a href='https://github.com/atari-monk/node.js-course/blob/main/2-how-node-works/streams-do.js'>Stream do</a>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "note": [
+        "\r\n//example reads whole file to memry, how not to do it\r\n const fs = require('fs'); const server = require('http').createServer(); server.on('request', (req, res) => { fs.readFile('test-file.txt', (err, data) => { if (err) console.log(err); res.end(data); }); }); server.listen(8000, '127.0.0.1', () => { console.log('listening...'); });"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "note": [
+        "\r\n//example uses streams, but with problem\r\n//back pressure - res cant send data as fast as it's recived from file\r\n const fs = require('fs'); const server = require('http').createServer(); server.on('request', (req, res) => { const readable = fs.createReadStream('testt-file.txt'); readable.on('data', (chunk) => { res.write(chunk); }); readable.on('end', () => { res.end(); }); readable.on('error', err => { console.log(err); res.statusCode = 500; res.end(\"File not found!\"); }) }); server.listen(8000, '127.0.0.1', () => { console.log('listening...'); });"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "note": [
+        "\r\n//example uses streams, correct way with pipes\r\n const fs = require('fs'); const server = require('http').createServer(); server.on('request', (req, res) => { const readable = fs.createReadStream('test-file.txt'); readable.pipe(res); \r\n//readeableSource.pile(writeableDestination)\r\n }); server.listen(8000, '127.0.0.1', () => { console.log('listening...'); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "modules",
+      "title": "About Modules",
+      "note": [
+        "Each js file is module; Node js uses CommonJS module system, require, exports or module.exports; ES module system is used in browsers, import/export; attempts to bring ED modules to node.js (.mjs)."
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "modules",
+      "title": "How require works",
+      "note": [
+        "{%TAB%} Resolving&Loading. Core modules - require('http'). Dev modules - require('./lib/controller'). 3rd-party modules from npm require('express'){%BR_TAB%} Path resolving - 1. start with core modules; 2. if begins with ./ or ../ try load dev module; 3. if no file found, try to find folder with that name and load index.js; 4. try find module in node_modules."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "title": "Wrapping",
+      "note": [
+        "(function({0}, {1}, {2}, {3}, {4}) {\r\n//Module code lives here...\r\n});"
+      ],
+      "aside": {
+        "paramKey": "wrapping",
+        "isDetail": true
+      }
+    },
+    {
+      "type": "text",
+      "note": [
+        "Execution - Code of module gets executed. Returning exports - For single class module.exports = Calculator. For multiple use exports.prop = x. Caching - Execution is done for first run, module is chached and next require will get it from cache.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "modules-practice",
+      "title": "Modules in Practice",
+      "note": [
+        "<a href='https://github.com/atari-monk/node.js-course/tree/main/2-how-node-works'>Modules code example</a>{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "hell",
+      "title": "Callback hell",
+      "note": [
+        "Node js is strong about async, to not block this one thread. First is was implemented on callbacks (callback hell), then promises, and then async await. {%BR_TAB%}superagent - Small progressive client-side HTTP request library, and Node.js module with the same API, supporting many high-level HTTP client features. <a href='https://github.com/atari-monk/node.js-course/blob/main/3-asynchronous-js/callbacks.js'>Example</a>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "title": "Setup node for callback example.",
+      "note": ["npm init", "npm i superagent", "nodemon index.js"]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "title": "To update nodemon.",
+      "note": [
+        "npm uninstall -g nodemon",
+        "npm install -g nodemon",
+        "nodemon -v"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Callbacks",
+      "note": [
+        "const fs = require('fs'); const superagent = require('superagent'); fs.readFile(`${__dirname}/dog.txt`, (err, data) => { console.log(`Breed: ${data}`); superagent .get(\r\n`https://dog.ceo/api/breed/${data}/images/random`)\r\n.end((err, res) => { if (err) return console.log(err.message); console.log(res.body.message); fs.writeFile('dog-img.txt', res.body.message, (err) => { console.log('Random dog image saved to file!'); }); }); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "promise-consume",
+      "title": "Consume Promises",
+      "note": [
+        "Promise is object returned from async method with no data but promise of data when task is finished. It has syntax of asyncMethod().then(res => { callback }). It still uses callbacks but allows chaining them instead of nesting. Promise state changes from pending to resolved. Resolved promise is fullfilled with result, or rejected with error. Then is used for fullfilled. Catch is used for rejected. Logic for ok, not ok is separeted. <a href='https://github.com/atari-monk/node.js-course/blob/main/3-asynchronous-js/promise-consume.js'>Example</a>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Consume Promise",
+      "note": [
+        "const fs = require('fs'); const superagent = require('superagent'); fs.readFile(`${__dirname}/dog.txt`, (err, data) => { console.log(`Breed: ${data}`); superagent .get(\r\n`https://dog.ceo/api/breed/${data}/images/random`)\r\n.then((res) => { console.log(res.body.message); fs.writeFile('dog-img.txt', res.body.message,\r\n(err) => { console.log('Random dog image saved to file!'); }); }) .catch((err) => { console.log(err.message); }); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "promise-building",
+      "title": "Building Promises",
+      "note": [
+        "To use Promise concept for reading file. Use fs readFile function will callback, but wrapp it in function that returns Promise. Promise takes as argument executor function. In readFile callback place data arg in resolve method, place error arg in reject. Returning Promises enables chaining of methods with then. <a href='https://github.com/atari-monk/node.js-course/blob/main/3-asynchronous-js/promise-build.js'>Example</a>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "const fs = require('fs'); const superagent = require('superagent'); const readFilePro = (file) => { return new Promise((resolve, reject) => { fs.readFile(file, (err, data) => { if (err) reject(`I could not find that file. ${err}`); resolve(data); }); }); }; const writeFilePro = (file, data) => { return new Promise((resolve, reject) => { fs.writeFile(file, data, (err) => { if (err) reject(`I could not write that file. ${err}`); resolve('File writen.'); }); }); }; readFilePro(`${__dirname}/dog.txt`) .then((data) => { return superagent.get(\r\n`https://dog.ceo/api/breed/${data}/images/random` ); }) .then((res) => { console.log(res.body.message); return writeFilePro('dog-img.txt', res.body.message); }) .then(() => { console.log('Random dog image saved to file!'); }) .catch((err) => { console.log(err); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "async-promise",
+      "title": "Consume Promise with async await.",
+      "note": [
+        "We use 'async' functions and 'await' in them, where awaits are in front of functions returning promises. This allows async code to look and feel more like sync code. Syntactic sugar that works on promises. <a href='https://github.com/atari-monk/node.js-course/blob/main/3-asynchronous-js/4-async-await.js'>Example</a>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "const superagent = require('superagent'); const io = require('./promise-module'); const getDogPic = async () => { try { const data = await io.readFilePro(`${__dirname}/dog.txt`); console.log(`Breed: ${data}`); const res = await superagent.get(\r\n`https://dog.ceo/api/breed/${data}/images/random` ); console.log(res.body.message); await io.writeFilePro('dog-img.txt', res.body.message); console.log('Random dog image saved to file!'); } catch (err) { console.log(err); } }; getDogPic();"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "async-return",
+      "title": "Returning values from async functions",
+      "note": [
+        "Promise version with then and catch. Async await version, await value, use try catch for errors. Wrapp await with async iffy function (Immediatly run). <a href='https://github.com/atari-monk/node.js-course/blob/main/3-asynchronous-js/5-async-await-returns.js'>Example</a>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "console.log('1: Will get dog pics!'); getDogPic() .then((x) => { console.log(x); console.log('3: Done getting dog pics!'); }) .catch((err) => { console.log('ERROR 💥'); }); \r\n\r\n(async () => { try { console.log('1: Will get dog pics!'); const x = await getDogPic(); console.log(x); console.log('3: Done getting dog pics!'); } catch (err) { console.log('ERROR 💥'); } })();"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "promise-all",
+      "title": "Waiting for multiple promises simultaneously",
+      "note": [
+        "Get promises to variables and await them all with Promise.all. <a href='https://github.com/atari-monk/node.js-course/blob/main/3-asynchronous-js/6-await-many.js'>Example</a>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "const getDogPic = async () => { try { const data = await io.readFilePro(`${__dirname}/dog.txt`); console.log(`Breed: ${data}`); const res1Pro = superagent.get(\n`https://dog.ceo/api/breed/${data}/images/random` ); const res2Pro = superagent.get(\n`https://dog.ceo/api/breed/${data}/images/random` ); const res3Pro = superagent.get(\n`https://dog.ceo/api/breed/${data}/images/random` ); const all = await Promise.all([res1Pro, res2Pro, res3Pro]); const imgs = all.map((el) => el.body.message); console.log(imgs); await io.writeFilePro('dog-img.txt', imgs.join('\\n')); console.log('Random dog image saved to file!'); } catch (err) { console.log(err); throw err; } return '2: READY ✔'; };"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "title": "Part 5."
+    },
+    {
+      "type": "text",
+      "navId": "express",
+      "title": "What is Express",
+      "note": [
+        "Express is minimal node.js framework, higher level of abstraction. Express has features like complex routing, easier handling of requests and responses, middleware, server-side rendering, mvc architecture freindly. 'Dont reinvent the wheel' - it's all here for you. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "postman",
+      "title": "Intall Postman",
+      "note": ["https://dog.ceo/api/breeds/image/random {%CONTENT%}"]
+    },
+    {
+      "type": "text",
+      "navId": "express-setup",
+      "title": "Intall Express",
+      "note": ["Download starter files."]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "note": [
+        "npm init",
+        "npm i express",
+        "npm uninstall express",
+        "npm i express@4"
+      ]
+    },
+    {
+      "type": "text",
+      "note": [
+        "By convention config is in app.js file. Write simple server wth express. Test it in postman."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "note": ["localhost:3000"]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "const express = require('express'); const app = express(); app.get('/', (req, res) => { res .status(200) .json({ message: 'Hello from the server side!', app: 'Natours' }); }); app.post('/', (req, res) => { res.send('You can post to this endpoint...'); }) const port = 3000; app.listen(port, () => { console.log(`App running on port ${port}...`); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "api-design",
+      "title": "APIS and restful API design",
+      "note": [
+        "Application Programming Interface: piece of software that can be used by another piece of software, in order to allow apps to talk to each other. (isnt that definition of all software lol). It starts with public methods of class, or even header of method.{%BR_TAB%} The REST architecture. Separate API into logical resources. Expose structured, resource-based URLs. Use HTTP methods (verbs). Send data as JSON (usually). Be stateless. {%BR_TAB%} Resource abstraction is object or description with data, any information that can be named, ex. Tours, Users, Reviews. {%BR_TAB%} urls in format http://www.natours.com/addNewTour, where addNewTour is ENDPOINT. For example /getTour, /updateTour, deleteTour, getToursByUser, deleteToursByUser, each sends diffrent data to cilent. These are bad. Convention is that endpoints cant have verb in them, are plural, have ids as numbers, for example GET will have endpoint /tours/7. To read data use GET /tours/7, to create POST /tours, to update PUT, PATCH /tours/7, to delete DELETE /tours/7.This constitutes CRUD operations. Create, read, update, delete. To combine resources use GET /users/3/tours; DELETE /users/3/tours/9. JSON - standard for data format, ease of parsing. In api use of JSend format."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "JSON",
+      "note": [
+        "{ \"id\":5, \"tourName\": \"The Park Camper\", \"rating\": \"4.9\", \"guides\": [{\"name\":\"bla\", \"role\":\"be\" },\n {\"name\":\"wee\", \"role\":\"dee\" }\n]}"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "JSend",
+      "note": [
+        "{ \"status\": \"sucess\", \"data\": { \"id\":5, \"tourName\": \"The Park Camper\", \"rating\": \"4.9\", \"guides\": [ {\"name\":\"bla\", \"role\":\"be\" }, {\"name\":\"wee\", \"role\":\"dee\" } ] }}"
+      ]
+    },
+    {
+      "type": "text",
+      "note": [
+        "Other json formats are JSOPN:API, OData JSON Protocol. {%BR_TAB%} Stateless RESTful API means all state is on the client. Each request independant. Server doesnt remmember prevoius requests. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "api-get",
+      "title": "Starting our API: Handling GET requests",
+      "note": ["First handle get, route is "]
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "html",
+      "aside": {
+        "paramKey": "get",
+        "isDetail": true
+      },
+      "note": ["/api/{0}/tours", "{1}"]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Sync reading json at top level (before event loop).",
+      "note": [
+        "const tours = JSON.parse(\nfs.readFileSync(\n`${__dirname}/dev-data/data/tours-simple.json`) );"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "By default res has status 200 but it's nice to state it explicitly. Here we send json in JSEND format, wrapping data in it.",
+      "note": [
+        "app.get('/api/v1/tours', (req, res) => { res.status(200).json({ status: 'success', data: { tours } }) });"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "text",
+      "title": "1. Test endpoint in postman. 2. Add number of items in res to JSEND format.",
+      "note": ["localhost:3000/api/v1/tours", "results: tours.length"]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "api-post",
+      "title": "Handling POST requests"
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Add middleware to add json from client to req body. Middleware moddiefies incoming request data according to it's logic. It's name is from the fact it stands between request and response. It's a step for request. Data from body is added to req.",
+      "note": [
+        "app.use(express.json());",
+        "req.body",
+        "app.post('/api/v1/tours', (req, res) => { console.log(req.body); res.send('ok'); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": [
+        "In postman create collection named Natours and save tested entrypoint to it. Name it freandly to 'Get All Tours'. Save also post request with same route to this collecton. Simplest way to send data with post is to select in Body tab, checkbox raw and option JSON (application/json)."
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "css",
+      "title": "Add json.",
+      "note": [
+        "{\"name\": \"Test Tour\", \"duration\": \"10\", \"difficulty\": \"easy\"}"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Calculate next id, create newTour, add to array, save file, set status 201 (for create) and send JSEND json with newTour.",
+      "note": [
+        "app.post('/api/v1/tours', (req, res) => { const newId = tours[tours.length - 1].id + 1; const newTour = Object.assign({ id: newId }, req.body); tours.push(newTour); fs.writeFile(\n`${__dirname}/dev-data/data/tours-simple.json`, \nJSON.stringify(tours), \n(err) => { res.status(201).json({ status: 'success', data: { tour: newTour }, }); } ); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "url-param",
+      "title": "Responding to Url Parameters"
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "text",
+      "title": "Request params hold params defined in routes. ? means that parameter is optional. Trick to convert id to number is to multiplay string by number 1.",
+      "note": [
+        "/api/v1/tours/:id",
+        "req.params",
+        "/api/v1/tours/:id/:x/:y?",
+        "const id = req.params.id * 1;"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "url params",
+      "note": [
+        "app.get('/api/v1/tours/:id', (req, res) => { const id = req.params.id * 1; const tour = tours.find((el) => el.id === id); if (!tour) { return res.status(404).json({ status: 'fail', message: 'Invalid ID', }); } res.status(200).json({ status: 'success', data: { tour, }, }); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "api-patch",
+      "title": "Handling Patch requests"
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Patch request",
+      "note": [
+        "app.patch('/api/v1/tours/:id', (req, res) => { if (req.params.id * 1 > tours.length) { return res.status(404).json({ status: 'fail', message: 'Invalid ID', }); } res.status(200).json({ status: 'success', data: { tour: '<Updated tour here...>' }, }); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "api-delete",
+      "title": "Handling Delete requests"
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Delete requests",
+      "note": [
+        "app.delete('/api/v1/tours/:id', (req, res) => { if (req.params.id * 1 > tours.length) { return res.status(404).json({ status: 'fail', message: 'Invalid ID', }); } res.status(204).json({ status: 'success', data: null, }); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "api-refactor",
+      "title": "Refactoring our routes",
+      "note": [
+        "Give route handlers their variables. Set route and chain actions on them."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "app\n.route('/api/v1/tours')\n.get(getAllTours)\n.post(createTour); \n\napp\n.route('/api/v1/tours/:id')\n.get(getTour)\n.patch(updateTour)\n.delete(deleteTour);"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "middleware",
+      "title": "Middleware and the request response cycle",
+      "note": [
+        "The essence of express development is the request-response cycle. On incoming request req and res object are created and processed to send meaningfull responce. Req and res obs are proceesed by using middleware. It's chainable/paipeable stream/list/array of steps taken to produce res from req object (may be some other code). Any part of express  is middleware, for example routers, parsig body, logging, setting headers and so on. In the context of server they stack up and produce responce. Middleware stack is set of middleware used in this process. Order of middleware elements is defined by order of their definition place in code. next method is used to chain middlewares. res.send() ends request-response cycle. It's linear process.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "own-middleware",
+      "title": "Creating our own Middleware",
+      "note": ["To add middleware use method app.use."]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "app.use((req, res, next) => {console.log('Hello from the middleware 💛'); next();});",
+        "app.use((req, res, next) => {req.requestTime = new Date().toISOString();next();});"
+      ]
+    },
+    {
+      "type": "text",
+      "note": [
+        "This will applay to every request, if placed in top code before routers.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "middleware-lib",
+      "title": "Using 3rd party middleware",
+      "note": [
+        "Add new terminal with +, keep api run in forst one. In second install lib."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "npm i morgan",
+        "const morgan = require('morgan');",
+        "app.use(morgan('dev'));"
+      ]
+    },
+    {
+      "type": "text",
+      "note": [
+        "Now send request with postman and check on the first terminal that morgan provides log on request."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "text",
+      "note": ["GET /api/v1/tours 200 4.191 ms - 8620"]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "users-route",
+      "title": "Implementing the users routes",
+      "note": [
+        "Same as Tours. Add methods with info that route is not yet defined."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "const deleteUser = (req, res) => { res .status(500) .json({ status: 'error', message: 'This route is not yet defined!' }); };"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "multiple-routers",
+      "title": "Creating and mounting multiple routers",
+      "note": [
+        "This is more efficient way od setting up routers for resources."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "const tourRouter = express.Router(); const userRouter = express.Router(); tourRouter.route('/').get(getAllTours).post(createTour); tourRouter.route('/:id').get(getTour).patch(updateTour).delete(deleteTour); userRouter.route('/').get(getAllUsers).post(createUser); userRouter.route('/:id').get(getUser).patch(updateUser).delete(deleteUser); app.use('/api/v1/tours', tourRouter); app.use('/api/v1/users', userRouter);"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "file-structure",
+      "title": "A Better file structure",
+      "note": [
+        "{%TAB%} Create folder routes for tour-routes and users-routes. Export routers. Mount these routers in app with app.use. Create server.js file with listen method and for server entry point and config. app.js is same for express app, export app and import it in server.js. Create folder controllers. Create tour-contoller.js and user-contorller.js. Move all route handlers there, export from contorllers and import them in routes files.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "param-middleware",
+      "title": "Param Middleware",
+      "note": [""]
+    },
+    {
+      "type": "text",
+      "navId": "summary",
+      "isCenter": true,
+      "title": "Summary",
+      "note": ["End.{%NAV%}"]
+    }
+  ],
+  "param": {
+    "get": [
+      {
+        "name": "v1",
+        "desc": "Defining version allows verssioning without breaking prevoius apis."
+      },
+      {
+        "name": "(req, res) => {}",
+        "desc": "route handler"
+      }
+    ],
+    "url": [
+      {
+        "name": "http://127.0.0.1:8000/product?id=0",
+        "desc": "url to test parse url"
+      }
+    ],
+    "i1": [
+      {
+        "name": "npm i slugify",
+        "desc": "cmd to install package as dependency"
+      },
+      {
+        "name": "npm i nodemon --save-dev",
+        "desc": "nodemon restarts server on modification of a file"
+      },
+      {
+        "name": "npm i nodemon -g",
+        "desc": "installs globaly"
+      }
+    ],
+    "i2": [
+      {
+        "name": "node i",
+        "desc": "hit tab for autocomplete"
+      },
+      {
+        "name": "nodemon index.js",
+        "desc": "Insted of using node index.js, use nodemon index.js for auto-restarting server."
+      },
+      {
+        "name": "\"start\": \"nodemon index.js\"",
+        "desc": "To run with alias, add script in scripts section of package.json."
+      },
+      {
+        "name": "npm run start",
+        "desc": "cmd to run npm scripts from package.json"
+      },
+      {
+        "name": "npm start",
+        "desc": "for name start, run can be omitted"
+      }
+    ],
+    "http": [
+      {
+        "name": "GET /maps HTTP/1.1",
+        "desc": "Start line: Http method + request target + http version"
+      },
+      {
+        "name": "Host: www.google.com<br>User-Agent: Mozilla/5.0<br>Accept-Language: en-US",
+        "desc": "Http request headers. Information about request. Many options."
+      },
+      {
+        "name": "&lt;BODY&gt;",
+        "desc": "Request body. Only when sending data to server."
+      }
+    ],
+    "http2": [
+      {
+        "name": "HTTP/1.1 200 OK",
+        "desc": "Start line: http version + status code + status message"
+      },
+      {
+        "name": "Date: Sat, 19 Jan 2021<br>Content-Type: text/html<br>Transfer-Encoding: chunked",
+        "desc": "Http response headers."
+      },
+      {
+        "name": "&lt;BODY&gt;",
+        "desc": "Response body. (most)"
+      }
+    ],
+    "events": [
+      {
+        "name": "server.on",
+        "desc": "creates event listener"
+      }
+    ],
+    "wrapping": [
+      {
+        "name": "exports",
+        "desc": "ref to module.exports, used to export object from a module"
+      },
+      {
+        "name": "require",
+        "desc": "function to require modules"
+      },
+      {
+        "name": "module",
+        "desc": "ref to current module"
+      },
+      {
+        "name": "__filename",
+        "desc": "absolute path to current module file"
+      },
+      {
+        "name": "__dirname",
+        "desc": "directory name of current module"
+      }
+    ]
+  },
+  "inject": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%NAV2%}",
+      "text": "<br><a href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%CONTENT2%}",
+      "text": "<a href='#content'>Back to Content</a>"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Windows 11",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://10scopes.com/ungroup-taskbar-on-windows-11/#1-use-the-explorer-patcher-app",
+          "text": "How to Ungroup Taskbar on Windows 11"
+        },
+        {
+          "link": "https://github.com/valinet/ExplorerPatcher/releases",
+          "text": "ExplorerPatcher"
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": [
+        "Tweaks making stuff easier"
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": [
+        "Windows 11"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": [
+            "Ungroup Taskbar on Windows 11"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Download and install stable relase of Expolorer Patcher (links in Source)",
+                "left click on taskbar, select properties",
+                "select ungroup taskbar icons option",
+                "on windows 10 these options are possible to set in standard toolbar options"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "fix stuff"
+  ]
+}

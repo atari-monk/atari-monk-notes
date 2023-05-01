@@ -1,0 +1,364 @@
+{
+  "title": "HTML & CSS Full Course - Beginner to Pro",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://youtu.be/G3e-cpL7ofc",
+          "text": "Source Tutorial"
+        },
+        {
+          "link": "https://github.com/atari-monk/css-tutorial",
+          "text": "My Repo"
+        },
+        {
+          "link": "https://supersimple.dev/exercises/buttons",
+          "text": "Exercise Buttons"
+        },
+        {
+          "link": "https://supersimple.dev/exercises/text",
+          "text": "Exercise Text"
+        },
+        {
+          "link": "https://www.rapidtables.com/convert/color/hex-to-rgb.html",
+          "text": "Hex to RGB Color Converter"
+        },
+        {
+          "link": "https://www.freeformatter.com/html-escape.html",
+          "text": "Escape HTML"
+        },
+        {
+          "link": "https://www.w3schools.com/charsets/ref_html_entities_4.asp",
+          "text": "HTML 4 Entity"
+        },
+        {
+          "link": "https: //fonts.google.com/",
+          "text": "Google Fonts"
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": ["HTML & CSS"]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": ["Chrome", "VSCode"]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": ["Timestamps"],
+          "codes": [
+            {
+              "format": [
+                "0-1; Intro",
+                "1-18; 1. Html Intro",
+                "18-44; 2. Css Intro",
+                "44-x; 3. Hovers, Transitions, Shadows",
+                "1:03-1:17 4. Chrome DevTools & CSS Box Model",
+                "1:17-1:52 5. Text Styles",
+                "1:52-2:11 6. The HTML Structure",
+                "2:11-2:26 7. Images and Text Boxes"
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Html Intro/Syntax"],
+          "codes": [
+            {
+              "format": [
+                "Html-HyperText Markup Language",
+                "{0}: a, button, p",
+                "Tags: {1}Content/Text{2}",
+                "{3}: &lt;a href=\"\" target=\"\"",
+                "spaces in html code are ignored",
+                "advised formating:",
+                "&lt;p&gt;",
+                "&nbsp;&nbsp;Content/Text",
+                "&lt;/p&gt;"
+              ],
+              "params": [
+                {
+                  "name": "elements",
+                  "desc": "things displayed on web page"
+                },
+                {
+                  "name": "&lt;element-name&gt;",
+                  "desc": "Opening Tag"
+                },
+                {
+                  "name": "&lt;/element-name&gt;",
+                  "desc": "Closing Tag"
+                },
+                {
+                  "name": "Html attributes",
+                  "desc": "Modifies element behvior"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Paragraph Element"],
+          "codes": [
+            {
+              "format": ["&lt;p&gt;Content/Text&lt;/p&gt;"]
+            }
+          ]
+        },
+        {
+          "text": ["Button Element"],
+          "codes": [
+            {
+              "format": ["&lt;button&gt;Content/Text&lt;/button&gt;"]
+            }
+          ]
+        },
+        {
+          "text": ["Anchor Element"],
+          "codes": [
+            {
+              "format": ["&lt;a {0} {1}&gt;Content/Text&lt;/a&gt;"]
+            }
+          ]
+        },
+        {
+          "text": ["Css Intro/Syntax"],
+          "codes": [
+            {
+              "format": [
+                "{0}",
+                "{1} {",
+                "&nbsp;&nbsp;{2}: {3};",
+                "}",
+                "&lt;/style&gt;",
+                "rgb(255,255,255) - red, green, blue color scale",
+                "&lt;button {4}&gt;",
+                "technique to copy style from reference:",
+                "1. Create element with HTML",
+                "2. Style with CSS one-by-one"
+              ],
+              "params": [
+                {
+                  "name": "&lt;style&gt;",
+                  "desc": "element to write css embeded in html"
+                },
+                {
+                  "name": "button",
+                  "desc": "CSS Selector - which elements we're targeting"
+                },
+                {
+                  "name": "background-color",
+                  "desc": "CSS Property - what we're changing"
+                },
+                {
+                  "name": "red",
+                  "desc": "CSS Value"
+                },
+                {
+                  "name": "class=&quot;&quot;",
+                  "desc": "class attribute - lets you label html elements, .close-button (. in name)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Hovers, Transitions, Shadows"],
+          "codes": [
+            {
+              "format": [
+                ".close-button{0}",
+                "{1}",
+                "{2}",
+                "{3}",
+                "transition: background-color 1s, color 1s;",
+                "always put transitions in base class css style, not on pseudo class becouse it works only in particular state",
+                "how to create shadows:",
+                "box-shadow: {4} {5} {6} {7};",
+                "{8}"
+              ],
+              "params": [
+                {
+                  "name": ":hover",
+                  "desc": "pseudo class - colon after class specifies that style applies to specific state of the element"
+                },
+                {
+                  "name": "active",
+                  "desc": "state when button is clicked"
+                },
+                {
+                  "name": "opacity",
+                  "desc": "css property that tells how transparent element is (0-1)"
+                },
+                {
+                  "name": "transition: opacity 1s",
+                  "desc": "CSS property for Transitions beetween styles"
+                },
+                {
+                  "name": "10px",
+                  "desc": "horizontal possition of a shadow"
+                },
+                {
+                  "name": "15px",
+                  "desc": "vertical possition of a shadow"
+                },
+                {
+                  "name": "20px",
+                  "desc": "shadow blur"
+                },
+                {
+                  "name": "black",
+                  "desc": "shadow color"
+                },
+                {
+                  "name": "rgba(0, 0, 0, 0.15)",
+                  "desc": "color rgb with opacity a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Chrome DevTools & CSS Box Model"],
+          "codes": [
+            {
+              "format": [
+                "right click empty area, select inspect to open chrome dev tools",
+                "in tab elements, select element, in styles tab, all styles for this element",
+                "this tool works for every web site",
+                "selection icon - selects elements on page and highlights coresponding html",
+                "hex color scale:",
+                "#{0}{1}{2}",
+                "hex to rgb calculators",
+                "Computed tab shows final styles aplied to element",
+                "You can get final rgb colors and sizes there",
+                "you copy colors from source to target with chrome tools",
+                "CSS Box Model:",
+                "margin - adds space outside element",
+                "setting fixed height and width prevents element to auto size to it's content",
+                "padding - spacing inside the element",
+                "chrome dev tools Computed tab has box model for selected element",
+                "margin, border, padding sizes (in px)",
+                "buttons have default padding of 6 on sides and 1 on top and bottom",
+                "using padding is better alternative to hight and width",
+                "browsers align by text, by default",
+                "to align elements use vertical-align prop"
+              ],
+              "params": [
+                {
+                  "name": "1d",
+                  "desc": "red"
+                },
+                {
+                  "name": "9b",
+                  "desc": "green"
+                },
+                {
+                  "name": "f0",
+                  "desc": "blue"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Text Styles"],
+          "codes": [
+            {
+              "format": [
+                "Css has all text properties.",
+                "{0}css text italic",
+                "General technique for creating visuals.",
+                "1. Create element with HTML.",
+                "2. Style with CSS one-by-one.",
+                "Set with to text to wrap it to next line.",
+                "{0}html entity middle dot",
+                "&amp;#183; is code for &#183;",
+                "Paragraph has default margin 14 on top, bottom.",
+                "{0}html entity checkmark",
+                "&amp;#10003; is code for &#10003;",
+                "Remove duplication of props in styles.",
+                "Create p style to target all p's.",
+                "Set font-family: Arial; in p style.",
+                "Remove font-family from all classes, to clean code.",
+                "Reset all p margins in p style, remove it from classes, for better code.",
+                "Selector that's more specific has higher priority. ",
+                "{0}html entity greater than",
+                "To style part of paragraph content use span (inline container with no style)",
+                "Other inline containers have style: strong, u.",
+                "Use margin-left on span to give text white space."
+              ],
+              "params": [
+                {
+                  "name": "_",
+                  "desc": "Google it"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["The HTML Structure"],
+          "codes": [
+            {
+              "format": [
+                "{0}",
+                "Use google fonts in text page.",
+                "Select font, it's styles, copy link, use it in head."
+              ],
+              "params": [
+                {
+                  "name": "!",
+                  "desc": "and Tab in VSCode for html template"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Images and Text Boxes"],
+          "codes": [
+            {
+              "format": [""],
+              "params": [
+                {
+                  "name": "",
+                  "desc": ""
+                },
+                {
+                  "name": "",
+                  "desc": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": ["In progress."]
+}

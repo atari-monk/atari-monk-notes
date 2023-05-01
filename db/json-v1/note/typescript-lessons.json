@@ -1,0 +1,295 @@
+{
+  "title": "TypeScript Learning",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://youtu.be/gieEQFIfgYc",
+          "text": "Source Tutorial"
+        },
+        {
+          "link": "https://www.typescriptlang.org/",
+          "text": "TypeScript Official page"
+        },
+        {
+          "link": "https://nodejs.org/en/",
+          "text": "Node.js/npm"
+        },
+        {
+          "link": "https://github.com/atari-monk/typescript-lessons",
+          "text": "Repo with lessons snippets"
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": [
+        "TypeScript Full Course for Beginners | Complete All-in-One Tutorial | 8 Hours",
+        "Dave Gray"
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": [
+        "VSCode"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": [
+            "Timestamps"
+          ],
+          "codes": [
+            {
+              "format": [
+                "0-26; 1. Intro/Setup",
+                "26-42; 2. Basic Types",
+                "42-1:10; 3. Arrays & Objects",
+                "1:10-1:42; 4. Functions",
+                "1:42-2:08; 5. Type casting/Assertions",
+                "2:08-2:38; 6. Classes"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Setup tools"
+          ],
+          "codes": [
+            {
+              "format": [
+                "{0}",
+                "{1}",
+                "{2}"
+              ],
+              "params": [
+                {
+                  "name": "npm i typescript -g",
+                  "desc": "globally instal typescript"
+                },
+                {
+                  "name": "tsc .\\main.ts ",
+                  "desc": "compiles ts file to js"
+                },
+                {
+                  "name": "tsc .\\main.ts -w ",
+                  "desc": "compiles ts file to js in watch mode, (goes nice with auto updates of live server), ctrl+c to quit"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Setup proj"
+          ],
+          "codes": [
+            {
+              "format": [
+                "{0}",
+                "{1}",
+                "{2}",
+                "{3}",
+                "{4}",
+                "{5}",
+                "{6}",
+                "removing ts file wont auto remove compiled js file, do it manually",
+                "{7}",
+                "Js code can be valid, but look at ts code for errors and warns from static type compilations results to better your code.",
+                "{8}",
+                "{9}"
+              ],
+              "params": [
+                {
+                  "name": "src",
+                  "desc": "folder with code"
+                },
+                {
+                  "name": "build",
+                  "desc": "folder with js code build from ts"
+                },
+                {
+                  "name": "tsc -init",
+                  "desc": "run on proj folder for tsconfig file"
+                },
+                {
+                  "name": "\"rootDir\": \"./src\",",
+                  "desc": "in tsconfig modules section, set rootDir for ts files"
+                },
+                {
+                  "name": "\"outDir\": \"./build/js\",",
+                  "desc": "in tsconfig emit section, set outDir for js files compiled from ts files"
+                },
+                {
+                  "name": "tsc -w",
+                  "desc": "compiles proj in watch mode"
+                },
+                {
+                  "name": "\"target\": \"es2016\",",
+                  "desc": "in tsconfig Language and Environment section, target lets you set js version to compile to"
+                },
+                {
+                  "name": "\"include\": [\"src\"]",
+                  "desc": "include this prop in tsconfig, to add src folder, to exclude other folders from compiling ts files to js"
+                },
+                {
+                  "name": "\"noEmitOnError\": true,",
+                  "desc": "do not emit js files when compile errors"
+                },
+                {
+                  "name": "tsc -noEmitOnError -w",
+                  "desc": "noEmitOnError can be false in tsconfig but switched on by flag of cli command"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Basic Types"
+          ],
+          "codes": [
+            {
+              "format": [
+                "{0}",
+                "{1}",
+                "ts benefits: self documenting, catch errors in dev, great fo teams",
+                "{2}",
+                "{3}",
+                "ts infers return type from function, based on args",
+                "union types; string | number | boolean",
+                "ts also infers types, for example on RegExp"
+              ],
+              "params": [
+                {
+                  "name": "Strongly Typed Language (as oposed to Loosely Typed Language)",
+                  "desc": "demands specification of types; self documenting, enforce code"
+                },
+                {
+                  "name": "Statically/Dynamically typed",
+                  "desc": "types checked at a compile time (ts) / run time (js)"
+                },
+                {
+                  "name": "let myname = 'Dave'",
+                  "desc": "ts can implicitly infer type"
+                },
+                {
+                  "name": "let myname: string = 'Dave'",
+                  "desc": "ts can explicitly infer type"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Arrays & Objects"
+          ],
+          "codes": [
+            {
+              "format": [
+                "type inference, annotation",
+                "{0}",
+                "enums are addition to js language and runtime (unlike rest of ts)"
+              ],
+              "params": [
+                {
+                  "name": "let myTuple: [string, number, boolean] = ['Dave', 42, true];",
+                  "desc": "Tuple, typed array"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Functions"
+          ],
+          "codes": [
+            {
+              "format": [
+                "type aliases",
+                "literal types - type with defined set of values",
+                "functions",
+                "never type"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Type Casting/Assertions"
+          ],
+          "codes": [
+            {
+              "format": [
+                "providing type if you have more info about it than ts, for example when it's objecs from dom",
+                "let b = a as someType, cast to less or more specific type",
+                "practical use in narrowing",
+                "carefull as this can introduce runtime bugs if used with wrong types or just not work as correct type"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Classes"
+          ],
+          "codes": [
+            {
+              "format": [
+                ""
+              ]
+            },
+            {
+              "format": [
+                ""
+              ]
+            },
+            {
+              "format": [
+                ""
+              ],
+              "params": [
+                {
+                  "name": "",
+                  "desc": ""
+                },
+                {
+                  "name": "",
+                  "desc": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "In progress"
+  ]
+}

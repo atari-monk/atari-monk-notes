@@ -1,0 +1,170 @@
+{
+  "title": "Azure SQL Database",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": ["Create a single database - Azure SQL Database."]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://learn.microsoft.com/en-us/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-cli",
+        "text": "Source Tutorial"
+      },
+      {
+        "link": "https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli",
+        "text": "Install Azure CLI on Windows"
+      }
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": [
+      "I have Azure free account set up.",
+      "Using a local installation of Azure CLI."
+    ]
+  },
+  "note": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "title": "Login",
+      "note": [
+        "Run PowerShell in chosen root folder.",
+        "{0}",
+        "{1}",
+        "{2}",
+        "{3}"
+      ],
+      "params": [
+        {
+          "name": "az version",
+          "desc": "Check Azure CLI version"
+        },
+        {
+          "name": "az upgrade",
+          "desc": "Update Azure CLI"
+        },
+        {
+          "name": "taskkill /im python.exe /F",
+          "desc": "During Azure CLI MSI install, phyton needed to be killed."
+        },
+        {
+          "name": "az login",
+          "desc": "Sign in to the Azure CLI"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Create resource group for this project.",
+      "note": ["az group create --name {0} --location {1} --tags {2}"],
+      "params": [
+        {
+          "name": "az-sql-db1-rg",
+          "desc": "resource group"
+        },
+        {
+          "name": "swedencentral",
+          "desc": "location"
+        },
+        {
+          "name": "create-and-configure-database",
+          "desc": "description tag"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Create a server.",
+      "note": ["az sql server create --name {0} --resource-group {1} --location {2} --admin-user {3} --admin-password {4}"],
+      "params": [
+        {
+          "name": "atari-monk-sql-server1",
+          "desc": "server name (unique in azure)"
+        },
+        {
+          "name": "az-sql-db1-rg",
+          "desc": "resource group"
+        },
+        {
+          "name": "swedencentral",
+          "desc": "location"
+        },
+        {
+          "name": "atari-monk",
+          "desc": "server login"
+        },
+        {
+          "name": "password",
+          "desc": "server password"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Configure a server-based firewall rule.",
+      "note": ["az sql server firewall-rule create --resource-group {0} --server {1} -n AllowYourIp --start-ip-address {2} --end-ip-address {2}"],
+      "params": [
+        {
+          "name": "az-sql-db1-rg",
+          "desc": "resource group"
+        },
+        {
+          "name": "atari-monk-sql-server1",
+          "desc": "server name"
+        },
+        {
+          "name": "ip",
+          "desc": "public ip of your admin pc"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Deleting resources, server and dbs, after they are not needed.",
+      "note": ["az group delete --name {0}"],
+      "params": [
+        {
+          "name": "az-sql-db1-rg",
+          "desc": "resource group"
+        }
+      ]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": [
+        "This kind of worked but maybe containers are not for db's ?",
+        "Originally at least. I dont know their history.",
+        "Btw, this is a danger of getting priced for playing with cloud servers."
+      ]
+    }
+  ]
+}

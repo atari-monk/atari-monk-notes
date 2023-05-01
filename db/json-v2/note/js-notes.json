@@ -1,0 +1,240 @@
+{
+  "title": "js-notes",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "isCenter": false,
+    "title": "Description",
+    "description": [
+      "Project with JavaScript front side application. It uses mvc pattern. First two versions had html generation in c#. Next version in javascript had html generation. Current version uses html tempates to separate html from js. App uses json data. It has minimalistic styles to give it hand notes vibe."
+    ]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://github.com/atari-monk/js-notes-templated",
+        "text": "Repository js-notes-templated"
+      },
+      {
+        "link": "https://github.com/atari-monk/js-notes-json",
+        "text": "Repository with data"
+      },
+      {
+        "link": "https://github.com/atari-monk/js-notes-generated",
+        "text": "Repository js-notes-generated"
+      },
+      {
+        "link": "https://github.com/atari-monk/html-css-js/tree/main/my-templates/mvc",
+        "text": "Repository mvc-template"
+      },
+      {
+        "link": "https://atari-monk.github.io/js-notes-templated/",
+        "text": "Notes page"
+      },
+      {
+        "link": "https://stackdiary.com/detect-mobile-browser-javascript/",
+        "text": "Article 'Detect Mobile Browser'"
+      },
+      {
+        "link": "https://www.npmjs.com/package/ua-parser-js",
+        "text": "package ua-parser-js"
+      },
+      {
+        "link": "https://www.npmjs.com/package/js-beautify",
+        "text": "package js-beautify"
+      }
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["VSCode", "GitHub"]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "title": "Notes"
+    },
+    {
+      "type": "text",
+      "navId": "content",
+      "isCenter": false,
+      "title": "Content",
+      "note": [
+        "1. <a href=#history>History</a>{%BR%}2. <a href=#user_stories>User Stories</a>{%BR%}3. <a href=#features>Features</a>{%BR%}4. <a href=#dev_notes>Dev Notes</a>{%BR%}5. <a href=#tips>Tips</a>{%BR%}6. <a href=#responsive>Responsive Design</a>{%BR%}</a>7. <a href=#todo>ToDo</a>{%NAV2%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "history",
+      "title": "History",
+      "note": [
+        "First was HTML tutorial. Then c# cli app generating html notes from json data. It had 2 templates. Page was made from it. Then Javascript course. After that javasctipt front app. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "note-aside",
+      "navId": "user_stories",
+      "title": "User Stories",
+      "note": [
+        "0. {0} User uses mvc pattern to build page for notes.{%BR%}1. {0} User can switch beetween styles (none, desktop, mobile).{%BR%}2. {0} User has styles to chose from (none, desktop, mobile).{%BR%}3. {0} User has color markers cycling from 1-7 in a loop, used on params in notes.{%BR%}4. {0} User can use json data from another repo and page.{%BR%}5. {0} User has acces to mvc-template, witch this proj was based on.{%BR%}6. {0} User is able use templated views.{%BR%}7. {0} User is able use new page type, for templated views.{%BR%}8. {0} User is able to see what system he is operating, page style will be ajusted for that.{%BR%}9. {0} User is able to render views with two methods, generate and template.{%BR%}10. {0} User is able to use templated views for title and navigation on index page.{%BR%}11. {0} User has all pages rendered with templating method, using html template element.{%BR%}12. {0} User has style selected by default, based on platform he is on.{%BR%}13. {0} User can input tab in note, to indent text.{%BR%}14. {0} User can copy line/lines with cli command or code.{%BR%}15. {0} User can switch flag isCopy to have button witch with he can copy note, by default it shuould be false, turns on only if flag is provided and true.{%BR%}16. {2} User can input data to form, to generate note json file. {%CONTENT%}"
+      ],
+      "params": [
+        {
+          "name": "1",
+          "desc": "Top Priority."
+        },
+        {
+          "name": "2",
+          "desc": "Middle Priority."
+        },
+        {
+          "name": "3",
+          "desc": "Low Priority."
+        }
+      ]
+    },
+    {
+      "type": "note-aside",
+      "navId": "features",
+      "title": "Features",
+      "note": [
+        "1. {0} Switch beetween styles (none, desktop, mobile).{%BR%}2. {0} Usefull Styles, none, desktop, mobile.{%BR%}3. {0} Color markers, from 1-7, looping on params in notes.{%BR%}4. {0} Json data in separete repo and page. Test if this will work.{%BR%}5. {0} Create Mvc-template that this proj was based on, readable and minimalistic as possible.{%BR%}6. {0} Create new templated views.{%BR%}7. {0} Create new page type for templated views.{%BR%}8. {0} Create template/control to detect operating system.{%BR%}9. {0} Create renderers that provide views based on generate or template methods.{%BR%}10. {0} Create template of title, navigation section for index page.{%BR%}To separete html from js code and to have more control over css.{%BR%}11. {0} Create all pages with templating method.{%BR%}12. {0} Create css style enabled, based on current platform and indicate in ui.{%BR%}13. {0} Create feature of injecting html like 'br' and tab or spaces to text.{%BR%} 14. {0} Create new test page to develop new template that enables copy button for line or lines. 15. {0} Test notes json with test page. Make sure that isCopy flag works as expected in user story. Adjust scheme. {%CONTENT%}"
+      ],
+      "params": [
+        {
+          "name": "1",
+          "desc": "Top Priority."
+        },
+        {
+          "name": "2",
+          "desc": "Middle Priority."
+        },
+        {
+          "name": "3",
+          "desc": "Low Priority."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "dev_notes",
+      "title": "Dev Notes",
+      "note": [
+        "{%TAB%}1. 3 css files added to html's (none, desktop, mobile). Simple links based control is added to html's.On load, desktop style is enabled, others disabled. On link click, coresponding style is enabled. Very simple and works, that was the point.{%BR_TAB%}2. Very Minimalistic Desktop style added.{%BR_TAB%}3. There can be n params with name and description, used in code section. Each param name is marked by color form 1 to 7, after that from 1 again in loop. Each param description in detail aside have matching color marker.{%BR_TAB%}4. Turns out it works. Loacally, with live server i dont know how to make it work. It works on production, so locally it's getting data from github pages to now. This means test of new data will be delayed a bit, but separation of data and app is more important.{%BR_TAB%}5. Minimalistic Mvc-tempate, added to html-css-js repo, runable in local live server. It;s Model-View-Controller, model data is read from json, view generates html filled with data. Controller selects page from url params, loads data, renders views. View and Controller have base classes with their common behavior methods.{%BR_TAB%}6. First version of app had views generated from js code. Create templated views as separete controls.Test it with test data, in dev project. If they look good put them in app view classes to be rendered in app.{%BR_TAB%}7. New page type is needed to develop templated views without braking existing pages. Minimal count of mvc elements needed for new page type should be used at first.{%BR_TAB%}8. This turned out to be complex. I found some examples only to deem them unsufficient. I was distracted by searching cards examples for presenting. Found article and lib for detecting platform, links in Source. Maybe they dont have rubust standard for this.{%BR_TAB%}9. Added renderers classes in controller, to handle diffrent methods for producing views. Otherwise couldnt handle chaos.{%BR_TAB%}git mv IndexRenderer.js indexRenderer.js{%BR_TAB%}10. Nav template has title. Links for switching style between none, desktop, mobile. Links for navigation staying on index page. Card detecting operating system.{%BR_TAB%}11. New repo js-notes-templated created. Generating html in old repo js-notes-generated. Templates first created in repo html-css-js, then moved to js-notes-templated. Current step is to create index page template, style it, them move it to app. Index page and note using templates works. Part of them was refactored. All in repo html-css-js in my-templates project. It's time to merge them in app, becouse some of the code is common between them, and there is no more point in refactoring them separatly. App version using templetes done. Data was converted from format V1 to V2.{%BR_TAB%}12. Style set by default, based on detected system. Setting indicated in ui.{%BR_TAB%}13. Done in note text by using markers like {%VALUE%} and replacing them with html designated to it in json data.{%BR_TAB%}14. Created test page. Add new note template for note type of 'command note'. Refactor, created textNoteView from noteView class. Extract asideNoteView form textNoteView. Add commandNoteView, style it so command text and copy button is on one line. I changed the data format for aside in test page. Add text params for commandNoteAsideView. Add detail button and view that can be placed after chosen note. Fix copy button in test page. Style commandNoteView so copy icon is next to text in center. {%BR_TAB%} 15.I I made icon be hiden by default in html. Then with method _showElement i made it shown on \"isCopy\": true. Scheme and this file updated, rest as opened. Made notes json test page that needs to be updated as this proj goes. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "tips",
+      "title": "Tips"
+    },
+    {
+      "type": "cmd",
+      "aside": {
+        "paramKey": "inline",
+        "isDetail": false
+      },
+      "note": [
+        "&lt;div class='debug {0}'&gt;{%BR%}{%TAB%}&lt;p class='debug-log {1}'&gt;{%BR%}{%TAB%}{%TAB%}{%LOG%}{%BR%}{%TAB%}&lt;/p&gt;{%BR%}&lt;/div&gt;"
+      ]
+    },
+    {
+      "type": "text",
+      "aside": {
+        "paramKey": "inline",
+        "isDetail": true
+      },
+      "note": [
+        "Style center contains supposedly modern css method to center divs.{%BR%}It's used on root/top most div of element/control/view.{%BR%}To keep text in speciffied width inline style can be used on text element. It works only when combined with center style.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "responsive",
+      "title": "Responsive Design",
+      "note": []
+    },
+    {
+      "type": "text",
+      "title": "Problem",
+      "note": [
+        "First i managed to get a ok look on desktop. On mobile font size changes so it looked bad. I tried to have css for desktop and mobile. I was detecting browser type and switching to css targetting it. This didnt really fixed core of the problem. On the contrary, added a lot of complexity for no gain. Another problem is when mobile screen switches beetwen landscape/portrait modes. I added detection. Based on mode i changed css variables to fix the looks. This didnt help either. I removed all that. Searching was made. I found out 'Responsive Design'. It's suposed to target problem of making website look good on any screen size.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "todo",
+      "title": "TODO",
+      "note": ["<li>why text in cmd view dosent wrap to screen size ?</li><li>dictionary in separate json</li><li>move params to cmd note</li><li>injecting in description and title text/html</li><li>navId to separate class and use in all views/notes</li><li>same for injector</li><li>\"isCopy\": false by default</li><li>isCopy doesnt work for cmd, test all notes with some test page</li>"]
+    },
+    {
+      "type": "text",
+      "navId": "summary",
+      "isCenter": true,
+      "title": "Summary",
+      "note": ["App in use for making notes.{%NAV%}"]
+    }
+  ],
+  "param": {
+    "inline": [
+      {
+        "name": "center",
+        "desc": "center root div"
+      },
+      {
+        "name": "inline",
+        "desc": "inline child div with text"
+      }
+    ]
+  },
+  "inject": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%NAV2%}",
+      "text": "<br><a href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a href='#content'>Back to Content</a>"
+    }
+  ]
+}

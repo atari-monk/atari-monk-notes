@@ -1,0 +1,104 @@
+{
+  "title": "SQL quiz.",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": ["This checks some basic sql knowlege."]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://github.com/atari-monk/sql/tree/main/Task1",
+        "text": "Repo with sqls"
+      }
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": [
+      "<img src='src/img/sql-schema.png' alt='Db Schema' title='Db Schema' width='800' height='222'>",
+      "Txt files, with tables data, in repo."
+    ]
+  },
+  "note": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "note": [
+        "Created database named SqlTest with Create.sql from repo.",
+        "Inserted data to tables with Insert.sql from repo.",
+        "Backup to .bak file.",
+        "Write queries:"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Persons who have no address.",
+      "note": [
+        "SELECT p.[Id],p.[Name],p.[Surname],p.[IdNumber],p.[DateOfBirth]<br>FROM [dbo].[Person] p<br>LEFT JOIN [dbo].[Address] a<br>ON p.Id = a.PersonId<br>WHERE a.Id IS NULL;"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Unique name of person who are born during july, august.",
+      "note": [
+        "SELECT DISTINCT n, m FROM<br>(SELECT [Name] as n, MONTH([DateOfBirth]) as m<br>FROM [dbo].[Person])<br>AS data WHERE m IN ('7','8')"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Show one record with addres type witch is used the most and count of it used.",
+      "note": [
+        "select Top(1)<br>at.Name,<br>count(*) as c<br>FROM Address a<br>INNER JOIN AddressType at<br>ON a.AddressTypeId = at.Id<br>GROUP BY at.Name<br>ORDER BY c DESC;"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Persons with adresses of more that one type.",
+      "note": [
+        "select * FROM (<br>select<br>p.Name as Person<br>, at.Name as AddressType<br>, count(*) as c<br>FROM Address a<br>INNER JOIN AddressType at<br>ON a.AddressTypeId = at.Id<br>INNER JOIN Person p<br>ON a.PersonId = p.Id<br>GROUP BY p.Name, at.Name) selectA<br>WHERE c>1<br>ORDER BY selectA.c DESC;"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Average age of woman. (Truns out if digit before last one in IdNumber is even it's a woman)",
+      "note": ["SELECT AVG(age) FROM<br>(SELECT Name, Surname,<br>FLOOR(DATEDIFF(DAY, DateOfBirth, GETDATE()) / 365.25) AS age,<br>IdNumber,<br>SUBSTRING(IdNumber, 10, 1) AS Sex<br>FROM Person) selectA<br>WHERE Sex % 2 = 0;"]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": [
+        "I had no problem in doing that,",
+        "but it took 2 days with notes and all.",
+        "20 min was given for this part.",
+        "Eventually AI will take the job anyway."
+      ]
+    }
+  ]
+}

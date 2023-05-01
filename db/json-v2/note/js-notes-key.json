@@ -1,0 +1,50 @@
+{
+  "isKey": true,
+  "title": "Key feature.",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Notes"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "isCenter": true,
+    "title": "Description",
+    "description": ["Page to develop/test 'Key' feature."]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://gist.github.com/mhalamine/a236cf6cdc6902d2c318c270b0749202",
+        "text": "Source"
+      }
+    ]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+      "note": ["Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error nulla debitis aspernatur sed repellat tenetur fugit reprehenderit quo dicta. Modi facere incidunt vel laborum delectus suscipit quod, illo quae optio! Molestiae minima expedita ipsam illum laudantium fugit cupiditate temporibus atque aut iure! Esse mollitia iure ratione rem laborum totam! Minus sunt blanditiis distinctio libero. Maxime aliquam incidunt dignissimos. Necessitatibus, qui? Optio, dolore ipsa quod praesentium dolorum sint est commodi quaerat adipisci hic aliquam exercitationem dolorem iste doloremque consectetur itaque ad voluptas ratione tempore atque laboriosam dolor sapiente quas veniam! Delectus? Quas incidunt perspiciatis ipsam ullam earum aperiam modi! Minima expedita impedit voluptatum asperiores ullam voluptates animi provident excepturi, quae reprehenderit dignissimos hic porro suscipit? Mollitia voluptatum alias praesentium reiciendis reprehenderit!"]
+    }
+  ]
+}

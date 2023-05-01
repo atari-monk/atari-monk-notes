@@ -1,0 +1,87 @@
+{
+  "title": "atari-monk Notes",
+  "nav": [
+    {
+      "title": "Coding"
+    },
+    {
+      "title": "Software"
+    },
+    {
+      "title": "Diy"
+    },
+    {
+      "title": "Other"
+    }
+  ],
+  "sections": [
+    {
+      "text": "Coding",
+      "links": [
+        {
+          "link": "index.html?page=index/net",
+          "text": ".Net"
+        },
+        {
+          "link": "index.html?page=index/web-dev",
+          "text": "Web Dev"
+        },
+        {
+          "link": "index.html?page=index/azure",
+          "text": "Azure"
+        },
+        {
+          "link": "notes.html?page=note/files",
+          "text": "VSCode files"
+        },
+        {
+          "link": "notes.html?page=note/unity-course",
+          "text": "Learn Unity"
+        }
+      ]
+    },
+    {
+      "text": "Software",
+      "links": [
+        {
+          "link": "notes.html?page=note/win-11",
+          "text": "Windows 11"
+        },
+        {
+          "link": "notes.html?page=note/apps-keys",
+          "text": "Apps Keys"
+        }
+      ]
+    },
+    {
+      "text": "Diy",
+      "links": [
+        {
+          "link": "notes.html?page=note/stool",
+          "text": "Stool"
+        }
+      ]
+    },
+    {
+      "text": "Other",
+      "links": [
+        {
+          "link": "notes.html?page=note/todo",
+          "text": "ToDo"
+        },
+        {
+          "link": "notes.html?page=note/recipes",
+          "text": "Recipes"
+        },
+        {
+          "link": "notes.html?page=note/ug-give-up",
+          "text": "UG Give Up Talk"
+        },
+        {
+          "link": "notes.html?page=note/links",
+          "text": "Links"
+        }
+      ]
+    }
+  ]
+}

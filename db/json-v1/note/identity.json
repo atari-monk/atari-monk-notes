@@ -1,0 +1,242 @@
+{
+  "title": "Identity web app",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-7.0&tabs=netcore-cli",
+          "text": "Source Tutorial"
+        },
+        {
+          "link": "https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-7.0&tabs=netcore-cli",
+          "text": "Scaffold Identity"
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": [
+        "Asp.Net Core MVC Web app with identity authentication/authorization system."
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": [
+        "Azure account",
+        "VSCode"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": ["Current path"],
+          "codes": [
+            {
+              "format": [
+                "cd C:\\atari-monk\\Code\\net-web-tutorial\\Identity.WebApp",
+                "code ."
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Steps done.", "Generate web app with identity."],
+          "codes": [
+            {
+              "format": [
+                "dotnet new list",
+                "dotnet new mvc --auth Individual -uld -n Identity.WebApp",
+                "dotnet new sln",
+                "dotnet sln add Identity.WebApp"
+              ],
+              "params": [
+                {
+                  "desc": "optional to check options"
+                },
+                {
+                  "desc": "This uses LocalDb. There is option with SQLite"
+                }
+              ]
+            },
+            {
+              "format": ["{0}"],
+              "params": [
+                {
+                  "name": "*.vscode",
+                  "desc": "add to .gitignore"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Do migrations."],
+          "codes": [
+            {
+              "format": [
+                "dotnet tool update --global dotnet-ef",
+                "cd .\\Identity.WebApp\\",
+                "dotnet ef database update"
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Run the app and register a user and login."],
+          "codes": [
+            {
+              "format": ["dotnet run"]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Configure Identity services.",
+            "I copied default settings from msdocs and put it in class invoked in program.cs.",
+            "It's refactored to better readability."
+          ]
+        },
+        {
+          "text": [
+            "Add my db connection string buider lib, with help of",
+            "<a href='notes.html?page=nuget'>Nuget</a>",
+            "<a href='notes.html?page=azure-secrets'>Azure Secrets</a>"
+          ]
+        },
+        {
+          "text": ["Scaffold Identity UI."],
+          "codes": [
+            {
+              "format": [
+                "dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design",
+                "dotnet add package Microsoft.EntityFrameworkCore.Design",
+                "dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+                "dotnet add package Microsoft.AspNetCore.Identity.UI",
+                "dotnet add package Microsoft.EntityFrameworkCore.SqlServer",
+                "dotnet add package Microsoft.EntityFrameworkCore.Tools",
+                "dotnet tool install -g dotnet-aspnet-codegenerator",
+                "dotnet tool update -g dotnet-aspnet-codegenerator",
+                "dotnet aspnet-codegenerator identity -h",
+                "dotnet aspnet-codegenerator identity -dc Identity.WebApp.Data.ApplicationDbContext"
+              ],
+              "params": [
+                {
+                  "desc": "this should generate all available UI"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Error thrown.",
+            "Cannot use an existing DbContext with the '--useDefaultUI' option",
+            "Removed --useDefaultUI from command. Fixed error."
+          ]
+        },
+        {
+          "text": ["Removed null warns/problems from generated code."]
+        },
+        {
+          "text": [
+            "Add [Authorize] on privacy page in controller. To test identity."
+          ]
+        },
+        {
+          "text": [
+            "Upgraded connection builder to handle locally trusted connection.",
+            "I dont like to clear all nugets, it take ages to restore them after that.",
+            "ToDo: why it was suggested?",
+            "Created local db by ef core migrations.",
+            "Tested register, login, logout locally."
+          ],
+          "codes": [
+            {
+              "format": [
+                "dotnet nuget locals temp -c",
+                "dotnet nuget locals global-packages -c",
+                "dotnet ef database update"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Below commands was used to deploy to Azure.",
+            "Based on <a href=''>todo-app-azure (todo: add link)</a>",
+            "As output, there is connection string."
+          ],
+          "codes": [
+            {
+              "format": [
+                "az login",
+                "az login --tenant id",
+                "az group create --name identity-web-app-rg --location swedencentral --tags identity-web-app resource group",
+                "az webapp create --name atari-monk-identity-web-app --runtime 'DOTNETCORE:7.0' --plan atari-monk-appservice-plan1 --resource-group identity-web-app-rg",
+                "az sql db create --resource-group az-sql-db1-rg --server atari-monk-sql-server1 --name identityDb",
+                "az webapp connection create sql --resource-group identity-web-app-rg --name atari-monk-identity-web-app --target-resource-group az-sql-db1-rg --server atari-monk-sql-server1 --database identityDb --client-type dotnet --query configurations"
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Connection string from Azure was input as local secrets."],
+          "codes": [
+            {
+              "format": [
+                "dotnet user-secrets set 'Server' 'atari-monk-sql-server1.database.windows.net'",
+                "dotnet user-secrets set 'DbPort' '1433'",
+                "dotnet user-secrets set 'DbUser' 'atari-monk'",
+                "dotnet user-secrets set 'DbPassword' 'x'",
+                "dotnet user-secrets set 'Database' 'identityDb'"
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Deploy migrations on Azure sql server."],
+          "codes": [
+            {
+              "format": ["dotnet ef database update"]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Build and Deploy web app on Azure App Services. (Right-click on publish folder and select Deploy to Web App). Test app."
+          ]
+        },
+        {
+          "text": [
+            "At this point i had realised that db on Azure was above S0 witch costed me. Had to mail with support. They agread to forgive cost on 04.12.2022.",
+            "I deleted all resources before mailing with them."
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "I dont know yet."
+  ]
+}

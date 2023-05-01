@@ -1,0 +1,859 @@
+{
+  "isScrollToBottom": false,
+  "title": "Unity Beginner Tutorial",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "isCenter": true,
+    "navId": "description",
+    "title": "Description",
+    "description": ["Always wanted to create a game."]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://youtu.be/AmGSEH7QcDg",
+        "text": "Source Tutorial"
+      },
+      {
+        "link": "https://unity.com/download",
+        "text": "Unity"
+      },
+      {
+        "link": "https://unityatscale.com/unity-version-control-guide/how-to-setup-unity-project-on-github/",
+        "text": "Unity GitHub"
+      },
+      {
+        "link": "https://docs.github.com/en/enterprise-cloud@latest/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github",
+        "text": "Local git repo to GitHub"
+      },
+      {
+        "link": "https://github.com/github/gitignore/blob/main/Unity.gitignore",
+        "text": "Unity.gitignore"
+      }
+    ]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes"
+    },
+    {
+      "type": "content",
+      "navId": "content",
+      "title": "Content",
+      "links": [
+        {
+          "link": "#reflect",
+          "title": "Reflections"
+        },
+        {
+          "link": "#unity_github_repo",
+          "title": "Unity Project GitHub repo"
+        },
+        {
+          "title": "Intro",
+          "time": "0-20"
+        },
+        {
+          "link": "#create_project",
+          "title": "Create Project",
+          "time": "20-25"
+        },
+        {
+          "link": "#prepare_layout",
+          "title": "Prepare Layout",
+          "time": "25-32"
+        },
+        {
+          "link": "#setup_visual_studio",
+          "title": "Setup Visual Studio",
+          "time": "32-35"
+        },
+        {
+          "link": "#naming_rules",
+          "title": "Naming Rules",
+          "time": "35.5-39.5"
+        },
+        {
+          "link": "#importing_assets",
+          "title": "Importing Assets",
+          "time": "39.5-41"
+        },
+        {
+          "link": "#post_processing",
+          "title": "Post Processing",
+          "time": "41-56"
+        },
+        {
+          "link": "#character_controller",
+          "title": "Character Controller",
+          "time": "56-1:15"
+        },
+        {
+          "link": "#character_visual_rotation",
+          "title": "Character Visual, Rotation",
+          "time": "1:15-1:23"
+        },
+        {
+          "link": "#animations",
+          "title": "Animations",
+          "time": "1:23-1:43"
+        },
+        {
+          "link": "#cinemachine",
+          "title": "Cinemachine",
+          "time": "1:43-1:49"
+        },
+        {
+          "link": "#input_system_refactor",
+          "title": "Input System Refactor",
+          "time": "1:49-2:04"
+        },
+        {
+          "link": "#collision_detection",
+          "title": "Collision Detection",
+          "time": "2:04-2:17"
+        },
+        {
+          "link": "#clear_counter",
+          "title": "Clear Counter",
+          "time": "2:17-02:38"
+        },
+        {
+          "link": "#interact_action",
+          "title": "Interact Action, C# Events",
+          "time": "02:38-02:48"
+        },
+        {
+          "link": "#singleton",
+          "title": "Selected Counter Visual, Singleton Pattern",
+          "time": "02:48-03:11"
+        },
+        {
+          "link": "#kitchen_object",
+          "title": "Kitchen Object, Scriptable Objects",
+          "time": "03:11-03:25"
+        },
+        {
+          "link": "#player_pickup",
+          "title": "Player Pick up, C# Interfaces",
+          "time": "03:25-03:38"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "reflect",
+      "isCopy": false,
+      "title": "Reflections",
+      "note": [
+        "{%L%}Watch video part once before making any notes, then watch again, making notes along the way.{%EL%}{%L%}Code is best done in VS or VSCode, then convert to single line and copy to note.{%EL%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "unity_github_repo",
+      "isCopy": false,
+      "title": "Unity Project GitHub repo",
+      "note": [
+        "Add .gitignore for Unity (link in Source) to root project folder.{%BR%}Open git in project folder."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "aside": {
+        "paramKey": "git",
+        "isDetail": true
+      },
+      "note": [
+        "git init {0}",
+        "git {1}",
+        "git {2}",
+        "git commit -m 'First commit, project files and .gitignore'"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["Create GitHub repo, using GitHub web page. Push to it."]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "note": [
+        "git remote add origin \r\nhttps://github.com/atari-monk/unity-kitchen-chaos.git<br>git branch -M main<br>git push -u origin main"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["Add and commit licence on GitHub page."]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "note-aside",
+      "navId": "create_project",
+      "isCopy": false,
+      "title": "Create Project",
+      "note": [
+        "{%TAB%}Install Unity Hub. Install Unity Editor version 2022.2.1f1. Select to install editor and Visual Studio Community 2022. Create new Project. Select Unity Editor version 2022.2.1f1. I installed on 'game' ssd drive ({0}). Select 3D URP template (universal render pipeline), download template. Set Project Name to KitchenChaos. Set Project folder ({1}). Click New Project button, editor opens. Remove readme assets about URP. Edit-> Project Settings-> Graphics Tab, check, URP HighFidelity asset should be assign. URP Global Settings should be set to UniversalRenderPipelineGlobalSettings. On Quality tab, HighFidelity should be seleted, trash/delete preforment and balanced. Go to main assets tab and delete preforment and balanced, 4 assets."
+      ],
+      "params": [
+        {
+          "name": "path",
+          "desc": "E:\\2022.2.1f1\\Editor\\Unity.exe"
+        },
+        {
+          "name": "path",
+          "desc": "E:\\atari-monk\\unity-course"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "prepare_layout",
+      "isCopy": false,
+      "title": "Prepare Layout",
+      "note": [
+        "{%TAB%}Put Inspector on the right, put Hierarchy down on left side, next place Project and Console. Scene and Game view in the center. Go to Project, 3 dots menu, select one column layout. Go to Console, 3 dots menu, select Log Entry-> one line, Clear->Clear on play, untoogle collapse, toogle pause on error. On Game view, Free Aspect -> Full HD, turn on VSync (limit fps), Play Unfocused, scale should be pushed max to the left. On Scene view, use Pivot (not center), Global (rotation), grid on, snaping off. On the right, draw mode on Shaded, 2D off, ligh on, audio off, special effects on (refresh off), hidden objs on, camera defaults, gizmos defaults. Go to layouts (top right), save layout as KitchenChaos.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "setup_visual_studio",
+      "isCopy": false,
+      "title": "Setup Visual Studio",
+      "note": [
+        "{%TAB%}Open proj in Unity Editor, Window->Package Manager, Packeges->Unity Registry. Find editor of liking, Visual Studio Editor, install (upd btn). Edit->Preferences, External Tools, External Script Editor, select VS, untick checkboxes. Go to Assets->Open C# Project, VS opens up.{%BR_TAB%}In VS, Extensions->Manage Extensions, Viasfora, install. Go to Tools->Options, Viasfora, Enable Dev Margin false, Rainbow Braces is one of the features of this extnsion. Go to Unity Editor, Project, +, add c# script, name it Testing, wait to compile, click to open in VS. Go to Tools->Options, C#->Code Style->Formating, uncheck to make braces not start in new lines.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "note-aside",
+      "navId": "naming_rules",
+      "isCenter": false,
+      "isCopy": false,
+      "title": "Naming Rules",
+      "note": [
+        "{0}, {1}, {2}, {3}{%BR%}PascalCase - Functions Names, Properties, Events.{%BR%}camelCase - Function params, Fields.{%BR%}UpperCase SnakeCase - Constants.{%BR%}Use Proper naming with no abbreviations."
+      ],
+      "params": [
+        {
+          "name": "PascalCase",
+          "desc": "Starts with capital and every word is capitalized."
+        },
+        {
+          "name": "camelCase",
+          "desc": "Starts with lowercase and every word is capitalized (camel hump)."
+        },
+        {
+          "name": "snake_case",
+          "desc": "Underscore beetween words."
+        },
+        {
+          "name": "github-repo-case",
+          "desc": "- beetween words."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "importing_assets",
+      "isCopy": false,
+      "title": "Importing Assets",
+      "note": [
+        "Account on codeMonkey page, downloaded assets. Drag&drop assets package on Project window, select All, import. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "note-aside",
+      "navId": "post_processing",
+      "isCopy": false,
+      "title": "Post Processing",
+      "note": [
+        "{%TAB%}Normally added later. Rename Scene -> SampleScene to GameScene. Click GameScene, click GlobalVolume, select SampleSceneProfile, delete it. Click new to create ne Volume Profile. On Hierarchy, add, 3d object, plane, name it Floor. Select plane, go to transform, position on 0, scale 5 5 5. Enable constrain proportions. Go to Materials, circle selector, choose floor from assets. Project Assets -> PrefabsVisuals, select PlayerVisual, drag&drop on main screen, on plain, also for ClearCounter, CuttingCounter, tomato, cabbage.{%BR_TAB%}Scene control: {0}, {1}, {2}, {3}, {4}. Hold right mouse btn, use WSAD to move, shift to move faster, mose wheel to mod speed."
+      ],
+      "params": [
+        {
+          "name": "pan camera",
+          "desc": "mouse 3 (wheel)"
+        },
+        {
+          "name": "rotate cam",
+          "desc": "right mouse button"
+        },
+        {
+          "name": "rotate around point",
+          "desc": "left alt, left mouse btn"
+        },
+        {
+          "name": "zoom",
+          "desc": "left alt, right mose btn and move mouse"
+        },
+        {
+          "name": "rotate around obj",
+          "desc": "select obj, f, left alt, left mouse btn, move mouse"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": [
+        "{%TAB%}Possition camera: Position cam in scene, select main cam in Herarchy, ctrl+shift+f or menu -> GameObject -> Align With View, switch to Game view.{%BR_TAB%}Select Global Volume, add override -> Post Processing -> Tonemapping, check Mode, Neutral. If no diffrence, check if Main Cam -> Rendering -> PostProcessing is enabled also enabled in URP-HighFidelity-Renderer.{%BR_TAB%}Global Volume -> add override -> Post Processing -> Color Adjustments, Saturation on 20, contrast on 20. Add stove counter asset. Find stoveOnVisual in it, enable it visible.{%BR_TAB%}Global Volume -> add override -> Post Processing -> Bloom. Enable treshold and intensity, set 0.95 and 1. Stove should glow, for this URP HDR must be on. URP renderer must have Post Process Data atached (toogle to reset if not).{%BR_TAB%}Global Volume -> add override -> Post Processing -> Vignette. Intensity .25, Smoothness .4.{%BR_TAB%}Select URP, Anti Aliasing (MSAA) 8x (see diffrance in game view), on camera select no anti aliasing.{%BR_TAB%}URP renderer, add Screen Space Ambient Occlusion, adds shadows where object intersects, it looks better. Select cam, position it, x 0 y 21.5 z -21.3, rot x 46 y 0 z 0.{%BR_TAB%}Go to URP renderer, set ambient oclusion. Intensity 4, radius .3, direct lighting strength 1. Window -> Rendering -> Lighting, anchor it next to inspector. Leave defaults, scene -> assets none, environment default. In global volume, you can clone profile and make other post processing looks with diffrent settings. Delete visuals exept floor.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "character_controller",
+      "isCopy": false,
+      "title": "Character Controller",
+      "note": [
+        "{%TAB%}In Hierarchy, create empty game object, name it Player. Put it on 0,0,0. Inside of it, create a capsule visual. Scale it to .7,1,.7. Put it up by one unit. Rule: Separete logic from visual in your game objects. Create folder 'Scripts' in Assets. Create c# script. Call it Player, wait for code to compile. Select player logic object and atach the script, open script. There are two unity input systems, legacy and new one. Older is simpler, witch makes it usefull for prototyping. Newer is more capeable, but more complex. Btw, VS must have Unity packages installed for accesing framework. Write your code, to test, switch to game, press play, observe console for debug output. Dont forget to save code file, or switch auto save. InputVector (+-1,+-1), but also normalize it, becouse of diagonal. Run game, check FPS on Stats view."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "aside": {
+        "paramKey": "asset",
+        "isDetail": true
+      },
+      "title": "Framework code assets:",
+      "note": [
+        "namespace UnityEngine{%BR%}MonoBehaviour{%BR%}private void {0}{%BR%}Vector2{%BR%}Input.GetKey(KeyCode.W){%BR%}Debug.Log(inputVector);{%BR%}inputVector = inputVector.normalized;{%BR%}var moveDir = new Vector3(inputVector.x, 0f, inputVector.y);{%BR%}[{1}] private float moveSpeed = 7f;{%BR%}transform.position += moveDir * moveSpeed * Time.deltaTime;"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "character_visual_rotation",
+      "isCopy": false,
+      "title": "Character Visual, Rotation",
+      "note": [
+        "{%TAB%}Drag Player Visual to Player object. Position 0,0,0.{%BR_TAB%}Materials: Has a shader and bunch of properties. Shader is a code that runs on a graphics card. It's calculating how object is rendered. There is a lot of default ones. In URP use URP shaders, by default Lit. Shader Graph - Visual tool for generating shaders without coding them. Lit shader - Base Map has color field. You can drag&drop material from assets on to the scene, or Mesh, renderer Material field. Create materials and apply them on shapes."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "aside": {
+        "paramKey": "rotation",
+        "isDetail": true
+      },
+      "isCenter": false,
+      "content": "html",
+      "beautify": "js",
+      "title": "Rotate Visual code:",
+      "note": [
+        "transform.{0}{%BR%}transform.{1}{%BR%}transform.LookAt{%BR%}transform.{2} = moveDir{%BR%}var rotateSpeed = 10f;{%BR%}transform.forward = Vector3.{3}(\r\ntransform.forward,\r\n moveDir,\r\n Time.deltaTime * rotateSpeed)"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "animations",
+      "isCopy": false,
+      "title": "Animations",
+      "note": [
+        "{%TAB%}Go to PlayerVisual, add component Animator. Add Controller, name it MyPlayerAnimator. Drag&Drop it to Animator. Click controller to open Animator window. Animator is a State Machine. It defines states and transitions between them. By default there are Any State, Entry, Exit. Open Window->Animaion->Animation. Dock it beside Console.{%BR_TAB%}Click Create btn and name animation file - Idle. Select PlayerVisual, go to Animation, start recording. Move time to 0, select head, move it up a little. Red color in fields indocates recorded keyframe. Move to frame 30, witch is half a second. Samples is set to 60 frames per second. Move head a little more higher. Select keyframe on 0, ctrl+c, go to 60 (1s), paste keyframe. Record keyframe for the body, on 0, not changing possition. It's done to reset position when entering animation. Stop recording. Go to Idle and check if Loop Time is on (default). Go to Game, hit play, test animation.{%BR_TAB%}Duplicate Idle animation (ctrl + d). Rename it to Walk. Go to Project, drag&drop Walk to Animator view. Go to PlayerVisual Animation view, select Walk. Repeat steps made for head, do it for the body. Select middle body keyframe, offset it to the left. Select all keyframes, adjust time scale. It makes animation slower or faster.{%BR_TAB%}In Animator view, select Idle menu, add transition to Walk. Select transition, Has Exit Time should be on. Select Parameters tab, add bool parameter, name it IsWalking. Turn off Has Exit Time, add condition. Do it for Walk to Idle direction for IsWalking on false.{%BR_TAB%}Test the animations. Dock Animator view next to Animation and Console. Play Game, select PlayerVisual, toogle IsWalking to test animation transitions.{%BR_TAB%}Create new C# script, name it PlayerAnimator. Atach it to PlayerVisual. In PlayerAnimator script. Get Animator component referance in Awake method. Add Player referance by using SerializeField. In editor drag&drop player on this ref field. Add IsWalking metohd to player script. Set IsWalking in animator with player method. Use animator SetBool. Provide string name of IsWalking using constant. Do it in Update method so it's updated once per frame. Test it. {%BR_TAB%}Select PlayerVisual, remove test/learn animator, restore one from assets. Remove Idle, Wait, and MyPlayerAnimator controller. Test animations from assets. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "note-aside",
+      "navId": "cinemachine",
+      "isCopy": false,
+      "title": "Cinemachine",
+      "note": [
+        "{%TAB%}Go to Window->Package Manager. Find and install {0} extension. It's camera automation tools. Go to Game Object->Cinemachine->Virtual Camera. Set camera properties on Virtual Camera (Camera props blocked). Set FOV (Filed of view) on 20. Set position on (0, 21.5, -21.3). Set rotation on (46, 0, 0). On Noise drop down, noise effect can be added, like hand held camera wobble. Many virtual cameras can be used, to create effects like following camera (and many more)."
+      ],
+      "params": [
+        {
+          "name": "Cinemachine",
+          "desc": "Creates many types of virtual cameras. Works on top of unity camera, adds tons of functionality and automations."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "input_system_refactor",
+      "isCopy": false,
+      "title": "Input System Refactor",
+      "note": [
+        "{%TAB%}Create empty obj, name GameInput, pos (0,0,0). Create c# script, same name, atach it to obj. Refactor input from Player class to GameInput. Drag&Drop GameInput to Player field in editor. Install package Input System. Dont restart, go to Edit->Project Settings->Player->Configuration->Active Input Handling->Both. In Assets create Input Actions file, name it PlayerInputActions, click it to open window. Add action map, name it Player, add action Move, Action Type - Value, Control Type - Vector2. On Move, delete binding, add Up/Down/Left/Right Composite, name it WASD. Map directions to WSAD keys. Save asset. Select PlayerInputActions, check Generate c# class. Add reference to it in GameInput class. Refactor to use it. Add another composite for Arrow keys, save asset. Add binding to connect gamepad, use generic to work with many types (just listen for gamepad to register it). {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "collision_detection",
+      "isCopy": false,
+      "title": "Collision Detection",
+      "note": [
+        "{%TAB%}Add Cube to game objects. See that collision with player dosent work yet. Disable mesh collider on floor, it wont be used. In script, add ray casting to stop movment on cube. Use capsule cast to match shape of player. Handle diagonal movment by moving in only x or z directions. Normalize to move in same speed. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "clear_counter",
+      "isCopy": false,
+      "title": "Clear Counter",
+      "note": [
+        "{%TAB%}Add empty object, name it ClearCounter. Reset it's Transform to zeros. Add Visual to empty, drag it from PrefabsVisuals. Add Box Collider to empty. Scale Box Collider to match Visual (1.5, 1.5, 1.5). Move it up Y 0.5, to match Visual. Switch to Scene view. Select empty, select tool rotate. Hold ctrl and rotate 180 degres.{%BR_TAB%}Refactor code. Add methods for Movment and Interactions, call them in Update (Organize). Add code for interaction with ClearCounter, simillar as ray casting physics was written. I moved Scripts folder to root Assets.{%BR_TAB%}Create Prefabs folder in root Assets. Create prefab by drag&drop from Hierarchy to Prefabs folder. Duplicate ClearCounter prefab, move it so it dosent collide with original.{%BR_TAB%}Create C# script for ClearCounter. Select Prefab from Project and atach file to all of it's instances. Alternativlly, select prefab instance form Hierachy and click Open. Scene will focus on prefab, atach script, exit to scene, save prefab. Unity Tags are horrible, dont use that (string, no types). In code of ray casting, use LayerMask of objects to narow objects you check. Add editor property for layer, to player. Open Prefab, add layer, name it Counters, save it only to prefab (not children). Add Counters layer to player editor field, test interaction. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "interact_action",
+      "isCopy": false,
+      "title": "Interact Action, C# Events",
+      "note": [
+        "{%TAB%}Double click PlayerInputActions, add Interact action. Select Action Type - Button. On default binding, go to Path, Listen, assign E key. Save Asset. For movement it makes sense to handle it every frame in Update method. For less frequent actions c# events are used. In GameInput.Awake, register callback for action:"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "isCenter": false,
+      "content": "text",
+      "beautify": "js",
+      "note": [
+        "playerInputActions.Player.Interact.performed +=\r\n Interact_performed;"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": [
+        "Create event in GameInput. Invoke it on Interact callback. Subscribe to it in Player. Create callback in Player, copy interact code to it, comment out Interact action in other place, test E btn to interact. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "singleton",
+      "isCopy": false,
+      "title": "Selected Counter Visual, Singleton Pattern.",
+      "note": [
+        "{%TAB%}Create c# script named 'SelectedCounterVisual'. Go to prefab. Select ClearCounter on the Hierarchy. In the inspector click Open. Switch to Scene, to see if prefab is selected. 'Ctrl + d' to duplicate visual. Rename it to 'Selected'. Select visual inside. Select it's material to 'CounterSelected'. Select 'Selected' visual. Click link scales. Scale to 1.01, to prevent rendering flickers due to visuals beeing same size. Select 'KitchenCounter' visual and disable rendering (shift-alt-a). Add script to Selected by drag&drop on it's inspector view. Edit script. In Player class, get reference to selectedCounter using previouslly set up Raycast logic. Reset it when it's not detected. Test reference value, by logging it to console in game mode. In Player class add event."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "isCenter": false,
+      "content": "text",
+      "note": [
+        "public event \r\nEventHandler<OnSelectedCounterChangedEventArgs>\r\n OnSelectedCounterChanged;"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "singleton",
+      "isCopy": false,
+      "note": ["{%TAB%}Create argument for this event."]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "isCenter": false,
+      "beautify": "js",
+      "note": [
+        "public class OnSelectedCounterChangedEventArgs : EventArgs {public ClearCounter selectedCounter;}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "singleton",
+      "isCopy": false,
+      "note": ["{%TAB%}Invoke event."]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "isCenter": false,
+      "content": "text",
+      "beautify": "js",
+      "note": [
+        "OnSelectedCounterChanged?.Invoke(this,\r\nnew OnSelectedCounterChangedEventArgs {selectedCounter = selectedCounter});"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "singleton",
+      "isCopy": false,
+      "note": [
+        "{%TAB%}Refactor to method and invoke it 3 times when selectedCounter value is changing. 2 time pass null.Remove log to console."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "isCenter": false,
+      "content": "text",
+      "beautify": "js",
+      "note": [
+        "private void SetSelectedCounter(ClearCounter selectedCounter) {this.selectedCounter = selectedCounter;OnSelectedCounterChanged?.Invoke(this,\r\nnew OnSelectedCounterChangedEventArgs {selectedCounter = selectedCounter});}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "singleton",
+      "isCopy": false,
+      "note": [
+        "{%TAB%}Make player a singleton by adding static property. Set it in Awake."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "isCenter": false,
+      "beautify": "js",
+      "note": [
+        "public static Player Instance { get; private set; }",
+        "private void Awake() {if (Instance != null) {Debug.LogError('There is more than one Player instance');}Instance = this;}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "singleton",
+      "isCopy": false,
+      "beautify": "js",
+      "note": [
+        "{%TAB%}In SelectedCounterVisual class, In Start method assign handler for event. Start is always invoked after Awake so referance will be set. Add code to handle selection. Set references to ClearCounter and Visual in Unity. Open prefab, select 'Selected', add both references by drag&drop ClearCounter and KitchenCounter visual.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "kitchen_object",
+      "isCopy": false,
+      "title": "Kitchen Object, Scriptable Objects.",
+      "note": [
+        "{%TAB%}Create empty game object, name it Tomato. Project tab, Assets, _Assets, PrefabsVisuals, KitchenObjectsVisuals, drag&drop Tomato_Visual. Reset Visual position to zeros. Move Tomato so u can see it, y is 0. In Prefabs folder, create subfolders KitchenObjects and Counters. Sort prefabs. Create Tomato prefab with drag&drop. Open ClearCounter script, add referance to tomato prefab."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "title": "",
+      "note": [
+        "public class ClearCounter : MonoBehaviour { [SerializeField] private Transform tomatoPrefab; [SerializeField] private Transform counterTopPoint; public void Interact() { Debug.Log(\"Interact!\"); Transform tomatoTransform = Instantiate(\r\ntomatoPrefab,\r\n counterTopPoint); tomatoTransform.localPosition = Vector3.zero; } }"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": [
+        "{%TAB%}In editor, open ClearCounter prefab, drag&drop tomato on referance field in inspector.{%BR_TAB%}In editor, open ClearCounter prefab, add empty GameObject, name it CounterTopPoint. Position it on top. In code add ref to it, in editor drag to set it. Test interaction. Ctrl + d to duplicate Tomato prefab, name it CheeseBlock. Open prefab and add correct visual. Select second Counter and add ref to Cheese. Test it."
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Scriptable Objects",
+      "note": ["Add script KitchenObjectSO."]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "note": [
+        "[CreateAssetMenu] public class KitchenObjectSO : \r\nScriptableObject { public Transform prefab; public Sprite sprite; public string objectName; }"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": [
+        "In editor. Project, plus icon, select SO from menu. It creates SO, name it Tomato. Create ScriptableObjects folder with KitchenObjectSO subfolder. Move file there. Use it in code. Assign fields of SO in editor. Assign SO to Counters. Do steps again for CheeseBlock. Add script KitchenObject."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "note": [
+        "public class KitchenObject : MonoBehaviour { [SerializeField] private KitchenObjectSO kitchenObjectSO; \r\n\r\npublic KitchenObjectSO GetKitchenObjectSO() { return kitchenObjectSO; } }"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": [
+        "Assing script to both Objects Prefabs, assing SO`s refs created by this script in tomato and cheese Prefabs."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "title": "ClearCounter script updated to use SO and KitchenObject.",
+      "note": [
+        "public class ClearCounter : MonoBehaviour { [SerializeField] private KitchenObjectSO kitchenObjectSO; [SerializeField] private Transform counterTopPoint;\r\n\r\npublic void Interact() { Debug.Log(\"Interact!\"); Transform kitchenObjectTransform = Instantiate(\r\nkitchenObjectSO.prefab,\r\n counterTopPoint); kitchenObjectTransform.localPosition = Vector3.zero; Debug.Log(\r\nkitchenObjectTransform.GetComponent<KitchenObject>()\r\n.GetKitchenObjectSO().objectName); } }"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "player_pickup",
+      "isCopy": false,
+      "title": "Player Pick up, C# Interfaces",
+      "note": [
+        "In game mode, test that you can spawn tomato and cheese block in unlimited numbers. Hierarchy has many tomatos if you hit E multiple times. In the ClearCounter script."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "title": "Moddify so that counter has one KitchenObject. Test it in game.",
+      "note": [
+        "public class ClearCounter : MonoBehaviour { [SerializeField] private KitchenObjectSO kitchenObjectSO; [SerializeField] private Transform counterTopPoint; private KitchenObject kitchenObject; \r\n\r\npublic void Interact() { if (kitchenObject == null) { Transform kitchenObjectTransform = Instantiate( \r\nkitchenObjectSO.prefab,\r\n counterTopPoint); kitchenObjectTransform.localPosition = Vector3.zero; kitchenObject = kitchenObjectTransform\r\n.GetComponent<KitchenObject>(); } } }"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["In the KitchenObject script."]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "title": "Moddify so that KitchenObject has it's parent ref.",
+      "note": [
+        "public class KitchenObject : MonoBehaviour { \r\n\r\n[SerializeField] private KitchenObjectSO kitchenObjectSO; \r\n\r\nprivate ClearCounter clearCounter; \r\n\r\npublic KitchenObjectSO GetKitchenObjectSO() { return kitchenObjectSO; } \r\n\r\npublic void SetClearCounter(ClearCounter clearCounter) { this.clearCounter = clearCounter; } \r\n\r\npublic ClearCounter GetClearCounter() { return clearCounter; } }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "title": "Back in Counter script. Set kitchenCounter parent, print it in log when it's already set. Test that in game.",
+      "note": [
+        "public class ClearCounter : MonoBehaviour { [SerializeField] private KitchenObjectSO kitchenObjectSO; [SerializeField] private Transform counterTopPoint; private KitchenObject kitchenObject; public void Interact() { if (kitchenObject == null) { Transform kitchenObjectTransform = Instantiate( \r\nkitchenObjectSO.prefab, \r\ncounterTopPoint); kitchenObjectTransform.localPosition = Vector3.zero; kitchenObject = kitchenObjectTransform\r\n.GetComponent<KitchenObject>(); kitchenObject.SetClearCounter(this); } else { Debug.Log(kitchenObject.GetClearCounter()); } } }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "title": "Back in Counter script. Now, mod logic so that parent can be changed. On key T, parent is assign to second Counter. In editor, scene, select Counter and set Second Clear Counter referance in inspector by drag&drop Counter(1) from Hierarchy tab. Check Testing in inspector.",
+      "note": [
+        "public class ClearCounter : MonoBehaviour { [SerializeField] private KitchenObjectSO kitchenObjectSO; [SerializeField] private Transform counterTopPoint; [SerializeField] private ClearCounter secondClearCounter; [SerializeField] private bool testing; private KitchenObject kitchenObject; \r\n\r\nprivate void Update() { if (testing && Input.GetKeyDown(KeyCode.T)) { if (kitchenObject != null) { kitchenObject.SetClearCounter(secondClearCounter); Debug.Log(kitchenObject.GetClearCounter()); } } } \r\n\r\npublic void Interact() { if (kitchenObject == null) { Transform kitchenObjectTransform = Instantiate( \r\nkitchenObjectSO.prefab, \r\ncounterTopPoint); kitchenObjectTransform.localPosition = Vector3.zero; kitchenObject = kitchenObjectTransform\r\n.GetComponent<KitchenObject>(); kitchenObject.SetClearCounter(this); } else { Debug.Log(kitchenObject.GetClearCounter()); } } }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "title": "Counter ref in kitchenObj is reasign (log), but there is issue with visual not switching and refs to kitchenObj in counters. Back in Counter script. Add method.",
+      "note": [
+        "public Transform GetKitchenObjectFollowTransform() { return counterTopPoint; }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "title": "In KitchenObject script. Switch visual to other counter. Test game.",
+      "note": [
+        "public void SetClearCounter(ClearCounter clearCounter) { this.clearCounter = clearCounter; \r\n\r\ntransform.parent = clearCounter\r\n.GetKitchenObjectFollowTransform(); transform.localPosition = Vector3.zero; }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "title": "Tomato should switch counters. Three dots in inspector have Debug option. In this mode private fields are shown in inspector. To fix remaining issue, in ClearCounter script add.",
+      "note": [
+        "public void SetKitchenObject(KitchenObject kitchenObject) { this.kitchenObject = kitchenObject; } public KitchenObject GetKitchenObject() { return kitchenObject; } public void ClearKitchenObject() { kitchenObject = null; } public bool HasKitchenObject() { return kitchenObject != null; }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "title": "In KitchenObject script. Set refs when switching to new parent. Old counter is cleared. New is set and set to point this kitchen obj.",
+      "note": [
+        "public void SetClearCounter(ClearCounter clearCounter) { if (this.clearCounter != null) { this.clearCounter.ClearKitchenObject(); } this.clearCounter = clearCounter; if (clearCounter.HasKitchenObject()) { Debug.LogError(\"Counter already has a KitchenObject!\"); } clearCounter.SetKitchenObject(this); transform.parent = clearCounter\r\n.GetKitchenObjectFollowTransform(); transform.localPosition = Vector3.zero; }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "title": "In ClearCounter script. Use method SetClearCounter. Test in game mode. Check Testing flag in inspector. Press E to spawn tomato on right counter, press T to move it to left one. Press E to spawn on right again. Press T again, error should be in log.",
+      "note": [
+        "private void Update() { if (testing && Input.GetKeyDown(KeyCode.T)) { if (kitchenObject != null) { kitchenObject.SetClearCounter(secondClearCounter); } } } public void Interact() { if (kitchenObject == null) { Transform kitchenObjectTransform = Instantiate(\r\n kitchenObjectSO.prefab, \r\ncounterTopPoint); kitchenObjectTransform .GetComponent<KitchenObject>()\r\n.SetClearCounter(this); } else { Debug.Log(kitchenObject.GetClearCounter()); } }"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "summary",
+      "isCopy": false,
+      "isCenter": true,
+      "title": "Summary",
+      "note": ["In progress. {%NAV%}"]
+    }
+  ],
+  "param": {
+    "git": [
+      {
+        "name": "-b main",
+        "desc": "Default branch name."
+      },
+      {
+        "name": "add .",
+        "desc": "Dot means files in current folder."
+      },
+      {
+        "name": "status",
+        "desc": "Check .gitignore ignore it's files."
+      }
+    ],
+    "asset": [
+      {
+        "name": "Update()",
+        "desc": "Once per frame."
+      },
+      {
+        "name": "SerializeField",
+        "desc": "this makes field editable in ui editor"
+      }
+    ],
+    "rotation": [
+      {
+        "name": "rotation",
+        "desc": "uses quaterions, not intuitive"
+      },
+      {
+        "name": "eulerAngles",
+        "desc": "uses 0-360 degrees"
+      },
+      {
+        "name": "forward",
+        "desc": "method used"
+      },
+      {
+        "name": "Slerp",
+        "desc": "Smooth with Lerp - function for interpolating"
+      }
+    ]
+  },
+  "inject": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%NAV2%}",
+      "text": "<br><a href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%CONTENT2%}",
+      "text": "<a href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%M%}",
+      "text": "<mark class='mark-1'>"
+    },
+    {
+      "key": "{%EM%}",
+      "text": "</mark>"
+    },
+    {
+      "key": "{%L%}",
+      "text": "<li>"
+    },
+    {
+      "key": "{%EL%}",
+      "text": "</li>"
+    }
+  ]
+}

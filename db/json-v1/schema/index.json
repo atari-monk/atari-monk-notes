@@ -1,0 +1,39 @@
+{
+  "title": "title",
+  "nav": [
+    {
+      "title": "a"
+    },
+    {
+      "title": "b"
+    }
+  ],
+  "sections": [
+    {
+      "text": "a",
+      "links": [
+        {
+          "link": "",
+          "text": ""
+        },
+        {
+          "link": "",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "text": "b",
+      "links": [
+        {
+          "link": "",
+          "text": ""
+        },
+        {
+          "link": "",
+          "text": ""
+        }
+      ]
+    }
+  ]
+}

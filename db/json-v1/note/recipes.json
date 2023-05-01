@@ -1,0 +1,125 @@
+{
+  "title": "Recipes",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "",
+          "text": ""
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": [
+        "Recipes i used."
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": [
+        "Stomack and kitchen."
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": [
+            "Pancakes"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Wheat flour",
+                "Half spoon baking powder",
+                "1 glass milk",
+                "3/4 glass water",
+                "pinch of salt",
+                "3 spoons of oil",
+                "1 spoon of sugar",
+                "2 eggs",
+                "Result is 6 thick pancakes in 1 hour"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Mushroom Souce"
+          ],
+          "codes": [
+            {
+              "format": [
+                "300 g mushroom",
+                "1 small onion",
+                "1 clove of garlic",
+                "1 tablespoon of oil",
+                "1 tablespoon of butter",
+                "1/3 cup of cream 30% or 18% (for soups and sauces)",
+                "salt and pepper",
+                "2 tbsp chopped parsley",
+                "Result is ?"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Bread"
+          ],
+          "codes": [
+            {
+              "format": [
+                "1kg wheat flour",
+                "500 ml water",
+                "50 g yeast or 14 g instant yeast",
+                "2 flat teaspoon of sugar",
+                "8 tbsp rolled oats (plain, mountain or instant)",
+                "3 teaspoons of salt",
+                "4 tablespoons of oililspoons of salt",
+                "2 tablespoons of oil",
+                "Result is 2 breads in 1,5 hour"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            ""
+          ],
+          "codes": [
+            {
+              "format": [
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "One of the most importent things."
+  ]
+}

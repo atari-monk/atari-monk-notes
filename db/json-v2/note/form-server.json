@@ -1,0 +1,206 @@
+{
+  "isKey": false,
+  "isScrollToBottom": false,
+  "title": "Html Form Server",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://chat.openai.com",
+        "text": "ChatGPT"
+      }
+    ]
+  },
+  "description": {
+    "navId": "description",
+    "isCenter": true,
+    "title": "Description",
+    "description": [
+      "I wanted a server to save my notes with html form, not just in json. Here some of our chats."
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["Account"]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "title": "Notes"
+    },
+    {
+      "type": "text",
+      "navId": "content",
+      "isCenter": false,
+      "title": "Content",
+      "note": [
+        "1. <a href=#q1>Question 1</a>{%BR%}2. <a href=#q2>Question 2</a>{%NAV2%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "q1",
+      "title": "Question 1",
+      "note": [
+        "Please write me small server in express js. To recive data from html form."
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Answear",
+      "note": [
+        "Sure, here's a simple Express.js server that can receive data from an HTML form:{%BR%}First, create a new directory for your project and initialize a new Node.js project using command"
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "note": ["npm init"]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "title": "Install the express package using the command in your terminal.",
+      "note": ["npm install express"]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "js",
+      "title": "Create a new file called server.js in your project directory and paste the following code:",
+      "note": [
+        "const express = require('express'); const app = express(); const port = 3000; \r\n// Serve the index.html file\r\napp.get('/', (req, res) => { res.sendFile(__dirname + '/index.html'); }); \r\n// Handle form submission\r\n app.post('/submit', (req, res) => { \r\n// Get the data from the request body\r\n let data = ''; req.on('data', chunk => { data += chunk; }); \r\n// When the request has ended,\r\n // parse the data and send a response\r\n req.on('end', () => { console.log('Form data:', data); res.send('Form submitted!'); }); }); \r\n// Start the server\r\n app.listen(port, () => { console.log(`Server listening on port ${port}`); });"
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "html",
+      "title": "Create a new file called index.html in the same directory and paste the following code:",
+      "note": [
+        "<!DOCTYPE html> <html> <head> <title>Form Submission</title> </head> <body> <h1>Form Submission</h1> <form method='post' action='/submit'> \r\n<label> Name: \r\n<input type='text' name='name' required> \r\n</label> \r\n<br> \r\n<label> Email: \r\n<input type='email' name='email' required> \r\n</label> \r\n<br> \r\n<button type='submit'>Submit</button> </form> </body> </html>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "js",
+      "title": "Start the server by running in your terminal",
+      "note": ["node server.js"]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "html",
+      "title": "Open your web browser and go to",
+      "note": ["http://localhost:3000"]
+    },
+    {
+      "type": "text",
+      "note": [
+        "{%TAB%}You should see the form displayed in your browser. {%BR_TAB%}Enter some data in the form fields and click the Submit button. The server will log the form data to the console and display a message on the webpage saying 'Form submitted!'. {%BR_TAB%}Note: This is just a basic example of how to receive data from an HTML form using Express.js. In a real-world application, you would want to validate the form data and handle errors more gracefully.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "q2",
+      "title": "Question 2",
+      "note": [
+        "Given this json where there can be n elements can you provide html template using {{}} that will allow to edit whole list and add new elements ?"
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "js",
+      "note": ["{\"nav\":[{\"title\":\"n1\",\"link\":\"n1\"}]}"]
+    },
+    {
+      "type": "text",
+      "note": [
+        "Certainly, here's an example HTML template using Handlebars.js syntax that would allow you to edit the existing list and add new elements:"
+      ]
+    },
+    {
+      "type": "text",
+      "content": "text",
+      "note": ["search for form-template-nav.html in todo"]
+    },
+    {
+      "type": "text",
+      "note": [
+        "This template uses Handlebars.js syntax to loop over the existing items in the \"nav\" array and display them as input fields with pre-filled values. It also provides a form to add new items to the list. When the form is submitted, the data can be sent to a server-side script to update the original JSON object."
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "summary",
+      "isCenter": true,
+      "title": "Summary",
+      "note": ["{%NAV%}"]
+    }
+  ],
+  "param": {
+    "": [
+      {
+        "name": "",
+        "desc": ""
+      }
+    ]
+  },
+  "inject": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%NAV2%}",
+      "text": "<br><a href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%CONTENT2%}",
+      "text": "<a href='#content'>Back to Content</a>"
+    }
+  ]
+}

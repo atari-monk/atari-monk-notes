@@ -1,0 +1,139 @@
+{
+  "title": "Command note, js-notes.",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Notes"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "isCenter": false,
+    "title": "Description",
+    "description": [
+      "This page is to test copy button feature of note view.",
+      "Test new note template when isCommand is true."
+    ]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "type": "text",
+      "navId": "unity_github_repo",
+      "isCopy": false,
+      "title": "Unity Project GitHub repo",
+      "note": [
+        "Add .gitignore for Unity (link in Source) to root project folder.{%BR%}Open git in project folder."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "aside": {
+        "paramKey": "git",
+        "isDetail": true
+      },
+      "note": [
+        "git init {0}",
+        "git {1}",
+        "git {2}",
+        "git commit -m 'First commit, project files and .gitignore'"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["Create GitHub repo, using GitHub web page. Push to it."]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "note": [
+        "git remote add origin https://github.com/atari-monk/unity-kitchen-chaos.git<br>git branch -M main<br>git push -u origin main"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["Add and commit licence on GitHub page."]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "aside": {
+        "paramKey": "asset",
+        "isDetail": true
+      },
+      "title": "Framework code assets:",
+      "note": [
+        "namespace UnityEngine<br>MonoBehaviour<br>private void {0}<br>Vector2<br>Input.GetKey(KeyCode.W)<br>Debug.Log(inputVector);<br>inputVector = inputVector.normalized;<br>var moveDir = new Vector3(inputVector.x, 0f, inputVector.y);<br>[{1}] private float moveSpeed = 7f;<br>transform.position += moveDir * moveSpeed * Time.deltaTime;"
+      ]
+    },
+    {
+      "type": "text",
+      "isCenter": true,
+      "isCopy": false,
+      "note": ["{%NAV%}"]
+    }
+  ],
+  "param": {
+    "git": [
+      {
+        "name": "-b main",
+        "desc": "Default branch name."
+      },
+      {
+        "name": "add .",
+        "desc": "Dot means files in current folder."
+      },
+      {
+        "name": "status",
+        "desc": "Check .gitignore ignore it's files."
+      }
+    ],
+    "asset": [
+      {
+        "name": "Update()",
+        "desc": "Once per frame."
+      },
+      {
+        "name": "SerializeField",
+        "desc": "this makes field editable in ui editor"
+      }
+    ]
+  },
+  "inject": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a class='center' href='#content'>Back to Content</a>"
+    }
+  ]
+}

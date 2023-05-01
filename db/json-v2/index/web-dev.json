@@ -1,0 +1,177 @@
+{
+  "title": "Web Dev",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "General"
+    },
+    {
+      "title": "Html"
+    },
+    {
+      "title": "Css"
+    },
+    {
+      "title": "Javascript"
+    },
+    {
+      "title": "Node.js"
+    },
+    {
+      "title": "Project js-notes"
+    }
+  ],
+  "section": [
+    {
+      "navId": "general",
+      "title": "General",
+      "links": [
+        {
+          "link": "notes.html?page=note/creative-session",
+          "text": "Creative Session"
+        },
+        {
+          "link": "notes.html?page=note/socket-io-qs",
+          "text": "Socket.IO template app, deploy on azure."
+        },
+        {
+          "link": "notes.html?page=note/sql-quiz",
+          "text": "Sql quiz"
+        },
+        {
+          "link": "notes.html?page=note/responsive-design",
+          "text": "Responsive Design."
+        },
+        {
+          "link": "notes.html?page=note/web-ext",
+          "text": "VSCode Extensions"
+        },
+        {
+          "link": "notes.html?page=note/web-cheat-sheet",
+          "text": "Web Cheat Sheet"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    },
+    {
+      "navId": "html",
+      "title": "Html",
+      "links": [
+        {
+          "link": "notes.html?page=note/html-entry",
+          "text": "Html Beginner Tutorial"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    },
+    {
+      "navId": "css",
+      "title": "Css",
+      "links": [
+        {
+          "link": "notes.html?page=note/html-css-course",
+          "text": "HTML & CSS Full Course - Beginner to Pro"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    },
+    {
+      "navId": "javascript",
+      "title": "Javascript",
+      "links": [
+        {
+          "link": "notes.html?page=note/js-course",
+          "text": "JS Course"
+        },
+        {
+          "link": "notes.html?page=note/js-game-entry",
+          "text": "JavaScript Game Development Course for Beginners"
+        },
+        {
+          "link": "notes.html?page=note/typescript-lessons",
+          "text": "TypeScript Learning"
+        },
+        {
+          "link": "notes.html?page=note/javascript-tips",
+          "text": "Javascript Tips"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    },
+    {
+      "navId": "node.js",
+      "title": "Node.js",
+      "links": [
+        {
+          "link": "notes.html?page=note/node-js-course",
+          "text": "Node JS Course"
+        },
+        {
+          "link": "notes.html?page=note/node-js-upd",
+          "text": "Update with npm"
+        },
+        {
+          "link": "notes.html?page=note/node-js-qs",
+          "text": "Node js template app, deploy on azure"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    },
+    {
+      "navId": "project js-notes",
+      "title": "Project js-notes",
+      "links": [
+        {
+          "link": "notes.html?page=note/js-notes",
+          "text": "Project js-notes."
+        },
+        {
+          "link": "notes.html?page=note/js-notes-test1",
+          "text": "Test Copy Code Button."
+        },
+        {
+          "link": "notes.html?page=note/js-notes-key",
+          "text": "Test Key Feature."
+        },
+        {
+          "link": "notes.html?page=note/debug",
+          "text": "Device Info Page."
+        },
+        {
+          "link": "notes.html?page=note/js-notes-json-test",
+          "text": "Test notes json."
+        },
+        {
+          "link": "notes.html?page=schema/note",
+          "text": "Test notes schema json."
+        },
+        {
+          "link": "notes.html?page=views/contentView",
+          "text": "Test contentView json and class."
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Azure",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Azure"
+    }
+  ],
+  "section": [
+    {
+      "navId": "azure",
+      "title": "Azure",
+      "links": [
+        {
+          "link": "notes.html?page=note/voting-app",
+          "text": "Voting App deploy to azure"
+        },
+        {
+          "link": "notes.html?page=note/azure-db",
+          "text": "Azure SQL Database"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    }
+  ]
+}

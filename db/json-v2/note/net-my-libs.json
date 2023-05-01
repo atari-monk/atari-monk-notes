@@ -1,0 +1,157 @@
+{
+  "isKey": false,
+  "isScrollToBottom": false,
+  "title": "net-my-libs",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://github.com/atari-monk/net-my-libs",
+        "text": "Repo"
+      },
+      {
+        "link": "https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application",
+        "text": "Create a Generic Repository"
+      }
+    ]
+  },
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": ["My Repo with my .net libraries."]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["VSCode"]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "title": "Notes"
+    },
+    {
+      "type": "text",
+      "navId": "content",
+      "isCenter": false,
+      "title": "Content",
+      "note": [
+        "<ol><li><a href=#libs-hist>my-libs History</a></li><li><a href=#config.wrapper>Config.Wrapper</a></li><li><a href=#dihelper>DIHelper</a></li><li><a href=#efcore.helper>EFCore.Helper</a></li><ol>{%NAV2%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "libs-hist",
+      "title": "my-libs History",
+      "note": [
+        "{%TAB%} My github was created july 2021. At the time, among other things, i was interested in cli apps and CommandDotNet cli lib. Couple of cli apps where produced. Code that i would reuse in them, or one i wanted to learn in separate assembly, was ending up in it's separate repos, solutions and projects. These libs were build by generated scripts and referenced in projs with absolute paths to dlls. Beginning 2023 i consolidated these libs in one repo and solution. Net6.0 was upgraded to Net7.0 Replacing paths, Local Nuggets were generated. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "config.wrapper",
+      "title": "Config.Wrapper lib proj"
+    },
+    {
+      "type": "text",
+      "title": "History",
+      "note": [
+        "{%TAB%} I think this was added because cli app didn't had json config build in. Beginning 2022 .net web apps had json config files set in di container by default. Cli did not. So i readed hastily some msdocs about that. Once json config was set and used in test app, i begun to use this lib in my cli apps. At 02.2023 my apps were still using it."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Structure",
+      "note": [
+        "{%TAB%} This lib is for setup and use of .net json config system in cli app. ConfigBuilder class Configures config sys based on msdocs. Sets base dir. Sets two json files, one optional. Sets environmentalVariables. (nice chaining of config methods) ConfigReader class Reads json object to .net class. Two methods for two ways of doing that (possible null return, other with not null and default obj) ConfigTool static class Static class tool wrapper for .net json config. DirectorySys class Wrapper to make file sys testable. ConfigSuite class This is a set of modules witch only has one. ToDo: investigate why. Can't change now, becouse used in apps. AppConfigSet class Unity container module registering this lib. There is one instance of config per app, kind of setup. There is also class for MDI container. Unity is now deprecated. Rating I still use this library, it seems to work fine. It's written quite solid for my taste."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Config.Wrapper.Tests proj",
+      "note": [
+        "{%TAB%} ConfigFileTests - abstract class Constants with paths, methods for config test api. Integration test. Checks scenarions: file ok, no file, bad file. ConfigBuilderTests - xunit test class Tests required dependencies, tests ArgumentNullException on nulls. Tests FileNotFoundException. Tests ok scenario when ok file is there. ConfigReaderTests - xunit test class Tests required dependencies, tests ArgumentNullException on nulls Test when json config has bad format, not machting model class (InvalidOperationException). Test if ok file is readed as expected with correct values ending in memory."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Config.Wrapper.CLI.TestApp - cli test app",
+      "note": [
+        "{%TAB%} Using lib in test app for example. Tests json with string, int, bool. TestSettings - model class Program.cs Builds config with new keyword and asserts redead values. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "dihelper",
+      "title": ["DIHelper lib proj", "History"],
+      "note": [
+        "{%TAB%} This was made to support Dependency injection container use. Structure Bootstraper It creates app and runs it with optional args params. It uses DependencySuite to register apps components. In CreateApp method, it resolves app from di container, and runs apps Setup method. MultiBootstraper This bootstraper has a dictionary of suites. Suits have keys with two flags. Suit can be ComponentSuite or AppSuite. Each type is setup separetly. DependencySet abstract It's a concept of a module. It holds container and registers components of a module. DependencySuite It's a concept of a container for a list of modules. It registers modules. Registerd modules, register their dependencies. It also has method for resolving type. Program These interfaces define cli app entry and setup methods. MicrosoftDI and Unity These folders contain classes implementing module (DependencySet) and module set (DependencySuite), for Unity Container and MicrosoftDI Container. DependencySuite has template method, categorizing modules and their order of registering. Unfortunatly, Unity Container version 5.11.7 was deprecated by author. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "efcore.helper",
+      "title": "EFCore.Helper",
+      "note": ["{%TAB%} This is my helper for Entity Framework ORM. Object Relational Mapping. It's a layer between OOP (object oriented programming) and relational databases. It has familly of classes inheriting from DbContext. DbContextTemplate helps to override some methods to get access for configuring DbContext. In DbContextPolicy there is SetRestrictDeleteBehaviorPolicy set by default. It changes config from DeleteBehavior.Cascade to DeleteBehavior.Restrict. TODO: Dont know much about that. DbContextShadowProps adds properties with CreatedDate and UpdatedDate to each entity. They update on SaveChanges. I didnt use that really, but it's potentially usefull data. DbContextDbConfig sets up context to use my helpers for json app config. I dont know if i am using that anywhere. Overall theese classes contain some knowlege, but i wonder if it's not better to just use DbContext in most cases. {%BR_TAB%} EFRepository is acctually copied from msdocs article 'Create a Generic Repository' (link in Source). Class defines crud methods of ORM quite nicely. There is also async version EFRepositoryAsync. Same holds for UnitOfWork. There is also DbConfig class that configures local connections, it gives option for test and local db ConnectionString. It's net7.0. Has dependency on my local nuget Config.Wrapper and EFCore. {%BR_TAB%} I think it'a convinient and usefull abstraction, as article stated, it can be potentially mocked or implemented for other storage then mssql db. TODO: It would be nice to go deeper into LINQ. {%CONTENT%}"]
+    },
+    {
+      "type": "text",
+      "navId": "summary",
+      "title": "Summary",
+      "note": ["In progres.{%NAV%}"]
+    }
+  ],
+  "inject": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%NAV2%}",
+      "text": "<a href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%CONTENT2%}",
+      "text": "<a href='#content'>Back to Content</a>"
+    }
+  ]
+}

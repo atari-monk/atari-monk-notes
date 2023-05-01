@@ -1,0 +1,91 @@
+{
+  "title": "ToDo",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": [
+      "My ToDo lists.",
+      "Date and added positions.",
+      "What acctualy got done is in my db and app 'log'."
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["Text editor."]
+  },
+  "note": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "title": "ToDo/Ideas List",
+      "note": [
+        "01.03.2023",
+        "Sort Fotos {0}",
+        "Unity Tutorial {1}",
+        "Footstool {1} {3}",
+        "Node.js Course {1}",
+        "Ts Tutorial {1}",
+        "Css Tutorial {1}",
+        "Net My Libs notes {2}",
+        "Balcony Garden {1}",
+        "Card Game {2}",
+        "Js-notes, feature of notes on user password {1}",
+        "Refactor inventory-min scripts {2}",
+        "Prepare packages for Sort Fotos and inventory-min. Put it on github {2}",
+        "Pong playable on phone {2}",
+        "02.03.2023",
+        "Redo microservices tutorial for notes {2}",
+        "05.04.2023",
+        "<a href='https://web.dev/learn/css/grid/'>CSS GRID</a> {2}"
+      ],
+      "params": [
+        {
+          "name": "1",
+          "desc": "High Priority"
+        },
+        {
+          "name": "2",
+          "desc": "Medium Priority"
+        },
+        {
+          "name": "3",
+          "desc": "Low Priority"
+        },
+        {
+          "name": "DONE",
+          "desc": "Project finished."
+        }
+      ]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["Organizing chaos."]
+    }
+  ]
+}

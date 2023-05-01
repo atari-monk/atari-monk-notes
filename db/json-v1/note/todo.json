@@ -1,0 +1,76 @@
+{
+  "title": "ToDo",
+  "nav": [
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "desc": {
+      "text": "Description",
+      "desc": [
+        "My ToDo lists.",
+        "Date and added positions.",
+        "What acctualy got done is in my db and app 'log'."
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": [
+        "Text editor."
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": [
+            "ToDo/Ideas List"
+          ],
+          "codes": [
+            {
+              "format": [
+                "01.03.2023",
+                "Sort Fotos {0}",
+                "Unity Tutorial 5",
+                "Footstool 3",
+                "Node.js Course 5",
+                "Ts Tutorial 4",
+                "Css Tutorial 4",
+                "Net My Libs notes 5",
+                "Balcony Garden 4",
+                "Card Game 0",
+                "Js-notes, feature of notes on user password 4",
+                "Refactor inventory-min scripts 4",
+                "Prepare packages for Sort Fotos and inventory-min. Put it on github 4",
+                "Pong playable on phone 4",
+                "02.03.2023",
+                "Redo microservices tutorial for notes 4"
+              ],
+              "params": [
+                {
+                  "name": "3",
+                  "desc": "Priority, 0 - min, 5 - max"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Organizing chaos."
+  ]
+}

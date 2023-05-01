@@ -1,0 +1,583 @@
+{
+  "title": "Responsive Design.",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Notes"
+    }
+  ],
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://web.dev/learn/design/",
+        "text": "Learn Responsive Design"
+      }
+    ]
+  },
+  "description": {
+    "navId": "description",
+    "isCenter": true,
+    "title": "Description",
+    "description": ["Learning Responsive Design concepts."]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "navId": "content",
+      "isCopy": false,
+      "isCenter": true,
+      "title": "Content",
+      "note": [
+        "1. <a href=#intro>Intro</a>{%BR%}2. <a href=#media_queries>Media queries</a>{%BR%}3. <a href=#typography>Typography</a>{%BR%}4. <a href=#macro_layouts>Macro layouts</a>{%BR%}5. <a href=#images>Responsive images</a>{%NAV%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "intro",
+      "isCopy": false,
+      "title": "Intro",
+      "note": []
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Fixed-width design",
+      "note": [
+        "In 1990 web started to be popular. Monitors had size of 640 x 480. They evolved to 800 x 600, 1024 x 768, 1920 x 1080. Web devs started from designing pages of fixed screen size. It can waste space if screen is larger. It can need horizontal bar when screen is smaller."
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Liquid layouts",
+      "note": [
+        "These were using % for column width. They suffer distorted views in the wide and short screen."
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Separate sites",
+      "note": [
+        "Separate sites for different screens would introduce multiple code bases. Agent sniffing required for detecting screen may be removed."
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Adaptive layouts",
+      "note": [
+        "Switching between a handful of fixed-width layouts at specified widths using css media queries."
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Responsive web design",
+      "note": [
+        "Mashup of media queries and liquid layouts. Term by Ethan Marcotte in article in A List Apart in 2010.Defined three criteria: Fluid grids, Fluid media, Media queries."
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Meta element for viewport",
+      "note": [
+        "Mobile browser apply width of 980 px and then scale page down to the actual width of the screen. If you are doing responsive use:"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "html",
+      "note": [
+        "<meta name='viewport' content='width=device-width, initial-scale=1'>"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": [
+        "This tells browser to assume page is in size of screen and no scaling is needed.{%CONTENT2%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "media_queries",
+      "isCopy": false,
+      "title": "Media queries"
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "Set transparent background for print.",
+      "note": [
+        "body {color: black;background-color: grey;}",
+        "@media print { body { background-color: transparent; } }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "html",
+      "title": "Css files specific for media.",
+      "note": [
+        "<link rel='stylesheet' href='global.css'>",
+        "<link rel='stylesheet' href='print.css' media='print'>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "'all' is default. These pairs are equivalent.",
+      "note": [
+        "body {color: black;background-color: white;}",
+        "@media all {body {color: black;background-color: white;}}"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "html",
+      "note": [
+        "<link rel='stylesheet' href='global.css'>",
+        "<link rel='stylesheet' href='global.css' media='all'>"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["Query conditions"]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": [
+        "Conditions for screen orientation.",
+        "Landscape is where width is grater that heigth. Portrait when height is greater that width."
+      ],
+      "note": [
+        "@media all and (orientation: landscape) { }",
+        "@media all and (orientation: portrait) { }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "Media all is default so can be omitted.",
+      "note": [
+        "@media (orientation: landscape) { }",
+        "@media (orientation: portrait) { }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "html",
+      "title": "For files.",
+      "note": [
+        "<link rel='stylesheet' href='landscape.css' media='all and (orientation: landscape)'>",
+        "<link rel='stylesheet' href='portrait.css' media='all and (orientation: portrait)'>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "html",
+      "title": "Media all omitted.",
+      "note": [
+        "<link rel='stylesheet' href='landscape.css' media='(orientation: landscape)'>",
+        "<link rel='stylesheet' href='portrait.css' media='(orientation: portrait)'>"
+      ]
+    },
+    {
+      "type": "text",
+      "isCenter": false,
+      "isCopy": false,
+      "note": ["Use separate stylesheets for different media types like print."]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": [
+        "Adjust styles based on viewport size.",
+        "Styles for viewports wider than 400 pixels."
+      ],
+      "note": ["@media (min-width: 400px) {}"]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "Styles for viewports narrower than 400 pixels.",
+      "note": ["@media (max-width: 400px) {}"]
+    },
+    {
+      "type": "text",
+      "isCenter": false,
+      "isCopy": false,
+      "note": ["Use 'px' units for images, use 'em' or 'ch' units for text."]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "Combine queries. Styles for viewports wider than 50em and narrower than 60em.",
+      "note": ["@media (min-width: 50em) and (max-width: 60em) { }"]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "It's best to choose your breakpoints based on your content rather than popular device sizes.",
+      "note": ["@media (min-width: 50em) {article {column-count: 2;}}"]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "Combine media queries (width, height).",
+      "note": [
+        "@media (min-width: 50em) and (min-height: 60em) {article {column-count: 2;}}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "typography",
+      "isCopy": false,
+      "title": "Typography",
+      "note": [
+        "Browser has default styles called User Agent stylesheets.{%BR%}Browsers will wrap lines of text at the edge of the screen by default."
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Text size",
+      "note": [
+        "Text size can be switched based on screen size, but this is jumpy."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "note": [
+        "@media (min-width: 30em) {html {font-size: 125%;}}",
+        "@media (min-width: 40em) {html {font-size: 150%;}}",
+        "@media (min-width: 50em) {html {font-size: 175%;}}",
+        "@media (min-width: 60em) {html {font-size: 200%;}}"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Scaling text",
+      "note": [
+        "Scale text depending on screen width. Use vw (viewport width) units for this. Use calc to combine it with relative units like em, rem or ch. It's done so that user can resize font."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "note": ["html {font-size: calc(0.75rem + 1.5vw);}"]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Clamping text",
+      "note": ["This scales text but also it gives it min max limits."]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "note": ["html {font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);}"]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Clamping text",
+      "note": [
+        "45 to 75 characters for a single-column page. 66 ideal. 40-50 for multiple columns page."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "note": ["article {max-inline-size: 66ch;}"]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Line height",
+      "note": ["Bigger for shorter line."]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "note": [
+        "article {max-inline-size: 66ch;line-height: 1.65;}",
+        "blockquote {max-inline-size: 45ch;line-height: 2;}"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": ["Use unitless values, then height is related to font size."]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Web fonts",
+      "note": [
+        "Default was System fonts, now available web fonts.",
+        "Tell browser where to find font."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "note": [
+        "@font-face {font-family: Roboto;src: url('/fonts/roboto-regular.woff2') format('woff2');}",
+        "body {font-family: Roboto, sans-serif;}"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": [
+        "woff2 is ok format to use.",
+        "Web fonts increase page load time."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "Font loading",
+      "note": [
+        "<link href='/fonts/roboto-regular.woff2' type='font/woff2' rel='preload' as='font' crossorigin>"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": [
+        "font-display regulates how system font is replaced by web font after it's downloaded."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "note": ["body {font-family: Roboto, sans-serif;font-display: swap;}"]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "title": "Variable fonts",
+      "note": [
+        "Separate font file for each weight or style.",
+        "Variable fonts solve this problem by using one file."
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "macro_layouts",
+      "isCopy": false,
+      "title": "Macro layouts",
+      "note": ["Macro layouts describe page-wide organization of interface."]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "html",
+      "title": "Example of macro layout. <a href='https://atari-monk.github.io/html-css-js/tutorial/responsive-design/macro-layout/index.html'>Macro Layout Full Example</a>",
+      "note": [
+        "<body><header>…</header><main><article>…</article><aside>…</aside></main><footer>…</footer></body>"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "Grid layout. Two columns when screen is smaller. <a href='https://atari-monk.github.io/html-css-js/tutorial/responsive-design/grid/index.html'>Grid Layout</a>",
+      "note": [
+        "@media (min-width: 45em) { main { display: grid; grid-template-columns: 2fr 1fr; } }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "Flexbox. Same effect, more code. <a href='https://atari-monk.github.io/html-css-js/tutorial/responsive-design/flexbox/index.html'>Flexbox Layout</a>",
+      "note": [
+        "@media (min-width: 45em) { main { display: flex; flex-direction: row; } main article { flex: 2; } main aside { flex: 1; } }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "Media queries are not ideal for a lots of elements updated a lot. It can get to complicated. Instead use rules wtih grid. <a href='https://atari-monk.github.io/html-css-js/tutorial/responsive-design/no-media-query/grid/index.html'>Grid, No Media Query</a>",
+      "note": [
+        ".cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); grid-gap: 1em; }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "Rules wtih flexbox. <a href='https://atari-monk.github.io/html-css-js/tutorial/responsive-design/no-media-query/flexbox/index.html'>Flexbox, No Media Query</a>",
+      "note": [
+        ".cards { display: flex; flex-direction: row; flex-wrap: wrap; gap: 1em; } .cards .card { flex-basis: 15em; flex-grow: 1; }"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "note": [
+        "<a href='https://1linelayouts.glitch.me/'>Examples of macro layouts with minimal CSS and without any media queries.</a>"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "images",
+      "isCopy": false,
+      "title": "Responsive images",
+      "note": [
+        "Image wider than the screen, will overflow, causing a horizontal scrollbar to appear."
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "image size will fit containing element<br>block-size: auto; means preserved aspect ratio",
+      "note": ["img { max-inline-size: 100%; block-size: auto; }"]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "also for video and iframe",
+      "note": [
+        "img, video, iframe { max-inline-size: 100%; block-size: auto; }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "sets custom aspect ratio,<br>object-fit: contain; means aspect preserved and image contained in container even leaving empty space above and below.",
+      "note": [
+        "img { max-inline-size: 100%; block-size: auto; aspect-ratio: 2/1; object-fit: contain; }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "this preserves ratio even if image is cropped at top and bottom",
+      "note": [
+        "img { max-inline-size: 100%; block-size: auto; aspect-ratio: 2/1; object-fit: cover; }"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "css",
+      "title": "adjust focus of crop<br>this wont crop top and center",
+      "note": ["img { max-inline-size: 100%; block-size: auto; aspect-ratio: 2/1; object-fit: cover; object-position: top center; }"]
+    },
+    {
+      "type": "text",
+      "isCenter": true,
+      "isCopy": false,
+      "note": ["{%NAV%}"]
+    }
+  ],
+  "inject": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a class='center' href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%CONTENT2%}",
+      "text": "<br><a href='#content'>Back to Content</a>"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "title": "UG Give-Up Talk",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Note"
+    },
+    {
+      "title": "Transcript"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "note",
+    "title": "Note",
+    "description": [
+      "Transcript written by me while listening to UG talk. Can be used with Text to Speach AI."
+    ]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://www.ugkrishnamurti.org/",
+        "text": "Source"
+      },
+      {
+        "link": "https://www.ugkrishnamurti.org/giveup/Give%20Up-cleaned%20up%20by%20Roshan%20Naik-48k.mp3",
+        "text": "Audio"
+      }
+    ]
+  },
+  "note": [
+    {
+      "navId": "transcript",
+      "isCopy": false,
+      "title": "Transcript",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "title": "Give-Up",
+      "note": [
+        "The Society, it, this is the only reality i have. Is the word as it is today. And, The ultimate reality that man has, invented, has absolutely no relationship whatsoever, with the reality in this world. So as long as you are seaking, searching, wanting to understand that reality, witch you call ultimate reality, or call it by whatever name you like. So long it can not be possible for you, to come to terms with the reality of the world exactly the way it is. And, So anything you do to escape from the reality of this world, make it difficult for you, to live in harmony, with the things around you. So, we have an idea of harmony. So how to live at peace with yourself, as an idea, but already there is extrodenery peace that is there. So what makes it difficult for you to live at peace with yourself is the, the creation, of what you call peace witch is totally unrelated to the, to the harmonious functioning of this body. The, So you see when you free yourself from the burden of reaching out there, to grasp, to expirience and to be in that reality, then you find it that it is more difficult to understand the reality of anything. You have no way of expiriencing the reality of anything. So at least you are not living in the world of illusions. You accept that there is nothing, nothing that you can do to expirience the reality of anything."
+      ]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["Great talk."]
+    }
+  ]
+}

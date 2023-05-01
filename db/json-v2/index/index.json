@@ -1,0 +1,123 @@
+{
+  "title": "atari-monk Notes",
+  "nav": [
+    {
+      "title": "Coding"
+    },
+    {
+      "title": "Software"
+    },
+    {
+      "title": "Diy"
+    },
+    {
+      "title": "Other"
+    }
+  ],
+  "section": [
+    {
+      "navId": "coding",
+      "title": "Coding",
+      "links": [
+        {
+          "link": "index.html?page=index/net",
+          "text": ".Net"
+        },
+        {
+          "link": "index.html?page=index/web-dev",
+          "text": "Web Dev"
+        },
+        {
+          "link": "index.html?page=index/azure",
+          "text": "Azure"
+        },
+        {
+          "link": "index.html?page=index/chatgpt",
+          "text": "ChatGPT"
+        },
+        {
+          "link": "notes.html?page=note/files",
+          "text": "VSCode files"
+        },
+        {
+          "link": "notes.html?page=note/unity-course",
+          "text": "Unity Beginner Tutorial"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    },
+    {
+      "navId": "software",
+      "title": "Software",
+      "links": [
+        {
+          "link": "notes.html?page=note/win-11",
+          "text": "Windows 11"
+        },
+        {
+          "link": "notes.html?page=note/apps-keys",
+          "text": "Apps Keys"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    },
+    {
+      "navId": "diy",
+      "title": "Diy",
+      "links": [
+        {
+          "link": "notes.html?page=note/stool",
+          "text": "Stool"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    },
+    {
+      "navId": "other",
+      "title": "Other",
+      "links": [
+        {
+          "link": "notes.html?page=note/todo",
+          "text": "ToDo"
+        },
+        {
+          "link": "notes.html?page=note/recipes",
+          "text": "Recipes"
+        },
+        {
+          "link": "notes.html?page=note/ug-give-up",
+          "text": "UG Give Up Talk"
+        },
+        {
+          "link": "notes.html?page=note/kipling-poem",
+          "text": "If—"
+        },
+        {
+          "link": "notes.html?page=note/links",
+          "text": "Links"
+        },
+        {
+          "link": "notes.html?page=note/random-thoughts-en",
+          "text": "Random Thoughts"
+        },
+        {
+          "link": "notes.html?page=note/random-thoughts-pl",
+          "text": "Przypadkowe Myśli"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    }
+  ]
+}

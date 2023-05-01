@@ -1,0 +1,198 @@
+{
+  "title": "Azure SQL Database",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://learn.microsoft.com/en-us/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-cli",
+          "text": "Source Tutorial"
+        },
+        {
+          "link": "https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli",
+          "text": "Install Azure CLI on Windows"
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": [
+        "Create a single database - Azure SQL Database."
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": [
+        "I have Azure free account set up.",
+        "Using a local installation of Azure CLI."
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": [
+            "Login"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Run PowerShell in chosen root folder.",
+                "{0}",
+                "{1}",
+                "{2}",
+                "{3}"
+              ],
+              "params": [
+                {
+                  "name": "az version",
+                  "desc": "Check Azure CLI version"
+                },
+                {
+                  "name": "az upgrade",
+                  "desc": "Update Azure CLI"
+                },
+                {
+                  "name": "taskkill /im python.exe /F",
+                  "desc": "During Azure CLI MSI install, phyton needed to be killed."
+                },
+                {
+                  "name": "az login",
+                  "desc": "Sign in to the Azure CLI"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Create resource group for this project."
+          ],
+          "codes": [
+            {
+              "format": [
+                "az group create --name {0} --location {1} --tags {2}"
+              ],
+              "params": [
+                {
+                  "name": "az-sql-db1-rg",
+                  "desc": "resource group"
+                },
+                {
+                  "name": "swedencentral",
+                  "desc": "location"
+                },
+                {
+                  "name": "create-and-configure-database",
+                  "desc": "description tag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Create a server."
+          ],
+          "codes": [
+            {
+              "format": [
+                "az sql server create --name {0} --resource-group {1} --location {2} --admin-user {3} --admin-password {4}"
+              ],
+              "params": [
+                {
+                  "name": "atari-monk-sql-server1",
+                  "desc": "server name (unique in azure)"
+                },
+                {
+                  "name": "az-sql-db1-rg",
+                  "desc": "resource group"
+                },
+                {
+                  "name": "swedencentral",
+                  "desc": "location"
+                },
+                {
+                  "name": "atari-monk",
+                  "desc": "server login"
+                },
+                {
+                  "name": "password",
+                  "desc": "server password"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Configure a server-based firewall rule."
+          ],
+          "codes": [
+            {
+              "format": [
+                "az sql server firewall-rule create --resource-group {0} --server {1} -n AllowYourIp --start-ip-address {2} --end-ip-address {2}"
+              ],
+              "params": [
+                {
+                  "name": "az-sql-db1-rg",
+                  "desc": "resource group"
+                },
+                {
+                  "name": "atari-monk-sql-server1",
+                  "desc": "server name"
+                },
+                {
+                  "name": "ip",
+                  "desc": "public ip of your admin pc"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Deleting resources, server and dbs, after they are not needed."
+          ],
+          "codes": [
+            {
+              "format": [
+                "az group delete --name {0}"
+              ],
+              "params": [
+                {
+                  "name": "az-sql-db1-rg",
+                  "desc": "resource group"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "This kind of worked but maybe containers are not for db's ?",
+    "Originally at least. I dont know their history.",
+    "Btw, this is a danger of getting priced for playing with cloud servers."
+  ]
+}

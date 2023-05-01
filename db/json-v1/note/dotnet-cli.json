@@ -1,0 +1,78 @@
+{
+  "title": "Dotnet CLI",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://learn.microsoft.com/en-us/dotnet/core/tools/",
+          "text": "Source Tutorial"
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": [
+        ".NET CLI commands and info"
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": [
+        "Net 7.0 or higher runtime",
+        "VSCode",
+        "Powershell"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": [
+            "Build"
+          ],
+          "codes": [
+            {
+              "format": [
+                "dotnet build --configuration Release",
+                "dotnet build"
+              ],
+              "params": [
+                {
+                  "name": "",
+                  "desc": ""
+                },
+                {
+                  "name": "",
+                  "desc": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Cli commands list."
+  ]
+}

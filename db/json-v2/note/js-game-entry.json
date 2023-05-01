@@ -1,0 +1,188 @@
+{
+  "title": "JavaScript game beginner",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": ["Javascript beginner game dev tutorials by Franks laboratory."]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://www.youtube.com/watch?v=GFO_txvwK_c",
+        "text": "Source Tutorial"
+      },
+      {
+        "link": "https://github.com/atari-monk/js-game-beginner",
+        "text": "Repo"
+      },
+      {
+        "link": "https://atari-monk.github.io/js-game-beginner/",
+        "text": "Page with all examples"
+      }
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["VSCode"]
+  },
+  "note": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "title": "Sprites",
+      "note": [
+        "<a href='https://atari-monk.github.io/js-game-beginner/Sprite/spritePage1.html?script1.js'>Animate rectangle</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Sprite/spritePage1.html?script2.js'>Load sprite sheet</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Sprite/spritePage1.html?script3.js'>Load sprite frame</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Sprite/spritePage1.html?script4.js'>Sprite animation</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Sprite/spritePage1.html?script5.js'>Sprite animation with code upgr</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Sprite/spritePage1.html?script6.js'>Selecting other animation in sheet</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Sprite/spritePage2.html?script7.js'>Selecting all animations in sheet</a>"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Parallax",
+      "note": [
+        "<a href='https://atari-monk.github.io/js-game-beginner/Parallax/parallaxPage1.html?script1.js'>Gap in background image</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Parallax/parallaxPage1.html?script2.js'>Fix the gap</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Parallax/parallaxPage1.html?script3.js'>Layers</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Parallax/parallaxPage2.html?script4.js'>Input speed</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Parallax/parallaxPage2.html?script5.js'>Refactored code</a>"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Non-player character animations",
+      "note": [
+        "<a href='https://atari-monk.github.io/js-game-beginner/NPCAnim/npcAnim.html?script1.js'>Rectangle prototype</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/NPCAnim/npcAnim.html?script2.js'>Class</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/NPCAnim/npcAnim.html?script3.js'>Hovering Bats animation</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/NPCAnim/npcAnim.html?script4.js'>Flying Bats animation</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/NPCAnim/npcAnim.html?script5.js'>Circular motion Ghost animation</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/NPCAnim/npcAnim.html?script6.js'>Vertical Sine animation</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/NPCAnim/npcAnim.html?script7.js'>Elipse animation</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/NPCAnim/npcAnim.html?script8.js'>Horizontall 8 animation</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/NPCAnim/npcAnim.html?script9.js'>Randomized motions animation</a>"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Animation Trigger",
+      "note": [
+        "<a href='https://atari-monk.github.io/js-game-beginner/AnimTrigger/animTrigger.html?script1.js'>Rectangle on mouse click</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/AnimTrigger/animTrigger.html?script2.js'>Animation on mouse click</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/AnimTrigger/animTrigger.html?script3.js'>Animation on mouse movement</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/AnimTrigger/animTrigger.html?script4.js'>Animation on mouse click with sound</a>"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Point and click game",
+      "note": [
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game/gamePage1.html?script1.js'>Prototype with rectangle</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game/gamePage1.html?script2.js'>Prototype with rectangle group</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game/gamePage1.html?script3.js'>Prototype with animation</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game/gamePage1.html?script4.js'>Add Score</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game/gamePage2.html?script5.js'>Detect with mouse click</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game/gamePage2.html?script6.js'>Add explosion animation and sound</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game/gamePage2.html?script7.js'>Add particle effect</a>"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Enemy animations",
+      "note": [
+        "<a href='https://atari-monk.github.io/js-game-beginner/EnemyClass/enemy.html?script1.js'>Prototype with rectangle</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/EnemyClass/enemy.html?script2.js'>Prototype with rectangle group</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/EnemyClass/enemy.html?script3.js'>Ground creature animation</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/EnemyClass/enemy.html?script4.js'>Ghosts and ground creature animation</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/EnemyClass/enemy.html?script5.js'>Ghosts,ground creature and spider animation</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/EnemyClass/enemy.html?script6.js'>Some upgrade</a>"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Scrolling Game",
+      "note": [
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame.html?script1.js'>Input</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame.html?script2.js'>Player prototype</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame.html?script3.js'>Background</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame.html?script4.js'>Enemy</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame.html?script5.js'>Sprites</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame.html?script6.js'>Remove enemies on screen exit</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame.html?script7.js'>Score</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame.html?script8.js'>Collision detection</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame2.html?script9.js'>Making it Phone friendly</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame2.html?script10.js'>Reset</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame2.html?script11.js'>Touch events for phone</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame3.html?script12.js'>Full screen option</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame3.html?script13.js'>Better/tweaking collision</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/ScrollingGame/scrollingGame3.html?script14.js'>Finished</a>"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "State Design Pattern",
+      "note": [
+        "<a href='https://atari-monk.github.io/js-game-beginner/StateDesignPattern/state.html?State1/script1.js'>Left Right state for player</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/StateDesignPattern/state.html?State2/script2.js'>Add sitting state</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/StateDesignPattern/state.html?State3/script3.js'>Add running state</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/StateDesignPattern/state.html?State4/script4.js'>Add jumping states</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/StateDesignPattern/state.html?State5/script5.js'>Add falling states</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/StateDesignPattern/state.html?State6/script6.js'>Add animations</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/StateDesignPattern/state.html?State7/script7.js'>Addjust frames speed</a>"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Flame Dog Game",
+      "note": [
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d.html?Page1/script1.js'>Player prototype</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d.html?Page2/script2.js'>Player state</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d2.html?Page3/script3.js'>Player animations</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d2.html?Page4/script4.js'>Background</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d3.html?Page5/script5.js'>Enemies</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d3.html?Page6/script6.js'>Collisions</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d3.html?Page7/script7.js'>Expand states</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d3.html?Page8/script8.js'>Particles</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d4.html?Page9/script9.js'>Flames</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d4.html?Page10/script10.js'>Diving and beeing hit animations</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d4.html?Page11/script11.js'>Add collision animation</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d4.html?Page12/script12.js'>Finished game</a>",
+        "<a href='https://atari-monk.github.io/js-game-beginner/Game2d/game2d5.html?Page13/script13.js'>Add font, lives, floating messages</a>"
+      ]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["Great introduction to javascript and indie game dev."]
+    }
+  ]
+}

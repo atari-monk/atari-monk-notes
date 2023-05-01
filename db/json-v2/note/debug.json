@@ -1,0 +1,11 @@
+
+{
+  "isDebugViewOn": true,
+  "title": "Device Info Page.",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "title": "js-notes",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://github.com/atari-monk/js-notes",
+          "text": "js-notes Repo"
+        },
+        {
+          "link": "https://github.com/atari-monk/js-notes-json",
+          "text": "Data Repo"
+        },
+        {
+          "link": "https://github.com/atari-monk/html-css-js/tree/main/my-creation/mvc-template",
+          "text": "mvc-template Repo"
+        },
+        {
+          "link": "https://atari-monk.github.io/js-notes/",
+          "text": "Notes page"
+        },
+        {
+          "link": "https://stackdiary.com/detect-mobile-browser-javascript/",
+          "text": "Detect Mobile"
+        },
+        {
+          "link": "https://www.npmjs.com/package/ua-parser-js",
+          "text": "npm Detect Mobile"
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": [
+        "JavaScript front app, mvc pattern, html generation, json data, minimalistic styles."
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": ["VSCode", "GitHub"]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": ["History"],
+          "codes": [
+            {
+              "format": [
+                "First was HTML tutorial.",
+                "Then c# cli app generating html notes from json data.",
+                "It had 2 templates.",
+                "Page was made from it.",
+                "Then Javascript course.",
+                "After that javasctipt front app."
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["User Stories"],
+          "codes": [
+            {
+              "format": [
+                "Story {0}",
+                "0. User uses mvc pattern to build page for notes.",
+                "1. User can switch beetween styles (none, desktop, mobile). <span class='mark-1'>5</span>",
+                "2. User has styles to chose from (none, desktop, mobile). <span class='mark-1'>5</span>",
+                "3. User has color markers cycling from 1-7 in a loop, used on params in notes. <span class='mark-1'>5</span>",
+                "4. User can use json data from another repo and page. <span class='mark-1'>5</span>",
+                "5. User has acces to mvc-template, witch this proj was based on. <span class='mark-1'>5</span>",
+                "6. User is able use templated views. <span class='mark-1'>5</span>",
+                "7. User is able use new page type, for templated views. <span class='mark-1'>5</span>",
+                "8. User is able to see what system he is operating, page style will be ajusted for that. <span class='mark-1'>5</span>",
+                "9. User is able to render views with two methods, generate and template. <span class='mark-1'>5</span>",
+                "10. User is able to use templated views for title and navigation on index page. <span class='mark-1'>5</span>",
+                "11. User has all pages rendered with templating method, using html template element. <span class='mark-1'>5</span>",
+                "12. User can input data to form, to generate note json file. <span class='mark-1'>4</span>"
+              ],
+              "params": [
+                {
+                  "name": "0-5",
+                  "desc": "Priority from 0 to 5."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Features"],
+          "codes": [
+            {
+              "format": [
+                "Feature {0}",
+                "1. Switch beetween styles (none, desktop, mobile). <span class='mark-1'>5</span>",
+                "2. Usefull Styles, none, desktop, mobile. <span class='mark-1'>5</span>",
+                "3. Color markers, from 1-7, looping on params in notes. <span class='mark-1'>5</span>",
+                "4. Json data in separete repo and page. Test if this will work. <span class='mark-1'>5</span>",
+                "5. Create Mvc-template that this proj was based on, readable and minimalistic as possible. <span class='mark-1'>5</span>",
+                "6. Create new templated views. <span class='mark-1'>5</span>",
+                "7. Create new page type for templated views. <span class='mark-1'>5</span>",
+                "8. Create template/control to detect operating system. <span class='mark-1'>5</span>",
+                "9. Create renderers that provide views based on generate or template methods. <span class='mark-1'>5</span>",
+                "10. Create template of title, navigation section for index page. <span class='mark-1'>5</span>",
+                "To separete html from js code and to have more control over css.",
+                "11. Create all pages with templating method. <span class='mark-1'>5</span>"
+              ],
+              "params": [
+                {
+                  "name": "0-5",
+                  "desc": "Priority from 0 to 5."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": ["Notes"],
+          "codes": [
+            {
+              "format": [
+                "<span class='mark-1'>1.</span> 3 css files added to html's. (none, desktop, mobile)",
+                "Simple links based control is added to html's.",
+                "On load, desktop style is enabled, others disabled.",
+                "On link click, coresponding style is enabled.",
+                "Very simple and works, that was the point.",
+                "<span class='mark-1'>2.</span> Very Minimalistic Desktop style added.",
+                "<span class='mark-1'>3.</span> There can be n params with name and description, used in code section.",
+                "Each param name is marked by color form 1 to 7, after that from 1 again in loop.",
+                "Each param description in detail aside have matching color marker.",
+                "<span class='mark-1'>4.</span> Turns out it works. Loacally, with live server i dont know how to make it work.",
+                "It works on production, so locally it's getting data from github pages to now.",
+                "This means test of new data will be delayed a bit, but separation of data and app is more important.",
+                "<span class='mark-1'>5.</span> Minimalistic Mvc-tempate, added to html-css-js repo, runable in local live server.",
+                "It;s Model-View-Controller, model data is read from json, view generates html filled with data.",
+                "Controller selects page from url params, loads data, renders views.",
+                "View and Controller have base classes with their common behavior methods.",
+                "<span class='mark-1'>6.</span> First version of app had views generated from js code.",
+                "Create templated views as separete controls.",
+                "Test it with test data, in dev project.",
+                "If they look good put them in app view classes to be rendered in app.",
+                "<span class='mark-1'>7.</span> New page type is needed to develop templated views without braking existing pages.",
+                "Minimal count of mvc elements needed for new page type should be used at first.",
+                "<span class='mark-1'>8.</span> This turned out to be complex.",
+                "I found some examples only to deem them unsufficient.",
+                "I was distracted by searching cards examples for presenting.",
+                "Found article and lib for detecting platform, links in Source.",
+                "Maybe they dont have rubust standard for this.",
+                "<span class='mark-1'>9.</span> Added renderers classes in controller, to handle diffrent methods for producing views.",
+                "Otherwise couldnt handle chaos.",
+                "git mv IndexRenderer.js indexRenderer.js",
+                "<span class='mark-1'>10.</span> Nav template has title.",
+                "Links for switching style between none, desktop, mobile.",
+                "Links for navigation staying on index page.",
+                "Card detecting operating system.",
+                "<span class='mark-1'>11.</span> New repo js-notes-templated created.",
+                "Generating html in old repo js-notes-generated.",
+                "Templates first created in repo html-css-js, then moved to js-notes-templated.",
+                "Current step is to create index page template, style it, them move it to app.",
+                "Index page and note using templates works.",
+                "Part of them was refactored. All in repo html-css-js in my-templates project.",
+                "It's time to merge them in app, becouse some of the code is common between them, and",
+                "there is no more point in refactoring them separatly."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": ["App in use for making notes."]
+}

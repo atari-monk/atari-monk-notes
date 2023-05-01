@@ -1,0 +1,519 @@
+{
+  "title": "Learn Unity",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "sections": {
+    "source": {
+      "text": "Source",
+      "links": [
+        {
+          "link": "https://youtu.be/AmGSEH7QcDg",
+          "text": "Source Tutorial"
+        },
+        {
+          "link": "https://unity.com/download",
+          "text": "Unity"
+        }
+      ]
+    },
+    "desc": {
+      "text": "Description",
+      "desc": [
+        "Always wanted to create a game.",
+        ""
+      ]
+    },
+    "precondition": {
+      "text": "Preconditions",
+      "list": [
+        "Unity",
+        "Visual Studio Community 2022"
+      ]
+    }
+  },
+  "notes": [
+    {
+      "text": "Notes",
+      "points": [
+        {
+          "text": [
+            "Timestamps"
+          ],
+          "codes": [
+            {
+              "format": [
+                "0-20; 1. Intro",
+                "20-25; 2. Create Project",
+                "25-32; 3. Prepare Layout",
+                "32-35.5; 4. Setup Visual Studio",
+                "35.5-39.5; 5. Naming Rules",
+                "39.5-41; 6. Importing Assets",
+                "41-56; 7. Post Processing",
+                "56-1:15; 8. Character Controller",
+                "1:15-1:23 9. Character Visual, Rotation",
+                "1:23-1:43 10. Animations",
+                "1:43-1:49 11. Cinemachine",
+                "1:49-2:04 12. Input System Refactor",
+                "2:04-2:17 13. Collision Detection",
+                "2:17-02:38 14. Clear Counter",
+                "02:38-02:48 15. Interact Action, C# Events",
+                "02:48-03:11 16. Selected Counter Visual, Singleton Pattern"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Create Project"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Install Unity Hub",
+                "Instal Unity Editor version 2022.2.1f1 (course version)",
+                "Only editor and Visual Studio Community 2022 for this",
+                "Create new Project",
+                "Select Unity Editor version 2022.2.1f1",
+                "Installed on game ssd drive",
+                "E:\\2022.2.1f1\\Editor\\Unity.exe",
+                "select 3D URP template (universal render pipeline), download template",
+                "Set Project Name to KitchenChaos",
+                "Project folder: E:\\atari-monk\\unity-course",
+                "Click New Project, editor opens",
+                "remove readme assets about URP",
+                "Edit->Project Settings->Graphics Tab check ig URP HighFidelity asset should be assign",
+                "URP Global Settings should be set to UniversalRenderPipelineGlobalSettings",
+                "On Quality tab HighFidelity should be seleted, trash/delete preforment and balanced",
+                "Go to main assets tab and delete preforment and balanced assets (4)"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Prepare Layout"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Inspector on the right",
+                "put Hierarchy down on left side",
+                "next Project and Console",
+                "Scene and Game view in the center",
+                "go to Project, 3 dots menu, select one column layout",
+                "go to Console, 3 dots menu, select Log Entry-> one line, Clear->Clear on play, untoogle collapse, toogle pause on error",
+                "on Game view, Free Aspect -> Full HD, turn on VSync (limit fps), Play Unfocused, scale should be pushed max to the left",
+                "on Scene view, use Pivot (not center), Global (rotation), grid on, snaping off",
+                "on the right, draw mode on Shaded, 2D off, ligh on, audio off, special effects on (refresh off)",
+                "hidden objs on, camera defaults, gizmos defaults",
+                "go to layouts (top right), save as KitchenChaos"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Setup Visual Studio"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Open proj in Unity Editor, Window->Package Manager, Packeges->Unity Registry",
+                "Find editor of liking, Visual Studio Editor, install (upd btn)",
+                "Edit->Preferences, External Tools, External Script Editor, select VS, untick checkboxes (this proj doesnt need it)",
+                "Go to Assets->Open C# Project, VS opens up",
+                "In VS, Extensions->Manage Extensions, Viasfora, install",
+                "Go to Tools->Options, Viasfora, Enable Dev Margin false, Rainbow Braces is one of the features of this extnsion.",
+                "Go to Unity Editor, Project, +, add c# script, name it Testing, wait to compile, click to open in VS",
+                "Go to Tools->Options, C#->Code Style->Formating, he unchecked to make braces not start in new lines"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Naming Rules"
+          ],
+          "codes": [
+            {
+              "format": [
+                "{0}",
+                "{1}",
+                "{2}",
+                "{3}",
+                "His rules:",
+                "Functions Names - PascalCase",
+                "Function params - camelCase",
+                "Fields - camelCase",
+                "Properties - PascalCase",
+                "Constants = UpperCase SnakeCase",
+                "Events - PascalCase",
+                "Proper naming with no abbreviations"
+              ],
+              "params": [
+                {
+                  "name": "PascalCase",
+                  "desc": "Starts with capital and every word is capitalized"
+                },
+                {
+                  "name": "camelCase",
+                  "desc": "Starts with lowercase and every word is capitalized (camel hump)"
+                },
+                {
+                  "name": "snake_case",
+                  "desc": "underscore beetween words"
+                },
+                {
+                  "name": "github-repo-case",
+                  "desc": "- beetween words"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Importing Assets"
+          ],
+          "codes": [
+            {
+              "format": [
+                "account on codeMonkey page, downloaded assets",
+                "drag&drop assets package on Project window, select All, import",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Post Processing"
+          ],
+          "codes": [
+            {
+              "format": [
+                "normally added later, this is for yt",
+                "rename Scene->SampleScene to GameScene",
+                "click GameScene, click GlobalVolume, select SampleSceneProfile, delete it ",
+                "click new to create ne Volume Profile",
+                "on Hierarchy, add, 3d object, plane, name it Floor",
+                "select plane, go to transform, position on 0, scale 5 5 5",
+                "enable constrain proportions",
+                "materials, circle selector, choose floor from assets",
+                "Project, Assets->PrefabsVisuals, select PlayerVisual, drag&drop on main screen, on plain",
+                "also for ClearCounter, CuttingCounter, tomato, cabbage",
+                "scene control: mouse 3 (wheel) - pan camera, rotate cam - right mouse button, rotate around point - left alt, left mouse btn, zoom - left alt, right mouse btn",
+                "rotate around obj - select obj, f, left alt, left mouse btn",
+                "hold right mouse btn, use WSAD to move, shift to move faster, mose wheel to mod speed",
+                "possition camera:",
+                "position cam in scene, select main cam in Herarchy, ctrl+shift+f or menu->GameObject->Align With View, switch to Game view",
+                "select Global Volume, add override -> Post Processing -> Tonemapping, check Mode, Neutral",
+                "if no diffrence, check if Main Cam->Rendering->PostProcessing is enabled",
+                "also enabled in URP-HighFidelity-Renderer",
+                "Global Volume -> add override -> Post Processing -> Color Adjustments, Saturation on 20, contrast on 20",
+                "add stove counter asset",
+                "find stoveOnVisual in it, enable it visible",
+                "Global Volume -> add override -> Post Processing -> Bloom",
+                "enable treshold and intensity, set 0.95 and 1",
+                "stove should glow, for this URP HDR must be on",
+                "URP renderer must have Post Process Data atached (toogle to reset if not)",
+                "Global Volume -> add override -> Post Processing -> Vignette",
+                "Intensity .25, Smoothness .4",
+                "select URP, Anti Aliasing (MSAA) 8x (see diffrance in game view), on camera select no anti aliasing",
+                "URP renderer, add Screen Space Ambient Occlusion, adds shadows where object intersects, it looks better",
+                "select cam, position it, x 0 y 21.5 z -21.3, rot x 46 y 0 z 0",
+                "go to URP renderer, set ambient oclusion",
+                "intensity 4, radius .3, direct lighting strength 1",
+                "window->Rendering->Lighting, anchor it next to inspector",
+                "leave defaults, scene->assets none, environment default",
+                "in clobal volume, u can clone profile and make other post processing look with diffrent settings",
+                "delete visuals exept floor"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Character Controller"
+          ],
+          "codes": [
+            {
+              "format": [
+                "In Hierarchy, create empty game object, name it Player",
+                "put it on 0,0,0; inside of it create a capsule visual;",
+                "scale it to .7,1,.7; put it up by one unit",
+                "rule: separete logic from visual in your game objects",
+                "create folder Scripts in Assets; create c# script",
+                "call it Player, wait for code to compile",
+                "select player logic object and atach the script, open script",
+                "there are two unity input systems legacy and new one",
+                "older is simpler, witch makes it usefull for prototyping",
+                "newer is more capeable but more complex",
+                "btw VS must have Unity packages installed for accesing framework",
+                "write your code, to test, switch to game, press play, observe console for debug output",
+                "dont forget to save code file or switch auto save",
+                "Framework code assets:",
+                "namespace UnityEngine",
+                "MonoBehaviour",
+                "private void Update() - once per frame",
+                "Vector2",
+                "Input.GetKey(KeyCode.W)",
+                "inputVector (+-1,+-1), but also normalize it, becouse of diagonal",
+                "Debug.Log(inputVector);",
+                "inputVector = inputVector.normalized;",
+                "var moveDir = new Vector3(inputVector.x, 0f, inputVector.y);",
+                "{0} private float moveSpeed = 7f;",
+                "transform.position += moveDir * moveSpeed * Time.deltaTime;",
+                "Run game, check FPS on Stats view"
+              ],
+              "params": [
+                {
+                  "name": "[SerializeField]",
+                  "desc": "this makes field editable in ui editor"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Character Visual, Rotation"
+          ],
+          "codes": [
+            {
+              "format": [
+                "drag Player Visual to Player object",
+                "position 0,0,0",
+                "Materials:",
+                "has a shader and bunch of properties",
+                "shader is a code that runs on a graphics card",
+                "calculating how object is rendered",
+                "there is a lot of default ones",
+                "in URP use URP shaders, by default Lit",
+                "Shader Graph - Visual tool for generating shaders without coding them",
+                "Lit shader - Base Map has color field",
+                "you can drag&drop material from assets on to the scene, or Mesh renderer Material field",
+                "crate materials and apply them on shapes",
+                "Rotate Visual:",
+                "transform.rotation - uses quaterions, not intuitive",
+                "transform.eulerAngles - uses 0-360 degrees",
+                "transform.LookAt",
+                "transform.forward = moveDir (method used)",
+                "Smooth with Lerp",
+                "function for interpolating",
+                "var rotateSpeed = 10f;",
+                "transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed)"
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Animations"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Go to PlayerVisual, add component Animator.",
+                "Add Controller, name it MyPlayerAnimator.",
+                "Drag&Drop it to Animator.",
+                "Click controller to open Animator window.",
+                "Animator is a State Machine.",
+                "It defines states and transitions between them.",
+                "By default there are Any State, Entry, Exit.",
+                "Open Window->Animaion->Animation.",
+                "Dock it beside Console.",
+                "Click Create btn and name animation file - Idle.",
+                "Select PlayerVisual, go to Animation, start recording.",
+                "Move time to 0, select head, move it up a little.",
+                "Red color in fields indocates recorded keyframe.",
+                "Move to frame 30, witch is half a second.",
+                "Samples is set to 60 frames per second.",
+                "Move head a little more higher.",
+                "Select keyframe on 0, ctrl+c, go to 60 (1s), paste keyframe.",
+                "Record keyframe for the body, on 0, not changing possition.",
+                "It's done to reset position when entering animation.",
+                "Stop recording.",
+                "Go to Idle and check if Loop Time is on (default).",
+                "Go to Game, hit play, test animation.",
+                "Duplicate Idle animation (ctrl + d).",
+                "Rename it to Walk.",
+                "Go to Project, drag&drop Walk to Animator view.",
+                "Go to PlayerVisual Animation view, select Walk.",
+                "Repeat steps made for head, do it for the body.",
+                "Select middle body keyframe, offset it to the left.",
+                "Select all keyframes, adjust time scale.",
+                "It makes animation slower or faster.",
+                "In Animator view, select Idle menu, add transition to Walk.",
+                "Select transition, Has Exit Time should be on.",
+                "Select Parameters tab, add bool parameter, name it IsWalking.",
+                "Turn off Has Exit Time, add condition.",
+                "Do it for Walk to Idle direction for IsWalking on false.",
+                "Test the animations.",
+                "Dock Animator view next to Animation and Console.",
+                "Play Game, select PlayerVisual, toogle IsWalking to test animation transitions.",
+                "Create new C# script, name it PlayerAnimator.",
+                "Atach it to PlayerVisual.",
+                "In PlayerAnimator script.",
+                "Get Animator component referance in Awake method.",
+                "Add Player referance by using SerializeField.",
+                "In editor drag&drop player on this ref field.",
+                "Add IsWalking metohd to player script.",
+                "Set IsWalking in animator with player method.",
+                "Use animator SetBool.",
+                "Provide string name of IsWalking using constant.",
+                "Do it in Update method so it's updated once per frame.",
+                "Test it.",
+                "Select PlayerVisual, remove test/learn animator, restore one from assets.",
+                "Remove Idle, Wait, and MyPlayerAnimator controller.",
+                "Test animations."
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Cinemachine"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Go to Window->Package Manager.",
+                "Find and install {0} extension.",
+                "It's camera automation tools.",
+                "Go to Game Object->Cinemachine->Virtual Camera.",
+                "Set camera properties on Virtual Camera. (Camera props blocked)",
+                "Set FOV (Filed of view) on 20.",
+                "Set position on (0, 21.5, -21.3).",
+                "Set rotation on (46, 0, 0).",
+                "On Noise drop down, noise effect can be added, like hand held camera wobble.",
+                "Many virtual cameras can be used, to create effects like following camera fast (and many more)."
+              ],
+              "params": [
+                {
+                  "name": "Cinemachine",
+                  "desc": "Creates many types of virtual cameras. Works on top of unity camera, adds tons of functionality and automations."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Input System Refactor"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Create empty obj, name GameInput, pos (0,0,0).",
+                "Create c# script, same name, atach it to obj.",
+                "Refactor input from Player class to GameInput.",
+                "Drag&Drop GameInput to Player field in editor.",
+                "Install package Input System.",
+                "Dont restart, go to Edit->Project Settings->Player->Configuration->Active Input Handling->Both.",
+                "In Assets create Input Actions file, name it PlayerInputActions, click it to open window.",
+                "Add action map, name it Player, add action Move, Action Type - Value, Control Type - Vector2.",
+                "On Move, delete binding, add Up/Down/Left/Right Composite, name it WASD.",
+                "Map directions to WSAD keys.",
+                "Save asset.",
+                "Select PlayerInputActions, check Generate c# class.",
+                "Add reference to it in GameInput class. Refactor to use it.",
+                "Add another composite for Arrow keys, save asset.",
+                "Add binding to connect gamepad, use generic to work with many types. (just listen for gamepad to register it)."
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Collision Detection"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Add Cube to game objects. See that collision with player dosent work yet.",
+                "Disable mesh collider on floor, it wont be used.",
+                "In script, add ray casting to stop movment on cube.",
+                "Use capsule cast to match shape of player.",
+                "Handle diagonal movment by moving in only x or z directions.",
+                "Normalize to move in same speed."
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Clear Counter"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Add empty object, name it ClearCounter. Reset it's Transform to zeros.",
+                "Add Visual to empty, drag it from PrefabsVisuals.",
+                "Add Box Collider to empty.",
+                "Scale Box Collider to match Visual (1.5, 1.5, 1.5)",
+                "Move it up Y 0.5, to match Visual.",
+                "Switch to Scene view.",
+                "Select empty, select tool rotate.",
+                "Hold ctrl and rotate 180 degres.",
+                "Refactor code. Add methods for Movment and Interactions, call them in Update. (Organize)",
+                "Then add code for interaction with ClearCounter, simillar as ray casting physics was written.",
+                "I moved Scripts folder to root Assets.",
+                "Create Prefabs folder in root Assets.",
+                "Create prefab by drag&drop from Hierarchy to Prefabs folder.",
+                "Duplicate ClearCounter prefab, move it so it dosent collide with original.",
+                "Create C# script for ClearCounter.",
+                "Select Prefab from Project and atach file to all of it's instances.",
+                "Alternativlly, select prefab instance form Hierachy and click Open.",
+                "Scene will focus on prefab, atach script, exit to scene, save prefab.",
+                "Unity Tags are horrible, dont use that. (string)",
+                "In code of ray casting, use LayerMask of objects to narow objects you check.",
+                "Add editor property for layer, to player.",
+                "Open Prefab, add layer, name it Counters, save it only to prefab (not children).",
+                "Add Counters layer to player editor fieled, test interaction."
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "Interact Action, C# Events"
+          ],
+          "codes": [
+            {
+              "format": [
+                "Double click PlayerInputActions, add Interact action.",
+                "Select Action Type - Button.",
+                "On default binding, go to Path, Listen, assign E key. Save Asset.",
+                "For movement it makes sense to handle it in every frame Update method.",
+                "For less frequent actions c# events are used.",
+                "In GameInput.Awake register callback for action.",
+                "playerInputActions.Player.Interact.performed += Interact_performed;",
+                "Create event in GameInput. Invoke it on Interact callback. Subscribe to it in Player.",
+                "Create callback in Player, copy interact code to it, comment out Interact action in other place, test E btn to interact."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "In progress."
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "title": "Web app dotnet version upgrade",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": [
+      "ToDo web app example from microsoft open source on github was used to train azure deployment.",
+      "Before deploy i make upgrade from .net6 to .net7.",
+      "Below are some steps to have a feel what this entail."
+    ]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://github.com/Azure-Samples/msdocs-app-service-sqldb-dotnetcore",
+        "text": "Source Tutorial"
+      },
+      {
+        "link": "https://dotnet.microsoft.com/en-us/download/dotnet/7.0",
+        "text": "Dotnet 7 download page"
+      },
+      {
+        "link": "https://learn.microsoft.com/en-us/ef/core/miscellaneous/connection-strings",
+        "text": "Connection Strings"
+      },
+      {
+        "link": "https://www.nuget.org/",
+        "text": "Nugets"
+      }
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["VSCode"]
+  },
+  "notes": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "title": "Clone example repo.",
+      "note": [
+        "cd C:\\atari-monk\\Code",
+        "git clone https://github.com/Azure-Samples/msdocs-app-service-sqldb-dotnetcore.git",
+        "cd msdocs-app-service-sqldb-dotnetcore"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Install dotnet 7.0. <a href = '#source'>Source</a>",
+      "note": ["dotnet --version"]
+    },
+    {
+      "isCopy": false,
+      "title": ["Create net7 web app in VSCode.", "Test run it.", "Commit it."],
+      "note": ["dotnet new mvc -n todo-web-app"]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Copy Todo model file.",
+        "To rename project, change folder and csproj name",
+        "also change RootNamespace in csproj."
+      ],
+      "note": ["dotnet new sln", "dotnet sln add .\\TodoWebApp\\"]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Copy dbContext file.",
+        "Add contorller. Handle null warnings.",
+        "Map to new contorller as default in program.cs app.MapControllerRoute...",
+        "Copy views folder. Rename namespaces. Commit.",
+        "Add ConnectionString named LocalDbConnection to appsettings.json.",
+        "<a href = '#source'>Source</a>",
+        "Add ef core dbContext to program.cs web app setup."
+      ],
+      "note": [
+        "dotnet add package Microsoft.EntityFrameworkCore.SqlServer PackageReference --version 7.0.0",
+        "builder.Services.AddDbContext"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "From a local terminal applay migrations.",
+        "To create local db for tests."
+      ],
+      "note": [
+        "cd TodoWebApp",
+        "dotnet tool install -g dotnet-ef",
+        "dotnet tool update -g dotnet-ef",
+        "dotnet add package Microsoft.EntityFrameworkCore.Design --version 7.0.0",
+        "dotnet ef migrations add InitialCreate",
+        "dotnet ef database update"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": [
+        "Mismach in ef core nugets versions, for example Microsoft.EntityFrameworkCore.SqlServer and Microsoft.EntityFrameworkCore.Design can give exceptions due to misiing implementations. Version='7.0.0', Version='6.0.0', did.",
+        ".vscode json contain scripts to lunch app. If app was renamed. You need to edit theese files.",
+        "Test web app localy with the browser in debug mode.",
+        "Add azure diagnostics logging nuget. Add builder.Logging.AddAzureWebAppDiagnostics(); in program.cs. Build. Commit."
+      ],
+      "note": [
+        "dotnet add package Microsoft.Extensions.Logging.AzureAppServices --version 7.0.0"
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Name of current repo for TodoWebApp.",
+      "note": ["net-web-tutorial"]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["Upgrade takes some actions and time."]
+    }
+  ]
+}

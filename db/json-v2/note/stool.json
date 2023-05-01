@@ -1,0 +1,144 @@
+{
+  "title": "Stool",
+  "nav": [
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "title": "Description",
+    "description": ["I want to make diy stool."]
+  },
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://youtu.be/Zg3XoyMbrf4",
+        "text": "Source Tutorial"
+      },
+      {
+        "link": "https://github.com/atari-monk/blender-models",
+        "text": "Repo - model stool"
+      }
+    ]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["Stock, tools."]
+  },
+  "note": [
+    {
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes",
+      "note": []
+    },
+    {
+      "isCopy": false,
+      "title": "Stock",
+      "note": [
+        "{0}{1}",
+        "4x4x64 x2",
+        "4x4x58 x1",
+        "5x5x30 x12",
+        "4x4x30 x4",
+        "4x6x30 x2",
+        "2x6x30 x1",
+        "2x6x100 x7",
+        "1.5x6x100 x4",
+        "1.2x39x50 x1"
+      ],
+      "params": [
+        {
+          "name": "4x4x100",
+          "desc": "size [cm]"
+        },
+        {
+          "name": " x4",
+          "desc": "quantity"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Stool Size (footrest).",
+      "note": ["size in cm: {0}x{1}x{2}"],
+      "params": [
+        {
+          "name": "20",
+          "desc": "heigth"
+        },
+        {
+          "name": "40",
+          "desc": "width"
+        },
+        {
+          "name": "30",
+          "desc": "depth"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Parts",
+      "note": [
+        "top - {0}x{1}x{2} x{3}",
+        "leg - 4x4x19 x4",
+        "long beam - 4x4x32 x4",
+        "short beam - 4x4x22 x3",
+        "screw 4cm x4",
+        "screw 8cm x14",
+        "wood glue"
+      ],
+      "params": [
+        {
+          "name": "1.2",
+          "desc": "height"
+        },
+        {
+          "name": "40",
+          "desc": "width"
+        },
+        {
+          "name": "30",
+          "desc": "depth"
+        },
+        {
+          "name": "1",
+          "desc": "quantity"
+        }
+      ]
+    },
+    {
+      "isCopy": false,
+      "title": "Model",
+      "note": [
+        "<img src='https://atari-monk.github.io/js-notes-json/src/img/stool1.PNG' alt='stool 1' width='942' height='784'>",
+        "<img src='https://atari-monk.github.io/js-notes-json/src/img/stool2.PNG' alt='stool 2' width='916' height='680'>",
+        "<img src='https://atari-monk.github.io/js-notes-json/src/img/stool3.PNG' alt='stool 3' width='1102' height='567'>",
+        "<img src='https://atari-monk.github.io/js-notes-json/src/img/stool4.PNG' alt='stool 4' width='829' height='864'>"
+      ]
+    },
+    {
+      "navId": "summary",
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["In progress."]
+    }
+  ]
+}

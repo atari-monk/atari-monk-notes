@@ -1,0 +1,70 @@
+{
+  "nav": [
+    {
+      "title": "General"
+    },
+    {
+      "title": "Node.js"
+    },
+    {
+      "title": "My Projects"
+    }
+  ],
+  "sections": [
+    {
+      "text": "General",
+      "links": [
+        {
+          "link": "notes.html?page=note/socket-io-qs",
+          "text": "Socket.IO template app, deploy on azure."
+        },
+        {
+          "link": "notes.html?page=note/sql-quiz",
+          "text": "Sql quiz"
+        },
+        {
+          "link": "notes.html?page=note/html-entry",
+          "text": "Html Beginner Tutorial"
+        },
+        {
+          "link": "notes.html?page=note/js-game-entry",
+          "text": "JavaScript Game Development Course for Beginners"
+        },
+        {
+          "link": "notes.html?page=note/web-ext",
+          "text": "VSCode Extensions"
+        },
+        {
+          "link": "notes.html?page=note/typescript-lessons",
+          "text": "TypeScript Learning"
+        },
+        {
+          "link": "notes.html?page=note/html-css-course",
+          "text": "HTML & CSS Full Course - Beginner to Pro"
+        }
+      ]
+    },
+    {
+      "text": "Node.js",
+      "links": [
+        {
+          "link": "notes.html?page=note/node-js-upd",
+          "text": "Update with npm"
+        },
+        {
+          "link": "notes.html?page=note/node-js-qs",
+          "text": "Node js template app, deploy on azure"
+        }
+      ]
+    },
+    {
+      "text": "My Projects",
+      "links": [
+        {
+          "link": "notes.html?page=note/js-notes",
+          "text": "js-notes"
+        }
+      ]
+    }
+  ]
+}

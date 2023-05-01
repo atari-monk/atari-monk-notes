@@ -1,0 +1,69 @@
+{
+  "title": ".Net",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": ".Net"
+    },
+    {
+      "title": "My Projects"
+    }
+  ],
+  "section": [
+    {
+      "navId": ".net",
+      "title": ".Net",
+      "links": [
+        {
+          "link": "notes.html?page=note/secrets",
+          "text": "Secrets"
+        },
+        {
+          "link": "notes.html?page=note/nuget",
+          "text": "Nuget"
+        },
+        {
+          "link": "notes.html?page=note/web-app-upg",
+          "text": "Web app dotnet version upgrade"
+        },
+        {
+          "link": "notes.html?page=note/identity-lib",
+          "text": "Identity db as separate lib"
+        },
+        {
+          "link": "notes.html?page=note/identity",
+          "text": "Identity web app"
+        },
+        {
+          "link": "notes.html?page=note/cs-quiz",
+          "text": "C# quiz"
+        },
+        {
+          "link": "notes.html?page=note/dotnet-cli",
+          "text": "Dotnet CLI"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    },
+    {
+      "navId": "my projects",
+      "title": "My Projects",
+      "links": [
+        {
+          "link": "notes.html?page=note/net-my-libs",
+          "text": "net-my-libs"
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    }
+  ]
+}

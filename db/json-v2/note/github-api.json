@@ -1,0 +1,143 @@
+{
+  "isKey": false,
+  "isScrollToBottom": false,
+  "title": "GitHub API",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://chat.openai.com",
+        "text": "ChatGPT"
+      }
+    ]
+  },
+  "description": {
+    "navId": "description",
+    "isCenter": true,
+    "title": "Description",
+    "description": ["GitHub API"]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["Account"]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "isCopy": false,
+      "title": "Notes"
+    },
+    {
+      "type": "text",
+      "navId": "content",
+      "isCopy": false,
+      "isCenter": false,
+      "title": "Content",
+      "note": ["1. <a href=#q1>Question</a>{%BR%}{%NAV2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "q1",
+      "isCopy": false,
+      "title": "Question",
+      "note": ["How can i download raw code from github using js ?"]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "isCenter": false,
+      "title": "Answear",
+      "note": [
+        "You can use the GitHub API to download raw code from GitHub using JavaScript. Here's an example code snippet that demonstrates how to download raw code from a GitHub repository using the fetch API:"
+      ]
+    },
+    {
+      "type": "cmd",
+      "isCopy": true,
+      "content": "text",
+      "beautify": "js",
+      "title": "",
+      "note": [
+        "fetch(\r\n\"https://api.github.com/repos/:owner/:repo/contents/:path\")\r\n.then(response => response.json())\r\n.then(data => { \r\n// Extract raw content from the response data\r\n const rawContent = atob(data.content); console.log(rawContent); }) .catch(error => console.error(error));"
+      ]
+    },
+    {
+      "type": "text",
+      "isCopy": false,
+      "isCenter": false,
+      "note": [
+        "In the URL, replace :owner with the username or organization name, :repo with the repository name, and :path with the file path within the repository. Note that in order to use the GitHub API, you'll need to authenticate with a personal access token. You can find more information about authentication and rate limiting in the GitHub API documentation."
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "summary",
+      "isCenter": true,
+      "isCopy": false,
+      "title": "Summary",
+      "note": ["{%NAV%}"]
+    }
+  ],
+  "param": {
+    "": [
+      {
+        "name": "",
+        "desc": ""
+      }
+    ]
+  },
+  "inject": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%NAV2%}",
+      "text": "<br><a href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%CONTENT2%}",
+      "text": "<a href='#content'>Back to Content</a>"
+    }
+  ]
+}
