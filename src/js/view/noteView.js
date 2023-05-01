@@ -44,26 +44,24 @@ export class NoteView extends View {
       if (this.#isType(note, 'text')) {
         newNote = this.#noteView.createContent(data, note);
         if (note.hasOwnProperty('aside') && note.aside.isDetail) {
-          const aside = this.#asideView.createContent(data, note);
+          const aside = this.#asideView.createContent(note);
           newNote.querySelector('.note-text').appendChild(aside);
         }
       } else if (this.#isType(note, 'note-aside')) {
         newNote = this.#getNoteAsideView(note, newNote, data);
       } else if (this.#isType(note, 'cmd')) {
         if (note.hasOwnProperty('aside')) {
-          if (note.aside.hasOwnProperty('paramKey')) {
-            newNote = this.#commandNoteAsideView.createContent(
-              data,
-              this.#asideView.getTextParams(data, note),
-              note
-            );
-          }
+          newNote = this.#commandNoteAsideView.createContent(
+            data,
+            this.#asideView.getTextParams(note),
+            note
+          );
           if (note.aside.hasOwnProperty('isDetail') && note.aside.isDetail) {
-            const aside = this.#asideView.createContent(data, note);
+            const aside = this.#asideView.createContent(note);
             newNote.querySelector('.cmd-ul').appendChild(aside);
           }
         } else {
-          newNote = this.#commandNoteView.createContent(data, note);
+          newNote = this.#commandNoteView.createContent(note);
         }
       } else if (this.#isType(note, 'content')) {
         newNote = this.#contentView.createContent(note);

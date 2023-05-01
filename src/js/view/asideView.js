@@ -1,11 +1,11 @@
 import { View } from './view.js';
 
 export class AsideView extends View {
-  createContent(data, note) {
-    return this.#createAside(data, note);
+  createContent(note) {
+    return this.#createAside(note);
   }
 
-  #createAside(data, note) {
+  #createAside(note) {
     const asideEl = this._getParentElement(
       'template-note-aside',
       '.note-aside'
@@ -14,8 +14,8 @@ export class AsideView extends View {
     const parentEl = newAside.querySelector('p');
     const markEl = this._getParentElement('template-note-mark', 'mark');
     let j = 1;
-    const params = this.#getData(data, note);
-    params.forEach((param, i) => {
+    const params = this.#getData(note);
+    params?.forEach((param, i) => {
       const newMark = this._getNewParent(markEl);
       newMark.classList.add(`mark-${j}`);
       j++;
@@ -27,14 +27,13 @@ export class AsideView extends View {
     return newAside;
   }
 
-  #getData(data, note) {
-    if (note.hasOwnProperty('aside') && note.aside.hasOwnProperty('paramKey'))
-      return data.param[note.aside.paramKey];
+  #getData(note) {
+    return note.hasOwnProperty('params') ? note.params : undefined;
   }
 
-  getTextParams(data, note) {
+  getTextParams(note) {
     const result = [];
-    const params = this.#getData(data, note);
+    const params = this.#getData(note);
     if (params === undefined) return result;
     let j = 1;
     const markEl = this._getParentElement('template-note-mark', 'mark');
