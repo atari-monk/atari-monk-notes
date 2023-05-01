@@ -7,8 +7,8 @@ if (!$commitMessage) {
   exit
 }
 
-$repoPath = "C:\atari-monk\Code\js-notes-templated"
-$scriptPath = "C:\atari-monk\Code\js-notes-templated\script"
+$repoPath = "C:\atari-monk\Code\atari-monk-notes"
+$scriptPath = "C:\atari-monk\Code\atari-monk-notes\script"
 
 Set-Location $repoPath
 

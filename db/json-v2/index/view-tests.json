@@ -1,0 +1,48 @@
+{
+  "title": "View Tests",
+  "nav": [
+    {
+      "title": "Tests"
+    }
+  ],
+  "section": [
+    {
+      "navId": "tests",
+      "title": "Tests",
+      "links": [
+        {
+          "link": "notes.html?page=note/js-notes-test1",
+          "text": "Test Copy Code Button."
+        },
+        {
+          "link": "notes.html?page=note/js-notes-key",
+          "text": "Test Key Feature."
+        },
+        {
+          "link": "notes.html?page=note/debug",
+          "text": "Device Info Page."
+        },
+        {
+          "link": "notes.html?page=note/js-notes-json-test",
+          "text": "Test notes json."
+        },
+        {
+          "link": "notes.html?page=schema/note",
+          "text": "Test notes schema json."
+        },
+        {
+          "link": "notes.html?page=views/content-view",
+          "text": "Test Content View."
+        },
+        {
+          "link": "notes.html?page=views/command-note-aside-view",
+          "text": "Test Command-Note-Aside View."
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    }
+  ]
+}

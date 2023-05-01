@@ -21,7 +21,7 @@
       "title": "Node.js"
     },
     {
-      "title": "Project js-notes"
+      "title": "Project Atari Monk Notes"
     }
   ],
   "section": [
@@ -136,36 +136,16 @@
       ]
     },
     {
-      "navId": "project js-notes",
-      "title": "Project js-notes",
+      "navId": "project atari monk notes",
+      "title": "Project Atari Monk Notes",
       "links": [
         {
           "link": "notes.html?page=note/js-notes",
-          "text": "Project js-notes."
+          "text": "Project Atari Monk Notes."
         },
         {
-          "link": "notes.html?page=note/js-notes-test1",
-          "text": "Test Copy Code Button."
-        },
-        {
-          "link": "notes.html?page=note/js-notes-key",
-          "text": "Test Key Feature."
-        },
-        {
-          "link": "notes.html?page=note/debug",
-          "text": "Device Info Page."
-        },
-        {
-          "link": "notes.html?page=note/js-notes-json-test",
-          "text": "Test notes json."
-        },
-        {
-          "link": "notes.html?page=schema/note",
-          "text": "Test notes schema json."
-        },
-        {
-          "link": "notes.html?page=views/contentView",
-          "text": "Test contentView json and class."
+          "link": "index.html?page=index/view-tests",
+          "text": "View Tests."
         },
         {
           "link": "#",

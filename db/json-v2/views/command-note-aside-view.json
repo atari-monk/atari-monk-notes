@@ -1,0 +1,21 @@
+{
+  "note": [
+    {
+      "type": "cmd",
+      "aside": {
+        "paramKey": "test",
+        "isDetail": true
+      },
+      "title": "test",
+      "note": ["test {0}"]
+    }
+  ],
+  "param": {
+    "test": [
+      {
+        "name": "test",
+        "desc": "test"
+      }
+    ]
+  }
+}
