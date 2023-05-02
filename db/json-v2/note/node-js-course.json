@@ -1,5 +1,5 @@
 {
-  "isKey": true,
+  "isKey": false,
   "isScrollToBottom": false,
   "title": "Node.js Course",
   "nav": [
@@ -408,8 +408,13 @@
         },
         {
           "link": "#serve-static",
-          "title": "Serving Static files.",
-          "time": "2:49-x"
+          "title": "Serving Static files",
+          "time": "2:49-2:54"
+        },
+        {
+          "link": "#env-vars",
+          "title": "Environment Variables",
+          "time": "2:54-x"
         }
       ]
     },
@@ -1777,6 +1782,24 @@
       "type": "text",
       "navId": "serve-static",
       "title": "Serving Static files.",
+      "note": [
+        "Use express middleware to host static files in speciffied folder."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": ["app.use(express.static(`${__dirname}/public`));"]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "env-vars",
+      "title": "Environment Variables",
       "note": [""]
     },
     {

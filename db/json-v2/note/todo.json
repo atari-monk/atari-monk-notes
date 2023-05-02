@@ -67,7 +67,8 @@
         "Game/sim of cells growing.",
         "spear game, player a rect with heart to hit.",
         "game, life of fruit fly.",
-        "game, cell life"
+        "game, cell life",
+        "browser cards"
       ],
       "params": [
         {
