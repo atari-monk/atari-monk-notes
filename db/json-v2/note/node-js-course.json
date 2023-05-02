@@ -404,7 +404,12 @@
         {
           "link": "#chain-middleware",
           "title": "Chaining multiple Middleware functions",
-          "time": "2:41-x"
+          "time": "2:41-2:49"
+        },
+        {
+          "link": "#serve-static",
+          "title": "Serving Static files.",
+          "time": "2:49-x"
         }
       ]
     },
@@ -1751,6 +1756,27 @@
       "type": "text",
       "navId": "chain-middleware",
       "title": "Chaining multiple Middleware functions",
+      "note": [
+        "Write middleware function to check if body has name and price (in Tour controller). Put it in Tour post route (Tour router)."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "exports.checkBody = (req, res, next) => { if (!req.body.name || !req.body.price) { return res.status(400).json({ status: 'fail', message: 'Missing name or price.', }); } next(); };",
+        "router\n.route('/')\n.get(tourController.getAllTours)\n.post(tourController.checkBody, tourController.createTour);"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "serve-static",
+      "title": "Serving Static files.",
       "note": [""]
     },
     {

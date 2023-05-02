@@ -6,6 +6,10 @@
       "link": "home"
     },
     {
+      "title": "Home",
+      "link": "home"
+    },
+    {
       "title": "Description"
     },
     {
@@ -35,12 +39,10 @@
   "note": [
     {
       "navId": "notes",
-      "isCopy": false,
-      "title": "Notes",
-      "note": []
+      "title": "Notes"
     },
     {
-      "isCopy": false,
+      "type": "note-aside",
       "title": "ToDo/Ideas List",
       "note": [
         "01.03.2023",
@@ -60,7 +62,12 @@
         "02.03.2023",
         "Redo microservices tutorial for notes {2}",
         "05.04.2023",
-        "<a href='https://web.dev/learn/css/grid/'>CSS GRID</a> {2}"
+        "<a href='https://web.dev/learn/css/grid/'>CSS GRID</a> {2}",
+        "02.05.2023",
+        "Game/sim of cells growing.",
+        "spear game, player a rect with heart to hit.",
+        "game, life of fruit fly.",
+        "game, cell life"
       ],
       "params": [
         {
@@ -83,9 +90,8 @@
     },
     {
       "navId": "summary",
-      "isCopy": false,
       "title": "Summary",
-      "note": ["Organizing chaos."]
+      "note": ["Organizing chaos.{%NAV%}"]
     }
   ]
 }
