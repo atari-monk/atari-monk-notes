@@ -2,6 +2,10 @@
   "title": "HTML & CSS Full Course - Beginner to Pro",
   "nav": [
     {
+      "title": "Home",
+      "link": "home"
+    },
+    {
       "title": "Source"
     },
     {
@@ -67,13 +71,12 @@
   },
   "note": [
     {
+      "type": "text",
       "navId": "notes",
-      "isCopy": false,
-      "title": "Notes",
-      "note": []
+      "title": "Notes"
     },
     {
-      "isCopy": false,
+      "type": "text",
       "title": "Timestamps",
       "note": [
         "0-1; Intro",
@@ -87,7 +90,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "note-aside",
       "title": "Html Intro/Syntax",
       "note": [
         "Html-HyperText Markup Language",
@@ -120,22 +123,19 @@
       ]
     },
     {
-      "isCopy": false,
       "title": "Paragraph Element",
       "note": ["&lt;p&gt;Content/Text&lt;/p&gt;"]
     },
     {
-      "isCopy": false,
       "title": "Button Element",
       "note": ["&lt;button&gt;Content/Text&lt;/button&gt;"]
     },
     {
-      "isCopy": false,
       "title": "Anchor Element",
       "note": ["&lt;a {0} {1}&gt;Content/Text&lt;/a&gt;"]
     },
     {
-      "isCopy": false,
+      "type": "note-aside",
       "title": "Css Intro/Syntax",
       "note": [
         "{0}",
@@ -173,7 +173,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "note-aside",
       "title": "Hovers, Transitions, Shadows",
       "note": [
         ".close-button{0}",
@@ -226,7 +226,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "note-aside",
       "title": "Chrome DevTools & CSS Box Model",
       "note": [
         "right click empty area, select inspect to open chrome dev tools",
@@ -266,7 +266,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "note-aside",
       "title": "Text Styles",
       "note": [
         "Css has all text properties.",
@@ -299,7 +299,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "note-aside",
       "title": "The HTML Structure",
       "note": [
         "{0}",
@@ -314,7 +314,6 @@
       ]
     },
     {
-      "isCopy": false,
       "title": "Images and Text Boxes",
       "note": [""],
       "params": [
@@ -330,9 +329,8 @@
     },
     {
       "navId": "summary",
-      "isCopy": false,
       "title": "Summary",
-      "note": ["In progress."]
+      "note": ["In progress.{%NAV%}"]
     }
   ]
 }

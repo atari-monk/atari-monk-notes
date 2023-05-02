@@ -2,6 +2,10 @@
   "title": "Dotnet CLI",
   "nav": [
     {
+      "title": "Home",
+      "link": "home"
+    },
+    {
       "title": "Source"
     },
     {
@@ -40,20 +44,17 @@
   "note": [
     {
       "navId": "notes",
-      "isCopy": false,
-      "title": "Notes",
-      "note": []
+      "title": "Notes"
     },
     {
-      "isCopy": false,
+      "type": "cmd",
       "title": "Build",
       "note": ["dotnet build --configuration Release", "dotnet build"]
     },
     {
       "navId": "summary",
-      "isCopy": false,
       "title": "Summary",
-      "note": ["Cli commands list."]
+      "note": ["Cli commands list.{%NAV%}"]
     }
   ]
 }

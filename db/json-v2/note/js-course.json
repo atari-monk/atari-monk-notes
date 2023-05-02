@@ -68,13 +68,11 @@
     {
       "type": "text",
       "navId": "notes",
-      "isCopy": false,
       "title": "Notes"
     },
     {
       "type": "text",
       "navId": "content",
-      "isCopy": false,
       "isCenter": false,
       "title": "Content",
       "note": [
@@ -84,13 +82,11 @@
     {
       "type": "text",
       "navId": "part_1",
-      "isCopy": false,
       "title": "Part 1",
       "note": [""]
     },
     {
       "type": "note-aside",
-      "isCopy": false,
       "title": "VSCode Settings",
       "note": [
         "Color Theme: Mine was Github Dark Default.{%BR%}{0}.{%BR%} {1}.{%BR%} Auto Save: onFocusChange.{%BR%} Font Size: 18.{%BR%} Multi Cursor Modifier: ctrlCmd.{%BR%} Word Wrap: on.{%BR%} Tab Size: 2.{%BR%} Format On Save and Paste: on.{%BR%} File Icon Theme: Seti."
@@ -109,7 +105,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Chrome Console",
       "note": [
         "Open by F12.{%BR%} Open by Ctrl+Shift+I.{%BR%} Open by Right Click->Inspect/Zbadaj.{%BR%} Open by 3 dots menu->More Tools->Developer Tools.{%BR%} Increase Font size: Ctrl+- or mouse wheel and give more space.{%BR%} type: alert('Hello World!'){%BR%} let js = 'amazing'{%BR%} if (js === 'amazing') alert('JavaScript is FUN!'){%BR%} let js = 'boring'{%BR%} up arrow to cycle commands{%BR%} 40+8+23-10"
@@ -118,7 +113,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "JavaScript",
       "note": [
         "High level, object oriented, multi paradigm programming language.{%BR%} programming language - instruct computer to do things.{%BR%} high level - no memory menagement, no assembler, yes to many abstractions over low stuff.{%BR%} object oriented - based on objects fot storing most kinds of data.{%BR%} multi styles, for ex imperative, declarative, of structuring code."
@@ -127,7 +121,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "The Role of JavaScript",
       "note": [
         "Html - Content, Nouns, 'paragraph'.{%BR%} Css - Presentation, Adjectives, 'is red'.{%BR%} Js - Programming Language of web apps, Verbs, 'hide'."
@@ -136,7 +129,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "What to do with it",
       "note": [
         "Front end apps (browser, this course), frameworks like React, Angular, View, KNOW JAVASCRIPT WELL BEFORE FRAMEWORKS.{%BR%} Back end apps (web apps on web servers), interacts with db, Node.js.{%BR%} Native Mobile apps, React Native, Ionic.{%BR%} Native Desktop apps, Electron."
@@ -145,7 +137,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "JavaScript Releases",
       "note": [
         "ES5 (ECMAScript).{%BR%} ES6 (biggest update 2015) - ES11 (2020)... - Modern JavaScript."
@@ -154,14 +145,12 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Writing code in this tutorials",
       "note": ["Take starting code, write your own, compare with final."]
     },
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Data Types",
       "note": [
         "Value is Object or Primitive.{%BR%} 7 Primitives, 3 base and 4 rest.{%BR%} Number - floating point numbers used for decimals and integers.{%BR%} String - sequence of characters used for text.{%BR%} Boolean - true or false used for decisions.{%BR%} Undefined - undefined variable value (empty).{%BR%} Null.{%BR%} Symbol - immutable and unique.{%BR%} BigInt - larger integers than Number can hold.{%BR%} dynamic typing - value has type, not variable,{%BR%} variable can be assign/reassign to any type/value,{%BR%} also undefined in type and value.{%BR%} Comment - //, Ctrl+/ in VSCode, /**/.{%BR%} typeof - used on variable or value.{%BR%} language bug - typeof null return object (it's not)."
@@ -170,7 +159,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "3 ways to declare variable.",
       "note": [
         "let - mutable or initialy empty.{%BR%} const - immutable, not change, no reassign, no empty.{%BR%} var - old, never use.{%BR%} not using let will define variable in global scope, dont."
@@ -179,7 +167,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Operator - transform or combine values",
       "note": [
         "arithmetic/math oper.{%BR%} concatenation.{%BR%} assignment's.{%BR%} comparision's.{%BR%} operator precedence in <a href='#source'>Source</a>."
@@ -187,20 +174,17 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "note": ["{%CONTENT2%}"]
     },
     {
       "type": "text",
       "navId": "part_2",
-      "isCopy": false,
       "title": "Part 2",
       "note": [""]
     },
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "String",
       "note": [
         "template literals - use (below escape).{%BR%} for example: const bla = 'I/'m ${firstName}';{%BR%} any expression in {}.{%BR%} JavaScript has multiline strings support in template literals using ``."
@@ -209,7 +193,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Type Conversion/Coercion",
       "note": [
         "Conversion - manually change type, Number('18').{%BR%} Coercion - implicitly change type automatically.{%BR%} Coercion - example is number beetwen strings and + operator are converted to strings."
@@ -218,7 +201,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Falsy values",
       "note": [
         "Falsy values - values that will be converted to false when converting to boolean.{%BR%} Thruthly values convert to true, for example numbers.{%BR%} x: { 0, '', undefined, null, NaN }, Boolean(x) = False.{%BR%} mostly coercion in if's."
@@ -227,7 +209,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Equality operators == vs ===",
       "note": [
         "'18' == 18, true, does type coercion, loose, avoid like it dosent exist.{%BR%} '18' === 18, false, doesnt do type coercion, strict, use this one.{%BR%} !== strict diffrent operator (use strict)."
@@ -236,7 +217,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "prompt(question)",
       "note": [
         "Input from user.{%BR%} use conversion like: Number(prompt(question)) to get number, use === for Equality."
@@ -245,7 +225,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Control flow",
       "note": [
         "if(condition) {} else if (condition) {} ... else if (condition) {} else {}"
@@ -254,25 +233,21 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Logical operators",
       "note": ["and, or, not: &&, ||, !"]
     },
     {
       "type": "text",
-      "isCopy": false,
       "note": ["{%CONTENT2%}"]
     },
     {
       "type": "text",
       "navId": "part_3",
-      "isCopy": false,
       "title": "Part 3",
       "note": [""]
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Switch",
@@ -283,14 +258,12 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "",
       "note": ["Case statements stack up, use strict equality."]
     },
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Statements and Expressions",
       "note": [
         "Expressions - produces a value; 3 + 4, 1991, true && false.{%BR%} Statements - if, switch, actions, full sentence.{%BR%} For example {} in `` takes only expressions."
@@ -298,7 +271,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Conditional (Ternary) operator",
@@ -307,13 +279,11 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "note": ["it can be expression like above and it's useable in `${}`"]
     },
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "JavaScript Releases",
       "note": [
         "History of JS: 1995 Netscape browser language, 96 Microsoft in IE, 97 standarisation ECMAScript 1, 2009 ES5, 2015 ES6 biggest update, yearly release cycle ES2016-...{%BR%} Backwards compatible accros ES versions, don't break the web, nothing removed, only added.{%BR%} ES5 - supported in all browsers,{%BR%} ES6/ES2015->ES2020 - well supported in modern browsers{%BR%} ESNext - future versions (new features that reched Stage 4){%BR%} Development - use latest Chrome{%BR%} Production: use Babel to transpile/polyfill code (more compatibility or future features)"
@@ -321,20 +291,17 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "note": ["{%CONTENT2%}"]
     },
     {
       "type": "text",
       "navId": "part_4",
-      "isCopy": false,
       "title": "Part 4",
       "note": [""]
     },
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Strict Mode, use it to produce better code",
       "note": [
         "'use strict';.{%BR%} more errors info, block some features to work with less problems.{%BR%} not defined variables are trown as exceptions.{%BR%} reserves some words as future lang features.{%BR%}"
@@ -343,7 +310,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Functions - like variable/container for chunk of code",
       "note": [
         "function logger() { ... }.{%BR%} logger();.{%BR%} logger();.{%BR%} logger().{%BR%} Code reuse.{%BR%} input, output; analogy to machine.{%BR%} function logger(x,y) { const z = ${x},${y}; return z; }.{%BR%} const valz = logger(valx,valy);.{%BR%} Allow more maintanable code, DRY - dont repeat yourself.{%BR%} Functions can call functions.{%BR%}"
@@ -352,7 +318,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Functions Declarations VS Expressions",
       "note": [
         "Declaration is named function as shown in above section point.{%BR%} Function Expression is annonymous function that can be stored as variable.{%BR%} const calcAge = function (birthYear) { return 2037 - birthYear; }.{%BR%} const age = calcAge(1991);.{%BR%} Function Declarations can be called/used before it's declaration. (unlike Functions Expressions).{%BR%} Use what you preffer."
@@ -361,13 +326,11 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Arrow Functions",
       "note": ["fit for one liners"]
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "",
@@ -375,7 +338,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "",
@@ -386,7 +348,6 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Arrays",
       "note": [
         "Values, Expressions, Variables, Arrays, Functions can be used as elements of Array."
@@ -394,7 +355,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Create (cant reassign array)",
@@ -405,7 +365,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Read",
@@ -413,7 +372,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Update",
@@ -422,12 +380,10 @@
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Array Methods"
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Add to end",
@@ -435,7 +391,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Add to beginning",
@@ -443,7 +398,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Remove last",
@@ -451,7 +405,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Remove first",
@@ -459,7 +412,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Index",
@@ -467,7 +419,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Exists",
@@ -475,32 +426,27 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "note": ["uses ==="]
     },
     {
       "type": "text",
-      "isCopy": false,
       "note": ["{%CONTENT2%}"]
     },
     {
       "type": "text",
       "navId": "part_5",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 5",
       "note": ["Objects"]
     },
     {
       "type": "text",
-      "isCopy": false,
       "note": [
         "Arrays - ordered data, Objects - unstructured data as order of acces doesnt matter."
       ]
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "note": [
@@ -509,7 +455,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Add",
@@ -519,7 +464,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Read",
@@ -529,20 +473,17 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Objects Methods",
       "note": "Function can be added to object, calcAge: function() {}{%BR%}Access: jonas.calcAge(1991); jonas.['calcAge'](1991);{%BR%}Use this. to access object instance in object's methods.{%BR%}Use this.x = expression; to create new objects property in object's methods.{%BR%}This way you can invoke method once and then get value from created property next time.{%BR%}"
     },
     {
       "type": "text",
       "navId": "part_6",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 6"
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Loops - control statements automating repetitions",
@@ -554,13 +495,11 @@
     {
       "type": "text",
       "navId": "part_7",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 7"
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Configure VSCode",
       "note": [
         "Install Prettier extension (formatter), Settings -> set it as 'default formatter', turn on format on save; configure Prettier by adding json named .prettierrc; add options 'singleQuote' : true, 'arrowParens': 'avoid'; Formatter makes code look consistent. File->Preferences->Configure User Snippets, New file, name it, uncomment Print to console. Edit it to use prefix 'cl' + Tab to have console.log(); snippet."
@@ -568,7 +507,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "css",
       "title": "Install Live Server extension.<br>In VSCode extension manager.<br>Using node.js and npm:",
@@ -576,7 +514,6 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Learning coding",
       "note": [
         "Have a clear goal.{%BR%}Understand and type code from tutorials.{%BR%}Learn and reinforce with notes and exercises (calculate something personal, codewars page).{%BR%}Code your own projects.{%BR%}Dont obsess about clean code or that you will never know everything.{%BR%}Dont learn in isolation. Some community is beneficial.{%BR%}Only fixing problems and never stoping it, will make you competent. Learning never stops."
@@ -584,7 +521,6 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Solving problems",
       "note": [
         "1. 100% understand clear picture of the problem.{%BR%}2. Divide and conquer: break big into smaller sub-problems.{%BR%}3. Research as much as you have to.{%BR%}4. For bigger problems, write pseudo-code before actual code."
@@ -592,7 +528,6 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Debugging",
       "note": [
         "Identify, Find, Fix, Prevent Bug.{%BR%}Chrome F12, Sources tab, .js file, add breakpoints,{%BR%}In code add (debugger:) line to get a breakpont."
@@ -601,13 +536,11 @@
     {
       "type": "text",
       "navId": "part_8",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 8"
     },
     {
       "type": "text",
-      "isCopy": false,
       "note": [
         "DOM - Document Object Model.{%BR%} Structured representation of html.{%BR%} Allows JavaScript access to html elements and styles to manipulate them.{%BR%}For example, change text, html attributes, css styles.{%BR%} Html is translated to DOM tree structure.{%BR%} DOM is one of Web Api's witch browsers implement and javascript can interact with."
       ]
@@ -615,13 +548,11 @@
     {
       "type": "text",
       "navId": "part_11",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 11"
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "How it works under the hood",
       "note": [
         "JS Engine - executes js code. (ex. V8 Engine used in chrorme and node.js) Engine - call stack (excecutes code in execution context), heap (objects in memory) compilation: source code->bin file with machine code (1 and 0's)->execution interpreter: source code->executing line by line with conversion to machine code JS uses JIT compilation. Compiles to machine code and executes. (No bin file) JS JIT compilation: Parsing (reading with specific rules) produces AST (Abstract Syntax Tree). AST is tree like data structure with language parts used to generate machine code (representation of a language). Compilation is generating machine code from AST. This gets executed, also it is optimized and recompiled during excecution to run code faster. Runtime in browser: JS Engine, WEB APIs (DOM, Timers, Fetch API, ...), Callback Queue (for ex. callback for DOM event like click), Event Loop). Runtime in Node.js: no web api's from browser, instead c++ bindings & thread pool."
@@ -629,7 +560,6 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "How code executes in JS Engine",
       "note": [
         "Global execution context (for top level code). Execute top level code. Execution of functions (creates one execution context per function) and waiting for callbacks (events loop). Call stack is all these execution context's. Execution context: Variable environment (variable declarations, functions, arguments object), scope chain, this keyword. Arrow functions dont have their own arguments object and this keyword, they inherit those from parent standard functions. For example for code that has global part and 2 functions, one global context and 2 function contexts. There are values that are known only after executing those in right order. Example: global code with call to first function, witch calls secode function for some value. Call stack is produced. Global goes first, on top first(), on top second(). JS has only one THREAD! second() is run and poped of the stack, then first(), then global(). Broweser closed closes global. Scoping. Where variable is declared and used. Global, local (function), block (function, if, loop, ...). All scope have parent and can search it if they need variable they dont have. Variable lookup in scope chain (only in parent, up direction). Var(obsolete) is function scoped. Let and const is block scoped. Hoisting. Variable useable before they are declared. 'They are lifted to top of their scope'. Function declarations are hoisted. let and const are not hoisted (usable after declaration in code). All this is true in Strict mode witch should be allways used."
@@ -638,13 +568,11 @@
     {
       "type": "text",
       "navId": "part_12",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 12"
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Keyword this",
       "note": [
         "Window - global JS object. Created for every function execution context. Points to 'owner' of function. Method (atached to object) has this pointing to calling it object. Function has this undefined in strict mode. Arrow Function has this of parent/surrounding scope function. Event listener has this pointing to DOM element. console.log(this) proves that global this points to global window object. Function is a variable so it can be assigned to variables. It can be 'borowed' betwween objects or assigned from object to some global variable. Depending on from what context it's called, this will change accordingly."
@@ -652,7 +580,6 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Function vs Arrow Function in object",
       "note": [
         "Arrow Function as method have this pointing to global window, not object. Never use it as method. To call function in method (object's function) use Arrow Function becouse then this will point to object as expected (when method or method expression will get undefined this)."
@@ -660,7 +587,6 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Primitives vs Reference Types",
       "note": [
         "Primitives are stored in the callstack (execution contexts). Objects are stored in the heap. Primitives has Identifiers pointing to address and value on callstack. Identifiers can be assign to any address. Objects have identifiers pointing to address and value on callstack, that value is address on the heap, pointing to object value. to copy object: const objCopy = Object.assign({}, obj); (shallow copy - dosent copy internal objects)"
@@ -669,13 +595,11 @@
     {
       "type": "text",
       "navId": "part_13",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 13"
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Modern syntax. Destructuring Arrays. Gets variables from array.",
@@ -683,7 +607,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "is same as",
@@ -691,7 +614,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "to skip values",
@@ -699,7 +621,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "To switch values in variables.",
@@ -707,7 +628,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "To get multiple values from function returning array.",
@@ -715,7 +635,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "note": [
@@ -725,7 +644,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "this gets 8, 9, 1 (default values)",
@@ -733,12 +651,10 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Destructuring objects. Gets variables from object."
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "This takes values form object properties.",
@@ -746,7 +662,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Change variable names, give default value in case no value.",
@@ -754,7 +669,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Mutate variables when destructuring object. todo: this needs rewatching",
@@ -762,7 +676,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Nested destructuring object with new variable names. todo: this needs rewatching",
@@ -770,20 +683,17 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "note": [
         "Destructuring object can be done as a parameter in function or method."
       ]
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Array Spread operator",
       "note": ["Useable on Iterables: arrays, strings, maps, sets and objects."]
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Expands arr elements to newArr.",
@@ -791,7 +701,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Logs individual elements of array expanded into method.",
@@ -799,7 +708,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Spread when creating new array.",
@@ -807,7 +715,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Simpler syntax for array copy.",
@@ -815,7 +722,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Joining arrays.",
@@ -823,7 +729,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "String to chars.",
@@ -831,7 +736,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Simpler syntax for object copy.",
@@ -839,12 +743,10 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Rest operator"
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Spread - on right of =",
@@ -852,7 +754,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Destructuring with rest - on left of =",
@@ -860,7 +761,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Aggregates any number of separete parameters to array numbers, also can be called with spread array.",
@@ -868,7 +768,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Gets 'unused' params to array in function.",
@@ -876,12 +775,10 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Logic operators expanded"
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "10 if undefined/0 (when falsey). Short circuts on first truethy.",
@@ -889,7 +786,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Call method only if it exists. Short circuts on first falsey.",
@@ -897,12 +793,10 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Null coalescing operator"
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "10 when nullish: null, undefined.",
@@ -910,7 +804,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Are also in JS.",
@@ -919,13 +812,11 @@
     {
       "type": "text",
       "navId": "part_14",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 14"
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "For of loop<br>faster syntax for loop",
@@ -937,7 +828,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Faster syntax for object literals (hard coded objects)<br>Object can be inserted into object without property name and it will be set to it's variable identifier.",
@@ -948,7 +838,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Optional chaining<br>Condisions/ifs done on properties in one line when accessing them.<br>Returns undefined instead of exception.",
@@ -960,7 +849,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Looping objects: keys, values, entries",
@@ -973,7 +861,6 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Sets",
       "note": [
         "Collection of unique values. Iterable. Use case is to remove duplicates from arrays."
@@ -981,7 +868,6 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Maps",
       "note": [
         "Iterable, objects not. Key value pairs like objects but keys are any type, not just strings. Conversions Object=>Map, Map->Array of arrays."
@@ -989,7 +875,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "Map.set returns map witch allows to chain.",
@@ -997,7 +882,6 @@
     },
     {
       "type": "cmd",
-      "isCopy": true,
       "content": "text",
       "beautify": "js",
       "title": "even array and object can be map key",
@@ -1008,14 +892,12 @@
     {
       "type": "text",
       "navId": "part_15",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 15"
     },
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Data Structures summary",
       "note": [
         "{%TAB%}Data Source: hard coded in program (eg. status messages), input from UI, web API -> data collection -> data structure. list -> Array or Sets, key/value pairs -> Objects or Maps.{%BR_TAB%}Use Arrays for ordered value lists that might contain duplicates, or to manipulate data as it has many methods.{%BR_TAB%}Use Sets for unique values and for high performance, or to remove duplicates from arrays.{%BR_TAB%}Use Objects when you need methods. Use with JSON.{%BR_TAB%}Use Map when you need to map key to values. Use when keys are not strings."
@@ -1023,21 +905,18 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Strings",
       "note": ["Methods are case sensitive."]
     },
     {
       "type": "text",
       "navId": "part_16",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 16"
     },
     {
       "type": "text",
       "navId": "",
-      "isCopy": false,
       "title": "Functions",
       "note": [
         "Default Parameters. Passing arguments, Value/Reference. Primitives by value. Objects by reference. Primitives arguments cant change their outside value in function. Objects can. First class functions. Meaning Functions are values and objects. Functions can be stored in variables or properties, passed as arguments to functions, returned from functions, have methods. Higher order functions. Function that recives function as argument, that returns new function or both. Callback functions passed to functions allow for levels of abstraction. Callback is lower level. Function calling them is higher level of abstraction delegating some computations to callback. Call and apply methods. Method can be stored in variable as function. This to object on witch it is called is provided as argument of call function along with rest of the params. Bind returns function with this set. Bind can be used to bind function to object in event handlers, becouse this is pointing to DOM element by default in addEvent methods."
@@ -1046,13 +925,11 @@
     {
       "type": "text",
       "navId": "part_17",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 17"
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Functions",
       "note": [
         "Immediately Invoked Function Expressions (IIFE); Expression containing function that can be run only once. Closures. Function always has a parent scope context when it was created available even if it's popped off stack."
@@ -1061,13 +938,11 @@
     {
       "type": "text",
       "navId": "part_18",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 18"
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Arrays",
       "note": [
         "slice, splice, reverse, concat, join, at. foreach, takes callback. Continue and break don't work. Arrays, Maps, Sets. Bankist app 1. Challenge 1. Map creates new array with values calculated by applying operation on original array values. Filter creates new array with values that passed condition on original array values. Reduce computes single value form values in array using some formula. Bankist app 2. Filter method."
@@ -1076,13 +951,11 @@
     {
       "type": "text",
       "navId": "part_21",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 21"
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Arrays",
       "note": [
         "Mutates original array. Add: push (end), unshift (start). Remove: pop (end), shift (start), splice (any). Others: reverse, sort, fill. New array. map, filter, slice, concat, flat, flatMap. Array index. indexOf (value), findIndex (condition). Array element. find (condition). Test Array element. includes (value), some, every (condition). Array to new string. join. Array to value. reduce. Loop Array. forEach."
@@ -1091,7 +964,6 @@
     {
       "type": "text",
       "navId": "part_24",
-      "isCopy": false,
       "title": "Part 24, OOP",
       "note": [
         "{%LI%}Paradigm{%BR_TAB%}Style of code. Rules on how to write, organize, structure code. Determines how program operate.{%ELI%}{%LI%}Object oriented programming{%BR_TAB%}Programming paradigm based on the concept of objects.{%BR_TAB%}Objects are used to model (describe) real-world or abstract features. Objects may contain data (properties) and code (methods). By using objects we pack data and the corresponding behavior into one block. In OOP, objects are self-contained pieces/blocks of code. Interactions happen through a public interface methods (API) that the code outside of the object can access and use to communicate with the object.{%BR_TAB%}OOP was developed with the goal of organizing code, to make it more flexible and easier to maintain (avoid 'spaghetti code').{%ELI%}{%LI%}Class{%BR_TAB%}Blueprint from which we can create new objects. Like a real house created from an abstract blueprint. To design classes use four principles. Abstraction, Encapsulation, Inheritance, Polymorphism{%ELI%}{%LI%}Abstraction{%BR_TAB%}Ignoring or hiding details that dont matter, allowing us to get an overview perspective of the thing we're implementing, insted of messing with details that dont really matter to our implementation. Real phone has electronics, volategs, temperature etc, abstacted phone has screen and buttons.{%ELI%}{%LI%}Encapsulation{%BR_TAB%}Keeping properties and methods private inside the class so they are not accesible from outside the class. Some methods can be exposed as a public interface (API).{%ELI%}{%LI%}Inheritance{%BR_TAB%} Making all properties and methods of a certain class avaliable to a child class, forming a hierarchical relationship between classes. This allows us to reuse common logic and to model a real-world relationships.{%ELI%}{%LI%}Polymorphism{%BR_TAB%}A child class can overwrite a method it inherited from a parent class. (Child objects run overriden methods even if they are pointed to by referance to parrent type.){%ELI%}{%LI%}Classical OOP{%BR_TAB%}Classes. Objects are instantiated from class, which functions like a blueprint. Methods are copied from class to all instances.{%ELI%}{%LI%}OOP in JS prototypes{%BR_TAB%}Objects are linked to a prototype object. Prototypal inheritance. Prototype methods are accessible to all objects linked to that prototype. Behavior is delegated to the linked prototype object. For ex. Array.prototype defines Array methods.{%ELI%}{%LI%}Three JS methods to implement OOP{%BR_TAB%}1. Constructor functions. Technique to create objects from a function. Arrays, Maps, Sets are implemented this way.{%BR%}2. ES6 classes, modern syntax, syntactic sugar on constructor functions.{%BR%}3. Object.create() easiest way of linking object to a prototype object.{%ELI%}{%LI%}Prototypal inheritance/delegation{%BR_TAB%}Constructor function of Person. Prototype of Person (of Person objects), holds methods and props. Object of Person, holds props initialized by constructor function and __proto__ property pointing to prototype. Prototype chain, when obj calls function it finds it in it's prototype.{%ELI%}{%LI%}New operator{%BR_TAB%}1. An empty obj is created.{%BR%}2. this is set to new obj in constructor function.{%BR%} 3.New obj is linked to prototype by __proto__ property.{%BR%}4. New obj is returned form constructor function call.{%ELI%}{%TAB%}Constructor function has .prototype property pointing to prototype. Prototype has .constructor pointing to constructor function.{%BR_TAB%}Prototype chain, root is Object.prototype (__proto___ = null). And others in inheritance hierachy. Till __proto__ pointed to in object of some type.{%CONTENT%}"
@@ -1100,13 +972,11 @@
     {
       "type": "text",
       "navId": "part_25",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 25"
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "How To Plan A Web Project",
       "note": [
         "{%TAB%}User Stories => Features => Flowchart => Architecture => Development.{%BR_TAB%}User story: Description of the app functionality from users perspective.{%BR_TAB%}Common format: As a [type of user], i want [an action] so that [a benefit]. Who, What, Why.{%BR_TAB%}App User Stories.{%BR%}1) Log my running workouts with location, distance, time, pace and steps/minute.{%BR%}2) Log my cycling workouts with location, distance, time, speed and elevation gain.{%BR%}3) See all my workouts at a glance.{%BR%}4) See my workouts on a map.{%BR%}5) See all my workouts when i leave the app and come back later.{%BR_TAB%}Coresponding Features.{%BR%}1) a) Map where user clicks to add new workout location coordinates.{%BR%}b) Geolocation to display map at current location (user friendly).{%BR%}c) Form to input distance, time, pace, steps/minute.{%BR%}2) Form to input distance, time, speed, elevation gain.{%BR%}3) Display all workouts in a list.{%BR%}4) Display all workouts on the map.{%BR%}5) a) Store workout data in the crowser using local storage API.{%BR%}b) On page load read saved data and display."
@@ -1115,13 +985,11 @@
     {
       "type": "text",
       "navId": "part_26",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 26"
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Async",
       "note": [
         "Synchronous code. Most of the code. Executed line by line as written. Each line wait for pervious to finish. Blocking. For example modal alert stops execution until it's cliked. Long running operations block code execution. Asynchronous code. Is executed after a task that runs in the 'background' finishes. Non blocking. Execution doesn't wait for an asynchronous task to finish it's work. Callback functions alone dont make code asynchronous. It'a about coordinating behavior of a program over a period of time. Example is img.src = 'x.jpg'. It loads image asynchronously and emits load event with callback function. Geolocation API, AJAX calls use async. EventListener alone, for ex. click is not aync becouse it just waits to fire callback, dosent do nothing in the background. AJAX. Asynchronous JavaScript And XML. Comunicate with remote web servers in an asynchronous way. Browser (client), request (get, post, ...), response (data), Web Server (usually web api). API, application programming interface. Pice of software that can be used by another piece of software, in order to allow applications to talk to each other. DOM API, Geolocation API, Own Class API, 'Online API (web API or just API)' 'Online API - Application running on a server, that recives request for data, sends it back as a response. JS uses node.js. Third party APIs are everywhere. APIs made web possible. AJAX dosent use xml anymore, json is most popular data format standard. API's: weather, countries, flights, currency conversions, email, sms, maps and just any data. Net. Client communicating with Web Server. Request-Response model or Client-Server architecture. Url is build with Protocol (http or https), Domain name, resource. DNS 'phonebook of net', converts name's to ip's. Sends it back to client. Client establishes TCP/IP socket connection. Http request is send (Start line, methods GET, POST..., target, version; Header; Body). Web server calculates and sends Http response (Version, Status code, Status message, header, body). TCP/IP choops data into small data packets and routs them throu net to client. This procces happens many times for each file. Html load first and it's scanned for assets js, css, images. Page is rendered in browser. Callback hell. Callback in callback many levels down, produces code unreadable and hard to reason about. To solve that promises feature was introduced. Promise is object used as a placeholder for the future result of an asynchronous operation. A container for asynchronously delivered value. Container for a future value, like AJAX call. Removes need to relay on events and callbacks. Instead nesting callbacks, we can chain promises for sequence of asynchronous operations escaping callback hell. Promise lifecycle/states. Pending (async task), Settled (async task finished), Fulfilled (value ready), Rejected (error). Promise is also Build and Consumed. How async jaavscript works behind scenes. Async tasks as loading image is not executed on callstack (would block it) but on browsers web apis environment context. Callbacks are registered to tasks (img by load event, fetch webapi from then promise). After task ends, callback is added to end of callback queue, it waits to be executed (callback of all events and tasks) in event loop tick (one callback executed (from queue on call stack)). Promises callbacks have their own queue (microtasks queue), it has priority over callback queue."
@@ -1130,13 +998,11 @@
     {
       "type": "text",
       "navId": "part_27",
-      "isCopy": false,
       "isCenter": true,
       "title": "Part 27"
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Modules and Tooling",
       "note": [
         "1) Theory on modern js dev: Unit of modern js dev is modules. User modules and 3rd-party packege modules, shared on npm repository and cli.Next there is build process resulting in Javascript bundle, witch is deployed on production.Build process consists of Bundling. Bundling joins all modules into one file, copresses code (for old browsers and performance).Next is Transpiling/Polyfilling (tool Babel) witch converts modern js back to ES5. Js tools for buld are for example webpack (popular but hard to configure) or parcel (works 'out of the box' with defaults), available on npm.Modules overview: Reusable piece of code, file, exports (public Api), imports (dependency). Modules are units composing software. For example camera modules, can be work on separetly in isolation, abstract code, organize code, reuse code.Es6 Modules. One module per file. Module has: Top level variables are a) scoped to module, b) strict mode, c) top level this is undefined, d) imports and exports, e) <script type='module'>, f) file downloading asynchronous.Script has: a) global, b) 'sloppy' mode, c) window, d) no, e) <script>, f) synchronous.How modules are imported. For example index with two import statements. Parsing index.js, Async download two modules x.js, y.js,linking imports to exports 'live way' (content updated, 'pointer' used), execution of x.js, y.js, execution of index.js.Writing Clean And Modern Javascript: Readable code: a) write code so that others can understand it. b) Write code so that you can understand it in 1 year. c) Avoid too 'clever' and overcomplicated solitions. d) Use descriptive variable names: what they contain. e) Use descriptive function names: what they do.General: a) Use DRY principle (refactor your code). b) Dont polute global namespace, encapsulate instead. c) Dont use var. d) Use strong type checks (=== and !==)Functions: a) Generally, functions should do only one thing. b) Dont use more than 3 functions parameters. c) Use default parameters whenever possible. d) Generally, return same data type as recived. e) Use arrow functions when they make code more readable.OOP: a) Use ES6 classes. b) Encapsulate data and dont mutate it from outside the class. c) Implement method chaining. d) Do not use arrow functions as methods (in regular objects).Avoid nested code: a) Use early return (guard clauses). b) Use ternary (conditional) or logical operators insted of if. c) Use multiple if instead of if/else-if. d) Avoid for loops, use array methods instead. e) Avoid callback-based asynchronous APIs.Asynchronous code: a) Consume promisses with async/await for best readability. b) Whenever possible, run promisses in parallel (Promise.all). c) Handle errors and promise rejections.Declarative and functional js principles: (paradigms - fundementally diffrent ways of writing code) Imperative - programmer explains 'how to do things', every single step, example: step by step recipe of a cake. Declarative - programmer tells 'what to do', we describe the way computer should achive result, how (step-by-step) gets abstracted away, description of a cake.Functional Programming: Declarative programming paradigm. Based on idea of combining pure functions avoiding side effects and mutating data. Side effect - mutation of any data outside function, mutating external variables, logging, writing to DOM. Pure fuction - given same inputs returns same outputs. Immutability - state is never moddified, copy is mutated and returned. Techniques: try to avoid data mutations, use build in methods with no side effects, use likes of map, filter, reduce on data, try to avoid side effects in functions, at least in core or some places. Declarative Syntax - array and object destructuring, spread operator (...), use ternary operator, use template literals. Examples: React, Redux."
@@ -1146,57 +1012,10 @@
       "type": "text",
       "navId": "summary",
       "isCenter": true,
-      "isCopy": false,
       "title": "Summary",
       "note": [
         "Definitions level. Need to read it again to see if it makes some sense. {%NAV%}"
       ]
-    }
-  ],
-  "param": {
-    "": [
-      {
-        "name": "",
-        "desc": ""
-      }
-    ]
-  },
-  "inject": [
-    {
-      "key": "{%BR%}",
-      "text": "<br>"
-    },
-    {
-      "key": "{%TAB%}",
-      "text": "<span class='tab'></span>"
-    },
-    {
-      "key": "{%BR_TAB%}",
-      "text": "<br><span class='tab'></span>"
-    },
-    {
-      "key": "{%NAV%}",
-      "text": "<br><a class='center' href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%NAV2%}",
-      "text": "<a href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%CONTENT%}",
-      "text": "<br><a href='#content'>Back to Content</a>"
-    },
-    {
-      "key": "{%CONTENT2%}",
-      "text": "<a href='#content'>Back to Content</a>"
-    },
-    {
-      "key": "{%LI%}",
-      "text": "<li>"
-    },
-    {
-      "key": "{%ELI%}",
-      "text": "</li>"
     }
   ]
 }

@@ -1,13 +1,19 @@
 export class Injector {
-  inject(text, inject) {
-    if (inject === undefined) return text;
-    inject.forEach((item) => {
-      if (text.includes(item.key)) text = this.#inject(text, item);
+  #injectionsData;
+
+  constructor(injectionsData) {
+    this.#injectionsData = injectionsData;
+  }
+
+  inject(text) {
+    if (this.#injectionsData === undefined) return text;
+    this.#injectionsData.injections.forEach((injectItem) => {
+      if (text.includes(injectItem.key)) text = this.#inject(text, injectItem);
     });
     return text;
   }
 
-  #inject(text, inject) {
-    return text.replace(new RegExp(inject.key, 'g'), inject.text);
+  #inject(text, injectItem) {
+    return text.replace(new RegExp(injectItem.key, 'g'), injectItem.text);
   }
 }

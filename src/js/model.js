@@ -5,8 +5,14 @@ class Model {
     return await this.#loadJson(fileName);
   }
 
+  async getInjectionsData() {
+    return await this.#loadJson('dictionary/injections');
+  }
+
   async #loadJson(fileName) {
-    return await fetch(`${CONNECTION}${fileName}.json`).then((res) => res.json());
+    return await fetch(`${CONNECTION}${fileName}.json`).then((res) =>
+      res.json()
+    );
   }
 }
 

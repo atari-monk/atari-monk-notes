@@ -1,0 +1,10 @@
+{
+  "note": [
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Title Test",
+      "note": ["{%TAB%} Note Test with Injections, TAB test.{%BR%}Hello from {%BR%}"]
+    }
+  ]
+}

@@ -9,8 +9,8 @@ import { Injector } from './../tool/injector.js';
 import { Beautifier } from './../tool/beautifier.js';
 
 export class NotesController extends Controller {
-  
-  async controlNotes(data) {
+  async controlNotes(dataObj) {
+    const data = dataObj.pageData;
     navView.createContent(data);
     sourceView.createContent(data);
     descriptionView.createContent(data);
@@ -18,6 +18,9 @@ export class NotesController extends Controller {
     data.hasOwnProperty('isDebugViewOn') &&
       data.isDebugViewOn &&
       debugView.createContent();
-    new NoteView(new Injector(), new Beautifier()).createContent(data);
+    new NoteView(
+      new Injector(dataObj.injectionsData),
+      new Beautifier()
+    ).createContent(data);
   }
 }

@@ -45,7 +45,9 @@
     "navId": "description",
     "isCenter": false,
     "title": "Description",
-    "description": ["<span class='tab'></span>Idea is to just freecode with chatgpt, google. Whatever i want. In session up to 4 hrs. Just do it becouse i have a software in my mind. Not becouse i want a reward, audience, folowers or anything but this flow. I can stream it thow. It feels better to not talk only to yourself for some weird reason."]
+    "description": [
+      "<span class='tab'></span>Idea is to just freecode with chatgpt, google. Whatever i want. In session up to 4 hrs. Just do it becouse i have a software in my mind. Not becouse i want a reward, audience, folowers or anything but this flow. I can stream it thow. It feels better to not talk only to yourself for some weird reason."
+    ]
   },
   "precondition": {
     "navId": "preconditions",
@@ -87,17 +89,17 @@
       "type": "text",
       "navId": "session3",
       "title": "Session 3, 15.04.2023 13:40-16.04.2023 00:18.",
-      "note": ["Questions aimed at producing game prototyping page. <ol><li>Write only html, no css, no js for now. I want responsive design. Plese add canvas, start, pause and reset buttons.</li><li>Can you style that page ? I would like black backgroud. I want to see canvas border. Make buttons look better. Write only css.</li><li>Make canvas bigger, center button under the canvas. Use separate css file for this.</li><li>I noticed that on mobile landscape mode, canvas and buttuns dont fill the screen, can you correct ?</li><li>Can you make canvas fill the screen. Leave small button. Create overlay witch is transparent but adds 3 button we had on page. Dont code logic for that yet.</li><li>At this point i am already raging with fury. All i want is page, black with canvas, overlay with buttons. Lets see it can produce that. I dont note or limit questions at this point. Only goal and result.</li><li>It is unable to reach quite simple objective. Reset chat.</li></ol>"]
+      "note": [
+        "Questions aimed at producing game prototyping page. <ol><li>Write only html, no css, no js for now. I want responsive design. Plese add canvas, start, pause and reset buttons.</li><li>Can you style that page ? I would like black backgroud. I want to see canvas border. Make buttons look better. Write only css.</li><li>Make canvas bigger, center button under the canvas. Use separate css file for this.</li><li>I noticed that on mobile landscape mode, canvas and buttuns dont fill the screen, can you correct ?</li><li>Can you make canvas fill the screen. Leave small button. Create overlay witch is transparent but adds 3 button we had on page. Dont code logic for that yet.</li><li>At this point i am already raging with fury. All i want is page, black with canvas, overlay with buttons. Lets see it can produce that. I dont note or limit questions at this point. Only goal and result.</li><li>It is unable to reach quite simple objective. Reset chat.</li></ol>"
+      ]
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Goal is page with canvas. Black, border on edge of screen.",
       "note": ["We, i and it was able to achive wanted canvas."]
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Goal is in the bottom right corner, place a small button.",
       "note": [
         "A little to long on styling button hell, but i and it victoriuous."
@@ -105,19 +107,16 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Goal is transparent overlay with text hello world. Show overlay on small button press. Hide it after it;s clicked anywhere.",
       "note": ["We, i and it was able to achive wanted overlay."]
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Goal is Put start and reset buttons in center of overlay.",
       "note": ["We, i and it was able to achive wanted overlay buttons."]
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Goal is to add a game class that will update and render game objects using proper frame delta time. Make it start and reset with our buttons, also pause when overlay button is pressed and resume when overlay is closed.",
       "note": [
         "We, i and it was able to achive wanted game class. Needs to be used/tested."
@@ -125,7 +124,6 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Goal is to add GameObject class, render it as rectangle.",
       "note": [
         "I got stuck here. Unable to test Game class. Need to use proper ones from some project."
@@ -133,7 +131,6 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Goal is to add GameObject class, render it as rectangle.",
       "note": [
         "I got stuck here. Unable to test Game class. Need to use proper ones from some project."
@@ -141,7 +138,6 @@
     },
     {
       "type": "text",
-      "isCopy": false,
       "title": "Continue on session 3.",
       "note": [
         "Fixed overlay, removed game class. I want animator class. Went for canvas class first.  For setup and drawing test. Added some canvas config and test of drawing. Now i need some animation, time to add animator class. I need also GameObject to properlly test animator. Animator kind of works. Now can i handle start in overlay ? It started on button. Code needs testing and to make it pretty, othervise it will rot as usual. Need to end here for now. 20:34 - 23:00 18.04.2023 I made it provide a sript with project code, then i asked for pause btn to work, code was correct in sense of concept, but nasty merge was needed manually."
@@ -151,47 +147,8 @@
       "type": "text",
       "navId": "summary",
       "isCenter": true,
-      "isCopy": false,
       "title": "Summary",
       "note": ["Not yet{%NAV%}"]
-    }
-  ],
-  "param": {
-    "": [
-      {
-        "name": "",
-        "desc": ""
-      }
-    ]
-  },
-  "inject": [
-    {
-      "key": "{%BR%}",
-      "text": "<br>"
-    },
-    {
-      "key": "{%TAB%}",
-      "text": "<span class='tab'></span>"
-    },
-    {
-      "key": "{%BR_TAB%}",
-      "text": "<br><span class='tab'></span>"
-    },
-    {
-      "key": "{%NAV%}",
-      "text": "<br><a class='center' href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%NAV2%}",
-      "text": "<br><a href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%CONTENT%}",
-      "text": "<br><a href='#content'>Back to Content</a>"
-    },
-    {
-      "key": "{%CONTENT2%}",
-      "text": "<a href='#content'>Back to Content</a>"
     }
   ]
 }

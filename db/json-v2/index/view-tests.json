@@ -2,6 +2,10 @@
   "title": "View Tests",
   "nav": [
     {
+      "title": "Home",
+      "link": "home"
+    },
+    {
       "title": "Tests"
     }
   ],
@@ -37,6 +41,10 @@
         {
           "link": "notes.html?page=views/command-note-aside-view",
           "text": "Test Command-Note-Aside View."
+        },
+        {
+          "link": "notes.html?page=views/text-note-view",
+          "text": "Test Text-Note View."
         },
         {
           "link": "#",

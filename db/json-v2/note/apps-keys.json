@@ -2,6 +2,10 @@
   "title": "Apps Keys",
   "nav": [
     {
+      "title": "Home",
+      "link": "home"
+    },
+    {
       "title": "Source"
     },
     {
@@ -44,12 +48,10 @@
   "note": [
     {
       "navId": "notes",
-      "isCopy": false,
       "title": "Notes",
       "note": []
     },
     {
-      "isCopy": false,
       "title": "VSCode",
       "note": ["{0}{%BR%}, {1}{%BR%}, {2}{%BR%}, {3}{%BR%}, {4}{%BR%}"],
       "params": [
@@ -76,7 +78,6 @@
       ]
     },
     {
-      "isCopy": false,
       "title": "Chrome",
       "note": ["{0}"],
       "params": [
@@ -87,7 +88,6 @@
       ]
     },
     {
-      "isCopy": false,
       "title": "Blender ver 3.4",
       "note": [
         "{0}",
@@ -106,7 +106,6 @@
       ]
     },
     {
-      "isCopy": false,
       "title": "Visual Studio 2022",
       "note": ["{0}", "{1}"],
       "params": [
@@ -122,9 +121,8 @@
     },
     {
       "navId": "summary",
-      "isCopy": false,
       "title": "Summary",
-      "note": ["Know your controls."]
+      "note": ["Know your controls.{%NAV%}"]
     }
   ]
 }

@@ -2,6 +2,10 @@
   "title": "Html beginner tutorial",
   "nav": [
     {
+      "title": "Home",
+      "link": "home"
+    },
+    {
       "title": "Source"
     },
     {
@@ -66,13 +70,12 @@
   },
   "note": [
     {
+      "type": "text",
       "navId": "notes",
-      "isCopy": false,
-      "title": "Notes",
-      "note": []
+      "title": "Notes"
     },
     {
-      "isCopy": false,
+      "type": "text",
       "title": "Setup",
       "note": [
         "chrome extension dark new tab",
@@ -83,7 +86,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "text",
       "title": "Lesson01 - template",
       "note": [
         "index.html - lower case convention for hosting reasons",
@@ -96,7 +99,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "text",
       "title": "Lesson02 - template",
       "note": [
         "meta author",
@@ -106,7 +109,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "text",
       "title": "Lesson03 - text",
       "note": [
         "alt+z on new file",
@@ -130,7 +133,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "text",
       "title": "Lesson04 - lists",
       "note": [
         "ctrl+D to highlight same section below",
@@ -144,7 +147,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "text",
       "title": "Lesson05 - link",
       "note": [
         "a - link pages",
@@ -163,7 +166,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "text",
       "title": "Lesson06 - image",
       "note": [
         "img tab - for img markup",
@@ -178,7 +181,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "text",
       "title": "Lesson07 - semantic tags",
       "note": [
         "h1 - one per page, title",
@@ -203,7 +206,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "text",
       "title": "lesson08 - tables",
       "note": [
         "tables structure data, do not use them as page layout as in 90's",
@@ -225,7 +228,7 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "text",
       "title": "Lesson09 - input forms",
       "note": [
         "add nav section, add article, h2",
@@ -234,17 +237,17 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "text",
       "title": "Lesson10 - beginner project",
       "note": [
         "every tag of html has inteli sense, just type name and press tab"
       ]
     },
     {
+      "type": "text",
       "navId": "summary",
-      "isCopy": false,
       "title": "Summary",
-      "note": ["Nice starting point."]
+      "note": ["Nice starting point.{%NAV%}"]
     }
   ]
 }

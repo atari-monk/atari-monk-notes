@@ -18,12 +18,23 @@ class NotesRouter extends Controller {
   async #controlNotes() {
     try {
       this._setPage();
-      const data = await model.getPageData(this._page);
-      DEBUG && console.log(data);
-      if (data.hasOwnProperty('isKey') === false || data.isKey === false)
-        this.#notesController.controlNotes(data);
-      else this.#keyNotesController.controlNotes(data);
-      if (data.hasOwnProperty('isScrollToBottom') && data.isScrollToBottom)
+      const pageData = await model.getPageData(this._page);
+      const injectionsData = await model.getInjectionsData();
+      const dataObj = {
+        pageData: pageData,
+        injectionsData: injectionsData,
+      };
+      DEBUG && console.log(pageData);
+      if (
+        pageData.hasOwnProperty('isKey') === false ||
+        pageData.isKey === false
+      )
+        this.#notesController.controlNotes(dataObj);
+      else this.#keyNotesController.controlNotes(dataObj);
+      if (
+        pageData.hasOwnProperty('isScrollToBottom') &&
+        pageData.isScrollToBottom
+      )
         navView._scrollToBottom();
     } catch (err) {
       console.log(err);

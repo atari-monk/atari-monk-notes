@@ -2,6 +2,10 @@
   "title": "Azure SQL Database",
   "nav": [
     {
+      "title": "Home",
+      "link": "home"
+    },
+    {
       "title": "Source"
     },
     {
@@ -47,15 +51,15 @@
   "note": [
     {
       "navId": "notes",
-      "isCopy": false,
-      "title": "Notes",
-      "note": []
+      "title": "Notes"
     },
     {
-      "isCopy": false,
-      "title": "Login",
+      "type": "cmd",
+      "aside": {
+        "isDetail": true
+      },
+      "title": "Login.<br>Run PowerShell in chosen root folder.",
       "note": [
-        "Run PowerShell in chosen root folder.",
         "{0}",
         "{1}",
         "{2}",
@@ -81,9 +85,12 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "cmd",
+      "aside": {
+        "isDetail": true
+      },
       "title": "Create resource group for this project.",
-      "note": ["az group create --name {0} --location {1} --tags {2}"],
+      "note": ["az group create {%BR%} --name {0} {%BR%} --location {1} {%BR%} --tags {2}"],
       "params": [
         {
           "name": "az-sql-db1-rg",
@@ -100,9 +107,14 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "cmd",
+      "aside": {
+        "isDetail": true
+      },
       "title": "Create a server.",
-      "note": ["az sql server create --name {0} --resource-group {1} --location {2} --admin-user {3} --admin-password {4}"],
+      "note": [
+        "az sql server create {%BR%} --name {0} {%BR%} --resource-group {1} {%BR%} --location {2} {%BR%} --admin-user {3} {%BR%} --admin-password {4}"
+      ],
       "params": [
         {
           "name": "atari-monk-sql-server1",
@@ -127,9 +139,14 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "cmd",
+      "aside": {
+        "isDetail": true
+      },
       "title": "Configure a server-based firewall rule.",
-      "note": ["az sql server firewall-rule create --resource-group {0} --server {1} -n AllowYourIp --start-ip-address {2} --end-ip-address {2}"],
+      "note": [
+        "az sql server firewall-rule create {%BR%} --resource-group {0} {%BR%} --server {1} {%BR%} -n AllowYourIp {%BR%} --start-ip-address {2} {%BR%} --end-ip-address {2}"
+      ],
       "params": [
         {
           "name": "az-sql-db1-rg",
@@ -146,7 +163,10 @@
       ]
     },
     {
-      "isCopy": false,
+      "type": "cmd",
+      "aside": {
+        "isDetail": true
+      },
       "title": "Deleting resources, server and dbs, after they are not needed.",
       "note": ["az group delete --name {0}"],
       "params": [
@@ -158,12 +178,11 @@
     },
     {
       "navId": "summary",
-      "isCopy": false,
       "title": "Summary",
       "note": [
         "This kind of worked but maybe containers are not for db's ?",
         "Originally at least. I dont know their history.",
-        "Btw, this is a danger of getting priced for playing with cloud servers."
+        "Btw, this is a danger of getting priced for playing with cloud servers.{%NAV%}"
       ]
     }
   ]

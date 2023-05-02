@@ -1,0 +1,48 @@
+{
+  "injections": [
+    {
+      "key": "{%BR%}",
+      "text": "<br>"
+    },
+    {
+      "key": "{%TAB%}",
+      "text": "<span class='tab'></span>"
+    },
+    {
+      "key": "{%BR_TAB%}",
+      "text": "<br><span class='tab'></span>"
+    },
+    {
+      "key": "{%NAV%}",
+      "text": "<br><a class='center' href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%NAV2%}",
+      "text": "<br><a href='#'>Back to Top</a>"
+    },
+    {
+      "key": "{%CONTENT%}",
+      "text": "<br><a href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%CONTENT2%}",
+      "text": "<a href='#content'>Back to Content</a>"
+    },
+    {
+      "key": "{%M%}",
+      "text": "<mark class='mark-1'>"
+    },
+    {
+      "key": "{%EM%}",
+      "text": "</mark>"
+    },
+    {
+      "key": "{%L%}",
+      "text": "<li>"
+    },
+    {
+      "key": "{%EL%}",
+      "text": "</li>"
+    }
+  ]
+}

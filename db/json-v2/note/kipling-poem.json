@@ -28,60 +28,28 @@
     {
       "type": "text",
       "navId": "if",
-      "isCopy": false,
       "title": "If BY RUDYARD KIPLING",
-      "note": ["If you can keep your head when all about you {%BR_TAB%}Are losing theirs and blaming it on you, {%BR%}If you can trust yourself when all men doubt you, {%BR_TAB%}But make allowance for their doubting too; {%BR%}If you can wait and not be tired by waiting, {%BR_TAB%}Or being lied about, don’t deal in lies, {%BR%}Or being hated, don’t give way to hating, {%BR_TAB%}And yet don’t look too good, nor talk too wise:"]
+      "note": [
+        "If you can keep your head when all about you {%BR_TAB%}Are losing theirs and blaming it on you, {%BR%}If you can trust yourself when all men doubt you, {%BR_TAB%}But make allowance for their doubting too; {%BR%}If you can wait and not be tired by waiting, {%BR_TAB%}Or being lied about, don’t deal in lies, {%BR%}Or being hated, don’t give way to hating, {%BR_TAB%}And yet don’t look too good, nor talk too wise:"
+      ]
     },
     {
       "type": "text",
-      "isCopy": false,
       "note": [
         "If you can dream—and not make dreams your master; {%BR_TAB%}If you can think—and not make thoughts your aim; {%BR%}If you can meet with Triumph and Disaster {%BR_TAB%}And treat those two impostors just the same; {%BR%}If you can bear to hear the truth you’ve spoken {%BR_TAB%}Twisted by knaves to make a trap for fools, {%BR%}Or watch the things you gave your life to, broken, {%BR_TAB%}And stoop and build ’em up with worn-out tools:"
       ]
     },
     {
       "type": "text",
-      "isCopy": false,
       "note": [
         "If you can make one heap of all your winnings {%BR_TAB%}And risk it on one turn of pitch-and-toss, {%BR%}And lose, and start again at your beginnings {%BR_TAB%}And never breathe a word about your loss; {%BR%}If you can force your heart and nerve and sinew {%BR_TAB%}To serve your turn long after they are gone, {%BR%}And so hold on when there is nothing in you {%BR_TAB%}Except the Will which says to them: ‘Hold on!’"
       ]
     },
     {
       "type": "text",
-      "isCopy": false,
       "note": [
         "If you can talk with crowds and keep your virtue, {%BR_TAB%}Or walk with Kings—nor lose the common touch, {%BR%}If neither foes nor loving friends can hurt you, {%BR_TAB%}If all men count with you, but none too much; {%BR%}If you can fill the unforgiving minute {%BR_TAB%}With sixty seconds’ worth of distance run, {%BR%}Yours is the Earth and everything that’s in it, {%BR_TAB%}And—which is more—you’ll be a Man, my son!"
       ]
-    }
-  ],
-  "inject": [
-    {
-      "key": "{%BR%}",
-      "text": "<br>"
-    },
-    {
-      "key": "{%TAB%}",
-      "text": "<span class='tab'></span>"
-    },
-    {
-      "key": "{%BR_TAB%}",
-      "text": "<br><span class='tab'></span>"
-    },
-    {
-      "key": "{%NAV%}",
-      "text": "<br><a class='center' href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%NAV2%}",
-      "text": "<br><a href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%CONTENT%}",
-      "text": "<br><a href='#content'>Back to Content</a>"
-    },
-    {
-      "key": "{%CONTENT2%}",
-      "text": "<a href='#content'>Back to Content</a>"
     }
   ]
 }
