@@ -68,8 +68,8 @@
       "title": "Content",
       "links": [
         {
-          "link": "#tile-editor",
-          "title": "Tile Editor",
+          "link": "#tiled-editor",
+          "title": "Tiled Editor",
           "time": "0-x"
         },
         {
@@ -86,9 +86,11 @@
     },
     {
       "type": "text",
-      "navId": "tile-editor",
-      "title": "Tile Editor",
-      "note": ["Grab assets from itch.io. Grab Tiled, tile map editor. New Tileset, tile size is 12px rect.Source is image with most icons on grid called 'asset pack'. Saved. New file, new map, map size in tiles 70x40, 840x480 px. Create Water Layer. Select all water tiles, click dice icon to randomize tiles, select bucket and fill map. Add new layer named Island. Select land mass on water. Place it in middle of map. Select green tile, extend rows. Select edge tiles from set and finish extended island. Add layer named 'Plateau'. Add plateau using 'land on land' image. Add House layer, add house image with stamp brush. Select Island layer, rect select part of island, copy, paste to expand it. Add Trees layer, add row of trees. Add another layer above, put new trees between first row. Many rows can be added expanding layers."]
+      "navId": "tiled-editor",
+      "title": "Tiled Editor",
+      "note": [
+        "Grab assets from itch.io. Grab Tiled, tile map editor. New Tileset, tile size is 12px rect.Source is image with most icons on grid called 'asset pack'. Saved. New file, new map, map size in tiles 70x40, 840x480 px. Create Water Layer. Select all water tiles, click dice icon to randomize tiles, select bucket and fill map. Add new layer named Island. Select land mass on water. Place it in middle of map. Select green tile, extend rows. Select edge tiles from set and finish extended island. Add layer named 'Plateau'. Add plateau using 'land on land' image. Add House layer, add house image with stamp brush. Select Island layer, rect select part of island, copy, paste to expand it. Add Trees layer, add row of trees. Add another layer above, put new trees between first row. Many rows can be added expanding layers. {%BR_TAB%}Add new layer for Paths. Create path using randomized bucket tool in rect selection, add corner detail tiles. Expand island if no room. {%BR_TAB%}Add layer for Battle Patch, add patch with brush tool. {%BR_TAB%}Add layer for Grass and Flowers. Select grass use randomized brush, same for flowers. {%BR_TAB%} Add new layer for Fence. Add fence with brush tool, to connect parts, select tile with part of fence covering all tile. {%BR_TAB%} Add Dock layer, add dock tiles selected in tileset, using brush tool. {%BR_TAB%} Download or create asset tile for collison detection, it's red rectangle. File new, add new tileset with it. Set name, source image, save as. {%BR_TAB%}Add new layer named Collisions. Add collisions tile to set player allowed movement regions. Set opacity to see tiles under collison tiles. {%BR_TAB%} Add new layer Foreground Objects, select parts that stick out of colision rectangles, copy them and move to this layer. It's done so player will be draw behind these."
+      ]
     },
     {
       "type": "text",
