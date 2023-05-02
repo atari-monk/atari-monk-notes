@@ -18,7 +18,7 @@ class NotesRouter extends Controller {
   async #controlNotes() {
     try {
       this._setPage();
-      const data = await model.getPage(this._page);
+      const data = await model.getPageData(this._page);
       DEBUG && console.log(data);
       if (data.hasOwnProperty('isKey') === false || data.isKey === false)
         this.#notesController.controlNotes(data);

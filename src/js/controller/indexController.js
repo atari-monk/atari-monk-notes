@@ -13,7 +13,7 @@ class IndexController extends Controller {
   async #controlIndex() {
     try {
       this._setPage();
-      const data = await model.getPage(this._page ?? 'index/index');
+      const data = await model.getPageData(this._page ?? 'index/index');
       DEBUG && console.log(data);
       navView.createContent(data);
       linkListView.createContent(data);

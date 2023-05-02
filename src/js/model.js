@@ -1,14 +1,12 @@
-import { CONNECTION } from "./config.js";
+import { CONNECTION } from './config.js';
 
 class Model {
-
-  async getPage(page) {
-    return await this.loadJson(page);
+  async getPageData(fileName) {
+    return await this.#loadJson(fileName);
   }
 
-  async loadJson(page) {
-    return await fetch(`${CONNECTION}${page}.json`)
-      .then((res) => res.json());
+  async #loadJson(fileName) {
+    return await fetch(`${CONNECTION}${fileName}.json`).then((res) => res.json());
   }
 }
 

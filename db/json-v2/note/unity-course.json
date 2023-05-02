@@ -184,7 +184,6 @@
       "type": "cmd",
       "isCopy": true,
       "aside": {
-        "paramKey": "git",
         "isDetail": true
       },
       "note": [
@@ -192,6 +191,20 @@
         "git {1}",
         "git {2}",
         "git commit -m 'First commit, project files and .gitignore'"
+      ],
+      "params": [
+        {
+          "name": "-b main",
+          "desc": "Default branch name."
+        },
+        {
+          "name": "add .",
+          "desc": "Dot means files in current folder."
+        },
+        {
+          "name": "status",
+          "desc": "Check .gitignore ignore it's files."
+        }
       ]
     },
     {
@@ -351,12 +364,21 @@
       "type": "cmd",
       "isCopy": true,
       "aside": {
-        "paramKey": "asset",
         "isDetail": true
       },
       "title": "Framework code assets:",
       "note": [
         "namespace UnityEngine{%BR%}MonoBehaviour{%BR%}private void {0}{%BR%}Vector2{%BR%}Input.GetKey(KeyCode.W){%BR%}Debug.Log(inputVector);{%BR%}inputVector = inputVector.normalized;{%BR%}var moveDir = new Vector3(inputVector.x, 0f, inputVector.y);{%BR%}[{1}] private float moveSpeed = 7f;{%BR%}transform.position += moveDir * moveSpeed * Time.deltaTime;"
+      ],
+      "params": [
+        {
+          "name": "Update()",
+          "desc": "Once per frame."
+        },
+        {
+          "name": "SerializeField",
+          "desc": "this makes field editable in ui editor"
+        }
       ]
     },
     {
@@ -377,7 +399,6 @@
       "type": "cmd",
       "isCopy": true,
       "aside": {
-        "paramKey": "rotation",
         "isDetail": true
       },
       "isCenter": false,
@@ -386,6 +407,24 @@
       "title": "Rotate Visual code:",
       "note": [
         "transform.{0}{%BR%}transform.{1}{%BR%}transform.LookAt{%BR%}transform.{2} = moveDir{%BR%}var rotateSpeed = 10f;{%BR%}transform.forward = Vector3.{3}(\r\ntransform.forward,\r\n moveDir,\r\n Time.deltaTime * rotateSpeed)"
+      ],
+      "params": [
+        {
+          "name": "rotation",
+          "desc": "uses quaterions, not intuitive"
+        },
+        {
+          "name": "eulerAngles",
+          "desc": "uses 0-360 degrees"
+        },
+        {
+          "name": "forward",
+          "desc": "method used"
+        },
+        {
+          "name": "Slerp",
+          "desc": "Smooth with Lerp - function for interpolating"
+        }
       ]
     },
     {
@@ -766,50 +805,6 @@
       "note": ["In progress. {%NAV%}"]
     }
   ],
-  "param": {
-    "git": [
-      {
-        "name": "-b main",
-        "desc": "Default branch name."
-      },
-      {
-        "name": "add .",
-        "desc": "Dot means files in current folder."
-      },
-      {
-        "name": "status",
-        "desc": "Check .gitignore ignore it's files."
-      }
-    ],
-    "asset": [
-      {
-        "name": "Update()",
-        "desc": "Once per frame."
-      },
-      {
-        "name": "SerializeField",
-        "desc": "this makes field editable in ui editor"
-      }
-    ],
-    "rotation": [
-      {
-        "name": "rotation",
-        "desc": "uses quaterions, not intuitive"
-      },
-      {
-        "name": "eulerAngles",
-        "desc": "uses 0-360 degrees"
-      },
-      {
-        "name": "forward",
-        "desc": "method used"
-      },
-      {
-        "name": "Slerp",
-        "desc": "Smooth with Lerp - function for interpolating"
-      }
-    ]
-  },
   "inject": [
     {
       "key": "{%BR%}",
