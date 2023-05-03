@@ -42,6 +42,10 @@
       {
         "link": "https://www.mapeditor.org/download.html",
         "text": "Tile map editor"
+      },
+      {
+        "link": "https://drive.google.com/drive/folders/1yO_iPs6wrwCXjpYFelYxDxVUtrz31qRH",
+        "text": "Assets on Google Cloud"
       }
     ]
   },
@@ -70,17 +74,22 @@
         {
           "link": "#tiled-editor",
           "title": "Tiled Editor",
-          "time": "0-x"
+          "time": "0-1:08"
         },
         {
-          "link": "#chapter2",
-          "title": "Chapter 2",
-          "time": "10-20"
+          "link": "#coding",
+          "title": "Coding",
+          "time": "1:08-1:51"
         },
         {
-          "link": "#chapter3",
-          "title": "Chapter 3",
-          "time": "20-40"
+          "link": "",
+          "title": "",
+          "time": ""
+        },
+        {
+          "link": "",
+          "title": "",
+          "time": ""
         }
       ]
     },
@@ -89,57 +98,16 @@
       "navId": "tiled-editor",
       "title": "Tiled Editor",
       "note": [
-        "Grab assets from itch.io. Grab Tiled, tile map editor. New Tileset, tile size is 12px rect.Source is image with most icons on grid called 'asset pack'. Saved. New file, new map, map size in tiles 70x40, 840x480 px. Create Water Layer. Select all water tiles, click dice icon to randomize tiles, select bucket and fill map. Add new layer named Island. Select land mass on water. Place it in middle of map. Select green tile, extend rows. Select edge tiles from set and finish extended island. Add layer named 'Plateau'. Add plateau using 'land on land' image. Add House layer, add house image with stamp brush. Select Island layer, rect select part of island, copy, paste to expand it. Add Trees layer, add row of trees. Add another layer above, put new trees between first row. Many rows can be added expanding layers. {%BR_TAB%}Add new layer for Paths. Create path using randomized bucket tool in rect selection, add corner detail tiles. Expand island if no room. {%BR_TAB%}Add layer for Battle Patch, add patch with brush tool. {%BR_TAB%}Add layer for Grass and Flowers. Select grass use randomized brush, same for flowers. {%BR_TAB%} Add new layer for Fence. Add fence with brush tool, to connect parts, select tile with part of fence covering all tile. {%BR_TAB%} Add Dock layer, add dock tiles selected in tileset, using brush tool. {%BR_TAB%} Download or create asset tile for collison detection, it's red rectangle. File new, add new tileset with it. Set name, source image, save as. {%BR_TAB%}Add new layer named Collisions. Add collisions tile to set player allowed movement regions. Set opacity to see tiles under collison tiles. {%BR_TAB%} Add new layer Foreground Objects, select parts that stick out of colision rectangles, copy them and move to this layer. It's done so player will be draw behind these."
+        "{%TAB%}Grab assets from itch.io. {%BR_TAB%}Grab Tiled, tile map editor. New Tileset, tile size is 12px rect.Source is image with most icons on grid called 'asset pack'. Saved. New file, new map, map size in tiles 70x40, 840x480 px. {%BR_TAB%}Create Water Layer. Select all water tiles, click dice icon to randomize tiles, select bucket and fill map. {%BR_TAB%}Add new layer named Island. Select land mass on water. Place it in middle of map. Select green tile, extend rows. Select edge tiles from set and finish extended island. {%BR_TAB%}Add layer named 'Plateau'. Add plateau using 'land on land' image. {%BR_TAB%}Add House layer, add house image with stamp brush. Select Island layer, rect select part of island, copy, paste to expand it. {%BR_TAB%}Add Trees layer, add row of trees. Add another layer above, put new trees between first row. Many rows can be added expanding layers. {%BR_TAB%}Add new layer for Paths. Create path using randomized bucket tool in rect selection, add corner detail tiles. Expand island if no room. {%BR_TAB%}Add layer for Battle Patch, add patch with brush tool. {%BR_TAB%}Add layer for Grass and Flowers. Select grass use randomized brush, same for flowers. {%BR_TAB%} Add new layer for Fence. Add fence with brush tool, to connect parts, select tile with part of fence covering all tile. {%BR_TAB%} Add Dock layer, add dock tiles selected in tileset, using brush tool. {%BR_TAB%} Download or create asset tile for collison detection, it's red rectangle. File new, add new tileset with it. Set name, source image, save as. {%BR_TAB%}Add new layer named Collisions. Add collisions tile to set player allowed movement regions. Set opacity to see tiles under collison tiles. {%BR_TAB%} Add new layer Foreground Objects, select parts that stick out of colision rectangles, copy them and move to this layer. It's done so player will be draw behind these. {%BR_TAB%} Download tutorial level map. Uncheck visability for 3 top layers and expot map as png image to your assets.{%CONTENT%}"
       ]
     },
     {
       "type": "text",
-      "title": "",
-      "note": [""]
-    },
-    {
-      "type": "note-aside",
-      "navId": "",
-      "title": "",
-      "note": ["{%TAB%}"],
-      "params": [
-        {
-          "name": "",
-          "desc": ""
-        },
-        {
-          "name": "",
-          "desc": ""
-        }
+      "navId": "coding",
+      "title": "Coding",
+      "note": [
+        "{%TAB%}Just setup basic htlm, css, js with canvas. {%BR_TAB%} Export image from tiled at 400% zoom to have bigger size file. To draw image use onload event of image. Position it on house with negative cords. Setup onload of next image on onload of fisrt to ensure order of loading (otherwise player can be covered). Now setup cords of drawImage method to crop player image to one frame."
       ]
-    },
-    {
-      "type": "cmd",
-      "aside": {
-        "isDetail": true
-      },
-      "title": "",
-      "note": [""],
-      "params": [
-        {
-          "name": "",
-          "desc": ""
-        }
-      ]
-    },
-    {
-      "type": "cmd",
-      "content": "text",
-      "beautify": "css",
-      "title": "",
-      "note": [""]
-    },
-    {
-      "type": "cmd",
-      "beautify": "js",
-      "content": "text",
-      "title": "",
-      "note": [""]
     },
     {
       "type": "text",
@@ -147,36 +115,6 @@
       "isCenter": true,
       "title": "Summary",
       "note": ["{%NAV%}"]
-    }
-  ],
-  "inject": [
-    {
-      "key": "{%BR%}",
-      "text": "<br>"
-    },
-    {
-      "key": "{%TAB%}",
-      "text": "<span class='tab'></span>"
-    },
-    {
-      "key": "{%BR_TAB%}",
-      "text": "<br><span class='tab'></span>"
-    },
-    {
-      "key": "{%NAV%}",
-      "text": "<br><a class='center' href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%NAV2%}",
-      "text": "<br><a href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%CONTENT%}",
-      "text": "<br><a href='#content'>Back to Content</a>"
-    },
-    {
-      "key": "{%CONTENT2%}",
-      "text": "<a href='#content'>Back to Content</a>"
     }
   ]
 }
