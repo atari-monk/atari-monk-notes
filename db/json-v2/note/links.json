@@ -24,25 +24,23 @@
     {
       "type": "text",
       "navId": "links",
-      "isCopy": false,
-      "title": "Links",
-      "note": []
+      "title": "Links"
     },
     {
       "type": "text",
       "navId": "content",
-      "isCopy": false,
       "isCenter": true,
       "title": "Content",
-      "note": ["1. <a href=#classic_games>Classic Games</a>{%BR%}2. <a href=#shows>Shows</a>{%BR%}3. <a href=#tools>Tools</a>{%NAV2%}"]
+      "note": [
+        "1. <a href=#classic_games>Classic Games</a>{%BR%}2. <a href=#shows>Shows</a>{%BR%}3. <a href=#tools>Tools</a>{%NAV2%}"
+      ]
     },
     {
       "type": "note-aside",
       "navId": "classic_games",
-      "isCopy": false,
       "isCenter": true,
       "title": "Classic Games",
-      "note": ["{0}", "{1}", "{2}", "{3}{%CONTENT%}"],
+      "note": ["{0}", "{1}", "{2}", "{3}"],
       "params": [
         {
           "name": "<a href=\"https://playclassic.games/games/puzzle-solving-dos-games-online/play-lemmings-online/play/\">Lemings</a>",
@@ -63,10 +61,13 @@
       ]
     },
     {
+      "type": "text",
+      "note": ["{%CONTENT%}"]
+    },
+    {
       "type": "note-aside",
       "navId": "shows",
       "isCenter": true,
-      "isCopy": false,
       "title": "Shows",
       "note": [
         "{0}",
@@ -78,7 +79,7 @@
         "{6}",
         "{7}",
         "{8}",
-        "{%CONTENT%}"
+        "{9}"
       ],
       "params": [
         {
@@ -112,21 +113,27 @@
         {
           "name": "<a href=\"https://www.youtube.com/@freecodecamp\">freecodecamp</a>",
           "desc": "Tutorial hell of YT."
-        }
-        ,
+        },
         {
           "name": "<a href=\"https://www.youtube.com/@ImnotNorm\">ImnotNorm</a>",
           "desc": "Art of Norm Macdonald."
+        },
+        {
+          "name": "<a href=\"https://www.youtube.com/@KabaretMalina/videos\">Kabaret Malina</a>",
+          "desc": "Królowie Żyta."
         }
       ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT%}"]
     },
     {
       "type": "note-aside",
       "navId": "tools",
       "isCenter": true,
-      "isCopy": false,
       "title": "Tools",
-      "note": ["{0}{%CONTENT%}"],
+      "note": ["{0}"],
       "params": [
         {
           "name": "<a href=\"https://translate.google.com/\">Google Translate</a>",
@@ -136,41 +143,14 @@
     },
     {
       "type": "text",
+      "note": ["{%CONTENT%}"]
+    },
+    {
+      "type": "text",
       "navId": "summary",
       "isCenter": true,
-      "isCopy": false,
       "title": "Summary",
       "note": ["Enjoy.{%NAV%}"]
-    }
-  ],
-  "inject": [
-    {
-      "key": "{%BR%}",
-      "text": "<br>"
-    },
-    {
-      "key": "{%TAB%}",
-      "text": "<span class='tab'></span>"
-    },
-    {
-      "key": "{%BR_TAB%}",
-      "text": "<br><span class='tab'></span>"
-    },
-    {
-      "key": "{%NAV%}",
-      "text": "<br><a class='center' href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%NAV2%}",
-      "text": "<br><a href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%CONTENT%}",
-      "text": "<br><a href='#content'>Back to Content</a>"
-    },
-    {
-      "key": "{%CONTENT2%}",
-      "text": "<a href='#content'>Back to Content</a>"
     }
   ]
 }

@@ -125,36 +125,18 @@
       "note": [
         "I automatically assume that everything on YouToube is a lie done for fake currency. Sometimes i consume content. I still want things."
       ]
-    }
-  ],
-  "inject": [
-    {
-      "key": "{%BR%}",
-      "text": "<br>"
     },
     {
-      "key": "{%TAB%}",
-      "text": "<span class='tab'></span>"
+      "type": "text",
+      "title": "02.05.2023 19:35",
+      "note": ["I use a lot, my computers toys. They are like part of body."]
     },
     {
-      "key": "{%BR_TAB%}",
-      "text": "<br><span class='tab'></span>"
-    },
-    {
-      "key": "{%NAV%}",
-      "text": "<br><a class='center' href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%NAV2%}",
-      "text": "<br><a href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%CONTENT%}",
-      "text": "<br><a href='#content'>Back to Content</a>"
-    },
-    {
-      "key": "{%CONTENT2%}",
-      "text": "<a href='#content'>Back to Content</a>"
+      "type": "text",
+      "title": "02.05.2023 19:38",
+      "note": [
+        "Sex is life mechanizm for reproduction. It's weakness and it's contorol. It's plesure and toy. It's many things."
+      ]
     }
   ]
 }
