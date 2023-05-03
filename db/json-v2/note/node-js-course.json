@@ -1,6 +1,6 @@
 {
-  "isKey": true,
-  "isScrollToBottom": false,
+  "isKey": false,
+  "isScrollToBottom": true,
   "title": "Node.js Course",
   "nav": [
     {
@@ -189,22 +189,22 @@
         {
           "link": "#web",
           "title": "How Web Works",
-          "time": "1-14."
+          "time": "1-14"
         },
         {
           "link": "#http",
           "title": "Http in action",
-          "time": "14-20."
+          "time": "14-20"
         },
         {
           "link": "#back-end",
           "title": "Front End vs Back End Dev",
-          "time": "20-26."
+          "time": "20-26"
         },
         {
           "link": "#dynamic-api",
           "title": "Static vs Dynamic vs API",
-          "time": "26-35."
+          "time": "26-35"
         }
       ]
     },
@@ -224,47 +224,47 @@
         {
           "link": "#node-threads",
           "title": "Threading in node js",
-          "time": "5-10."
+          "time": "5-10"
         },
         {
           "link": "#event-loop",
           "title": "Event Loop",
-          "time": "10-21."
+          "time": "10-21"
         },
         {
           "link": "#evloop-example",
           "title": "Event Loop Example",
-          "time": "21-40."
+          "time": "21-40"
         },
         {
           "link": "#event-driven",
           "title": "Events driven architecture",
-          "time": "40-45."
+          "time": "40-45"
         },
         {
           "link": "#event-example",
           "title": "Events example",
-          "time": "45-58."
+          "time": "45-58"
         },
         {
           "link": "#streams",
           "title": "Streams",
-          "time": "58-64."
+          "time": "58-64"
         },
         {
           "link": "#streams-practice",
           "title": "Streams in Practice",
-          "time": "64-81."
+          "time": "64-81"
         },
         {
           "link": "#modules",
           "title": "About Modules",
-          "time": "81-90. "
+          "time": "81-90"
         },
         {
           "link": "#modules-practice",
           "title": "Modules in practice",
-          "time": "90-106."
+          "time": "90-106"
         }
       ]
     },
@@ -414,7 +414,23 @@
         {
           "link": "#env-vars",
           "title": "Environment Variables",
-          "time": "2:54-x"
+          "time": "2:54-3:11"
+        },
+        {
+          "link": "#lint",
+          "title": "Setting up es lint and prettier in VS Code",
+          "time": "3:11-3:24"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Content, Part 6",
+      "links": [
+        {
+          "link": "#",
+          "title": "",
+          "time": ""
         }
       ]
     },
@@ -1800,6 +1816,79 @@
       "type": "text",
       "navId": "env-vars",
       "title": "Environment Variables",
+      "note": [
+        "{%TAB%}Most important environments are Development and Production. By default express sets environment to Development. Environment Variables will be in server file since they are out of the scope of express (app file). When deploying, change env/NODE_ENV to production since many modules depend on env vars. Env vars are used for connection strings, passwords and so on. {%BR_TAB%} Create config.env file to edit env vars with config file. Install DotENV extension for syntax highlighting."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "html",
+      "aside": {
+        "isDetail": true
+      },
+      "note": [
+        "console.log(app.get({0}));",
+        "console.log({1});",
+        "{2} node server.js",
+        "{3}"
+      ],
+      "params": [
+        {
+          "name": "'env'",
+          "desc": "Environment set by express."
+        },
+        {
+          "name": "process.env",
+          "desc": "A lot of node.js internall Environment Variables, from process.core module."
+        },
+        {
+          "name": "NODE_ENV=development X=23",
+          "desc": "Setting env vars in console/terminal."
+        },
+        {
+          "name": "npm i dotenv",
+          "desc": "Package for handling config.env file."
+        }
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "text",
+      "title": "Example of config.env file.",
+      "note": [
+        "NODE_ENV=development\nPORT=3000\nMY_USER_NAME=atari-monk\nPASSWORD=1212134"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Using Env Vars from config in server and app files, to set port and logging with morgan package.",
+      "note": [
+        "const dotenv = require('dotenv'); dotenv.config({ path: './config.env' }); const app = require('./app'); const port = process.env.PORT || 3000; app.listen(port, () => { console.log(`App running on port ${port}...`); });",
+        "if (process.env.NODE_ENV === 'development') { app.use(morgan('dev'));}"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Env var used in package.json scripts of the project. This needs dev npm module on windows.",
+      "note": [
+        "\"scripts\": {\"start:dev\": \"node server.js\",\"start:prod\":\n\n \"cross-env NODE_ENV=production node server.js\"},",
+        "npm install --save-dev \"cross-env\""
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "lint",
+      "title": "Setting up es lint and prettier in VS Code",
       "note": [""]
     },
     {
