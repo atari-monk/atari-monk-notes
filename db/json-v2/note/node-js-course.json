@@ -50,6 +50,10 @@
       {
         "link": "https://expressjs.com/",
         "text": "expressjs"
+      },
+      {
+        "link": "https://eslint.org/docs/latest/rules/",
+        "text": "ESLint Rules"
       }
     ]
   },
@@ -1728,7 +1732,7 @@
       "navId": "multiple-routers",
       "title": "Creating and mounting multiple routers",
       "note": [
-        "This is more efficient way od setting up routers for resources."
+        "This is more efficient way of setting up routers for resources."
       ]
     },
     {
@@ -1889,7 +1893,22 @@
       "type": "text",
       "navId": "lint",
       "title": "Setting up es lint and prettier in VS Code",
-      "note": [""]
+      "note": [
+        "Having lint immproves code smells. This will setup prettier for code formatter but lint will highlight errors. First install ESLint extension. Then packages. Needed to change endofline to LF in my files :)."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "html",
+      "title": "",
+      "note": [
+        "npm i eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react --save-dev"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
     },
     {
       "type": "text",
