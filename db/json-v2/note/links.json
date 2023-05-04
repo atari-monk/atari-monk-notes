@@ -133,11 +133,15 @@
       "navId": "tools",
       "isCenter": true,
       "title": "Tools",
-      "note": ["{0}"],
+      "note": ["{0}", "{1}"],
       "params": [
         {
           "name": "<a href=\"https://translate.google.com/\">Google Translate</a>",
           "desc": "Text to Speach ability."
+        },
+        {
+          "name": "<a href=\"https://www.githubstatus.com/\">Google Translate</a>",
+          "desc": "When commit is down."
         }
       ]
     },
