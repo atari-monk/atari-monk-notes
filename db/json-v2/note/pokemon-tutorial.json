@@ -79,7 +79,7 @@
         {
           "link": "#coding",
           "title": "Coding",
-          "time": "1:08-1:51"
+          "time": "1:08-2:32"
         },
         {
           "link": "",
@@ -106,7 +106,7 @@
       "navId": "coding",
       "title": "Coding",
       "note": [
-        "{%TAB%}Just setup basic htlm, css, js with canvas. {%BR_TAB%} Export image from tiled at 400% zoom to have bigger size file. To draw image use onload event of image. Position it on house with negative cords. Setup onload of next image on onload of fisrt to ensure order of loading (otherwise player can be covered). Now setup cords of drawImage method to crop player image to one frame. Add switch to handle WSAD with keydown event listener."
+        "{%TAB%}Just setup basic htlm, css, js with canvas. {%BR_TAB%} Export image from tiled at 400% zoom to have bigger size file. To draw image use onload event of image. Position it on house with negative cords. Setup onload of next image on onload of fisrt to ensure order of loading (otherwise player can be covered). Now setup cords of drawImage method to crop player image to one frame. Add switch to handle WSAD with keydown event listener. {%BR_TAB%} Loading and maping data for collision. Simple, very solid code, very solid math and concepts."
       ]
     },
     {
