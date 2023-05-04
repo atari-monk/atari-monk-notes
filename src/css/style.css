@@ -134,6 +134,11 @@ a {
   overflow: auto;
 }
 
+.note-note {
+  width: 66ch;
+  overflow: auto;
+}
+
 @media (max-width: 1920px) {
   body {
     font-family: 'Arial';

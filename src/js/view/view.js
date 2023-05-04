@@ -85,19 +85,19 @@ export class View {
   }
 
   _setAttribute(data, propName, element, attributeName) {
-    if (data.hasOwnProperty(propName) === false) return;
+    if (this._hasProp(data, propName) === false) return;
     element.setAttribute(attributeName, data[propName]);
   }
 
   _hideElement(data, propName, element, selector, cssClass) {
-    if (data.hasOwnProperty(propName) === false || data[propName] === true)
+    if (this._hasProp(data, propName) === false || data[propName] === true)
       return;
     const childEl = element.querySelector(selector);
     childEl.classList.add(cssClass);
   }
 
   _showElement(data, propName, parentEl, selector, cssClass = 'hide') {
-    if (data.hasOwnProperty(propName) === false || data[propName] === false)
+    if (this._hasProp(data, propName) === false || data[propName] === false)
       return;
     const childEl = parentEl.querySelector(selector);
     childEl.classList.remove(cssClass);
@@ -113,8 +113,12 @@ export class View {
   }
 
   _centerText(data, element) {
-    if (data.hasOwnProperty('isCenter') && data.isCenter) {
+    if (this._hasProp(data, 'isCenter') && data.isCenter) {
       element.classList.add('center-text');
     }
+  }
+
+  _hasProp(obj, name) {
+    return Object.prototype.hasOwnProperty.call(obj, name);
   }
 }
