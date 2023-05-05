@@ -1,6 +1,6 @@
 {
-  "isKey": true,
-  "isScrollToBottom": false,
+  "isKey": false,
+  "isScrollToBottom": true,
   "title": "Node.js Course",
   "nav": [
     {
@@ -54,6 +54,10 @@
       {
         "link": "https://eslint.org/docs/latest/rules/",
         "text": "ESLint Rules"
+      },
+      {
+        "link": "https://www.mongodb.com/",
+        "text": "MongoDb"
       }
     ]
   },
@@ -432,9 +436,19 @@
       "title": "Content, Part 6",
       "links": [
         {
-          "link": "#",
-          "title": "",
-          "time": ""
+          "link": "#mongodb",
+          "title": "Whats MongoDb",
+          "time": "1-9"
+        },
+        {
+          "link": "#install",
+          "title": "Installing MongoDb, Windows",
+          "time": "16-26"
+        },
+        {
+          "link": "#localdb",
+          "title": "Creating local db",
+          "time": "26-x"
         }
       ]
     },
@@ -1909,6 +1923,41 @@
     {
       "type": "text",
       "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "mongodb",
+      "title": "Whats MongoDb",
+      "note": [
+        "{%TAB%}NoSQL Database, Collections, Documents. In relational databases that's Tables, Rows. Document is one item/unit. Collections hold all items. {%BR_TAB%}Main Mongo Features: Document based, like json; build in scalability (distibute on multiple machines as data grows); flexible, no data schema required, each document can have diffrent key value pairs; build in peformant features (i dont need to mention them); OpenSource. Mongo has Filelds, thats Column in relational dbs."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Mongo uses BSON, like json but typed. Embedding/Denormalizing: like on comments.Including related data in documents. In relational dbs, data is normalized. That would mean new table for comments. In Mongo 16 MB per document.",
+      "note": [
+        "{ \"_id\": ObjectID('9993345435'), \"title\": \"bla bla\", \"tags\": [\"x\",\"y\",\"z\"], \"comments\": [ {\"author\": \"mr x\", \"text\": \"oh well\"}, {\"author\": \"mr y\", \"text\": \"oh sure\"}, {\"author\": \"mr z\", \"text\": \"oh well sure then\"}, ] }"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "install",
+      "title": "Installing MongoDb, Windows",
+      "note": [
+        "Download MongoDB Community Server, install with defaults in installer. Folder for dbs: 'C:\\data' (this is default). Run server in powershell, PS C:\\Program Files\\MongoDB\\Server\\6.0\\bin> .\\mongod.exe. In second shell run mongosh.exe (mongo shell, downloaded from tools, unziped to server bin folder). Run 'db' command to create db in default folder (created files). {%BR_TAB%}Setup env path to run mongod.exe from any folder. Open Settings, type env, Edit the System Env Vars, click Env Vars, Edit Path var, add mongod.exe bin folder. Now both open from any folder.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "localdb",
+      "title": "Creating local db",
+      "note": [""]
     },
     {
       "type": "text",
