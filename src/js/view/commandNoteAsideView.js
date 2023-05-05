@@ -17,7 +17,7 @@ export class CommandNoteAsideView extends View {
   #createNote(data, textParams, note) {
     const noteEl = this._getParentElement('template-cmd', '.cmd');
     const newNote = this._getNewParent(noteEl);
-    if (note.hasOwnProperty('title')) {
+    if (this._hasProp(note, 'title')) {
       this._templateChildHtml3(
         newNote,
         '.cmd-title',
@@ -26,6 +26,7 @@ export class CommandNoteAsideView extends View {
       );
     }
     const ulEl = newNote.querySelector('.cmd-ul');
+    if (note.note === undefined) return newNote;
     note.note.forEach((line) => {
       ulEl.appendChild(this.#createNoteItem(data, textParams, note, line));
     });
@@ -36,7 +37,7 @@ export class CommandNoteAsideView extends View {
   #getTitle(note) {
     return Array.isArray(note.title) ? note.title.join('\n<br>') : note.title;
   }
-  
+
   #createNoteItem(data, textParams, note, line) {
     const noteItemEl = this._getParentElement('template-cmd-item', 'div');
     const newNoteItem = this._getNewParent(noteItemEl);
@@ -52,7 +53,7 @@ export class CommandNoteAsideView extends View {
   }
 
   #templateElement(note, noteTextEl, text) {
-    if (note.hasOwnProperty('content') === false) {
+    if (this._hasProp(note, 'content') === false) {
       this._templateHtml(noteTextEl, 'note', text);
     } else {
       if (note.content === 'text')

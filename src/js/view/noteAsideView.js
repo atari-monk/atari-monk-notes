@@ -1,4 +1,4 @@
-import * as tool from '../tool.js';
+import { DEBUG } from '../config.js';
 import { View } from './view.js';
 
 export class NoteAsideView extends View {
@@ -10,6 +10,7 @@ export class NoteAsideView extends View {
   }
 
   createContent(data, note, params) {
+    DEBUG && console.log('Note Aside View');
     if (params === undefined) return;
     const newNote = this.#createNote(note, params, data.inject);
     return newNote;
@@ -28,7 +29,7 @@ export class NoteAsideView extends View {
     this.#setNote(note, params, inject, noteTextEl);
     this._setAttribute(note, 'navId', newNote, 'id');
     this._hideElement(note, 'isCopy', newNote, '.note-icon', 'hide');
-    if (note.hasOwnProperty('isCode') && note.isCode)
+    if (this._hasProp(note, 'isCode') && note.isCode)
       noteTextEl.classList.add('code');
     return newNote;
   }

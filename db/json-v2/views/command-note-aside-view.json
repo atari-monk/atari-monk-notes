@@ -2,21 +2,7 @@
   "note": [
     {
       "type": "cmd",
-      "aside": {
-        "isDetail": true
-      },
-      "title": "test",
-      "note": ["test {0} {1}", "bla", "ble"],
-      "params": [
-        {
-          "name": "test",
-          "desc": "test"
-        },
-        {
-          "name": "test2",
-          "desc": "test2"
-        }
-      ]
+      "title": "Test CommandNoteAsideView class."
     }
   ]
 }

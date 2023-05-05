@@ -1,70 +1,89 @@
 {
   "note": [
     {
-      "type": "text",
-      "title": "Test TextNoteView class."
+      "type": "note-aside",
+      "title": "Test NoteAsideView class."
     },
     {
-      "type": "text",
+      "type": "note-aside",
+      "title": "These are copied from Test TextNoteView class. This means, merge is needed?"
+    },
+    {
+      "type": "note-aside",
       "title": "Only Title Test"
     },
     {
-      "type": "text",
+      "type": "note-aside",
       "note": ["Only Note Test"]
     },
     {
-      "type": "text",
+      "type": "note-aside",
       "title": "Title and Note Test",
       "note": ["Title and Note Test"]
     },
     {
-      "type": "text",
+      "type": "note-aside",
       "note": ["{%TAB%}Injections test.{%BR%}BR test.{%BR_TAB%}BR TAB test."]
     },
     {
-      "type": "text",
+      "type": "note-aside",
       "note": ["<a href='#navx'>navId Test</a>"]
     },
     {
-      "type": "text",
+      "type": "note-aside",
       "isCopy": true,
       "title": "Test isCopy",
       "note": ["Test isCopy"]
     },
     {
-      "type": "text",
+      "type": "note-aside",
       "isCode": true,
       "title": "Test isCode",
       "note": ["const test = 'bla bla';"]
     },
     {
-      "type": "text",
+      "type": "note-aside",
       "isCenter": true,
       "note": ["Test Note isCenter"]
     },
     {
-      "type": "text",
+      "type": "note-aside",
       "aside": {
         "isDetail": true
       },
       "note": ["Test aside {0}"],
       "params": [
         {
-          "name": "test",
-          "desc": "test"
+          "name": "marked text",
+          "desc": "aside details"
         }
       ]
     },
     {
-      "type": "text",
+      "type": "note-aside",
       "navId": "navx",
       "note": ["navId Test"]
     },
     {
-      "type": "text",
+      "type": "note-aside",
       "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
       "note": [
         "{%TAB%}Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, possimus hic corporis necessitatibus velit iste aliquam, sunt provident sint tempore ipsam maxime! Labore doloremque vel corrupti ex maxime quod ad. Rerum, repellat amet explicabo atque, doloremque non ad ipsa perspiciatis aspernatur dicta delectus. Unde reiciendis minima deserunt in aliquid! Cumque, voluptas totam. Repellat dolor ut accusantium, expedita fugit repellendus aperiam? Voluptas asperiores consequatur quod quisquam optio nisi vitae, minima eum recusandae deserunt, repellendus, corrupti eveniet doloremque ipsa enim excepturi. Ad nesciunt impedit a obcaecati eos assumenda vel cumque velit praesentium!"
+      ]
+    },
+    {
+      "type": "note-aside",
+      "title": "test",
+      "note": ["test", "{0}", "{1}"],
+      "params": [
+        {
+          "name": "test",
+          "desc": "test"
+        },
+        {
+          "name": "bla",
+          "desc": "bla"
+        }
       ]
     }
   ]
