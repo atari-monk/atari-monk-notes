@@ -1,5 +1,4 @@
 import { View } from './view.js';
-import { TextNoteView } from './text-note-view.js';
 import { NoteAsideView } from './noteAsideView.js';
 import { AsideView } from './asideView.js';
 import { AsideNoteView } from './asideNoteView.js';
@@ -8,7 +7,6 @@ import { CommandNoteAsideView } from './commandNoteAsideView.js';
 import { ContentView } from './contentView.js';
 
 export class NoteView extends View {
-  #noteView;
   #noteAsideView;
   #asideView;
   #asideNoteView;
@@ -22,7 +20,6 @@ export class NoteView extends View {
     super();
     this.#injector = injector;
     this.#beautifier = beautifier;
-    this.#noteView = new TextNoteView(this.#injector);
     this.#noteAsideView = new NoteAsideView(this.#injector);
     this.#asideView = new AsideView();
     this.#asideNoteView = new AsideNoteView();
@@ -40,13 +37,7 @@ export class NoteView extends View {
   createContent(data) {
     data.note.forEach((note) => {
       let newNote;
-      if (this.#isType(note, 'text')) {
-        newNote = this.#noteView.createContent(data, note);
-        if (this._hasProp(note, 'aside') && note.aside.isDetail) {
-          const aside = this.#asideView.createContent(note);
-          newNote.querySelector('.note-text').appendChild(aside);
-        }
-      } else if (this.#isType(note, 'note-aside')) {
+      if (this.#isType(note, 'note-aside') || this.#isType(note, 'text')) {
         newNote = this.#getNoteAsideView(note, newNote, data);
       } else if (this.#isType(note, 'cmd')) {
         if (this._hasProp(note, 'aside')) {

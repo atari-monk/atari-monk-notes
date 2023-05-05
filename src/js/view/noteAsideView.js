@@ -1,6 +1,7 @@
 import { DEBUG } from '../config.js';
 import { View } from './view.js';
 
+//todo: rename to NoteView
 export class NoteAsideView extends View {
   #injector;
 
@@ -11,9 +12,7 @@ export class NoteAsideView extends View {
 
   createContent(data, note, params) {
     DEBUG && console.log('Note Aside View');
-    if (params === undefined) return;
-    const newNote = this.#createNote(note, params, data.inject);
-    return newNote;
+    return this.#createNote(note, params, data.inject);
   }
 
   #createNote(note, params, inject) {
@@ -43,12 +42,12 @@ export class NoteAsideView extends View {
       noteTextEl.classList.add('hide');
       return;
     }
-    const noteWithParams = this.#insertParams(
-      note.note?.join('\n<br>') + '\n',
-      params
-    );
-    const noteInjected = this.#injector.inject(noteWithParams, inject);
-    this._templateHtml(noteTextEl, 'note', noteInjected);
+    let noteText = Array.isArray(note.note)
+      ? note.note?.join('\n<br>')
+      : note.note;
+    if (params) noteText = this.#insertParams(noteText + '\n', params);
+    noteText = this.#injector.inject(noteText, inject);
+    this._templateHtml(noteTextEl, 'note', noteText);
     this._centerText(note, noteTextEl);
   }
 
