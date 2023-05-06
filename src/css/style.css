@@ -199,7 +199,7 @@ a {
     font-family: 'Courier New', Courier, monospace;
     word-break: break-all;
     white-space: pre;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.1rem);
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.3rem);
   }
 
   .btn-off {
@@ -246,7 +246,7 @@ a {
     font-family: 'Courier New', Courier, monospace;
     word-break: break-all;
     white-space: pre;
-    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 0.9rem);
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1rem);
   }
 
   .btn-off {
@@ -278,6 +278,16 @@ a {
   li {
     padding: 1.6vw;
   }
+
+  .cmd-item-note {
+    width: 65ch;
+    overflow: auto;
+  }
+
+  .note-note {
+    width: 65ch;
+    overflow: auto;
+  }
 }
 
 @media (max-width: 450px) and (orientation: portrait) {
@@ -293,7 +303,7 @@ a {
     font-family: 'Courier New', Courier, monospace;
     word-break: break-all;
     white-space: pre;
-    font-size: clamp(0.1rem, 0.75rem + 1.5vw, 0.5rem);
+    font-size: clamp(0.1rem, 0.75rem + 1.5vw, 1rem);
   }
 
   .btn-off {
@@ -324,5 +334,15 @@ a {
 
   li {
     padding: 3.2vw;
+  }
+
+  .cmd-item-note {
+    width: 33ch;
+    overflow: auto;
+  }
+
+  .note-note {
+    width: 33ch;
+    overflow: auto;
   }
 }
