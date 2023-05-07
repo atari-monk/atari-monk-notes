@@ -46,6 +46,10 @@
       {
         "link": "https://drive.google.com/drive/folders/1yO_iPs6wrwCXjpYFelYxDxVUtrz31qRH",
         "text": "Assets on Google Cloud"
+      },
+      {
+        "link": "https://cdnjs.com/libraries/gsap/3.9.1",
+        "text": "GSAP is a JavaScript library for building high-performance animations that work in **every** major browser."
       }
     ]
   },
