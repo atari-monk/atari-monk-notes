@@ -1,6 +1,6 @@
 {
-  "isKey": false,
-  "isScrollToBottom": true,
+  "isKey": true,
+  "isScrollToBottom": false,
   "title": "Node.js Course",
   "nav": [
     {
@@ -448,7 +448,12 @@
         {
           "link": "#localdb",
           "title": "Creating local db",
-          "time": "26-x"
+          "time": "26-34"
+        },
+        {
+          "link": "#create-docs",
+          "title": "CRUD: Creating Documents",
+          "time": "34-x"
         }
       ]
     },
@@ -1957,6 +1962,64 @@
       "type": "text",
       "navId": "localdb",
       "title": "Creating local db",
+      "note": ["{%TAB%}Run mongod.exe and mongosh.exe in powershell consoles."]
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "html",
+      "aside": {
+        "isDetail": true
+      },
+      "note": [
+        "{0}",
+        "{1}",
+        "{2}",
+        "{3}({ name: \"The Forest Hiker\", price: 297, rating: 4.7})",
+        "{4}",
+        "{5}",
+        "{6}",
+        "{7}"
+      ],
+      "params": [
+        {
+          "name": "mongod",
+          "desc": "runs server"
+        },
+        {
+          "name": "mongosh",
+          "desc": "runs shell"
+        },
+        {
+          "name": "use natours-test",
+          "desc": "creates and switches or switches(if exists) to db"
+        },
+        {
+          "name": "db.tours.insertOne",
+          "desc": "db stands for current database, creates collection tours, adds docs"
+        },
+        {
+          "name": "db.tours.find()",
+          "desc": "finds"
+        },
+        {
+          "name": "show dbs",
+          "desc": "shows databases"
+        },
+        {
+          "name": "show collections",
+          "desc": "shows collections"
+        },
+        {
+          "name": "quit()",
+          "desc": "exits shell"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "create-docs",
+      "title": "CRUD: Creating Documents",
       "note": [""]
     },
     {
