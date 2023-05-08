@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import * as tool from '../tool.js';
 import { View } from './view.js';
 
 export class CommandNoteAsideView extends View {
@@ -25,8 +27,8 @@ export class CommandNoteAsideView extends View {
         this.#getTitle(note)
       );
     }
-    const ulEl = newNote.querySelector('.cmd-ul');
     if (note.note === undefined) return newNote;
+    const ulEl = newNote.querySelector('.cmd-ul');
     note.note.forEach((line) => {
       ulEl.appendChild(this.#createNoteItem(data, textParams, note, line));
     });
@@ -42,12 +44,13 @@ export class CommandNoteAsideView extends View {
     const noteItemEl = this._getParentElement('template-cmd-item', 'div');
     const newNoteItem = this._getNewParent(noteItemEl);
     const noteTextEl = newNoteItem.querySelector('.cmd-item-note');
-    const formatText = line.format(...textParams);
-    const injectText = this.#injector.inject(formatText, data.inject);
-    const beautified = this.#beautifier.beautify(note, injectText);
-    const mystep = beautified.replace(new RegExp(' < ', 'g'), '<');
-    const mystep2 = mystep.replace(new RegExp(' > ', 'g'), '>');
-    this.#templateElement(note, noteTextEl, mystep2);
+    let noteText = line;
+    if (textParams) noteText = line.format(...textParams);
+    noteText = this.#injector.inject(noteText, data.inject);
+    noteText = this.#beautifier.beautify(note, noteText);
+    noteText = noteText.replace(new RegExp(' < ', 'g'), '<');
+    noteText = noteText.replace(new RegExp(' > ', 'g'), '>');
+    this.#templateElement(note, noteTextEl, noteText);
     noteTextEl.classList.add('code');
     return newNoteItem;
   }

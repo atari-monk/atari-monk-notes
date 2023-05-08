@@ -15,10 +15,6 @@
       "title": "Tests",
       "links": [
         {
-          "link": "notes.html?page=views/text-note-view",
-          "text": "Text Note View."
-        },
-        {
           "link": "notes.html?page=views/note-aside-view",
           "text": "Note Aside View."
         },

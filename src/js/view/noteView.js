@@ -2,7 +2,6 @@ import { View } from './view.js';
 import { NoteAsideView } from './noteAsideView.js';
 import { AsideView } from './asideView.js';
 import { AsideNoteView } from './asideNoteView.js';
-import { CommandNoteView } from './commandNoteView.js';
 import { CommandNoteAsideView } from './commandNoteAsideView.js';
 import { ContentView } from './contentView.js';
 
@@ -10,7 +9,6 @@ export class NoteView extends View {
   #noteAsideView;
   #asideView;
   #asideNoteView;
-  #commandNoteView;
   #commandNoteAsideView;
   #contentView;
   #injector;
@@ -23,10 +21,6 @@ export class NoteView extends View {
     this.#noteAsideView = new NoteAsideView(this.#injector);
     this.#asideView = new AsideView();
     this.#asideNoteView = new AsideNoteView();
-    this.#commandNoteView = new CommandNoteView(
-      this.#injector,
-      this.#beautifier
-    );
     this.#commandNoteAsideView = new CommandNoteAsideView(
       this.#injector,
       this.#beautifier
@@ -40,19 +34,7 @@ export class NoteView extends View {
       if (this.#isType(note, 'note-aside') || this.#isType(note, 'text')) {
         newNote = this.#getNoteAsideView(note, newNote, data);
       } else if (this.#isType(note, 'cmd')) {
-        if (this._hasProp(note, 'aside')) {
-          newNote = this.#commandNoteAsideView.createContent(
-            data,
-            this.#asideView.getTextParams(note),
-            note
-          );
-          if (this._hasProp(note.aside, 'isDetail') && note.aside.isDetail) {
-            const aside = this.#asideView.createContent(note);
-            newNote.querySelector('.cmd-ul').appendChild(aside);
-          }
-        } else {
-          newNote = this.#commandNoteView.createContent(data, note);
-        }
+        newNote = this.#getCmdView(note, newNote, data);
       } else if (this.#isType(note, 'content')) {
         newNote = this.#contentView.createContent(note);
       } else {
@@ -62,6 +44,21 @@ export class NoteView extends View {
     });
     this.#setupCopyBtns();
     this.#setupDetailBtns();
+  }
+
+  #getCmdView(note, newNote, data) {
+    if (this._hasProp(note, 'params')) {
+      newNote = this.#commandNoteAsideView.createContent(
+        data,
+        this.#asideView.getTextParams(note),
+        note
+      );
+      const aside = this.#asideView.createContent(note);
+      newNote.querySelector('.cmd-ul').appendChild(aside);
+    } else {
+      newNote = this.#commandNoteAsideView.createContent(data, undefined, note);
+    }
+    return newNote;
   }
 
   #getNoteAsideView(note, newNote, data) {
