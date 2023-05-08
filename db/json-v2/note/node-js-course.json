@@ -452,8 +452,13 @@
         },
         {
           "link": "#create-docs",
-          "title": "CRUD: Creating Documents",
-          "time": "34-x"
+          "title": "CRUD: crud operations",
+          "time": "34-1:02"
+        },
+        {
+          "link": "#compas-ui",
+          "title": "Using Compass app for CRUD operations",
+          "time": "1:02-x"
         }
       ]
     },
@@ -2019,7 +2024,97 @@
     {
       "type": "text",
       "navId": "create-docs",
-      "title": "CRUD: Creating Documents",
+      "title": "CRUD: Creating Documents"
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "html",
+      "aside": {
+        "isDetail": true
+      },
+      "note": [
+        "{0}([{ name: \"The Sea Explorer\", price: 497, rating: 4.8 }, { name: \"The Snow Adventurer\", price: 997, rating: 4.9, difficulty: \"easy\" }])",
+        "db.tours.find()"
+      ],
+      "params": [
+        {
+          "name": "db.tours.insertMany",
+          "desc": "create docs"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "CRUD: Querying, (reading) Documents"
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "html",
+      "aside": {
+        "isDetail": true
+      },
+      "note": [
+        "db.tours.find()",
+        "db.tours.find({ name: \"The Forest Hiker\" })",
+        "db.tours.find({ difficulty: \"easy\" })",
+        "db.tours.find({ price: {{0}: 500} })",
+        "db.tours.find({ price: {{0}: 500}, rating: {{1}: 4.8} })",
+        "db.tours.find({ $or: [ {price: {$lt: 500}}, {rating: {$gte: 4.8}}]})",
+        "db.tours.find({ $or: [ {price: {$gt: 500}}, {rating: {$gte: 4.8}}]})",
+        "db.tours.find({ $or: [ {price: {$gt: 500}}, {rating: {$gte: 4.8}}]}, {name: 1})"
+      ],
+      "params": [
+        {
+          "name": "$lte",
+          "desc": "less then or equal, $ is pre operator sign (in object)"
+        },
+        {
+          "name": "$gte",
+          "desc": "greater then or equal"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "title": "CRUD: Updating Documents"
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "html",
+      "note": [
+        "db.tours.updateOne({ name: \"The Snow Adventurer\"}, { $set: {price: 597}})",
+        "db.tours.find()",
+        "db.tours.find({ price: {$gt: 500}, rating: {$gte: 4.8} })",
+        "db.tours.updateMany({ price: {$gt: 500}, rating: {$gte: 4.8}}, { $set: {premium: true}})",
+        "db.tours.find()",
+        "db.tours.replaceOne(...)"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "CRUD: Deleting Documents"
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "html",
+      "note": [
+        "db.tours.find()",
+        "db.tours.deleteMany({ rating: {$lt: 4.8} })",
+        "db.tours.deleteMany({})"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "compas-ui",
+      "title": "Using Compass app for CRUD operations",
       "note": [""]
     },
     {
