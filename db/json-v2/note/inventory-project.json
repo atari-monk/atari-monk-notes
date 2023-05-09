@@ -1,0 +1,112 @@
+{
+  "isKey": false,
+  "isScrollToBottom": false,
+  "title": "MongoDB database for inventory-project",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "https://cloud.mongodb.com/v2/645a497bc15ff236302d1e83#/clusters",
+        "text": "Atlas Cluster"
+      }
+    ]
+  },
+  "description": {
+    "navId": "description",
+    "isCenter": true,
+    "title": "Description",
+    "description": ["My stuff db."]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": ["Atlas account."]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "title": "Notes"
+    },
+    {
+      "type": "content",
+      "navId": "content",
+      "title": "Content",
+      "links": [
+        {
+          "link": "#setup",
+          "title": "Setup"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "setup",
+      "title": "Setup",
+      "note": [
+        "{%TAB%}Created inventory-project and inventory-cluster on my Atlas account. In future it's better to use just inventory, inventory names for project and db. In fact i removed all my projects and created natours, natours and inventory, inventory resources once agian, just to simply naming. Next i connect using mongosh."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "text",
+      "title": "mongosh connection string",
+      "note": [
+        "mongosh \"mongodb+srv://inventory.4kmhlb4.mongodb.net\" --apiVersion 1 --username atarimonk1"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "AI setup",
+      "note": [
+        "ChatGPT wrote me app to collect data. I provided json scheme and it generated express server with ejs form. This stored data to data.json file. I exposed this localhosted app to internet using ngrok service, so i can use it on mobile phone when collecting data. Next i use mogosh to add it to db."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Initial Items scheme.",
+      "note": [
+        "{\"name\":\"test\",\"description\":\"test\",\"tags\":[\"test\"],\"comments\":[{\"author\":\"test\",\"text\":\"test\"}],\"transactions\":[{\"name\":\"test\",\"price\":\"test\",\"date\":\"test\"}],\"sizes\":[{\"name\":\"test\",\"width\":\"test\",\"heigth\":\"test\",\"depth\":\"test\"}],\"count\":\"2\"}"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "text",
+      "title": "Now i try to export data to db using mongosh.",
+      "note": ["use inventory", "db.items.insertOne('put json here')", "db.tours.find()"]
+    },
+    {
+      "type": "text",
+      "navId": "summary",
+      "isCenter": true,
+      "title": "Summary",
+      "note": ["{%NAV%}"]
+    }
+  ]
+}

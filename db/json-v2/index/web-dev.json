@@ -22,6 +22,9 @@
     },
     {
       "title": "Project Atari Monk Notes"
+    },
+    {
+      "title": "MongoDB"
     }
   ],
   "section": [
@@ -150,6 +153,20 @@
         {
           "link": "index.html?page=index/view-tests",
           "text": "View Tests."
+        },
+        {
+          "link": "#",
+          "text": "Back to Top"
+        }
+      ]
+    },
+    {
+      "navId": "mongodb",
+      "title": "MongoDB",
+      "links": [
+        {
+          "link": "notes.html?page=note/inventory-project",
+          "text": "MongoDB database for inventory-project"
         },
         {
           "link": "#",

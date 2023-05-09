@@ -1,6 +1,6 @@
 {
   "isKey": false,
-  "isScrollToBottom": true,
+  "isScrollToBottom": false,
   "title": "Node.js Course",
   "nav": [
     {
@@ -472,9 +472,14 @@
       "title": "Content, Part 7",
       "links": [
         {
-          "link": "#chapter1",
-          "title": "Chapter 1",
-          "time": "0-10"
+          "link": "#connect",
+          "title": "Connect db with Express app",
+          "time": "0-15"
+        },
+        {
+          "link": "#tour-model",
+          "title": "Creating ",
+          "time": "15-x"
         }
       ]
     },
@@ -2140,7 +2145,47 @@
       "navId": "atlas",
       "title": "Hosting db in cloud with mongodb company atlas service.",
       "note": [
-        "Created Atlas account, created db user account. Connected with compas and cli/shell. Created db for this tutorial."
+        "Created Atlas account, created db user account. Connected with compas and cli/shell. Created db for this tutorial.{%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "connect",
+      "title": "Connect db with Express app",
+      "note": [
+        "Just add all connection strings from atlas web page to config.env."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "text",
+      "title": "config.env",
+      "note": [
+        "NODE_ENV=development \nPORT=3000 \nDATABASE=mongodb+srv://atarimonk1:<PASSWORD>@natours.hhuthlp.mongodb.net/?retryWrites=true&w=majority\nDATABASE_LOCAL=mongodb://localhost:27017/natours \nDATABASE_PASSWORD=mZ70DyWIGuDxRhq1"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "none",
+      "content": "text",
+      "title": "Install mongoose, popular mongo node driver.",
+      "note": ["npm i mongoose@5"]
+    },
+    {
+      "type": "text",
+      "title": "Setup in server",
+      "note": [
+        "Require mongoose. Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js, a higher level of abstraction. Rapid and simple development for mongoDB. Features: schemas to model data and relationships, easy data validation, simple query API, middleware. Mongoose schema: model for our data, structure, default values, validation. Mongoose model: wrapper for schema, provieds CRUD."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Connect to mongodb with mongoose",
+      "note": [
+        "const mongoose = require('mongoose'); const DB = process.env.DATABASE.replace( '<PASSWORD>', process.env.DATABASE_PASSWORD ); mongoose \n//.connect(process.env.DATABASE_LOCAL,\n .connect(DB, { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false, }) .then(() => { console.log('DB connection ok.'); });"
       ]
     },
     {
