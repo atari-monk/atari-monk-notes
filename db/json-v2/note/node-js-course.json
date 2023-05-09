@@ -1,6 +1,6 @@
 {
-  "isKey": true,
-  "isScrollToBottom": false,
+  "isKey": false,
+  "isScrollToBottom": true,
   "title": "Node.js Course",
   "nav": [
     {
@@ -458,7 +458,23 @@
         {
           "link": "#compas-ui",
           "title": "Using Compass app for CRUD operations",
-          "time": "1:02-x"
+          "time": "1:02-1:09"
+        },
+        {
+          "link": "#atlas",
+          "title": "Hosting db in cloud with mongodb company atlas service.",
+          "time": "1:09-1:20"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Content, Part 7",
+      "links": [
+        {
+          "link": "#chapter1",
+          "title": "Chapter 1",
+          "time": "0-10"
         }
       ]
     },
@@ -2115,7 +2131,17 @@
       "type": "text",
       "navId": "compas-ui",
       "title": "Using Compass app for CRUD operations",
-      "note": [""]
+      "note": [
+        "UI for mongo is MongoDB Compass. They have many tools on website. Run mongod db server on default port in powershell and connect to it with compass client. Same options like with cli only with gui."
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "atlas",
+      "title": "Hosting db in cloud with mongodb company atlas service.",
+      "note": [
+        "Created Atlas account, created db user account. Connected with compas and cli/shell. Created db for this tutorial."
+      ]
     },
     {
       "type": "text",
