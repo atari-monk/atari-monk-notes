@@ -1,6 +1,6 @@
 {
-  "isKey": true,
-  "isScrollToBottom": false,
+  "isKey": false,
+  "isScrollToBottom": true,
   "title": "Node.js Course",
   "nav": [
     {
@@ -2187,6 +2187,47 @@
       "note": [
         "const mongoose = require('mongoose'); const DB = process.env.DATABASE.replace( '<PASSWORD>', process.env.DATABASE_PASSWORD ); mongoose \n//.connect(process.env.DATABASE_LOCAL,\n .connect(DB, { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false, }) .then(() => { console.log('DB connection ok.'); });"
       ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "tour-model",
+      "title": "Creating a simple Tour model"
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "const tourSchema = new mongoose.Schema({name: { type: String, required: [true, 'A tour must have a name'], unique: true }, rating: { type: Number, default: 4.5 }, price: { type: Number, required: [true, 'A tour must have a price'] }}); const Tour = mongoose.model('Tour', tourSchema);"
+      ]
+    },
+    {
+      "type": "cmd",
+      "navId": "tour-model2",
+      "beautify": "js",
+      "content": "text",
+      "title": "Creating documents and testing the model.",
+      "note": [
+        "const testTour = new Tour({ name: 'The Forest Hiker', rating: 4.7, price: 497}); testTour.save().then(doc => { console.log(doc); }).catch(err => { console.log('Error 💥', err); });"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "mvc",
+      "title": "MVC architecture in express app",
+      "note": [
+        "Model - data/business logic, Constroller - application logic, View - presentation logic. Create tourModel. Use it in tourController. Implement and test create tour. Mongoose creates wrapper on model that provides methods for mongodb crud, along with validation, errors, defaults and so on, thanks to schema. Used Compas, postman and api app to connect and test db with create endpoint."
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Reading Documents. 58:38.",
+      "note": [""]
     },
     {
       "type": "text",
