@@ -58,6 +58,10 @@
       {
         "link": "https://www.mongodb.com/",
         "text": "MongoDb"
+      },
+      {
+        "link": "https://mongoosejs.com/docs/guide.html",
+        "text": "mongoosejs"
       }
     ]
   },
@@ -2227,7 +2231,21 @@
       "type": "text",
       "navId": "",
       "title": "Reading Documents. 58:38.",
-      "note": [""]
+      "note": [
+        "Write crud methods with moongose model. Get data from model object with some method using async await. Put it in response. Handle error in try catch."
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Updating Documents. 1:07",
+      "note": ["Same pattern. Use Mongoose doc page for it's ritch features."]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Deleting Documents. 1:18",
+      "note": ["Same pattern."]
     },
     {
       "type": "text",
