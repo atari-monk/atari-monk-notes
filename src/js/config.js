@@ -1,4 +1,4 @@
-const IS_IN_PROD = false;
+const IS_IN_PROD = true;
 export let CONNECTION;
 export let DEBUG;
 export let HOME;
