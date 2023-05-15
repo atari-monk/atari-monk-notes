@@ -1,6 +1,6 @@
 {
-  "isKey": false,
-  "isScrollToBottom": true,
+  "isKey": true,
+  "isScrollToBottom": false,
   "title": "Node.js Course",
   "nav": [
     {
