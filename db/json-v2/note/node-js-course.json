@@ -2336,6 +2336,24 @@
       "type": "text",
       "navId": "",
       "title": "Making the API better, advanced filtering. 2:15",
+      "note": [
+        "Advanced api query. It's just a format that must be documented. Enables opration on data."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Example of advanced api query for GET.",
+      "note": [
+        "127.0.0.1:3000/api/v1/tours?duration[gte]=5&difficulty=easy&price[lt]=1500"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Js implementation of filtering based on advanced query.",
       "note": [""]
     },
     {
