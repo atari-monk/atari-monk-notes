@@ -9,42 +9,18 @@
   "note": [
     {
       "type": "text",
-      "isCopy": false,
       "title": "05.04.2023 23:36",
       "note": [
-        "O tyle udało mi się dziś powiększyć swoją wiedzę. Pomnożyć to razy liczbę dni życia. To wszystko co mam. Praktycznie nic.",
-        "Zabawne ale po tej myśli, klinkęło mi się <a href='https://youtu.be/40UpmHHNBrE'>klip</a> który wpasował się w ten nastrój."
+        "{%TAB%}O tyle udało mi się dziś powiększyć swoją wiedzę. Pomnożyć to razy liczbę dni życia. To wszystko co mam. Praktycznie nic.",
+        "{%BR%}{%BR_TAB%}Zabawne ale po tej myśli, klinkęło mi się <a href='https://youtu.be/40UpmHHNBrE'>klip</a> który wpasował się w ten nastrój. Aczkolwiek pewnie to projekcja."
       ]
-    }
-  ],
-  "inject": [
-    {
-      "key": "{%BR%}",
-      "text": "<br>"
     },
     {
-      "key": "{%TAB%}",
-      "text": "<span class='tab'></span>"
-    },
-    {
-      "key": "{%BR_TAB%}",
-      "text": "<br><span class='tab'></span>"
-    },
-    {
-      "key": "{%NAV%}",
-      "text": "<br><a class='center' href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%NAV2%}",
-      "text": "<br><a href='#'>Back to Top</a>"
-    },
-    {
-      "key": "{%CONTENT%}",
-      "text": "<br><a href='#content'>Back to Content</a>"
-    },
-    {
-      "key": "{%CONTENT2%}",
-      "text": "<a href='#content'>Back to Content</a>"
+      "type": "text",
+      "title": "18.05.2023 23:17",
+      "note": [
+        "{%TAB%}Zliczamy impulsy nerwowe, informacje z których powstaje model. Życie to sen maszyny. Często siedząc nad kodem tworzyłem coś mocno odklejonego. Sztuka dla sztuki. Jak stukot obcej matematyki. Dobrze mieć z kimś jakiś dialog. Dobrze kogoś uczyć uznanej technologii, bo wtedy jest stabilność. Z drugiej strony bez eksploracji nie byłoby żadnej zabawy. AI to my. My to AI. Wszystko wydaje się informacją a my jesteśmy kroplą w oceanie. Jeśli analizujesz coś przez pryzmat umysłu. Wszystko można uznać za tego typu maszynę. Wiedza jest ograniczona, ale to dane na których polega sen istnienia. Słowa składam jak chatgpt."
+      ]
     }
   ]
 }
