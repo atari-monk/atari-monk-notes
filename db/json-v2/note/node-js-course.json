@@ -2380,8 +2380,40 @@
       "type": "text",
       "navId": "",
       "title": "Making the api better: Limiting Fields 2:38",
+      "note": ["Selecting set of fields from document."]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "",
       "note": [
-        "127.0.0.1:3000/api/v1/tours?fields=name,duration,difficulty,price"
+        "127.0.0.1:3000/api/v1/tours?fields=name,duration,difficulty,price",
+        "//3 Field limiting if (req.query.fields) { const fields = req.query.fields.split(',').join(' '); query = query.select(fields); } else { query = query.select('-__v'); }"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Making the api better: Pagination 2:44",
+      "note": ["Responce in pages with set documents per page."]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "",
+      "note": [
+        "127.0.0.1:3000/api/v1/tours?page=2&limit=10",
+        "// 4) Pagination const page = req.query.page * 1 || 1; const limit = req.query.limit * 1 || 100; const skip = (page - 1) * limit; query = query.skip(skip).limit(limit); if (req.query.page) { const numTours = await Tour.countDocuments(); if (skip >= numTours) throw new Error('This page does not exist'); }"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Making the api better: Aliasing 2:59",
+      "note": [
+        "Use router to provide alias route. Use middleware to prefill fields for standard query to make it custom."
       ]
     },
     {
@@ -2389,7 +2421,12 @@
       "beautify": "js",
       "content": "text",
       "title": "",
-      "note": [""]
+      "note": [
+        "127.0.0.1:3000/api/v1/tours?limit=5&sort=-ratingsAverage,price",
+        "127.0.0.1:3000/api/v1/tours/top-5-cheap",
+        "router.route('/top-5-cheap').get(tourController.aliasTopTours, tourController.getAllTours);",
+        "exports.aliasTopTours = (req, res, next) => { req.query.limit = '5'; req.query.sort = '-ratingsAverage,price'; req.query.fields = 'name,price,ratingsAverage,summary,difficulty'; next(); };"
+      ]
     },
     {
       "type": "text",
