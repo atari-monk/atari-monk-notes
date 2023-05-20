@@ -2354,6 +2354,41 @@
       "beautify": "js",
       "content": "text",
       "title": "Js implementation of filtering based on advanced query.",
+      "note": [
+        "exports.getAllTours = async (req, res) => { try { //build query\n //1) Filtering\n const queryObj = { ...req.query }; const excludedFields = ['page', 'sort', 'limit', 'fields']; excludedFields.forEach((el) => delete queryObj[el]); //2) Advanced filtering\n let queryStr = JSON.stringify(queryObj); queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`); const advQuery = JSON.parse(queryStr); console.log(advQuery); const query = Tour.find(advQuery); //Execute query const tours = await query; res.status(200).json({ status: 'success', results: tours.length, data: { tours, }, }); } catch (err) { res.status(404).json({ status: 'fail', message: err, }); } };"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Making the api better: Sorting 2:27",
+      "note": [
+        "Minus means direction of sorting. Props are separeted by comma."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "",
+      "note": [
+        "127.0.0.1:3000/api/v1/tours?sort=-price,-ratingsAverage",
+        "//2) Sorting if (req.query.sort) { const sortBy = req.query.sort.split(',').join(' '); query = query.sort(sortBy); } else { query = query.sort('-createdAt'); }"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Making the api better: Limiting Fields 2:38",
+      "note": [
+        "127.0.0.1:3000/api/v1/tours?fields=name,duration,difficulty,price"
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "",
       "note": [""]
     },
     {
