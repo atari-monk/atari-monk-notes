@@ -1,0 +1,76 @@
+{
+  "isKey": false,
+  "isScrollToBottom": false,
+  "title": "What I Watched or Listended to.",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "description": {
+    "navId": "description",
+    "isCenter": true,
+    "title": "Description",
+    "description": ["Just a list."]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "title": "Notes"
+    },
+    {
+      "type": "content",
+      "navId": "content",
+      "title": "Content",
+      "links": [
+        {
+          "link": "#ch1",
+          "title": "06.2023"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "ch1",
+      "title": "06.2023"
+    },
+    {
+      "type": "text",
+      "title": "Tim Dillon",
+      "note": [
+        "video: <a href='https://youtu.be/8yDyBFCdbQk'>The Price Of Fame | The Tim Dillon Show #349</a>",
+        "topic: concert adult dipers, thief proof drug store, hot teen eaten by shark",
+        "watched: 2",
+        "category: comedy, social commentary"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Jingles",
+      "note": [
+        "video: <a href='https://youtu.be/Qd8UhiRq6q0'>Not Mingles with Jingles</a>",
+        "topic: eddie has bad cancer",
+        "watched: 2",
+        "category: gamer, story teller"
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "summary",
+      "isCenter": true,
+      "title": "Summary",
+      "note": ["{%NAV%}"]
+    }
+  ]
+}

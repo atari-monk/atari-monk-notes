@@ -86,6 +86,10 @@
       "title": "Other",
       "links": [
         {
+          "link": "notes.html?page=note/watched",
+          "text": "What I Watched/Listed to."
+        },
+        {
           "link": "notes.html?page=note/todo",
           "text": "ToDo"
         },
