@@ -807,20 +807,41 @@
       "note": ["{%CONTENT2%}"]
     },
     {
-      "link": "",
-      "title": "",
-      "time": ""
-    },
-    {
       "type": "text",
       "navId": "container_counter",
       "title": "Container Counter 3:50-4:13"
     },
     {
       "type": "text",
-      "title": "Varaint Prefab",
+      "title": "Refactor Prefab to Varaint Prefab",
       "note": [
-        "{%TAB%}Duplicate ClearCounter.{%BR%}Rename to _BaseCounter.{%BR%} Edit _BaseCounter. {%BR%}Make sure _BaseCounter has all features of Counter. {%BR%}Namely, box collider, CounterTopPoint. {%BR%}Delete specifics, namly, delete visual, selected and script. {%BR%}Now click _BaseCounter, menu Create, Prefab Varaint. {%BR%}Rename ClearCounter to ClearCounter_BACKUP. {%BR%}Rename Variant to ClearCounter. {%BR%}Now, using BACKUP copy and add every thing removed, also script. {%BR%}On prefab parts, set all references. {%BR%}Remove BACKUP and broken scene prefabs. {%BR%}Drop ClearCounter prefab on scene (variant)."
+        "{%TAB%}Duplicate ClearCounter.",
+        "Rename to _BaseCounter.",
+        "Edit _BaseCounter.",
+        "Make sure _BaseCounter has all features of Counter.",
+        "Namely, box collider, CounterTopPoint.",
+        "Delete specifics, namly, delete visual, selected and script.",
+        "Now click _BaseCounter, menu Create, Prefab Varaint.",
+        "Rename ClearCounter to ClearCounter_BACKUP.",
+        "Rename Variant to ClearCounter.",
+        "Now, using BACKUP copy and add every thing removed, also script.",
+        "On prefab parts, set all references.",
+        "Remove BACKUP and broken scene prefabs.",
+        "Drop ClearCounter prefab on scene (variant)."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Container Counter Variant",
+      "note": [
+        "{%TAB%}On Base Counter, Create, Prefab Variant.",
+        "Drop ContainerCounter_Visual.",
+        "Duplicate Visual, rename it to Selected.",
+        "Change material to Selected type.",
+        "Keep xyz on 0. Make selected scale 1.01 on xyz.",
+        "Remove Animator from Selected.",
+        "Add ContainerCounter script.",
+        "Atach it to main obj and open."
       ]
     },
     {

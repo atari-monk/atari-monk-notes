@@ -1,0 +1,142 @@
+{
+  "isKey": false,
+  "isScrollToBottom": false,
+  "title": "",
+  "nav": [
+    {
+      "title": "Home",
+      "link": "home"
+    },
+    {
+      "title": "Source"
+    },
+    {
+      "title": "Description"
+    },
+    {
+      "title": "Preconditions"
+    },
+    {
+      "title": "Notes"
+    },
+    {
+      "title": "Summary"
+    }
+  ],
+  "source": {
+    "navId": "source",
+    "title": "Source",
+    "links": [
+      {
+        "link": "",
+        "text": ""
+      },
+      {
+        "link": "",
+        "text": ""
+      }
+    ]
+  },
+  "description": {
+    "navId": "description",
+    "isCenter": true,
+    "title": "Description",
+    "description": [""]
+  },
+  "precondition": {
+    "navId": "preconditions",
+    "title": "Preconditions",
+    "list": [""]
+  },
+  "note": [
+    {
+      "type": "text",
+      "navId": "notes",
+      "title": "Notes"
+    },
+    {
+      "type": "content",
+      "navId": "content",
+      "title": "Content",
+      "links": [
+        {
+          "link": "#chapter1",
+          "title": "Chapter 1",
+          "time": "0-10"
+        },
+        {
+          "link": "#chapter2",
+          "title": "Chapter 2",
+          "time": "10-20"
+        },
+        {
+          "link": "#chapter3",
+          "title": "Chapter 3",
+          "time": "20-40"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "",
+      "note": [""]
+    },
+    {
+      "type": "text",
+      "title": "",
+      "note": [""]
+    },
+    {
+      "type": "note-aside",
+      "navId": "",
+      "title": "",
+      "note": ["{%TAB%}"],
+      "params": [
+        {
+          "name": "",
+          "desc": ""
+        },
+        {
+          "name": "",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "type": "cmd",
+      "aside": {
+        "isDetail": true
+      },
+      "title": "",
+      "note": [""],
+      "params": [
+        {
+          "name": "",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "type": "cmd",
+      "content": "text",
+      "beautify": "css",
+      "title": "",
+      "note": [""]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "",
+      "note": [""]
+    },
+    {
+      "type": "text",
+      "navId": "summary",
+      "isCenter": true,
+      "title": "Summary",
+      "note": ["{%NAV%}"]
+    }
+  ]
+}
