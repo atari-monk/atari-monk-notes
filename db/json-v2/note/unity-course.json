@@ -699,9 +699,9 @@
     },
     {
       "type": "text",
-      "navId": "player_pickup",
+      "navId": "kitchen_object_parent",
       "isCopy": false,
-      "title": "Player Pick up, C# Interfaces",
+      "title": "Kitchen Object Parent",
       "note": [
         "In game mode, test that you can spawn tomato and cheese block in unlimited numbers. Hierarchy has many tomatos if you hit E multiple times. In the ClearCounter script."
       ]
@@ -808,6 +808,14 @@
     },
     {
       "type": "text",
+      "navId": "player_pickup",
+      "title": "Player Pick up, C# Interfaces",
+      "note": [
+        "KitchenObject has parent of ClearCounter type. To generalize it, we provide interface IKitchenObjectParent (instead of ClearCounter). Then we implement it on ClerCounter and Player. This way in Interact we can set parent of kitchenObject to player or counter. {%CONTENT%}"
+      ]
+    },
+    {
+      "type": "text",
       "navId": "container_counter",
       "title": "Container Counter 3:50-4:13"
     },
@@ -837,11 +845,23 @@
         "{%TAB%}On Base Counter, Create, Prefab Variant.",
         "Drop ContainerCounter_Visual.",
         "Duplicate Visual, rename it to Selected.",
-        "Change material to Selected type.",
+        "Change material to Selected type. (all elements in visual)",
+        "Disable all elements.",
         "Keep xyz on 0. Make selected scale 1.01 on xyz.",
         "Remove Animator from Selected.",
+        "Add Selected Counter Visual script to Selected.",
+        "Set second ref to first element.",
         "Add ContainerCounter script.",
         "Atach it to main obj and open."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Container Counter script",
+      "note": [
+        "using UnityEngine; public class ContainerScript : MonoBehaviour, IKitchenObejctParent { [SerializeField] private KitchenObjectSO kitchenObjectSO; [SerializeField] private Transform counterTopPoint; private KitchenObject kitchenObject; public void Interact() { if (kitchenObject == null) { Transform kitchenObjectTransform = Instantiate( kitchenObjectSO.prefab, counterTopPoint); kitchenObjectTransform .GetComponent<KitchenObject>().SetClearCounter(this); } else { Debug.Log(kitchenObject.GetClearCounter()); } } public Transform GetKitchenObjectFollowTransform() { return counterTopPoint; } public void SetKitchenObject(KitchenObject kitchenObject) { this.kitchenObject = kitchenObject; } public KitchenObject GetKitchenObject() { return kitchenObject; } public void ClearKitchenObject() { kitchenObject = null; } public bool HasKitchenObject() { return kitchenObject != null; } }"
       ]
     },
     {
