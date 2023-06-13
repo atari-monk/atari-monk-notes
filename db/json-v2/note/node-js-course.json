@@ -1,6 +1,6 @@
 {
-  "isKey": false,
-  "isScrollToBottom": true,
+  "isKey": true,
+  "isScrollToBottom": false,
   "title": "Node.js Course",
   "nav": [
     {
@@ -2472,8 +2472,30 @@
     {
       "type": "text",
       "navId": "",
-      "title": "Aggregation pipeline: unwinding and projecting 3:44-3:54-x",
-      "note": ["."]
+      "title": "Aggregation pipeline: unwinding and projecting 3:44-4:04",
+      "note": [
+        "Kind of a data based scripting language for writing stage based query on data. Cool."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Example endpoint. Router and controller part.",
+      "note": [
+        "router.route('/monthly-plan/:year').get(tourController.getMonthlyPlan);",
+        "exports.getMonthlyPlan = async (req, res) => { try { const year = req.params.year * 1; const plan = await Tour.aggregate([ { $unwind: '$startDates', }, { $match: { startDates: { $gte: new Date(`${year}-01-01`), $lte: new Date(`${year}-12-31`), }, }, }, { $group: { _id: { $month: '$startDates' }, numTourStarts: { $sum: 1 }, tours: { $push: '$name' }, }, }, { $addFields: { month: '$_id' }, }, { $project: { _id: 0 }, }, { $sort: { numTourStarts: -1 }, }, { $limit: 12, }, ]); res.status(200).json({ status: 'success', data: { plan, }, }); } catch (err) { res.status(404).json({ status: 'fail', message: err, }); } };"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Virtual Properties 4:04-x",
+      "note": [""]
     },
     {
       "type": "text",
