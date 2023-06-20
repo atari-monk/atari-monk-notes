@@ -2494,7 +2494,42 @@
     {
       "type": "text",
       "navId": "",
-      "title": "Virtual Properties 4:04-x",
+      "title": "Virtual Properties 4:04-4:10",
+      "note": ["Props computed from db props, not in db."]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "options for Schema",
+      "note": [
+        "new mongoose.Schema",
+        "{ toJSON: { virtuals: true }, toObject: { virtuals: true }, }",
+        "tourSchema.virtual('durationWeeks').get(function () { return this.duration / 7; });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Document middleware 4:10-4:25",
+      "note": [
+        "Concept of middleware applays to mongoose. One can run code between events. Document type middleware runs before save and create."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": ["tourSchema.pre('save', function (next) { this.slug = new slugify(this.name, { lower: true }); next(); }); tourSchema.pre('save', function (next) { console.log('Will save doc...'); next(); }); tourSchema.post('save', function (doc, next) { console.log(doc); next(); });"]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Query middleware 4:25-x",
       "note": [""]
     },
     {
