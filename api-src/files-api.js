@@ -5,7 +5,8 @@ class FilesApi {
   #rootFolder;
 
   constructor() {
-    this.#rootFolder = 'C:\\atari-monk\\Code\\js-notes-templated\\src\\json';
+    this.#rootFolder =
+      'C:\\atari-monk\\Code\\atari-monk-notes\\db\\json-v1';
   }
 
   async #getRootDirs(req, res) {
@@ -35,9 +36,8 @@ class FilesApi {
   async #getFile(req, res) {
     const dirId = req.params.dirId;
     const fileId = req.params.fileId;
-    const dir = (await this.#load(res, this.#rootFolder)).find(
-      (f) => f.id === Number(dirId)
-    );
+    const dirData = await this.#load(res, this.#rootFolder);
+    const dir = dirData.find((f) => f.id === Number(dirId));
     const file = (await this.#load(res, dir.path)).find(
       (f) => f.id === Number(fileId)
     );

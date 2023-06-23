@@ -4,6 +4,8 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+
+    
     {
       "type": "node",
       "request": "launch",
@@ -23,6 +25,19 @@
       ],
       "program": "./api-src/api.js",
       "cwd": "${workspaceFolder}",
+    },
+    {
+      "name": ".NET Core Launch (WPF)",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/NoteEditorApp/bin/Debug/net7.0-windows/NoteEditorApp.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "console": "internalConsole",
+      "logging": {
+        "moduleLoad": false
+      }
     }
   ]
 }
