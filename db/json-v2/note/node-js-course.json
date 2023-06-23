@@ -2524,13 +2524,94 @@
       "type": "cmd",
       "beautify": "js",
       "content": "text",
-      "note": ["tourSchema.pre('save', function (next) { this.slug = new slugify(this.name, { lower: true }); next(); }); tourSchema.pre('save', function (next) { console.log('Will save doc...'); next(); }); tourSchema.post('save', function (doc, next) { console.log(doc); next(); });"]
+      "note": [
+        "tourSchema.pre('save', function (next) { this.slug = new slugify(this.name, { lower: true }); next(); }); tourSchema.pre('save', function (next) { console.log('Will save doc...'); next(); }); tourSchema.post('save', function (doc, next) { console.log(doc); next(); });"
+      ]
     },
     {
       "type": "text",
       "navId": "",
-      "title": "Query middleware 4:25-x",
+      "title": "Query middleware 4:25-4:39",
+      "note": [
+        "Runs some code before or after query elements. Here used to hide secret records."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "schema, query middleware",
+      "note": [
+        "secretTour: { type: Boolean, default: false, },",
+        "tourSchema.pre('/^find/', function (next) { this.find({ secretTour: { $ne: true } }); this.start = Date.now(); next(); }); tourSchema.post('/^find/', function (docs, next) { console.log(`Query took ${Data.now() - this.start} milliseconds`); console.log(docs); next(); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Aggregation middleware 4:39-4:46",
+      "note": [
+        "Middleware in aggregation. Aggregation used in getTourStats. Middleware is nice to, again filter out secret records in convinient way (extending, not modiffying)."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "note": [
+        "tourSchema.pre('aggregate', function (next) { this.pipeline().unshift({ $match: { secretTour: { $ne: true } } }); console.log(this.pipeline()); next(); });"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Data Validation: Built-in validators 4:46-4:56",
+      "note": [
+        "Moongoose has 'fat model thin controller' assumption. min, max works with numbers, dates. enum on strings."
+      ]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "Validators in mongoose.Schema",
+      "note": [
+        "runValidators: true",
+        "maxlength: [40, 'A tour name must have less or equal then 40 characters'],",
+        "minlength: [10, 'A tour name must have more or equal then 10 characters'],",
+        "min: [1, 'Rating must be above 1.0'],",
+        "max: [5, 'Rating must be above 5.0'],",
+        "enum: { values: ['easy', 'medium', 'difficult'], message: 'Difficulty is either easy, medium, difficult' },"
+      ]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "Data Validation: Custom Validators 4:56-x",
+      "title": "",
       "note": [""]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "",
+      "note": [""]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
     },
     {
       "type": "text",
