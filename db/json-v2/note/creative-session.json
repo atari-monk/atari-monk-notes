@@ -93,6 +93,11 @@
           "link": "#ball-game",
           "title": "Ball Game",
           "time": "VI-x 2023"
+        },
+        {
+          "link": "#6-three-js",
+          "title": "6 Three.js",
+          "time": "VI-x 2023"
         }
       ]
     },
@@ -147,7 +152,21 @@
       "type": "text",
       "title": "24.06.2023",
       "note": [
-        "{%TAB%}Today i plan to understand model more by refactoring it. Again there will be two models now. Hope is second one will be more readable and first one will be deleted some day."
+        "{%TAB%}Today i plan to understand model more by refactoring it. Again there will be two models now. Hope is second one will be more readable and first one will be deleted some day.",
+        "{%TAB%}I want to fix bug and add to new player model. Fail. It's not easy. Need to copy entire game factory and add/change types."
+      ]
+    },
+    {
+      "type": "text",
+      "navId": "6-three-js",
+      "title": "6 Three.js",
+      "note": ["Ts 3d canvas proj."]
+    },
+    {
+      "type": "text",
+      "title": "24.06.2023",
+      "note": [
+        "Intro proj with Three.js with help on chatgpt. Rotating Cube in black is my Hello World. Worked."
       ]
     },
     {
