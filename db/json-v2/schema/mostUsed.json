@@ -1,0 +1,52 @@
+{
+  "note": [
+    {
+      "type": "text",
+      "navId": "",
+      "title": "",
+      "note": [""]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "",
+      "note": [""]
+    },
+    {
+      "type": "text",
+      "title": "",
+      "note": [""]
+    },
+    {
+      "type": "cmd",
+      "aside": {
+        "isDetail": true
+      },
+      "title": "",
+      "note": [""],
+      "params": [
+        {
+          "name": "",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "type": "note-aside",
+      "navId": "",
+      "title": "",
+      "note": ["{%TAB%}"],
+      "params": [
+        {
+          "name": "",
+          "desc": ""
+        },
+        {
+          "name": "",
+          "desc": ""
+        }
+      ]
+    }
+  ]
+}

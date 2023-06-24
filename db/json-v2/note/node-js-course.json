@@ -2598,20 +2598,46 @@
     },
     {
       "type": "text",
-      "navId": "Data Validation: Custom Validators 4:56-x",
+      "navId": "Data Validation: Custom Validators 4:56-5:10 End Part 7",
       "title": "",
-      "note": [""]
+      "note": ["Also use validator npm/github lib."]
     },
     {
       "type": "cmd",
       "beautify": "js",
       "content": "text",
-      "title": "",
-      "note": [""]
+      "title": "lib, function",
+      "note": [
+        "validate: [validator.isAlpha, 'Tour name must only contain characters'],",
+        "tourSchema.pre('aggregate', function (next) { this.pipeline().unshift({ $match: { secretTour: { $ne: true } } }); console.log(this.pipeline()); next(); });"
+      ]
     },
     {
       "type": "text",
       "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Debugging node.js with NDB. 0-21 Start Part 8",
+      "note": ["Google tool. Uses chromium."]
+    },
+    {
+      "type": "cmd",
+      "beautify": "js",
+      "content": "text",
+      "title": "install, script",
+      "note": ["npm i ndb --global", "'debug': ndb server.js", "npm run debug"]
+    },
+    {
+      "type": "text",
+      "note": ["{%CONTENT2%}"]
+    },
+    {
+      "type": "text",
+      "navId": "",
+      "title": "Handling unhandled routes. 21-x.",
+      "note": [""]
     },
     {
       "type": "text",
