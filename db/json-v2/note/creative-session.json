@@ -158,6 +158,13 @@
     },
     {
       "type": "text",
+      "title": "25.06.2023",
+      "note": [
+        "{%TAB%} I need more control. I want both game factories to work. Refactored verssion 1 of factory. App, players, ball, client, each have now separete class factory, in addition they were refactored for readability. Hope is this will grant more control now."
+      ]
+    },
+    {
+      "type": "text",
       "navId": "6-three-js",
       "title": "6 Three.js",
       "note": ["Ts 3d canvas proj."]
