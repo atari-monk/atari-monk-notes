@@ -98,6 +98,11 @@
           "link": "#6-three-js",
           "title": "6 Three.js",
           "time": "VI-x 2023"
+        },
+        {
+          "link": "#7-react",
+          "title": "7 React",
+          "time": "VI-x 2023"
         }
       ]
     },
@@ -130,7 +135,7 @@
       "navId": "pixi",
       "title": "PIXI",
       "note": [
-        "{%TAB%}Chatgpt introduced me to PIXI, a API for html Canvas, WebGL and more. {%BR%} First project was a robot animation. Then screen, player, two players, ball, setup. Initially pixi was linked in html and it used javascript. After two players and ball i wanted to refactor to give myself more readability. Started to switch to typescript and webpack bundler. {%BR_TAB%} Today (25.05.2023) i introduced player project to typescript and webpack. Removed pixi linked in html and used node_module and bundler instead. Had error that pixi.js cant be found. That was becouse structure is so that pixi/player and pixi/pixi-lib. Bundler works from player. After setup of node in pixi-lib and npm i pixi, bundler was able to find pixi in lib and thing worked. {%BR_TAB%} 29.05.2023 12:09. Conversion from javascript to typescript. Server, GameServer class. Test of project 8-ball. Feature of synchronizing players beetween clients and server should work. Feature of kicking and bouncing ball should work. It works. Refactor using chatgpt. Js to ts. Change # to private. Test. This broke feature of synchronizing ball. Converted rest of server files to ts. It works again. Yesterday i did it in 1,4 hour and failed, but it was late. Today it worked in 1,1 hour, no stress, no problems. {%BR_TAB%} 29.05.2023 19:12 Tired after firt layer of paint on raised bed garden, 6 hours. Will refactor library to better ts. {%CONTENT%}"
+        "{%TAB%} Chatgpt introduced me to PIXI, a API for html Canvas, WebGL and more. {%BR%} First project was a robot animation. Then screen, player, two players, ball, setup. Initially pixi was linked in html and it used javascript. After two players and ball i wanted to refactor to give myself more readability. Started to switch to typescript and webpack bundler. {%BR_TAB%} Today (25.05.2023) i introduced player project to typescript and webpack. Removed pixi linked in html and used node_module and bundler instead. Had error that pixi.js cant be found. That was becouse structure is so that pixi/player and pixi/pixi-lib. Bundler works from player. After setup of node in pixi-lib and npm i pixi, bundler was able to find pixi in lib and thing worked. {%BR_TAB%} 29.05.2023 12:09. Conversion from javascript to typescript. Server, GameServer class. Test of project 8-ball. Feature of synchronizing players beetween clients and server should work. Feature of kicking and bouncing ball should work. It works. Refactor using chatgpt. Js to ts. Change # to private. Test. This broke feature of synchronizing ball. Converted rest of server files to ts. It works again. Yesterday i did it in 1,4 hour and failed, but it was late. Today it worked in 1,1 hour, no stress, no problems. {%BR_TAB%} 29.05.2023 19:12 Tired after firt layer of paint on raised bed garden, 6 hours. Will refactor library to better ts. {%CONTENT%}"
       ]
     },
     {
@@ -138,22 +143,22 @@
       "navId": "ball-game",
       "title": "Ball Game",
       "note": [
-        "{%TAB%}Project initially in js. Client, server architecture. Pixi witch is wrapper on html canvas. Introduced typescript. Then refactoring. I fear to add any feature. I dont fell a lot control."
+        "{%TAB%} Project initially in js. Client, server architecture. Pixi witch is wrapper on html canvas. Introduced typescript. Then refactoring. I fear to add any feature. I dont fell a lot control."
       ]
     },
     {
       "type": "text",
       "title": "23.06.2023",
       "note": [
-        "{%TAB%}Second game factory was introduced along with dependency injection container. Another model was introduced instead of current one. This was done with substitution in mind. What i mean is, non destructive way."
+        "{%TAB%} Second game factory was introduced along with dependency injection container. Another model was introduced instead of current one. This was done with substitution in mind. What i mean is, non destructive way."
       ]
     },
     {
       "type": "text",
       "title": "24.06.2023",
       "note": [
-        "{%TAB%}Today i plan to understand model more by refactoring it. Again there will be two models now. Hope is second one will be more readable and first one will be deleted some day.",
-        "{%TAB%}I want to fix bug and add to new player model. Fail. It's not easy. Need to copy entire game factory and add/change types."
+        "{%TAB%} Today i plan to understand model more by refactoring it. Again there will be two models now. Hope is second one will be more readable and first one will be deleted some day.",
+        "{%TAB%} I want to fix bug and add to new player model. Fail. It's not easy. Need to copy entire game factory and add/change types."
       ]
     },
     {
@@ -162,6 +167,53 @@
       "note": [
         "{%TAB%} I need more control. I want both game factories to work. Refactored verssion 1 of factory. App, players, ball, client, each have now separete class factory, in addition they were refactored for readability. Hope is this will grant more control now."
       ]
+    },
+    {
+      "type": "text",
+      "title": "26.06.2023 17:27-17:45, 18:48-19:20",
+      "note": [
+        "{%TAB%} Second factory needs reestablishing. Problem with player manager."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "27.06.2023 7,2 hrs",
+      "note": [
+        "{%TAB%} 52 changes without commit. Game broke. Didnt know why. Turned out socket.io according to chatgpt uses standard js object in sockets channels. Had to convert to js object, on send, back to type, on recive, on all data comms."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "28.06.2023",
+      "note": [
+        "{%TAB%} Back to creating new better models. First fixed BallGameV2 with RivalPayer model. Next added Player model to V2."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "29.06.2023",
+      "note": [
+        "Add player move emitter, add ball model, move files, test, version script."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "30.06.2023",
+      "note": [
+        "I think it's time to make some Rules of Engagement. 1. Commit is above 20 lines. 2. More commits the better. 3. Test every commit. 4. Dont code after 21:00, when beeing tired, it dosent work. 5. Code 3hr main proj, 1hr tutorial. Rest of day use to upgrade health. 6. Commit also braking changes. Small not breaking commits should measure productivity. When code is bad and breaks on refactor, it's better to commit small (~20 changes) even on breaks. Today, 7 commits average every 42 min."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "01.07.2023",
+      "note": [
+        "Bigger refactor, 29 changes, collider, select ball and player in factories. I use BallObject and PlayerObject classes for models in verssion 1. Version 2 uses Player and BallObject, will be switched to Ball. This refactor took 2,4 hour for 1 commit due to big breaks when changes were introduced. Hopefully it will be esier to replace to Ball now. I did only 2 commits, but works and ball type is at last used in V2."
+      ]
+    },
+    {
+      "type": "text",
+      "title": "02.07.2023",
+      "note": [""]
     },
     {
       "type": "text",
@@ -175,6 +227,17 @@
       "note": [
         "Intro proj with Three.js with help on chatgpt. Rotating Cube in black is my Hello World. Worked."
       ]
+    },
+    {
+      "type": "text",
+      "navId": "7-react",
+      "title": "7 React",
+      "note": ["Framework for web UI."]
+    },
+    {
+      "type": "text",
+      "title": "26.06.2023",
+      "note": ["{%TAB%} Intro project with chatgpt. Worked."]
     },
     {
       "type": "text",
